@@ -20,6 +20,7 @@ Here is documentation on functions of the engine (gameplay and modding), and how
             - <a href="Events/Notetype Scripts.md">Events/Notetype Scripts</a>
         - <a href="State Scripts.md">State Scripts</a>
         - <a href="Global Scripts.md">Global Scripts</a>
+        - <a href="Global Scripts.md">Custom options</a>
         - <a href="Scripted Assets Scripts.md">Scripted Assets Scripts</a>
         - <a href="3D rendering.md">3D rendering</a>
         - <a href="Using hxvlc for videos.md">Using hxvlc for videos</a>
