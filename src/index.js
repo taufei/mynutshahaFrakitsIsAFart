@@ -1,8 +1,8 @@
 var fs = require('fs');
 
-var fileName = '../docs/index.html';
-if (!fs.existsSync("../docs")) {
-    fs.mkdirSync("../docs");
+var fileName = './docs/index.html';
+if (!fs.existsSync("./docs")) {
+    fs.mkdirSync("./docs");
 }
 var stream = fs.createWriteStream(fileName);
 
