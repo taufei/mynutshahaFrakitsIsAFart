@@ -40,10 +40,10 @@ For starters, we have to know what a mod structure looks like. A mod with only t
 
 This is the super basic structure of a minimal mod. It doesn't look much, but trust me, you can totally do a lot more than that.
 
-(btw if you're curious this is how a mod looks like fully decked out)
+<details>
+    <summary>(btw if you're curious this is how a mod looks like fully decked out)</summary>
 
-<div class="hideable" style="background-color: red; line-height: 1px">
-- #### songs
+- songs
     - example song
         - song
             - Inst.ogg
@@ -63,7 +63,7 @@ This is the super basic structure of a minimal mod. It doesn't look much, but tr
             - modchart.hx
             - example script.hx
         - meta.json
-- #### data
+- data
     - characters
         - example character.xml
         - example character.hx
@@ -101,9 +101,9 @@ This is the super basic structure of a minimal mod. It doesn't look much, but tr
 - music
 - shaders
 - videos
-</div>
 
-unhiding this when this gets fully filled out
+fill this shit later
+</details>
 
 Once you're done looking at this structure, you can begin with recreating it in your mods folder. The next steps are covered in these articles:
 - <a href="./Creating songs/index.md">Creating songs</a>
