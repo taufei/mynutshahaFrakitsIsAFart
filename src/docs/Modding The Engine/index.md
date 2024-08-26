@@ -4,7 +4,45 @@ To start modding the engine, you simply make a folder in ``./mods``. It's really
 
 As for the next steps, we will cover those in this documentation as well.
 
-For starters, we have to know what a mod structure looks like. A mod with all the folders and files available looks something like this:
+For starters, we have to know what a mod structure looks like. A mod with only the essential features looks something like this:
+- songs
+    - example song
+        - song
+            - Inst.ogg
+            - Voices.ogg
+            - Voices-dad.ogg
+            - Voices-bf.ogg
+        - charts
+            - easy.json
+            - normal.json
+            - hard.json
+        - scripts
+            - modchart.hx
+        - meta.json
+- data
+    - characters
+        - example character.xml
+        - example character.hx
+    - stages
+        - example stage.xml
+        - example stage.hx
+    - states
+        - MainMenuState.hx
+- images
+    - characters
+        - example character.xml
+        - example character.png
+    - stages
+        - example stage
+            - stage.png
+            - animated element.xml
+            - animated element.png
+
+This is the super basic structure of a minimal mod. It doesn't look much, but trust me, you can totally do a lot more than that.
+
+(btw if you're curious this is how a mod looks like fully decked out)
+
+<div class="hideable" style="background-color: red; line-height: 1px">
 - #### songs
     - example song
         - song
@@ -63,10 +101,23 @@ For starters, we have to know what a mod structure looks like. A mod with all th
 - music
 - shaders
 - videos
+</div>
 
-fill this later i'm fucking lazy
+unhiding this when this gets fully filled out
 
-This is what a mod looks like fully decked out. While this looks overwhelmingly a lot, 80% of this is actually optional and you are able to make a functional mod without it.
+Once you're done looking at this structure, you can begin with recreating it in your mods folder. The next steps are covered in these articles:
+- <a href="./Creating songs/index.md">Creating songs</a>
+- <a href="./Creating characters/index.md">Creating characters</a>
+- <a href="./Creating stages/index.md">Creating stages</a>
+- <a href="./Scripting/index.md">Scripting</a>
+
+And when you're done with the basic steps you're finally ready for release, or if you want, go through more advanced stuff, like these:
+- <a href="./Cutscenes or Dialogues.md">Cutscenes/Dialogues</a>
+- <a href="./Scripting/3D rendering.md">3D rendering</a>
+- <a href="./Scripting/Global Scripts.md">Global Scripts</a>
+- <a href="./Scripting/Custom options.md">Custom Options</a>
+- <a href="./Scripting/Scripted Assets Scripts.md">Scripted Assets Scripts</a>
+- <a href="./Scripting/NDLL Scripting.md">NDLL Scripting</a>
 
 ### Config
 
