@@ -14,10 +14,14 @@ stream.once('open', function(fd) {
 function buildHtml(req) {
     var header = '';
     var body = 'Hello World';
+
+    var filenames = fs.readdirSync("./src/docs", {recursive: true});
+    body += "<br>";
+    body += filenames.toString().replaceAll(",", "<br>");
   
     // concatenate header string
     // concatenate body string
   
     return '<!DOCTYPE html>'
          + '<html><head>' + header + '</head><body>' + body + '</body></html>';
-  };
+};
