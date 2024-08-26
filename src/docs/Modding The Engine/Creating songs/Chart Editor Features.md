@@ -9,8 +9,10 @@ Songs in Codename Engine are more modular, in the sense that you're no longer re
 <img src="Chart Editor Features.png"/>
 
 ### Moving around.
-This is only an in-editor thing, but if you don't like how the Strumlines are ordered, or you're left handed, you can change the order of them easily with just this lock button.<br>
+
+This is only an in-editor thing, but if you don't like how the Strumlines are ordered, and prefer a different order, you can reposition them easily with just this lock button.<br>
 (insert a gif here)
+
 ### Hitsounds
 Pretty self explanatory, but you get to choose which Strumline should play a Hitsound when you get past a Note.
 

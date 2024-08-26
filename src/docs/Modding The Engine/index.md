@@ -104,6 +104,7 @@ This is the super basic structure of a minimal mod. It doesn't look much, but tr
 
 fill this shit later
 </details>
+<br>
 
 Once you're done looking at this structure, you can begin with recreating it in your mods folder. The next steps are covered in these articles:
 - <a href="./Creating songs/index.md">Creating songs</a>
