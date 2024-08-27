@@ -4,7 +4,7 @@ The engine's biggest feature yet, scripting. Currently, you can script in HScrip
 Scripting can change not only gameplay, but also menus and other engine functions.<br>
 
 We will focus on writting in HScript, so whenever you have to create a script, the filename has to end with an ``.hx``.<br>
-<i>(you can also use ``.hxc)</i>
+<i>(you can also use ``.hscript``, ``.hxc`` and ``.hxs``)</i>
 
 #### Scripting relies heavily on having a console opened at all times.
 The console helps you track down errors and bugs with your script. To access it, you can either:
