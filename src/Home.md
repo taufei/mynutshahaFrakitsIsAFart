@@ -21,10 +21,13 @@ Here is documentation on functions of the engine (gameplay and modding), and how
         - <a href="./docs/Modding The Engine/Scripting/State Scripts.md">State Scripts</a>
         - <a href="./docs/Modding The Engine/Scripting/Global Scripts.md">Global Scripts</a>
         - <a href="./docs/Modding The Engine/Scripting/Custom options.md">Custom options</a>
-        - <a href="./docs/Modding The Engine/Scripting/Scripted Assets Scripts.md">Scripted Assets Scripts</a>
+        - <a href="./docs/Modding The Engine/Scripting/Scripted Assets Libraries.md">Scripted Assets Libraries</a>
+        - <a href="./docs/Modding The Engine/Scripting/Shaders.md">Shaders</a>
         - <a href="./docs/Modding The Engine/Scripting/3D rendering.md">3D rendering</a>
         - <a href="./docs/Modding The Engine/Scripting/Using hxvlc for videos.md">Using hxvlc for videos</a>
         - <a href="./docs/Modding The Engine/Scripting/Useful script snippets for modders.md">Useful script snippets for modders</a>
+        - <a href="./docs/Modding The Engine/Scripting/All of the script calls.md">All of the script calls</a>
+        - <a href="./docs/Modding The Engine/Scripting/Custom Classes.md">Custom Classes</a>
         - <a href="./docs/Modding The Engine/Scripting/NDLL Scripting.md">NDLL Scripting</a>
     - <a href="./docs/Modding The Engine/Hardcoding/index.md">Hardcoding</a>
         - idk lol
