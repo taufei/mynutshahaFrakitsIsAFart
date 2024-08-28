@@ -110,7 +110,7 @@ Afterwards, you have to find the devtools (or basically just the editors), by go
 
 ![alt text](index.png)
 
-Here you'll find the essential tools, and some options for debug <i>(for example, enabling the console in Debug Options)</i>
+Here you'll find the essential tools, and some options for debug *(for example, enabling the console in Debug Options)*
 
 The next steps are covered in these articles:
 - <a href="./Creating songs/index.md">Creating songs</a>

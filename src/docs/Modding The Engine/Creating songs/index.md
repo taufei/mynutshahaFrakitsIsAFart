@@ -27,7 +27,7 @@ Although we have made our song, it's still missing the charts. This is where cre
 
 ![alt text](index-2.png)
 
-Upon selecting New Difficulty, after selecting on our newly created song, brings us to this window. Now this looks overwhelming at first, but keep in mind you only have to focus on the top part the most. <br> Looking at the top part we can change the difficulty name, the stage and the scroll speed. Once you're done filling those you can proceed with pressing Save & Close, and your difficulty will be created. <br> <i>(If you're curious about the bottom part, see <a href="./Chart Editor Features.md">Chart Editor Features</a>)</i>
+Upon selecting New Difficulty, after selecting on our newly created song, brings us to this window. Now this looks overwhelming at first, but keep in mind you only have to focus on the top part the most. <br> Looking at the top part we can change the difficulty name, the stage and the scroll speed. Once you're done filling those you can proceed with pressing Save & Close, and your difficulty will be created. <br> *(If you're curious about the bottom part, see <a href="./Chart Editor Features.md">Chart Editor Features</a>)*
 
 ### Opening the chart editor.
 

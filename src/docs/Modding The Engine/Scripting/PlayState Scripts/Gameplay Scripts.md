@@ -1,8 +1,8 @@
 # Gameplay Scripts
 
-### Gameplay scripts run during gameplay <i>(yep)</i>
+### Gameplay scripts run during gameplay *(yep)*
 
-You can run Gameplay Scripts in <b>a song</b>, by putting the scripts in ``./song/YOUR SONG/scripts``, or run them in <b>every song</b>, by putting them in the ``./songs`` folder itself.
+You can run Gameplay Scripts in **a song**, by putting the scripts in ``./song/YOUR SONG/scripts``, or run them in **every song**, by putting them in the ``./songs`` folder itself.
 
 Gameplay Scripts can change the gameplay in various ways, for example, this is how you can hide the player character:
 ```hx
@@ -23,7 +23,7 @@ If you already got the hang of source coding, then scripting will feel like a br
 
 #### Script events.
 
-Noting other particularities, Gameplay Scripting relies heavily on <b>Events</b>, which triggers callbacks and returns a struct of parameters, basically unclogging the parameter list of functions.<br>
+Noting other particularities, Gameplay Scripting relies heavily on **Events**, which triggers callbacks and returns a struct of parameters, basically unclogging the parameter list of functions.<br>
 Which means, handling a note hit looks something like this:
 ```hx
 function onNoteHit(event) {
@@ -35,7 +35,7 @@ function onNoteHit(event) {
 There's a lot of other events, such as ``onStartCountdown``, ``onGamePause``, ``onCameraMove`` and more.<br>
 You can find them all in <a href="../All of the script calls.md">All of the script calls</a>.
 
-Despite all of that, functions like ``update``, ``beatHit``, ``stepHit`` still receive one parameter </i>(``elapsed:Float``, ``curBeat:Int``, ``curStep:Int``)
+Despite all of that, functions like ``update``, ``beatHit``, ``stepHit`` still receive one parameter *(``elapsed:Float``, ``curBeat:Int``, ``curStep:Int``)
 
 #### Class importing.
 
@@ -43,7 +43,7 @@ Some classes are pre-imported (FlxSprite, FlxMath, FlxAxis etc.), but for classe
 ```hx
 import flixel.addons.display.FlxBackdrop;
 ```
-<i>(``using`` does not work) </i>
+*(``using`` does not work) *
 
 #### Accessing characters.
 

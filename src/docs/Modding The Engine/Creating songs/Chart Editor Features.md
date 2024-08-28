@@ -30,17 +30,17 @@ Strumlines have more options than usual, being able to do things without scripti
 
 <img src="Chart Editor Features-4.png"/>
 
-- <b>Characters</b>, is where you input your characters. As you can see, you can have more than one character per Strumline.
-- <b>Type</b>, is where you determine the type of the strumline. Player makes the Strumline playable by a player, while Opponent and Additional makes the Strumline be handled by a CPU.
-- <b>Stage positioning</b>, is where you select where the Strumline characters will be placed, pretty self-explanatory.
-- <b>Scale and HUD position</b>, is where you set the scale of the strumline and the position in the HUD. <i>(keep in mind when setting the HUD positioning, the X axis is determined by a float, aka. 0.25 is Opponent side, 0.75 is Player side, and 0.5 is the middle point, while y axis uses actual positioning)</i>
-- <b>Visible</b> determines whether or not your Strumline shows up in the song. If you have it disabled, your Strumline will cease to exist <i>(though your notes will be intact and still play)</i>.
-- <b>Scroll Speed and that switch with a long name in it</b> determines if this Strumline should use a scroll speed, separately from the other Strumlines.
-- <b>Vocal Suffix</b> is covered in <a href="#multi-vocals">Multi Vocals</a>.
+- **Characters**, is where you input your characters. As you can see, you can have more than one character per Strumline.
+- **Type**, is where you determine the type of the strumline. Player makes the Strumline playable by a player, while Opponent and Additional makes the Strumline be handled by a CPU.
+- **Stage positioning**, is where you select where the Strumline characters will be placed, pretty self-explanatory.
+- **Scale and HUD position**, is where you set the scale of the strumline and the position in the HUD. *(keep in mind when setting the HUD positioning, the X axis is determined by a float, aka. 0.25 is Opponent side, 0.75 is Player side, and 0.5 is the middle point, while y axis uses actual positioning)*
+- **Visible** determines whether or not your Strumline shows up in the song. If you have it disabled, your Strumline will cease to exist *(though your notes will be intact and still play)*.
+- **Scroll Speed and that switch with a long name in it** determines if this Strumline should use a scroll speed, separately from the other Strumlines.
+- **Vocal Suffix** is covered in <a href="#multi-vocals">Multi Vocals</a>.
 
 ## Events & Notetypes.
 ### Events
-Events exist in the Chart Editor to avoid coding a lot of code for just a few events. Some of them are already built-in but you can also code your own <i>(see <a href="../Scripting/PlayState Scripts/Events or Notetype Scripts.md">Events/Notetype Scripts</a>)</i>.
+Events exist in the Chart Editor to avoid coding a lot of code for just a few events. Some of them are already built-in but you can also code your own *(see <a href="../Scripting/PlayState Scripts/Events or Notetype Scripts.md">Events/Notetype Scripts</a>)*.
 
 <img src="Chart Editor Features-5.png"/>
 <img src="Chart Editor Features-6.png"/>
@@ -57,7 +57,7 @@ Events are also movable.<br>
 
 <img src="Chart Editor Features-9.png"/>
 
-You can code your own notetypes, or use the pre-existing one <i>(though only 2 exists currently)</i>. They need to first be added to the Notetypes list before being able to use them. Afterwards you can simply select them from the dropdown here.
+You can code your own notetypes, or use the pre-existing one *(though only 2 exists currently)*. They need to first be added to the Notetypes list before being able to use them. Afterwards you can simply select them from the dropdown here.
 
 <img src="Chart Editor Features-10.png"/>
 
@@ -67,7 +67,7 @@ You can also change the graphic of a Notetype without programming, by putting th
 
 <img src="Chart Editor Features-12.png"/>
 
-If you wish to change some data regarding the chart <i>(scroll speed, bpm, stage etc.)</i>, you can do so here.
+If you wish to change some data regarding the chart *(scroll speed, bpm, stage etc.)*, you can do so here.
 
 ### Editing chart data.
 
@@ -79,7 +79,7 @@ Editing chart data has only 2 options, and they're self explanatory.
 
 <img src="Chart Editor Features-14.png"/>
 
-Editing metadata information, is also self-explanatory, though you can notice this menu is similar to what you've seen in <a href="./index.md">Creating songs</a>, so this should be easy to figure out. Though you might also notice there's a new option, <b>Custom Values</b>. These are extra values that let's you set certain values specifically for the song <i>(for example, crediting someone for a song)</i>. This will be covered in <a href="../Scripting/PlayState Scripts/Gameplay Scripts.md">Gameplay Scripts</a>.
+Editing metadata information, is also self-explanatory, though you can notice this menu is similar to what you've seen in <a href="./index.md">Creating songs</a>, so this should be easy to figure out. Though you might also notice there's a new option, **Custom Values**. These are extra values that let's you set certain values specifically for the song *(for example, crediting someone for a song)*. This will be covered in <a href="../Scripting/PlayState Scripts/Gameplay Scripts.md">Gameplay Scripts</a>.
 
 ## Saving.
 
@@ -88,8 +88,8 @@ The chart editor allows for multiple ways to save a chart. Currently, there's ab
 <img src="Chart Editor Features-11.png"/>
 
 We know what the first option does, but what about those other ones? Well, here's what they do:
-- <b>Save Without Events</b> saves the chart without saving it's events.
-- <b>Save Events Separately</b> saves the events in a separate file, which gets parsed on any difficulty chart you play on. <i>(Note that if you used this you have to also use <b>Save Without Events</b>, otherwise you will face issues with duplicate events)</i>
-- <b>Save Meta</b> saves the meta into a separate file.
-- <b>Export For FNF Legacy</b> saves the chart in a format that is supported by other FNF engines.
-- <b>Save For Psych Engine</b> saves the chart specifically in Psych Engine's format.
+- **Save Without Events** saves the chart without saving it's events.
+- **Save Events Separately** saves the events in a separate file, which gets parsed on any difficulty chart you play on. *(Note that if you used this you have to also use **Save Without Events**, otherwise you will face issues with duplicate events)*
+- **Save Meta** saves the meta into a separate file.
+- **Export For FNF Legacy** saves the chart in a format that is supported by other FNF engines.
+- **Save For Psych Engine** saves the chart specifically in Psych Engine's format.
