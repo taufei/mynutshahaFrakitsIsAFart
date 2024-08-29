@@ -24,7 +24,7 @@ Noting options that you can set there:
 - ``folder`` which changes the destination of where the sprites are taken from *(like ``images/stages/default/``)*.
 - ``startCamPosX, startCamPosY`` set the destination of where the camera starts from *(before countdown)*
 
-As for the other nodes, there's about ``7 types`` of them *(and more if you script them in)*, we'll go through each of them.
+As for the other nodes, there's about ``7 types`` of them *(and more if you script them in, see <a href="../Scripting/PlayState Scripts/Character or Stage Scripts.md">Character/Stage Scripts</a>)*, we'll go through each of them.
 
 *(note that it's important which order you put them in because they will take the same order in-game too)*
 
@@ -56,8 +56,8 @@ Other options include:
 You can also define animations by giving it a child node called ``anim``. A sprite node with an animation node looks something like this:
 ```xml
 <sprite name="dancer1" sprite="limoDancer" type="onbeat">
-<anim name="danceLeft" anim="bg dancer sketch PINK" loop="false"/>
-<anim name="danceRight" anim="bg dancer sketch PINK" loop="false"/>
+    <anim name="danceLeft" anim="bg dancer sketch PINK" loop="false"/>
+    <anim name="danceRight" anim="bg dancer sketch PINK" loop="false"/>
 </sprite>
 ```
 An anim node can define these options:
@@ -69,6 +69,14 @@ An anim node can define these options:
 - ``x`` and ``y`` are the animation offset. *(offset is only applied when the animation is played)*
 - ``forced`` whether or not to force animation playback while a different one is already playing.
 - ``loop`` to make your animation loop.
+
+Defining advanced properties is also possible. Like this:
+```xml
+<sprite name="clouds" sprite="clouds">
+    <property name="moves" type="bool" value="true">
+    <property name="velocity.x" type="float" value="40.0">
+</sprite>
+```
 
 ### Solid node (`solid`, `box`)
 Solid nodes are sprites that is, unlike a Sprite Node, composed of only one select color. This node has less parameters since it doesn't use images. <br>
@@ -84,3 +92,36 @@ Accepted parameters:
 - `color` which colors the solid/box.
 - `x` and `y` determine the position in the stage.
 - `width` and `height` defines the size of the solid/box.
+
+### Character nodes (``boyfriend``, ``bf``, ``player``, ``girlfriend``, ``gf``, ``dad``, ``opponent``, ``character``, ``char``)
+Character nodes are used to position characters in the stage. A Character node looks something like this:
+```xml
+<boyfriend x="200" y="400"/>
+```
+Accepted parametters are:
+- ``x`` and ``y`` for positioning.
+- ``camxoffset`` and ``camyoffset`` for changing the character's camera point.
+- ``skewx`` and ``skewy`` for skewing.
+- ``alpha`` which determines the opacity of the character sprite.
+- ``flip`` for if you want to flip the character for specifically for the stage.
+- ``scroll``, ``scrollx`` and ``scrolly`` to change the scrollFactor of the character.
+
+For the ``character`` and ``char`` nodes only use them if you want to change a specific character *(ex. if you want to change pico's positions)*
+
+```xml
+<character name="pico" x="400" y="200">
+```
+
+Keep in mind that where you put these nodes is important as the character will be layered depending on that.
+```xml
+<boyfriend/>
+<sprite name="stageCurtains" x="-500" y="-300" sprite="stagecurtains" scroll="1.3"/>
+```
+*(this will put boyfriend behind the ``stageCurtains`` sprite)*
+
+### Ratings sprites node (``ratings``, ``combo``)
+This node is only used to position the rating sprites and does nothing else *(atm)*. Positioning in nodes doesn't matter here.
+```xml
+<ratings x="200" y="400">
+```
+The only parameters are ``x`` and ``y``.
