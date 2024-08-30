@@ -41,7 +41,7 @@ Strumlines have more options than usual, being able to do things without scripti
 ### Multi-Vocals
 You can have different vocal audio files per Strumline. As seen previously, there's an option to set Vocal Suffixes on a Strumline.
 
-For this, you have to obviously have different vocal audio files ready, with a suffix at the end *(for example ``Vocals-bf.ogg`` has a ``-bf`` suffix at the end)*
+For this, you have to obviously have different vocal audio files ready, with a suffix at the end *(for example ``Voices-bf.ogg`` has a ``-bf`` suffix at the end)*
 <img src="./Chart Editor Features-16.png"/>
 <img src="./Chart Editor Features-15.png"/>
 
