@@ -36,7 +36,14 @@ Strumlines have more options than usual, being able to do things without scripti
 - **Scale and HUD position**, is where you set the scale of the strumline and the position in the HUD. *(keep in mind when setting the HUD positioning, the X axis is determined by a float, aka. 0.25 is Opponent side, 0.75 is Player side, and 0.5 is the middle point, while y axis uses actual positioning)*
 - **Visible** determines whether or not your Strumline shows up in the song. If you have it disabled, your Strumline will cease to exist *(though your notes will be intact and still play)*.
 - **Scroll Speed and that switch with a long name in it** determines if this Strumline should use a scroll speed, separately from the other Strumlines.
-- **Vocal Suffix** is covered in <a href="#multi-vocals">Multi Vocals</a>.
+- **Vocal Suffix** is covered in this next section.
+
+### Multi-Vocals
+You can have different vocal audio files per Strumline. As seen previously, there's an option to set Vocal Suffixes on a Strumline.
+
+For this, you have to obviously have different vocal audio files ready, with a suffix at the end *(for example ``Vocals-bf.ogg`` has a ``-bf`` suffix at the end)*
+<img src="./Chart Editor Features-16.png"/>
+<img src="./Chart Editor Features-15.png"/>
 
 ## Events & Notetypes.
 ### Events

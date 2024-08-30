@@ -11,10 +11,32 @@ The console helps you track down errors and bugs with your script. To access it,
 - Press F2 to open a window, or
 - Start the game in a cmd or powershell window (or in terminal for linux/mac users)
 
-To start on basic scripting, you can follow these articles here:
+#### Our HScript accepts special syntax from Haxe 4.3.x
+Things like ``?.``, ``??`` and ``??=`` are accepted in our HScript language.<br>
+Using those is beneficial as they prove to be very useful to keeping your code clean.<br>
+Example usage:
+```hx
+if (FlxG.sound.music != null) trace(FlxG.sound.music.time);
+
+trace(FlxG.sound?.music);
+```
+```hx
+var time:Float;
+if (FlxG.sound.music != null) time = FlxG.sound.music.time;
+else time = 0;
+
+time = FlG.sound?.music ?? 0;
+```
+```hx
+if (FlxG.save.data.isOpen == null) FlxG.save.data.isOpen = true;
+
+FlxG.save.data.isOpen ??= true;
+```
+
+### To start on basic scripting, you can follow these articles here:
 - <a href="./PlayState Scripts/Gameplay Scripts.md">Gameplay Scripts</a>
 - <a href="./PlayState Scripts/Events or Notetype Scripts.md">Events/Notetype Scripts</a>
-- <a href="./State Scripts.md">State Scripts</a><br><br>
+- <a href="./State or Substate Scripts.md">State/Substate Scripts</a><br><br>
 - <a href="./Useful script snippets for modders.md">Useful script snippets for modders</a>
 - <a href="./All of the script calls.md">All of the script calls</a>
 
