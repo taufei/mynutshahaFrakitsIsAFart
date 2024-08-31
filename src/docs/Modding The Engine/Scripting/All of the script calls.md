@@ -2,23 +2,23 @@
 
 ## All states
 
-### preCreate, create, postCreate
+### preCreate(), create(), postCreate()
 
-### preUpdate, update, postUpdate
+### preUpdate(elapsed:Float), update(elapsed:Float), postUpdate(elapsed:Float)
 
-### stepHit, beatHit, measureHit
+### stepHit(curStep:Int), beatHit(curBeat:Int), measureHit(curMeasure:Int)
 
-### onFocus, onFocusLost
+### onFocus(), onFocusLost()
 
-### draw, postDraw
+### draw(event:DrawEvent), postDraw(event:DrawEvent)
 
-### onStateSwitch
+### onStateSwitch(event:StateEvent)
 
-### onOpenSubState
+### onOpenSubState(event:StateEvent)
 
-### onResize
+### onResize(event:ResizeEvent)
 
-### destroy
+### destroy()
 
 ## Playstate.hx
 
