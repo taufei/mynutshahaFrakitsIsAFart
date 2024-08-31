@@ -20,7 +20,7 @@
 
 ### destroy()
 
-## Playstate.hx
+## PlayState.hx
 
 ### onStageXMLParsed, onStageNodeParsed
 
