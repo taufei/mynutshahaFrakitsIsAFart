@@ -2,6 +2,8 @@
 
 To start modding the engine, you simply make a folder in ``./mods``. It's really that simple, as making a mod does not require any setup.
 
+You can make the mod run constantly by putting it in ``./addons`` instead.
+
 As for the next steps, we will cover those in this documentation as well.
 
 For starters, we have to know what a mod structure looks like. A mod with only the essential features looks something like this:
