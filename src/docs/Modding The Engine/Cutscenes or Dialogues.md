@@ -9,4 +9,4 @@ Making Cutscenes is easy, either drop an .mp4 file in ``./videos`` with the name
 You can also put an ``-end`` before ``-cutscene`` to make that cutscene appear at the end of the song.
 
 ### Dialogues
-go figure it out i'm too lazy to document everything.
+go figure it out i'm too lazy to document everything. c
