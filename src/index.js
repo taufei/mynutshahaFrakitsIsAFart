@@ -16,8 +16,11 @@ function buildHtml(req) {
     var body = 'Hello World';
 
     var filenames = fs.readdirSync("./src/docs", {recursive: true});
-    body += "<br>";
-    body += filenames.toString().replaceAll(",", "<br>");
+    body += "<br><br>";
+    for (i of filenames) {
+      console.log(i);
+      if (i.endsWith(".md")) body += i + "<br>";
+    }
   
     // concatenate header string
     // concatenate body string
