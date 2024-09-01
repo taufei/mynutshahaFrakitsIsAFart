@@ -7,100 +7,104 @@ You can make the mod run constantly by putting it in ``./addons`` instead.
 As for the next steps, we will cover those in this documentation as well.
 
 For starters, we have to know what a mod structure looks like. A mod with only the essential features looks something like this:
-- songs
-    - example song
-        - song
-            - Inst.ogg
-            - Voices.ogg
-            - Voices-dad.ogg
-            - Voices-bf.ogg
-        - charts
-            - easy.json
-            - normal.json
-            - hard.json
-        - scripts
-            - modchart.hx
-        - meta.json
-- data
-    - characters
-        - example character.xml
-    - stages
-        - example stage.xml
-    - states
-        - MainMenuState.hx
-- images
-    - characters
-        - example character.xml
-        - example character.png
-    - stages
-        - example stage
-            - stage.png
-            - animated element.xml
-            - animated element.png
+```
+songs
+    example song
+        song
+            Inst.ogg
+            Voices.ogg
+            Voices-dad.ogg
+            Voices-bf.ogg
+        charts
+            easy.json
+            normal.json
+            hard.json
+        scripts
+            modchart.hx
+        meta.json
+data
+    characters
+        example character.xml
+    stages
+        example stage.xml
+    states
+        MainMenuState.hx
+images
+    characters
+        example character.xml
+        example character.png
+    stages
+        example stage
+            stage.png
+            animated element.xml
+            animated element.png
+```
 
 This is the super basic structure of a minimal mod. It doesn't look much, but trust me, you can totally do a lot more than that.
 
 <details>
     <summary>(btw if you're curious this is how a mod looks like fully decked out)</summary>
 
-- songs
-    - example song
-        - song
-            - Inst.ogg
-            - Voices.ogg
-            - Voices-dad.ogg
-            - Voices-bf.ogg
-            - Inst-hard.ogg
-            - Voices-hard.ogg
-            - Voices-dad-hard.ogg
-            - Voices-bf-hard.ogg
-        - charts
-            - easy.json
-            - normal.json
-            - hard.json
-            - example custom difficulty.json
-        - scripts
-            - modchart.hx
-            - example script.hx
-        - meta.json
-- data
-    - characters
-        - example character.xml
-        - example character.hx
-    - stages
-        - example stage.xml
-        - example stage.hx
-    - notes
-        - example notetype.hx
-    - splashes
-        - example splashes.xml
-    - dialogue
-        - boxes
-            - example box.xml
-            - example box.hx
-        - characters
-            - example portrait.xml
-            - example portrait.hx
-    - config
-        - credits.xml
-        - discord.json
-        - menuItems.txt
-        - options.xml
-    - titlescreen
-        - introText.txt
-        - titlescreen.xml
-    - weeks
-        - weeks
-            - example week.xml
-        - characters
-            - example character.xml
-        - weeks.txt
-- images
-- fonts
-- sounds
-- music
-- shaders
-- videos
+```
+songs
+    example song
+        song
+            Inst.ogg
+            Voices.ogg
+            Voices-dad.ogg
+            Voices-bf.ogg
+            Inst-hard.ogg
+            Voices-hard.ogg
+            Voices-dad-hard.ogg
+            Voices-bf-hard.ogg
+        charts
+            easy.json
+            normal.json
+            hard.json
+            example custom difficulty.json
+        scripts
+            modchart.hx
+            example script.hx
+        meta.json
+data
+    characters
+        example character.xml
+        example character.hx
+    stages
+        example stage.xml
+        example stage.hx
+    notes
+        example notetype.hx
+    splashes
+        example splashes.xml
+    dialogue
+        boxes
+            example box.xml
+            example box.hx
+        characters
+            example portrait.xml
+            example portrait.hx
+    config
+        credits.xml
+        discord.json
+        menuItems.txt
+        options.xml
+    titlescreen
+        introText.txt
+        titlescreen.xml
+    weeks
+        weeks
+            example week.xml
+        characters
+            example character.xml
+        weeks.txt
+images
+fonts
+sounds
+music
+shaders
+videos
+```
 
 fill this shit later
 </details>
