@@ -64,6 +64,6 @@ This is rather easy to do, put this in `./data/global.hx`:
 function create() {
     // FlxG.save is your mod's savedata
     if(FlxG.save.data.checkboxExample == null)
-        FlxG.save.data.checkboxExample = "defaultValue";
+        FlxG.save.data.checkboxExample = true;
 }
 ```
