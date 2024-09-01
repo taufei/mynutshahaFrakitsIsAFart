@@ -13,7 +13,7 @@ function create() {
 Or how to create a normal sprite:
 ```hx
 function create() {
-    var sprite = new FlxSprite(x, y).loadGraphic(Paths.image("my new sprite")) //picks the png image from the ./images folder
+    var sprite = new FlxSprite(x, y).loadGraphic(Paths.image("my new sprite")); //picks the png image from the ./images folder
 }
 ```
 If you notice, this looks slightly like source code, aside from the usual ``override function`` or ``super.create()``, which does not exist in our scripting language.<br>
@@ -27,8 +27,8 @@ Noting other particularities, Gameplay Scripting relies heavily on **Events**, w
 Which means, handling a note hit looks something like this:
 ```hx
 function onNoteHit(event) {
-    trace(event.note) // the note that has been hit
-    trace(event.score) // how much score gained from this
+    trace(event.note); // the note that has been hit
+    trace(event.score); // how much score gained from this
     event.cancel(); // cancels out any other handling (useful if you want to write custom note pressing)
 }
 ```
@@ -49,9 +49,9 @@ import flixel.addons.display.FlxBackdrop;
 
 Characters are actually accessed differently. Due to the modularity of having more than one Strumline, and having more than one character in a Strumline, characters are accessible like this:
 ```hx
-trace(strumLines.members[0].characters[0]) // opponent character
-trace(strumLines.members[1].characters[0]) // player character
-trace(strumLines.members[2].characters[0]) // girlfriend character
+trace(strumLines.members[0].characters[0]); // opponent character
+trace(strumLines.members[1].characters[0]); // player character
+trace(strumLines.members[2].characters[0]); // girlfriend character
 ```
 Though we have also established a few shortcuts to avoid typing this much code
 ```hx
