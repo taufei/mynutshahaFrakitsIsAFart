@@ -1,17 +1,17 @@
 # Custom Options
 You may find it useful to have custom options specific to your mod, thankfully you can do just that!
 
-To get started, put a file in `data/config` called `options.xml` in whatever folder your mod resides in.
+To get started, put a file in `./data/config` called `options.xml`.
 
-> [!NOTE]  
-> You can also put these into an addon, but do note that addons currently override mod options (as of writing)!
-
-There is a template ready for you in `assets/data/config/options.xml`, here's what it looks like:
+There already exists a template for you to look on, and it looks something like this:
 
 ```xml
 <menu name="Mod Options" desc="Modify mod options here">
+
 	<checkbox id="checkboxExample" name="Checkbox example" />
+
 	<number id="numberExample" name="Number example" min="0" max="10" change="1"/>
+
 	<choice id="choiceExample" name="Choice Example">
 		<value name="Disabled" value="disabled"/>
 		<value name="This only" value="thisOnly"/>
@@ -21,14 +21,9 @@ There is a template ready for you in `assets/data/config/options.xml`, here's wh
 	<menu name="Submenu Example" desc="Submenu test">
 		<checkbox id="levelOfIdk2" name="Level of idk" />
 	</menu>
+
 </menu>
 ```
-I recommend just dumping this template into your `options.xml` file, and going off of that.
-
-It will look something like this in-game:
-<img src="./Custom options.png"/>
-
-# Option Types
 You're likely wondering: "how does each type of option work?"
 That's what is about to be explained!!
 
@@ -55,19 +50,20 @@ All option types (except for `menu`) share 2 common properties:
         - `name` - This is the name of the value displayed on screen
         - `value` - This is the actual data/value applied to the option when chosen
 
-# Save Data
+Accessing them in Scripts is done via ``FlxG.save.data``, as you can see below.
+```hx
+var checkboxExample = FlxG.save.data.checkboxExample;
+```
+
 You may have noticed that none of the option types have a default value property,
-this is because you have to set the default values in a global script.
+this is because you have to set the default values yourself *(in a global script)*.<br>
+You have to do this otherwise your options won't save correctly!
 
-
-This is rather easy to do, put this in `data/global.hx`:
+This is rather easy to do, put this in `./data/global.hx`:
 ```haxe
 function create() {
     // FlxG.save is your mod's savedata
-    if(FlxG.save.data.myOptionID == null)
-        FlxG.save.data.myOptionID = "defaultValue";
+    if(FlxG.save.data.checkboxExample == null)
+        FlxG.save.data.checkboxExample = "defaultValue";
 }
 ```
-
-> [!WARNING]  
-> You have to do this otherwise your options won't save correctly!
