@@ -13,11 +13,11 @@
         ["Cutscenes or Dialogues"],
         ["Scripting", [
             ["PlayState Scripts", [
-                "Gameplay Scripts",
-                "Events or Notetype Scripts",
-                "Cutscenes or Dialogue Scripts",
-                "Character or Stage Scripts",
-                "Pause or Game Over Scripts"
+                ["Gameplay Scripts"],
+                ["Events or Notetype Scripts"],
+                ["Cutscenes or Dialogue Scripts"],
+                ["Character or Stage Scripts"],
+                ["Pause or Game Over Scripts"]
             ]],
             ["State Scripts"],
             ["Global Scripts"],
