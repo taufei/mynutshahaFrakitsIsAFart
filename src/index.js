@@ -3,6 +3,7 @@ const { Remarkable } = require('remarkable');
 var path = require("path");
 var Mustache = require('mustache');
 var jsdom = require("jsdom");
+var hljs = require('highlight.js');
 
 var docsPath = process.argv[2] || 'docs/';
 
@@ -96,6 +97,12 @@ function buildHtml() {
 						image.src = "/" + path.normalize("./" + docsPath + image.src);
 					}
 				}*/
+			}
+
+			var codeblocks = dom.window.document.querySelectorAll('pre code[class^="language-"]');
+			for(const codeblock of codeblocks) {
+				codeblock.innerHTML = hljs.highlight(codeblock.textContent, {language: codeblock.className.split("-")[1]}).value;
+				codeblock.parentElement.classList.add("hljs");
 			}
 
 			//console.log(data);

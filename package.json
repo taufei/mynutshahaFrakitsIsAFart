@@ -12,6 +12,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "highlight.js": "^11.10.0",
     "jsdom": "^25.0.0",
     "mustache": "^4.2.0",
     "remarkable": "^2.0.1"
