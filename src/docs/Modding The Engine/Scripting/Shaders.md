@@ -20,7 +20,7 @@ shader.intensity = 0.4;
 camGame.addShader(shader);
 ```
 
-### Remember that we only support flixel/openfl shaders.
+## Remember that we only support flixel/openfl shaders.
 If you got a shader from a site called https://shadertoy.com, you have to manually convert them to flixel/openfl accepted format.
 
 Here's a sample shader that renders a basic texture.
@@ -42,9 +42,9 @@ We'll show each step to converting this shader into an usable openfl/flixel shad
 3. replace ``vec4 col = texture(iChannel0, uv);`` with ``vec4 col = texture2D(bitmap, uv);`` or ``vec4 col = flixel_texture2D(bitmap, uv);`` *(keep in mind bitmap is the pixels of the camera/sprite the shader is aplied to)*
 4. finally, replace ``fragColor = col;`` with ``gl_FragColor = col;``
 
-#### Keep in mind that this covers the most basic on how to convert a shader from shadertoy.com, complex shaders will need more expertise with handling shaders before converting those.
+### Keep in mind that this covers the most basic on how to convert a shader from shadertoy.com, complex shaders will need more expertise with handling shaders before converting those.
 
-### Important things to note if your shader doesn't work for certain people.
+## Important things to note if your shader doesn't work for certain people.
 Avoid using `0.` or `.0` for floats, instead, use `0.0` (ending the float number with an `.0`)
 *(despite half floats working on nVidia gpus, other gpus like AMD gpus don't support this feature)*
 

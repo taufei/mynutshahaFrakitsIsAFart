@@ -1,7 +1,7 @@
 # Welcome to the Codename Engine Docs
 Here is documentation on functions of the engine (gameplay and modding), and how to use them for your mod.
 
-#### Navigation is done via either the sidebar, or by using this chart below:
+### Navigation is done via either the sidebar, or by using this chart below:
 - <a href="./docs/How to navigate the engine.md">How to navigate the engine</a>
 - <a href="./docs/Differences between the other FNF engines.md">Differences between the other FNF engines</a>
 - <a href="./docs/Modding The Engine/index.md">Modding the engine</a>

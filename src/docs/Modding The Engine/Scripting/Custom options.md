@@ -31,7 +31,7 @@ All option types (except for `menu`) share 2 common properties:
 - `id` - The ID of the option to pull from save data (which we cover just below this section!)
 - `name` - This is the name of the option displayed on screen
 
-### Here's what the properties for each type are:
+## Here's what the properties for each type are:
 
 - `menu` - A menu to put your options into, you can have sub-menus inside of them aswell
     - `name` - This is the name of the menu displayed on screen

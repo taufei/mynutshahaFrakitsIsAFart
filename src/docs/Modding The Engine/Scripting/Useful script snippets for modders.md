@@ -7,7 +7,7 @@ idk bro
 
 ## Global Scripts
 
-### Replace pre-existing states with custom states.
+## Replace pre-existing states with custom states.
 ```hx
 var redirectStates:Map<FlxState, String> = [
     TitleState => "CustomTitleState"
@@ -19,7 +19,7 @@ function preStateSwitch() {
             FlxG.game._requestedState = new ModState(redirectStates.get(redirectState));
 }
 ```
-### Animated Icons support.
+## Animated Icons support.
 ```haxe
 function update(elapsed) {
     for (i in FlxG.state.members)
@@ -40,4 +40,4 @@ function onHealthIconAnimChange(e) {
 }
 ```
 
-### to be filled with other snippets
+## to be filled with other snippets

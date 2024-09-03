@@ -28,7 +28,7 @@ As for the other nodes, there's about ``7 types`` of them *(and more if you scri
 
 *(note that it's important which order you put them in because they will take the same order in-game too)*
 
-### Sprite node (`sprite`, `spr`, `sparrow`)
+## Sprite node (`sprite`, `spr`, `sparrow`)
 The sprite node defines the basic sprites in a stage.
 
 ```xml
@@ -78,7 +78,7 @@ Defining advanced properties is also possible. Like this:
 </sprite>
 ```
 
-### Solid node (`solid`, `box`)
+## Solid node (`solid`, `box`)
 Solid nodes are sprites that is, unlike a Sprite Node, composed of only one select color. This node has less parameters since it doesn't use images. <br>
 Creating one of these looks something like this:
 
@@ -93,7 +93,7 @@ Accepted parameters:
 - `x` and `y` determine the position in the stage.
 - `width` and `height` defines the size of the solid/box.
 
-### Character nodes (``boyfriend``, ``bf``, ``player``, ``girlfriend``, ``gf``, ``dad``, ``opponent``, ``character``, ``char``)
+## Character nodes (``boyfriend``, ``bf``, ``player``, ``girlfriend``, ``gf``, ``dad``, ``opponent``, ``character``, ``char``)
 Character nodes are used to position characters in the stage. A Character node looks something like this:
 ```xml
 <boyfriend x="200" y="400"/>
@@ -119,7 +119,7 @@ Keep in mind that where you put these nodes is important as the character will b
 ```
 *(this will put boyfriend behind the ``stageCurtains`` sprite)*
 
-### Ratings sprites node (``ratings``, ``combo``)
+## Ratings sprites node (``ratings``, ``combo``)
 This node is only used to position the rating sprites and does nothing else *(atm)*. Positioning in nodes doesn't matter here.
 ```xml
 <ratings x="200" y="400">

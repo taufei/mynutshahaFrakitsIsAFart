@@ -132,12 +132,12 @@ And when you're done with the basic steps you're finally ready for release, or i
 - <a href="./Scripting/Scripted Assets Libraries.md">Scripted Assets Libraries</a>
 - <a href="./Scripting/NDLL Scripting.md">NDLL Scripting</a>
 
-### Config
+## Config
 
 Some config is still required for things like Discord RPC. so we're gonna get over them here.<br>
 All of these configs can be found in ``./data/config/``
 
-#### discord.json
+### discord.json
 ```
 {
 	"clientID": discord token,
@@ -145,7 +145,7 @@ All of these configs can be found in ``./data/config/``
 }
 ```
 Before doing this, make sure to make a discord application at https://discord.com/developers/applications, if you don't know how... please search a guide on google. After that, copy the application ID and insert it there.
-#### credits.xml
+### credits.xml
 Crediting people also uses XML data to parse members, though it has a lot of features to cover.<br>
 Here's a template provided by the engine:
 ```xml
@@ -177,5 +177,5 @@ Their parameters are as follows:
 
 Also, if you notice, you can wrap these with the ``menu`` node to separate the credits *(like probably having an artist submenu and stuff)*
 
-#### options.xml
+### options.xml
 options.xml is explained in this article <a href="./Scripting/Custom options.png">Custom options</a>.

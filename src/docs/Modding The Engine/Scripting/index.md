@@ -6,12 +6,12 @@ Scripting can change not only gameplay, but also menus and other engine function
 We will focus on writting in HScript, so whenever you have to create a script, the filename has to end with an ``.hx``.<br>
 *(you can also use ``.hscript``, ``.hxc`` and ``.hxs``)*
 
-#### Scripting relies heavily on having a console opened at all times.
+### Scripting relies heavily on having a console opened at all times.
 The console helps you track down errors and bugs with your script. To access it, you can either:
 - Press F2 to open a window, or
 - Start the game in a cmd or powershell window (or in terminal for linux/mac users)
 
-#### Our HScript accepts special syntax from Haxe 4.3.x
+### Our HScript accepts special syntax from Haxe 4.3.x
 Things like ``?.``, ``??`` and ``??=`` are accepted in our HScript language.<br>
 Using those is beneficial as they prove to be very useful to keeping your code clean.<br>
 Example usage:
@@ -33,7 +33,7 @@ if (FlxG.save.data.isOpen == null) FlxG.save.data.isOpen = true;
 FlxG.save.data.isOpen ??= true;
 ```
 
-### To start on basic scripting, you can follow these articles here:
+## To start on basic scripting, you can follow these articles here:
 - <a href="./PlayState Scripts/Gameplay Scripts.md">Gameplay Scripts</a>
 - <a href="./PlayState Scripts/Events or Notetype Scripts.md">Events/Notetype Scripts</a>
 - <a href="./State or Substate Scripts.md">State/Substate Scripts</a><br><br>

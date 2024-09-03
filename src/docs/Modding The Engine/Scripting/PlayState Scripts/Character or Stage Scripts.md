@@ -2,7 +2,7 @@
 
 Character/Stage Scripts run alongside them, or something like that.
 
-### Character Script.
+## Character Script.
 You can create one of those by making a Script file alongside your character's XML data file *(``./data/characters/``)*<br>
 In these scripts you don't need to specify the character, since the character becomes the Script's parent.
 
@@ -13,7 +13,7 @@ function update(elapsed) {
 }
 ```
 
-### Stage Scripts.
+## Stage Scripts.
 Creating one of those also goes next to the Stage XML data file *(``./data/stages/``)*.<br>
 This script also takes the Stage as it's parent, thus not needing to use ``stage.getSprite()``, instead, sprites becomes the variables
 

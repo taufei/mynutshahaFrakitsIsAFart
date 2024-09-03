@@ -1,6 +1,6 @@
 # Gameplay Scripts
 
-### Gameplay scripts run during gameplay *(yep)*
+## Gameplay scripts run during gameplay *(yep)*
 
 You can run Gameplay Scripts in **a song**, by putting the scripts in ``./song/YOUR SONG/scripts``, or run them in **every song**, by putting them in the ``./songs`` folder itself.
 
@@ -19,9 +19,9 @@ function create() {
 If you notice, this looks slightly like source code, aside from the usual ``override function`` or ``super.create()``, which does not exist in our scripting language.<br>
 If you already got the hang of source coding, then scripting will feel like a breeze. If not.. well.. prepare to learn!
 
-### Particularities
+## Particularities
 
-#### Script events.
+### Script events.
 
 Noting other particularities, Gameplay Scripting relies heavily on **Events**, which triggers callbacks and returns a struct of parameters, basically unclogging the parameter list of functions.<br>
 Which means, handling a note hit looks something like this:
@@ -37,7 +37,7 @@ You can find them all in <a href="../All of the script calls.md">All of the scri
 
 Despite all of that, functions like ``update``, ``beatHit``, ``stepHit`` still receive one parameter *(``elapsed:Float``, ``curBeat:Int``, ``curStep:Int``)
 
-#### Class importing.
+### Class importing.
 
 Some classes are pre-imported (FlxSprite, FlxMath, FlxAxis etc.), but for classes that aren't pre-imported, it's still possible to import like this: 
 ```hx
@@ -45,7 +45,7 @@ import flixel.addons.display.FlxBackdrop;
 ```
 *(``using`` does not work) *
 
-#### Accessing characters.
+### Accessing characters.
 
 Characters are actually accessed differently. Due to the modularity of having more than one Strumline, and having more than one character in a Strumline, characters are accessible like this:
 ```hx
@@ -60,7 +60,7 @@ trace(boyfriend);
 trace(gf);
 ```
 
-#### Replacing ``mustHitSection``.
+### Replacing ``mustHitSection``.
 
 Sections do not exists, and therefore, ``mustHitSection`` no longer works. But, as a workaround, you can use ``curCameraTarget`` to replace it.
 

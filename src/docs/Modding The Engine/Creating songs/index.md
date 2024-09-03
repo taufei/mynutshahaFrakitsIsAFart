@@ -9,7 +9,7 @@
 
 Creating songs is very simple, there's currently 2 ways of making them, and we will be focusing on the in-engine way for now.
 
-### Creating the song itself.
+## Creating the song itself.
 
 ![alt text](index.png)
 
@@ -21,7 +21,7 @@ Creating a song using the New Song option when entering Chart Editor selection w
 Proceeding to the next page after inputting our audio files, we arrive at this. This is where we input our meta data, though also self-explanatory and not much to explain. <br>
 Pressing Save & Close and Congratulations your song has been made!
 
-### Creating difficulties for the song.
+## Creating difficulties for the song.
 
 Although we have made our song, it's still missing the charts. This is where creating difficulties take place.
 
@@ -29,7 +29,7 @@ Although we have made our song, it's still missing the charts. This is where cre
 
 Upon selecting New Difficulty, after selecting on our newly created song, brings us to this window. Now this looks overwhelming at first, but keep in mind you only have to focus on the top part the most. <br> Looking at the top part we can change the difficulty name, the stage and the scroll speed. Once you're done filling those you can proceed with pressing Save & Close, and your difficulty will be created. <br> *(If you're curious about the bottom part, see <a href="./Chart Editor Features.md">Chart Editor Features</a>)*
 
-### Opening the chart editor.
+## Opening the chart editor.
 
 ![alt text](index-3.png)
 
@@ -41,7 +41,7 @@ As you can see, there's a lot of options on how to save the chart, but for now o
 
 Now that you've learned to make and chart a song, you can proceed to <a href="./Chart Editor Features.md">Chart Editor Features</a>, to learn about advanced features.
 
-### ADDITIONAL. Different audio per difficulty.
+## ADDITIONAL. Different audio per difficulty.
 
 If you ever wanted to make an erect-esque difficulty, the engine allows for that without scripting it in. <br> Simply add the alternative audio files and rename it to have a ``-difficulty`` at the end. (``Voices-difficulty.ogg`` and ``Inst-difficulty.ogg``).
 

@@ -1,6 +1,6 @@
 # Pause and Game Over Scripts
 
-### Pause Scripts
+## Pause Scripts
 Pause Scripts can change the pause menu, either entirely or tiny bits of it.<br>
 To use one, you have to load it from a Script *(any script can do, even Song Scripts)*.
 ```hx
@@ -27,7 +27,7 @@ Important functions to use when coding the pause menu:
 - `close();` - Closes the pause menu, resumes gameplay.
 - `FlxG.switchState(new PlayState());` - Reloads the state, restarts the song.
 
-### Game Over Scripts
+## Game Over Scripts
 Game over scripts work the same as Pause Scripts, though presents some differences.
 This is how you load one:
 ```hx

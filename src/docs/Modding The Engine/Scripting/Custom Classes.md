@@ -23,7 +23,7 @@ function create() {
 }
 ```
 
-### Particularities
+## Particularities
 As of writing this, this system is very limited and also presents some defects. For example:
 - You cannot extend FlxGroups or other typed classes *(the ones that end with a ``<T>``)*.
 - Certain classes like FlxText needs to have their ``update`` function manually called.
