@@ -1,6 +1,6 @@
 # List of all script calls
 
-## All states
+## All states/substates
 
 ### preCreate(), create(), postCreate()
 
@@ -55,3 +55,7 @@
 ### onGameOver, onPostGameOver
 
 ### onVocalsResync
+
+## Global Scripts
+
+### focusLost(), focusGained()
