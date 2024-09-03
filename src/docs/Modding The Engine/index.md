@@ -178,4 +178,4 @@ Their parameters are as follows:
 Also, if you notice, you can wrap these with the ``menu`` node to separate the credits *(like probably having an artist submenu and stuff)*
 
 ### options.xml
-options.xml is explained in this article <a href="./Scripting/Custom options.png">Custom options</a>.
+options.xml is explained in this article <a href="./Scripting/Custom options.md">Custom options</a>.
