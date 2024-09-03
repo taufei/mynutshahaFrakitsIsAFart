@@ -1,2 +1,2 @@
-export
-node_modules
+export/*
+node_modules/*
