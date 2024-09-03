@@ -9,7 +9,7 @@ Here is documentation on functions of the engine (gameplay and modding), and how
         - <a href="./docs/Modding The Engine/Creating songs/Chart Editor Features.md">Chart Editor Features</a>
     - <a href="./docs/Modding The Engine/Creating characters/index.md">Creating characters</a>
         - <a href="./docs/Modding The Engine/Creating characters/Character Editor Features.md">Character Editor Features</a>
-    - <a href="./docs/Modding The Engine/Creating stages/index.md">Creating stages</a>
+    - <a href="./docs/Modding The Engine/Creating stages.md">Creating stages</a>
     - <a href="./docs/Modding The Engine/Cutscenes or Dialogues.md">Cutscenes/Dialogues</a>
     - <a href="./docs/Modding The Engine/Scripting/index.md">Scripting</a>
         - <a href="./docs/Modding The Engine/Scripting/PlayState Scripts/index.md">PlayState Scripts</a>

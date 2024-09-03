@@ -121,11 +121,12 @@ Here you'll find the essential tools, and some options for debug *(for example, 
 The next steps are covered in these articles:
 - <a href="./Creating songs/index.md">Creating songs</a>
 - <a href="./Creating characters/index.md">Creating characters</a>
-- <a href="./Creating stages/index.md">Creating stages</a>
+- <a href="./Creating stages.md">Creating stages</a>
 - <a href="./Scripting/index.md">Scripting</a>
 
 And when you're done with the basic steps you're finally ready for release, or if you want, go through more advanced stuff, like these:
 - <a href="./Cutscenes or Dialogues.md">Cutscenes/Dialogues</a>
+- <a href="./Scripting/Shaders.md">Shaders</a>
 - <a href="./Scripting/3D rendering.md">3D rendering</a>
 - <a href="./Scripting/Global Scripts.md">Global Scripts</a>
 - <a href="./Scripting/Custom options.md">Custom Options</a>
