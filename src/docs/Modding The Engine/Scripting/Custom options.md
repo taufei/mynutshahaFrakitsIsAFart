@@ -24,6 +24,7 @@ There already exists a template for you to look on, and it looks something like 
 
 </menu>
 ```
+<img src="./Custom options.png"/>
 You're likely wondering: "how does each type of option work?"
 That's what is about to be explained!!
 

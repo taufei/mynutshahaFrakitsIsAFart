@@ -6,7 +6,7 @@ while we have only covered the basic of charting in <a href="./index.md">Creatin
 ## More than 2.
 Songs in Codename Engine are more modular, in the sense that you're no longer restricted to just 2 strumlines. This means that, you can have as many strumlines and characters in the song as you like. Moreover, Girlfriend also gets her own strumline.
 
-<img src="Chart Editor Features.png"/>
+<img src="./Chart Editor Features.png"/>
 
 ## Moving around.
 
@@ -16,19 +16,19 @@ This is only an in-editor thing, but if you don't like how the Strumlines are or
 ## Hitsounds
 Pretty self explanatory, but you get to choose which Strumline should play a Hitsound when you get past a Note.
 
-<img src="Chart Editor Features-1.png"/>
+<img src="./Chart Editor Features-1.png"/>
 
 ## Waveforms.
 Waveforms allows for visualizing songs, and we have that too. You get 2 or more options depending on how many audio files you have in the songs.
 
-<img src="Chart Editor Features-2.png"/>
+<img src="./Chart Editor Features-2.png"/>
 
-<img src="Chart Editor Features-3.png"/>
+<img src="./Chart Editor Features-3.png"/>
 
 ## Editing Strumlines Data.
 Strumlines have more options than usual, being able to do things without scripting them in.
 
-<img src="Chart Editor Features-4.png"/>
+<img src="./Chart Editor Features-4.png"/>
 
 - **Characters**, is where you input your characters. As you can see, you can have more than one character per Strumline.
 - **Type**, is where you determine the type of the strumline. Player makes the Strumline playable by a player, while Opponent and Additional makes the Strumline be handled by a CPU.
@@ -49,42 +49,42 @@ For this, you have to obviously have different vocal audio files ready, with a s
 ## Events
 Events exist in the Chart Editor to avoid coding a lot of code for just a few events. Some of them are already built-in but you can also code your own *(see <a href="../Scripting/PlayState Scripts/Events or Notetype Scripts.md">Events/Notetype Scripts</a>)*.
 
-<img src="Chart Editor Features-5.png"/>
-<img src="Chart Editor Features-6.png"/>
+<img src="./Chart Editor Features-5.png"/>
+<img src="./Chart Editor Features-6.png"/>
 
 Each event has it's own parameters, instead of a pre-established number of parameters. <br> Events are also stackable, without having to painstakingly putting them close together.
 
-<img src="Chart Editor Features-8.png"/>
-<img src="Chart Editor Features-7.png"/>
+<img src="./Chart Editor Features-8.png"/>
+<img src="./Chart Editor Features-7.png"/>
 
 Events are also movable.<br>
 (insert gif of moving events)
 
 ## Notetypes
 
-<img src="Chart Editor Features-9.png"/>
+<img src="./Chart Editor Features-9.png"/>
 
 You can code your own notetypes, or use the pre-existing one *(though only 2 exists currently)*. They need to first be added to the Notetypes list before being able to use them. Afterwards you can simply select them from the dropdown here.
 
-<img src="Chart Editor Features-10.png"/>
+<img src="./Chart Editor Features-10.png"/>
 
 You can also change the graphic of a Notetype without programming, by putting the Notetype's spritesheet in ``images/game/notes``.
 
 ## Changing additional chart/meta data.
 
-<img src="Chart Editor Features-12.png"/>
+<img src="./Chart Editor Features-12.png"/>
 
 If you wish to change some data regarding the chart *(scroll speed, bpm, stage etc.)*, you can do so here.
 
 ## Editing chart data.
 
-<img src="Chart Editor Features-13.png"/>
+<img src="./Chart Editor Features-13.png"/>
 
 Editing chart data has only 2 options, and they're self explanatory.
 
 ## Editing metadata information.
 
-<img src="Chart Editor Features-14.png"/>
+<img src="./Chart Editor Features-14.png"/>
 
 Editing metadata information, is also self-explanatory, though you can notice this menu is similar to what you've seen in <a href="./index.md">Creating songs</a>, so this should be easy to figure out. Though you might also notice there's a new option, **Custom Values**. These are extra values that let's you set certain values specifically for the song *(for example, crediting someone for a song)*. This will be covered in <a href="../Scripting/PlayState Scripts/Gameplay Scripts.md">Gameplay Scripts</a>.
 
@@ -92,7 +92,7 @@ Editing metadata information, is also self-explanatory, though you can notice th
 
 The chart editor allows for multiple ways to save a chart. Currently, there's about 10 ways to save the information of a chart.
 
-<img src="Chart Editor Features-11.png"/>
+<img src="./Chart Editor Features-11.png"/>
 
 We know what the first option does, but what about those other ones? Well, here's what they do:
 - **Save Without Events** saves the chart without saving it's events.
