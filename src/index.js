@@ -4,11 +4,14 @@ var path = require("path");
 var Mustache = require('mustache');
 var jsdom = require("jsdom");
 
-if (!fs.existsSync("./export")) {
-	fs.mkdirSync("./export");
+var docsPath = process.argv[2] || 'docs/';
+
+if(!docsPath.endsWith('/')) {
+	docsPath += '/';
 }
-if (!fs.existsSync("./export/docs")) {
-	fs.mkdirSync("./export/docs");
+
+if (!fs.existsSync("./export/" + docsPath)) {
+	fs.mkdirSync("./export/" + docsPath, {recursive: true});
 }
 
 function generateSidebar(list, basePath = '') {
@@ -35,7 +38,7 @@ function generateSidebar(list, basePath = '') {
 var sidebarRaw = fs.readFileSync("./src/list.json", "utf8");
 var sidebar = generateSidebar(JSON.parse(sidebarRaw));
 
-fs.copyFileSync("./src/style.css", "./export/docs/style.css");
+fs.copyFileSync("./src/style.css", "./export/" + docsPath + "style.css");
 
 buildHtml();
 function buildHtml() {
@@ -49,10 +52,10 @@ function buildHtml() {
 		var parsedName = path.parse(i);
 		var ext = parsedName.ext;
 		console.log(i);
-		if (ext == "" && !fs.existsSync("./export/docs/" + i))
-			fs.mkdirSync("./export/docs/" + i);
+		if (ext == "" && !fs.existsSync("./export/" + docsPath + i))
+			fs.mkdirSync("./export/" + docsPath + i, {recursive: true});
 		if (ext == ".png" || ext == ".jpg" || ext == ".jpeg" || ext == ".gif") {
-			fs.copyFile("./src/docs/" + i, "./export/docs/" + i, () => {});
+			fs.copyFile("./src/docs/" + i, "./export/" + docsPath + i, () => {});
 		}
 		if (ext == ".md") {
 			var filename = parsedName.name;
@@ -70,18 +73,34 @@ function buildHtml() {
 
 			var dom = new jsdom.JSDOM(html);
 			var links = dom.window.document.querySelectorAll("[href]");
+			var imageSrcs = dom.window.document.querySelectorAll("[src]");
 
 			for(const link of links) {
 				//path.normalize(path.parse(i).dir + "/" + link.href);
 				link.href = link.href.replace(/.md$/, ".html").replace("./docs/", "./");
 				if(link.href.startsWith("/")) {
-					link.href = path.normalize("/docs/" + link.href.substring(1));
-				}
+					link.href = path.normalize("/" + docsPath + link.href.substring(1));
+				}/* else {
+					if(!link.href.startsWith("./")) {
+						link.href = "/" + path.normalize("./" + docsPath + link.href);
+					}
+				}*/
+			}
+
+			for(const image of imageSrcs) {
+				image.src = image.src.replace(/.md$/, ".html").replace("./docs/", "./");
+				if(image.src.startsWith("/")) {
+					image.src = path.normalize("/" + docsPath + image.src.substring(1));
+				}/* else {
+					if(!image.src.startsWith("./")) {
+						image.src = "/" + path.normalize("./" + docsPath + image.src);
+					}
+				}*/
 			}
 
 			//console.log(data);
 			fs.writeFileSync(
-				"./export/docs/" + i.replace(".md", ".html"),
+				"./export/" + docsPath + i.replace(".md", ".html"),
 				dom.serialize(),
 				'utf8'
 			);
