@@ -114,7 +114,7 @@ Once you're done looking at this structure, you can begin with recreating it in 
 
 Afterwards, you have to find the devtools (or basically just the editors), by going to the game's Main Menu and pressing 7.
 
-![alt text](index.png)
+![alt text](./index.png)
 
 Here you'll find the essential tools, and some options for debug *(for example, enabling the console in Debug Options)*
 
