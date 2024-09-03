@@ -4,15 +4,19 @@ var path = require("path");
 var Mustache = require('mustache');
 var jsdom = require("jsdom");
 var hljs = require('highlight.js');
+var haxeformat = require('./haxeformat.js');
+
+hljs.registerLanguage('haxe', haxeformat);
 
 var docsPath = process.argv[2] || 'docs/';
+var realPath = process.argv[3] || 'docs/';
 
 if(!docsPath.endsWith('/')) {
 	docsPath += '/';
 }
 
-if (!fs.existsSync("./export/" + docsPath)) {
-	fs.mkdirSync("./export/" + docsPath, {recursive: true});
+if (!fs.existsSync("./export/" + realPath)) {
+	fs.mkdirSync("./export/" + realPath, {recursive: true});
 }
 
 function generateSidebar(list, basePath = '') {
@@ -39,7 +43,7 @@ function generateSidebar(list, basePath = '') {
 var sidebarRaw = fs.readFileSync("./src/list.json", "utf8");
 var sidebar = generateSidebar(JSON.parse(sidebarRaw));
 
-fs.copyFileSync("./src/style.css", "./export/" + docsPath + "style.css");
+fs.copyFileSync("./src/style.css", "./export/" + realPath + "style.css");
 
 buildHtml();
 function buildHtml() {
@@ -53,10 +57,10 @@ function buildHtml() {
 		var parsedName = path.parse(i);
 		var ext = parsedName.ext;
 		console.log(i);
-		if (ext == "" && !fs.existsSync("./export/" + docsPath + i))
-			fs.mkdirSync("./export/" + docsPath + i, {recursive: true});
+		if (ext == "" && !fs.existsSync("./export/" + realPath + i))
+			fs.mkdirSync("./export/" + realPath + i, {recursive: true});
 		if (ext == ".png" || ext == ".jpg" || ext == ".jpeg" || ext == ".gif") {
-			fs.copyFile("./src/docs/" + i, "./export/" + docsPath + i, () => {});
+			fs.copyFile("./src/docs/" + i, "./export/" + realPath + i, () => {});
 		}
 		if (ext == ".md") {
 			var filename = parsedName.name;
@@ -83,7 +87,7 @@ function buildHtml() {
 					link.href = path.normalize("/" + docsPath + link.href.substring(1));
 				}/* else {
 					if(!link.href.startsWith("./")) {
-						link.href = "/" + path.normalize("./" + docsPath + link.href);
+						link.href = "/" + path.normalize("./" + realPath + link.href);
 					}
 				}*/
 			}
@@ -94,7 +98,7 @@ function buildHtml() {
 					image.src = path.normalize("/" + docsPath + image.src.substring(1));
 				}/* else {
 					if(!image.src.startsWith("./")) {
-						image.src = "/" + path.normalize("./" + docsPath + image.src);
+						image.src = "/" + path.normalize("./" + realPath + image.src);
 					}
 				}*/
 			}
@@ -107,7 +111,7 @@ function buildHtml() {
 
 			//console.log(data);
 			fs.writeFileSync(
-				"./export/" + docsPath + i.replace(".md", ".html"),
+				"./export/" + realPath + i.replace(".md", ".html"),
 				dom.serialize(),
 				'utf8'
 			);
