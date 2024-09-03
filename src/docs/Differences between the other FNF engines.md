@@ -1,6 +1,6 @@
 # Differences between the other FNF engines.
 
-### First of all, **this engine does not have built-in LUA scripting,** like <a href="https://github.com/ShadowMario/FNF-PsychEngine">Psych Engine</a>.
+### First of all, **this engine does not have built-in LUA scripting**, unlike <a href="https://github.com/ShadowMario/FNF-PsychEngine">Psych Engine</a>.
 
 Codename engine is based on **Base Game's week 6 code** (AKA. version 0.2.7.1), and shows heavy modifications from the original source (for example, optimized PlayState ~1400 lines, rewritten systems etc.). It is not a fork of any other engines and hasn't taken code from other engines either.
 
