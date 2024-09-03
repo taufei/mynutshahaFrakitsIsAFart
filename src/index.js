@@ -1,4 +1,7 @@
 var fs = require('fs');
+const { Remarkable } = require('remarkable');
+var path = require("path");
+var renderer = new Remarkable();
 
 var fileName = './export/index.html';
 if (!fs.existsSync("./export")) {
@@ -19,7 +22,13 @@ function buildHtml(req) {
     body += "<br><br>";
     for (i of filenames) {
       console.log(i);
-      if (i.endsWith(".md")) body += i + "<br>";
+      if (path.parse(i).ext == "" && !fs.existsSync("./export/" + i)) fs.mkdirSync("./export/" + i);
+      if (i.endsWith(".md")) { 
+        body += i + "<br>";
+        var data = fs.readFileSync("./src/docs/" + i, 'utf8');
+        //console.log(data);
+        fs.writeFileSync("./export/" + i.replace(".md", ".html"), renderer.render(data), 'utf8');
+      }
     }
   
     // concatenate header string
