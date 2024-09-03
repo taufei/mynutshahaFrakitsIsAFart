@@ -43,7 +43,7 @@ Some classes are pre-imported (FlxSprite, FlxMath, FlxAxis etc.), but for classe
 ```hx
 import flixel.addons.display.FlxBackdrop;
 ```
-*(``using`` does not work) *
+*(``using`` does not work, yet)*
 
 ### Accessing characters.
 
