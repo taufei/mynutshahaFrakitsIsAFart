@@ -20,7 +20,7 @@ function create(event){
     // your code here
 }
 ```
-*(``create``'s event has more parameters than that. Check for <a href="./All of the script calls.md">All of the script calls</a>, and for calls other than ``create``)*<br>
+*(``create``'s event has more parameters than that. Check for <a href="../All of the script calls.md">All of the script calls</a>, and for calls other than ``create``)*<br>
 This script will prevent the base pause menu from loading and allows you to add whatever you want to it.
 
 Important functions to use when coding the pause menu:
@@ -48,4 +48,4 @@ function create(event) {
 }
 ```
 
-``create``'s event has even more parameters for changing SFX and other stuff. Check for <a href="./All of the script calls.md">All of the script calls</a>, and for calls other than ``create``.
+``create``'s event has even more parameters for changing SFX and other stuff. Check for <a href="../All of the script calls.md">All of the script calls</a>, and for calls other than ``create``.

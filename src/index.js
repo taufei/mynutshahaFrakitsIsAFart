@@ -26,12 +26,12 @@ function generateSidebar(list, basePath = '') {
         if (item.length == 1) {
 			item = item[0];
             const filePath = basePath ? `/${basePath}/${item}.html` : `/${item}.html`;
-            html += `<li><a href="${filePath}">${item}</a></li>\n`;
+            html += `<li><a href="${filePath}">${item.replace(" or ", "/")}</a></li>\n`;
         } else if (item.length == 2) {
             const [title, children] = item;
             const subPath = basePath ? `${basePath}/${title}` : title;
 
-            html += `<li><a href="/${subPath}/index.html">${title}</a>\n<ul>\n`;
+            html += `<li><a href="/${subPath}/index.html">${title.replace(" or ", "/")}</a>\n<ul>\n`;
             html += generateSidebar(children, subPath);
             html += `</ul>\n</li>\n`;
         }

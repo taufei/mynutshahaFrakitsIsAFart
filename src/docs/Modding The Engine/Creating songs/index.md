@@ -1,10 +1,3 @@
-<style> 
-    br {
-            display: block;
-            content: "";
-            margin-top: 7px;
-    }
-</style>
 # Creating Songs.
 
 Creating songs is very simple, there's currently 2 ways of making them, and we will be focusing on the in-engine way for now.

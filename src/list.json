@@ -19,7 +19,7 @@
                 ["Character or Stage Scripts"],
                 ["Pause or Game Over Scripts"]
             ]],
-            ["State Scripts"],
+            ["State or Substate Scripts"],
             ["Global Scripts"],
             ["Shaders"],
             ["Using hxvlc for videos"],

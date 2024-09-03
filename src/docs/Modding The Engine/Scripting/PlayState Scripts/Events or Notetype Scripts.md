@@ -1,9 +1,5 @@
-<style>
-    img {
-        width: 10vw
-    }
-</style>
 # Events/Notetype Scripts
+
 ## Events
 Events can be found in ``./data/events``. There's currently 3 files used for events: a script file, a JSON file to determine the parameters of it, and an image file for it's icon. *(they all need to have the same name as the event)*
 

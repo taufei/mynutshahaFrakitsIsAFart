@@ -3,29 +3,29 @@
 while we have only covered the basic of charting in <a href="./index.md">Creating songs</a>, we will cover the additional chart editor features here, in no particular order.
 
 ## Strumlines.
-## More than 2.
+### More than 2.
 Songs in Codename Engine are more modular, in the sense that you're no longer restricted to just 2 strumlines. This means that, you can have as many strumlines and characters in the song as you like. Moreover, Girlfriend also gets her own strumline.
 
 <img src="./Chart Editor Features.png"/>
 
-## Moving around.
+### Moving around.
 
 This is only an in-editor thing, but if you don't like how the Strumlines are ordered, and prefer a different order, you can reposition them easily with just this lock button.<br>
 (insert a gif here)
 
-## Hitsounds
+### Hitsounds
 Pretty self explanatory, but you get to choose which Strumline should play a Hitsound when you get past a Note.
 
 <img src="./Chart Editor Features-1.png"/>
 
-## Waveforms.
+### Waveforms.
 Waveforms allows for visualizing songs, and we have that too. You get 2 or more options depending on how many audio files you have in the songs.
 
 <img src="./Chart Editor Features-2.png"/>
 
 <img src="./Chart Editor Features-3.png"/>
 
-## Editing Strumlines Data.
+### Editing Strumlines Data.
 Strumlines have more options than usual, being able to do things without scripting them in.
 
 <img src="./Chart Editor Features-4.png"/>
@@ -38,7 +38,7 @@ Strumlines have more options than usual, being able to do things without scripti
 - **Scroll Speed and that switch with a long name in it** determines if this Strumline should use a scroll speed, separately from the other Strumlines.
 - **Vocal Suffix** is covered in this next section.
 
-## Multi-Vocals
+### Multi-Vocals
 You can have different vocal audio files per Strumline. As seen previously, there's an option to set Vocal Suffixes on a Strumline.
 
 For this, you have to obviously have different vocal audio files ready, with a suffix at the end *(for example ``Voices-bf.ogg`` has a ``-bf`` suffix at the end)*
@@ -46,7 +46,7 @@ For this, you have to obviously have different vocal audio files ready, with a s
 <img src="./Chart Editor Features-15.png"/>
 
 ## Events & Notetypes.
-## Events
+### Events
 Events exist in the Chart Editor to avoid coding a lot of code for just a few events. Some of them are already built-in but you can also code your own *(see <a href="../Scripting/PlayState Scripts/Events or Notetype Scripts.md">Events/Notetype Scripts</a>)*.
 
 <img src="./Chart Editor Features-5.png"/>
@@ -60,7 +60,7 @@ Each event has it's own parameters, instead of a pre-established number of param
 Events are also movable.<br>
 (insert gif of moving events)
 
-## Notetypes
+### Notetypes
 
 <img src="./Chart Editor Features-9.png"/>
 
@@ -76,13 +76,13 @@ You can also change the graphic of a Notetype without programming, by putting th
 
 If you wish to change some data regarding the chart *(scroll speed, bpm, stage etc.)*, you can do so here.
 
-## Editing chart data.
+### Editing chart data.
 
 <img src="./Chart Editor Features-13.png"/>
 
 Editing chart data has only 2 options, and they're self explanatory.
 
-## Editing metadata information.
+### Editing metadata information.
 
 <img src="./Chart Editor Features-14.png"/>
 
