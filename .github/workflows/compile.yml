@@ -30,7 +30,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - run: npm install
-      - run: npm run build
+      - run: npm run build New-folder/docs/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
