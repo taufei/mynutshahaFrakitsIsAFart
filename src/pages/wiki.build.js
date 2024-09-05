@@ -5,6 +5,8 @@ var jsdom = require("jsdom");
 var fs = require('fs');
 var hljs = require('highlight.js');
 
+var { fixHtmlRefs } = require("../utils.js");
+
 var header = fs.readFileSync("./src/pages/templates/header.html", 'utf8');
 
 function generateSidebar(list, basePath = '', selected = null) {
@@ -81,53 +83,7 @@ function buildHtml(_pageDir, _exportPath) {
 				}
 			});
 
-			var dom = new jsdom.JSDOM(html);
-			var links = dom.window.document.querySelectorAll("[href]");
-			var imageSrcs = dom.window.document.querySelectorAll("[src]");
-
-			for(const link of links) {
-				//path.normalize(path.parse(i).dir + "/" + link.href);
-				link.href = link.href.replace(/.md$/, ".html").replace("./" + wikiDir, "./");
-				if(link.href.startsWith("/")) {
-					link.href = path.normalize("/" + pageDir + link.href.substring(1));
-				}/* else {
-					if(!link.href.startsWith("./")) {
-						link.href = "/" + path.normalize("./" + exportPath + link.href);
-					}
-				}*/
-
-				if(link.href.startsWith("root/")) {
-					link.href = path.normalize("/" + _pageDir + link.href.substring(5));
-				}
-			}
-
-			for(const image of imageSrcs) {
-				image.src = image.src.replace(/.md$/, ".html").replace("./" + wikiDir, "./");
-				if(image.src.startsWith("/")) {
-					image.src = path.normalize("/" + _pageDir + image.src.substring(1));
-				}/* else {
-					if(!image.src.startsWith("./")) {
-						image.src = "/" + path.normalize("./" + exportPath + image.src);
-					}
-				}*/
-			}
-
-			var codeblocks = dom.window.document.querySelectorAll('pre code[class^="language-"]');
-			for(const codeblock of codeblocks) {
-				codeblock.innerHTML = hljs.highlight(codeblock.textContent, {language: codeblock.className.split("-")[1]}).value;
-				codeblock.parentElement.classList.add("hljs");
-			}
-
-			// select all non hljs codeblocks
-			var inlineCodeblocks = dom.window.document.querySelectorAll('code:not([class^="language-"])');
-			for(const codeblock of inlineCodeblocks) {
-				codeblock.classList.add("inline-code");
-			}
-
-			var inlineCodeblocks = dom.window.document.querySelectorAll('pre code:not([class^="language-"])');
-			for(const codeblock of inlineCodeblocks) {
-				codeblock.parentElement.classList.add("inline-code");
-			}
+			var dom = fixHtmlRefs(html, pageDir, _pageDir);
 
 			//console.log(data);
 			fs.writeFileSync(
