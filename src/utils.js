@@ -8,6 +8,7 @@ function fixHtmlRefs(html, pageDir, _pageDir) {
     var imageSrcs = dom.window.document.querySelectorAll("[src]");
 
     for(const link of links) {
+        link.href = link.href.replace(/.md$/, ".html").replace("./" + pageDir, "./");
         if(link.href.startsWith("/")) {
             link.href = path.normalize("/" + pageDir + link.href.substring(1));
         }
@@ -17,6 +18,7 @@ function fixHtmlRefs(html, pageDir, _pageDir) {
     }
 
     for(const image of imageSrcs) {
+        image.src = image.src.replace(/.md$/, ".html").replace("./" + pageDir, "./");
         if(image.src.startsWith("/")) {
             image.src = path.normalize("/" + _pageDir + image.src.substring(1));
         }
