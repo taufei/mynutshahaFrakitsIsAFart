@@ -63,7 +63,6 @@ Avoid using `0.` or `.0` for floats, instead, use `0.0` (ending the float number
 Avoid using switch cases, and use if statements where possible.
 *(switch cases are not supported on macOS or miscellaneous platforms)*
 
-
 Ints are not recommended when initiating vectors. *(ex, vec2(1, 1) is not supported on certain platforms)*.
 Instead, use floats where it's expected. Like mod(1.0, 2.0) instead of mod(1, 2)
 

@@ -124,6 +124,11 @@ function buildHtml(_pageDir, _exportPath) {
 				codeblock.classList.add("inline-code");
 			}
 
+			var inlineCodeblocks = dom.window.document.querySelectorAll('pre code:not([class^="language-"])');
+			for(const codeblock of inlineCodeblocks) {
+				codeblock.parentElement.classList.add("inline-code");
+			}
+
 			//console.log(data);
 			fs.writeFileSync(
 				exportPath + i.replace(".md", ".html"),
