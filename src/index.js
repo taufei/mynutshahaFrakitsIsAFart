@@ -56,7 +56,6 @@ function buildHtml() {
 	for (i of filenames) {
 		var parsedName = path.parse(i);
 		var ext = parsedName.ext;
-		console.log(i);
 		if (ext == "" && !fs.existsSync("./export/" + realPath + i))
 			fs.mkdirSync("./export/" + realPath + i, {recursive: true});
 		if (ext == ".png" || ext == ".jpg" || ext == ".jpeg" || ext == ".gif") {
@@ -67,8 +66,13 @@ function buildHtml() {
 			var vars = {
 				title: filename.replace(".md", ""),
 				content: renderer.render(fs.readFileSync("./src/docs/" + i, 'utf8')),
-				sidebar: sidebar
+				sidebar: sidebar.replace(`href="/${i.replace(".md", ".html").replaceAll("\\", "/")}"`, `href="/${i.replace(".md", ".html").replaceAll("\\", "/")}" id="selected"`)
 			};
+			console.log(i);
+			if (i == "/Modding The Engine/index.html") {
+				console.log(sidebar);
+				console.log(`href="/${i.replace(".md", ".html")}" id="selected"`);
+			}
 
 			var html = Mustache.render(templatePage, vars, null, {
 				escape: function(text) {
