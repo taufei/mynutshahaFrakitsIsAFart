@@ -21,6 +21,18 @@ camGame.addShader(shader);
 ```
 
 ## Remember that we only support flixel/openfl shaders.
+A basic shader looks like this:
+```glsl
+#pragma header //important to prevent your game from crashing
+function main() {
+    vec2 uv = openfl_TextureCoordv;
+
+    vec4 col = flixel_texture2D(bitmap, uv);
+
+    gl_FragColor = col;
+}
+```
+
 If you got a shader from a site called https://shadertoy.com, you have to manually convert them to flixel/openfl accepted format.
 
 Here's a sample shader that renders a basic texture.
