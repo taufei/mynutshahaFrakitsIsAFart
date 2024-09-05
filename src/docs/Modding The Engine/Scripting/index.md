@@ -25,7 +25,7 @@ var time:Float;
 if (FlxG.sound.music != null) time = FlxG.sound.music.time;
 else time = 0;
 
-time = FlG.sound?.music ?? 0;
+time = FlxG.sound?.music ?? 0;
 ```
 ```hx
 if (FlxG.save.data.isOpen == null) FlxG.save.data.isOpen = true;
