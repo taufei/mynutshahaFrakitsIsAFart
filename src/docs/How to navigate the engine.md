@@ -31,6 +31,7 @@ Now going back to the Main Menu and choosing the "Options" option, you're greete
 <h4 id="Controls Menu">Controls Menu</h4>
 
 <img src="./How to navigate the engine-6.png"/>
+
 Set your controls here. Pretty self-explanatory, but as you can see you also get to bind a second keybind for each action. And you also get to change controls for actions outside of gameplay.
 
 ## Gameplay
