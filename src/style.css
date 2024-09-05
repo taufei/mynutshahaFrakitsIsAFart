@@ -56,9 +56,20 @@ li > a {
 
 code {
   background: #282c34;
-  padding: 0em 0.4em;
   border-radius: 8px;
+}
+
+code.inline-code {
+  padding: 0em 0.4em;
   color: #d19a66;
+
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+pre.hljs code * {
+  font-family: monospace;
+  white-space: pre-wrap;
 }
 
 .container {
@@ -117,7 +128,11 @@ li>a {
 li>a:hover {
   background: rgba(255, 255, 255, 0.05);
 }
-.sidebar-list-item>#selected {
+
+.sidebar-list-item>.selected:hover {
+  background: rgb(166, 86, 241);
+}
+.sidebar-list-item>.selected {
   background: blueviolet;
 }
 

@@ -4,12 +4,12 @@ Stages are defined via XML files, similar to <a href="./Creating characters/inde
 The default stage XML looks something like this:
 ```xml
 <stage zoom="0.9" name="stage" folder="stages/default/" startCamPosY="600" startCamPosX="1000">
-<sprite name="bg" x="-600" y="-200" sprite="stageback" scroll="0.9"/>
-<sprite name="stageFront" x="-600" y="600" sprite="stagefront" scroll="0.9"/>
-<girlfriend/>
-<dad/>
-<boyfriend/>
-<sprite name="stageCurtains" x="-500" y="-300" sprite="stagecurtains" scroll="1.3"/>
+    <sprite name="bg" x="-600" y="-200" sprite="stageback" scroll="0.9"/>
+    <sprite name="stageFront" x="-600" y="600" sprite="stagefront" scroll="0.9"/>
+    <girlfriend/>
+    <dad/>
+    <boyfriend/>
+    <sprite name="stageCurtains" x="-500" y="-300" sprite="stagecurtains" scroll="1.3"/>
 </stage>
 ```
 There's a lot to pack but we will explain what's going on here.

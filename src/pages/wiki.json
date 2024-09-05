@@ -1,0 +1,35 @@
+[
+    ["index", "Home"],
+    ["How to navigate the engine"],
+    ["Differences between the other FNF engines"],
+    ["Modding The Engine/index", "Modding The Engine", [
+        ["Creating songs/index", "Creating songs", [
+            ["Chart Editor Features"]
+        ]],
+        ["Creating characters/index", "Creating characters", [
+            ["Character Editor Features"]
+        ]],
+        ["Creating stages"],
+        ["Cutscenes or Dialogues", "Cutscenes/Dialogues"],
+        ["Scripting/index", "Scripting", [
+            ["PlayState Scripts/index", "PlayState Scripts", [
+                ["Gameplay Scripts"],
+                ["Events or Notetype Scripts", "Events/Notetype Scripts"],
+                ["Cutscenes or Dialogue Scripts", "Cutscenes/Dialogue Scripts"],
+                ["Character or Stage Scripts", "Character/Stage Scripts"],
+                ["Pause or Game Over Scripts", "Pause/Game Over Scripts"]
+            ]],
+            ["State or Substate Scripts", "State/Substate Scripts"],
+            ["Global Scripts"],
+            ["Shaders"],
+            ["Using hxvlc for videos"],
+            ["Custom options"],
+            ["Custom Classes"],
+            ["3D rendering"],
+            ["Useful script snippets for modders"],
+            ["Scripted Assets Libraries"],
+            ["NDLL Scripting"]
+        ]],
+        ["Hardcoding"]
+    ]]
+]
