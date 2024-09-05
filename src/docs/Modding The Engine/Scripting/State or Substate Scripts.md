@@ -17,6 +17,7 @@ function postCreate() {
 }
 ```
 This code results in the menu looking like this.
+
 <img src="./State or Substate Scripts.png"/>
 
 You can do this with every State/Substate of course, but keep in mind you have to study the state's code first before modifying it. *(you can find the code in <a href="https://github.com/FNF-CNE-Devs/CodenameEngine">Codename Engine's Repository</a>)*<br>

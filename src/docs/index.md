@@ -1,4 +1,4 @@
-# Welcome to the Codename Engine Docs
+# Welcome to the Codename Engine Wiki
 Here is documentation on functions of the engine (gameplay and modding), and how to use them for your mod.
 
 ### Navigation is done via either the sidebar, or by using this chart below:
