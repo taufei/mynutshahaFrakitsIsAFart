@@ -19,29 +19,47 @@ if (!fs.existsSync("./export/" + realPath)) {
 	fs.mkdirSync("./export/" + realPath, {recursive: true});
 }
 
-function generateSidebar(list, basePath = '') {
+function generateSidebar(list, basePath = '', selected = null) {
     let html = '';
 
     list.forEach(item => {
-        if (item.length == 1) {
+		var visualName = item[0];
+		if(item.length > 2 && item[2] != null) {
+			visualName = item[2];
+		}
+		var hasChildren = item.length > 1 && item[1] != null;
+		html += `<li class="sidebar-list-item">`;
+		var href = hasChildren ? `/${basePath}/${item[0]}/index.md` : `/${basePath}/${item[0]}.md`;
+		var isSelected = href.replace(/^\/+/g, "") == selected.replace(/^\/+/g, "");
+		var classAttr = isSelected ? " class=\"selected\"" : "";
+		html += `<a href="${href}"${classAttr}>${visualName}</a>`;
+
+		if(hasChildren) {
+			const subPath = basePath ? `${basePath}/${item[0]}` : item[0];
+			html += `<ul class="sidebar-unordered-list">\n`;
+			html += generateSidebar(item[1], subPath, selected);
+			html += `</ul>\n`;
+		}
+		html += `</li>\n`;
+        /*if (item.length == 1) {
 			item = item[0];
             const filePath = basePath ? `/${basePath}/${item}.html` : `/${item}.html`;
-            html += `<li class="sidebar-list-item"><a href="${filePath}">${item.replace(" or ", "/")}</a></li>\n`;
-        } else if (item.length == 2) {
+            html += `<li class="sidebar-list-item"><a href="${filePath}">${visualName}</a></li>\n`;
+        } else if (hasChildren) {
             const [title, children] = item;
             const subPath = basePath ? `${basePath}/${title}` : title;
 
-            html += `<li class="sidebar-list-item"><a href="/${subPath}/index.html">${title.replace(" or ", "/")}</a>\n<ul class="sidebar-unordered-list">\n`;
+            html += `<li class="sidebar-list-item"><a href="/${subPath}/index.html">${visualName}</a>\n<ul class="sidebar-unordered-list">\n`;
             html += generateSidebar(children, subPath);
             html += `</ul>\n</li>\n`;
-        }
+        }*/
     });
 
     return html;
 }
 
 var sidebarRaw = fs.readFileSync("./src/list.json", "utf8");
-var sidebar = generateSidebar(JSON.parse(sidebarRaw));
+var parsedSidebar = JSON.parse(sidebarRaw);
 
 fs.copyFileSync("./src/style.css", "./export/" + realPath + "style.css");
 
@@ -63,16 +81,14 @@ function buildHtml() {
 		}
 		if (ext == ".md") {
 			var filename = parsedName.name;
+
+			var sidebar = generateSidebar(parsedSidebar, "", i);
 			var vars = {
 				title: filename.replace(".md", ""),
 				content: renderer.render(fs.readFileSync("./src/docs/" + i, 'utf8')),
-				sidebar: sidebar.replace(`href="/${i.replace(".md", ".html").replaceAll("\\", "/")}"`, `href="/${i.replace(".md", ".html").replaceAll("\\", "/")}" id="selected"`)
+				sidebar: sidebar
 			};
 			console.log(i);
-			if (i == "/Modding The Engine/index.html") {
-				console.log(sidebar);
-				console.log(`href="/${i.replace(".md", ".html")}" id="selected"`);
-			}
 
 			var html = Mustache.render(templatePage, vars, null, {
 				escape: function(text) {

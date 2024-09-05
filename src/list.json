@@ -1,5 +1,5 @@
 [
-    ["index"],
+    ["index", null, "Home"],
     ["How to navigate the engine"],
     ["Differences between the other FNF engines"],
     ["Modding The Engine", [
@@ -10,16 +10,16 @@
             ["Character Editor Features"]
         ]],
         ["Creating stages"],
-        ["Cutscenes or Dialogues"],
+        ["Cutscenes or Dialogues", null, "Cutscenes/Dialogues"],
         ["Scripting", [
             ["PlayState Scripts", [
                 ["Gameplay Scripts"],
-                ["Events or Notetype Scripts"],
-                ["Cutscenes or Dialogue Scripts"],
-                ["Character or Stage Scripts"],
-                ["Pause or Game Over Scripts"]
+                ["Events or Notetype Scripts", null, "Events/Notetype Scripts"],
+                ["Cutscenes or Dialogue Scripts", null, "Cutscenes/Dialogue Scripts"],
+                ["Character or Stage Scripts", null, "Character/Stage Scripts"],
+                ["Pause or Game Over Scripts", null, "Pause/Game Over Scripts"]
             ]],
-            ["State or Substate Scripts"],
+            ["State or Substate Scripts", null, "State/Substate Scripts"],
             ["Global Scripts"],
             ["Shaders"],
             ["Using hxvlc for videos"],
