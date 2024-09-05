@@ -2,19 +2,19 @@
 Shaders are pretty easy to do due to our shader backend that does the hard work for us. All you have to do is make a file in ``./shaders/``. Our system supports both fragment and vertex shaders to change both pixels and vertices. *(for example ``./shaders/example.frag`` and ``./shaders/example.vert``)*
 
 To use them, you have to script them in *(obviously)*. To do so, look at these pieces of code.
-```hx
+```haxe
 camHUD.addShader(new CustomShader("example")); //adds a shader onto the camera.
 
 FlxG.camera.addShader(new CustomShader("example")); //ditto but on FlxG.camera.
 
 FlxG.game.addShader(new CustomShader("example")); //adds a shader onto the entire game (persists between states).
 
-sprite.shader = new CustomShader("example"); // sets a sprite's shader to a shader. (only one shader can be added per sprite) 
+sprite.shader = new CustomShader("example"); // sets a sprite's shader to a shader. (only one shader can be added per sprite)
 
 boyfriend.shader = new CustomShader("example"); // ditto but on characters.
 ```
 If your shader contains uniform variables that needs to be set, you can do so like this:
-```hx
+```haxe
 var shader = new CustomShader("example");
 shader.intensity = 0.4;
 camGame.addShader(shader);
@@ -63,6 +63,7 @@ Avoid using `0.` or `.0` for floats, instead, use `0.0` (ending the float number
 Avoid using switch cases, and use if statements where possible.
 *(switch cases are not supported on macOS or miscellaneous platforms)*
 
+
 Ints are not recommended when initiating vectors. *(ex, vec2(1, 1) is not supported on certain platforms)*.
 Instead, use floats where it's expected. Like mod(1.0, 2.0) instead of mod(1, 2)
 
@@ -79,6 +80,7 @@ Avoid using `gl_` at the start of your variables *(ex, `float gl_Number` can bre
 Applying defaults to uniforms is not possible, so please set the defaults in your shader constructor or after initializing the shader.
 
 Avoid using `<number>u` *(ex, 8u)*
+
 Avoid initializing variables with the name `input` or `sample`, as those cause the shader to stop working on AMD gpus or other platforms.
 
 Avoid using the % operator and instead use the mod function.

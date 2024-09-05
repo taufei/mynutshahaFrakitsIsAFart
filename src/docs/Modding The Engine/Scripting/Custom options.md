@@ -52,7 +52,7 @@ All option types (except for `menu`) share 2 common properties:
         - `value` - This is the actual data/value applied to the option when chosen
 
 Accessing them in Scripts is done via ``FlxG.save.data``, as you can see below.
-```hx
+```haxe
 var checkboxExample = FlxG.save.data.checkboxExample;
 ```
 

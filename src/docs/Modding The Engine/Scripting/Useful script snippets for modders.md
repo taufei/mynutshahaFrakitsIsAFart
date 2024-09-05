@@ -8,7 +8,7 @@ idk bro
 ## Global Scripts
 
 ## Replace pre-existing states with custom states.
-```hx
+```haxe
 var redirectStates:Map<FlxState, String> = [
     TitleState => "CustomTitleState"
 ];

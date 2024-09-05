@@ -8,7 +8,7 @@ To get started, make a Script in ``./data/states`` and name it corresponding to 
 
 For example, if you decide to change the Main Menu, make a Script like this ``./data/states/MainMenuState.hx``<br>
 A basic Main Menu modification looks like this:
-```hx
+```haxe
 function postCreate() {
     forceCenterX = false; // disable the code that centers the menu buttons.
     for (i=>button in menuItems.members) {
@@ -27,10 +27,10 @@ You can do this with every State/Substate of course, but keep in mind you have t
 You can also create entirely custom ones too! By putting them in the same ``./data/states/`` folder, you create new ModStates/ModSubstates.
 
 Accessing them is done via this piece of code:
-```hx
+```haxe
 FlxG.switchState(new ModState("MyCustomState")); // assuming we have made a new Script ./data/states/MyCustomState.hx
 ```
 or this code
-```hx
+```haxe
 openSubstate(new ModSubstate("MyCustomSubstate")) // assuming we have made a new Script ./data/states/MyCustomSubstate.hx
 ```

@@ -3,7 +3,7 @@
 Custom classes can be made either inside the script you need it in or you can make a script file coresponding with the name of the class in ``./source``, and using `import` to import it.
 
 Here is a basic Song Script code that uses it:
-```hx
+```haxe
 class SpecialSprite extends FlxSprite {
     public var customValue:String = null;
     public function new(x:Float, y:Float, customValue:String) {

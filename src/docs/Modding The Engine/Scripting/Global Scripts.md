@@ -3,14 +3,14 @@ Global Scripts always run during the game, doesn't matter in which state or wher
 You can make one by creating a file in ``./data/`` called ``global.hx``
 
 Global Scripts are useful for certain things, for example, here's the default code in the base's global script:
-```hx
+```haxe
 function update(elapsed:Float)
 	if (FlxG.keys.justPressed.F5) FlxG.resetState();
 ```
 Which makes it so that pressing F5 will refresh any state you are currently in.
 
 Or a different example:
-```hx
+```haxe
 static var cashAmount:Float = 0;
 static var playerTitle = "poor";
 

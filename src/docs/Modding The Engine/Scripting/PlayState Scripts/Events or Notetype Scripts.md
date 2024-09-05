@@ -58,7 +58,7 @@ There's a lot of them but we'll go over each one.
 <img src="./Events or Notetype Scripts-1.png"/>
 
 Now that we have established the Parameters, we can go over scripting the event now. A basic flash camera event looks something like this:
-```hx
+```haxe
 function onEvent(e) {
     var params:Array = e.event.params;
     if (e.event.name == "Flash Camera") {
@@ -82,7 +82,7 @@ Putting the sprites in ``./images/game/notes`` and naming them after the notetyp
 
 Writing a script for the notetypes is very easy. Though only one script is ran for all existing notetypes instead of each note, you can still code actions for them. <br>
 For example here is code for triggering actions when the player presses it:
-```hx
+```haxe
 function onPlayerHit(event) {
     if (event.noteType == "Damage Note") {
         health -= 0.5;

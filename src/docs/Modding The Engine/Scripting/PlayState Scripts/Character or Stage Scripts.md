@@ -7,7 +7,7 @@ You can create one of those by making a Script file alongside your character's X
 In these scripts you don't need to specify the character, since the character becomes the Script's parent.
 
 Here's an example of a Character Script that makes the character spin..:
-```hx
+```haxe
 function update(elapsed) {
     angle += elapsed * 10;
 }
@@ -18,7 +18,7 @@ Creating one of those also goes next to the Stage XML data file *(``./data/stage
 This script also takes the Stage as it's parent, thus not needing to use ``stage.getSprite()``, instead, sprites becomes the variables
 
 Here's an example:
-```hx
+```haxe
 function postCreate() {
     // animatedObject has already been defined in the XML file.
     animatedObject.frames = Paths.getFrames("animatedObject");

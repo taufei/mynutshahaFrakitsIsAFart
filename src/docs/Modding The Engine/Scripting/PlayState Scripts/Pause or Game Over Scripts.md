@@ -3,13 +3,13 @@
 ## Pause Scripts
 Pause Scripts can change the pause menu, either entirely or tiny bits of it.<br>
 To use one, you have to load it from a Script *(any script can do, even Song Scripts)*.
-```hx
+```haxe
 PauseSubState.script = 'data/scripts/pause';
 ```
 This code points to the script that can be found in ``./data/scripts/`` and is called ``pause.hx``.
 
 You can do many things in this script. For example, this is how you can override it and have your own entirely custom pause menu here:
-```hx
+```haxe
 function create(event){
     event.cancel();
 
@@ -30,13 +30,13 @@ Important functions to use when coding the pause menu:
 ## Game Over Scripts
 Game over scripts work the same as Pause Scripts, though presents some differences.
 This is how you load one:
-```hx
+```haxe
 GameOverSubstate.script = "data/scripts/gameover"
 ```
 This code points to the script that can be found in ``./data/scripts/`` and is called ``gameover.hx``.
 
 Here's an example of playing a video when the player dies:
-```hx
+```haxe
 function create(event) {
     event.cancel(); // cancels out initializing characters and stuff
 

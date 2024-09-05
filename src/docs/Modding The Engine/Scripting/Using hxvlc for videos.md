@@ -7,7 +7,7 @@ To get started, you get 2 choices:
 - ``FlxSpriteVideo`` which runs based on an FlxSprite.
 
 Using an FlxVideo looks something like this:
-```hx
+```haxe
 var video:FlxVideo = new FlxVideo();
 video.onEndReached.add(function():Void
 {
@@ -21,7 +21,7 @@ if (video.load(Paths.video("video")))
 	new FlxTimer().start(0.001, (_) -> video.play());
 ```
 And using an FlxVideoSprite looks like this:
-```hx
+```haxe
 var video:FlxVideoSprite = new FlxVideoSprite(0, 0);
 video.antialiasing = true;
 video.bitmap.onFormatSetup.add(function():Void

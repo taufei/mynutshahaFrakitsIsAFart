@@ -15,19 +15,19 @@ The console helps you track down errors and bugs with your script. To access it,
 Things like ``?.``, ``??`` and ``??=`` are accepted in our HScript language.<br>
 Using those is beneficial as they prove to be very useful to keeping your code clean.<br>
 Example usage:
-```hx
+```haxe
 if (FlxG.sound.music != null) trace(FlxG.sound.music.time);
 
 trace(FlxG.sound?.music);
 ```
-```hx
+```haxe
 var time:Float;
 if (FlxG.sound.music != null) time = FlxG.sound.music.time;
 else time = 0;
 
 time = FlxG.sound?.music ?? 0;
 ```
-```hx
+```haxe
 if (FlxG.save.data.isOpen == null) FlxG.save.data.isOpen = true;
 
 FlxG.save.data.isOpen ??= true;
@@ -37,7 +37,7 @@ FlxG.save.data.isOpen ??= true;
 
 Scripting relies heavily on **Events**, which triggers callbacks and returns a struct of parameters, basically unclogging the parameter list of functions.<br>
 Which means, handling a note hit looks something like this:
-```hx
+```haxe
 function onNoteHit(event) {
     trace(event.note); // the note that has been hit
     trace(event.score); // how much score gained from this
@@ -52,7 +52,7 @@ Despite all of that, functions like ``update``, ``beatHit``, ``stepHit`` still r
 ### Class importing.
 
 Some classes are pre-imported (FlxSprite, FlxMath, FlxAxis etc.), but for classes that aren't pre-imported, it's still possible to import like this: 
-```hx
+```haxe
 import flixel.addons.display.FlxBackdrop;
 ```
 *(``using`` does not work, yet)*
