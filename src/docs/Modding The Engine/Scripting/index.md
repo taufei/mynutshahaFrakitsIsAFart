@@ -1,6 +1,7 @@
 # Scripting
 
-The engine's biggest feature yet, scripting. Currently, you can script in HScript *(haxe scripting language)*, or in NDLL format *(compiled C++ code)*, but mainly in HScript, which should make the experience similar to coding in source code.<br>
+The engine's biggest feature yet, scripting.<br>
+Currently, you can script in HScript *(haxe scripting language)*, or in NDLL format *(compiled C++ code)*, but mainly in HScript, which should make the experience similar to coding in source code.<br>
 Scripting can change not only gameplay, but also menus and other engine functions.<br>
 
 We will focus on writting in HScript, so whenever you have to create a script, the filename has to end with an ``.hx``.<br>

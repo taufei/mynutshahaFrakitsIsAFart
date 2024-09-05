@@ -22,7 +22,6 @@ Pretty self explanatory, but you get to choose which Strumline should play a Hit
 Waveforms allows for visualizing songs, and we have that too. You get 2 or more options depending on how many audio files you have in the songs.
 
 <img src="./Chart Editor Features-2.png"/>
-
 <img src="./Chart Editor Features-3.png"/>
 
 ### Editing Strumlines Data.
@@ -42,6 +41,7 @@ Strumlines have more options than usual, being able to do things without scripti
 You can have different vocal audio files per Strumline. As seen previously, there's an option to set Vocal Suffixes on a Strumline.
 
 For this, you have to obviously have different vocal audio files ready, with a suffix at the end *(for example ``Voices-bf.ogg`` has a ``-bf`` suffix at the end)*
+
 <img src="./Chart Editor Features-16.png"/>
 <img src="./Chart Editor Features-15.png"/>
 
