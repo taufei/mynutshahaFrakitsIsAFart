@@ -120,17 +120,9 @@ module.exports = function(hljs) {
         `[eE][+-]?(${decimalDigits})\\b` },
       { begin: `\\b(${decimalInteger})\\b((${frac})\\b|\\.)?|(${frac})\\b` },
 
-      // DecimalBigIntegerLiteral
-      { begin: `\\b(0|[1-9](_?[0-9])*)n\\b` },
-
       // NonDecimalIntegerLiteral
       { begin: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b" },
       { begin: "\\b0[bB][0-1](_?[0-1])*n?\\b" },
-      { begin: "\\b0[oO][0-7](_?[0-7])*n?\\b" },
-
-      // LegacyOctalIntegerLiteral (does not include underscore separators)
-      // https://tc39.es/ecma262/#sec-additional-syntax-numeric-literals
-      { begin: "\\b0[0-7]+n?\\b" },
     ],
     relevance: 0
   };
@@ -400,7 +392,7 @@ module.exports = function(hljs) {
             // sub-expressions inside also surrounded by parens.
             begin: FUNC_LEAD_IN_RE,
             returnBegin: true,
-            end: '\\s*->',
+            end: '\\s*(->|=>)',
             contains: [
               {
                 className: 'params',
@@ -475,7 +467,7 @@ module.exports = function(hljs) {
         relevance: 0
       },
       {
-        match: [ /\bconstructor(?=\s*\()/ ],
+        match: [ /\bnew(?=\s*\()/ ],
         className: { 1: "title.function" },
         contains: [ PARAMS ]
       },
