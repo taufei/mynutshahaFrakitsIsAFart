@@ -61,6 +61,8 @@ function generateSidebar(list, basePath = '', selected = null) {
 var sidebarRaw = fs.readFileSync("./src/list.json", "utf8");
 var parsedSidebar = JSON.parse(sidebarRaw);
 
+var header = fs.readFileSync("./src/templates/header.html", 'utf8');
+
 fs.copyFileSync("./src/style.css", "./export/" + realPath + "style.css");
 
 buildHtml();
@@ -86,7 +88,8 @@ function buildHtml() {
 			var vars = {
 				title: filename.replace(".md", ""),
 				content: renderer.render(fs.readFileSync("./src/docs/" + i, 'utf8')),
-				sidebar: sidebar
+				sidebar: sidebar,
+				header: header
 			};
 			console.log(i);
 
