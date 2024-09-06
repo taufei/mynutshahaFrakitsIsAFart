@@ -9,28 +9,36 @@ var { fixHtmlRefs } = require("../utils.js");
 
 var header = fs.readFileSync("./src/pages/templates/header.html", 'utf8');
 
-function generateSidebar(list, basePath = '', selected = null) {
+function generateSidebar(list, basePath = '', selected = null, idx = null) {
+	if(!idx) {
+		idx = {
+			value: 0
+		}
+	}
 	let html = '';
 
 	list.forEach(item => {
+		var parity = idx.value % 2 == 0 ? "even" : "odd";
+		idx.value++;
+
 		var visualName = item[0];
 		if(item.length > 1 && item[1] != null) {
 			visualName = item[1];
 		}
 		visualName = visualName.replace("UNFINISHED", "<span style='color: #FF0000;'>UNFINISHED</span>")
 		var hasChildren = item.length > 2 && item[2] != null;
-		html += `<li class="sidebar-list-item">`;
+		html += `<li class="sidebar-list-item ${parity}">`;
 		var href = `/${basePath}/${item[0]}.md`;
 		var isSelected = href.replace(/^\/+/g, "") == selected.replace(/^\/+/g, "");
 
-		var classAttr = isSelected ? ` class="selected"` : "";
+		var classAttr = isSelected ? ` class="${parity} selected"` : ` class="${parity}"`;
 		html += `<a href="${href}"${classAttr}>${visualName}</a>`;
 
 		if(hasChildren) {
 			var path = item[0].split("/")[0];
 			const subPath = basePath ? `${basePath}/${path}` : path;
-			html += `<ul class="sidebar-unordered-list">\n`;
-			html += generateSidebar(item[2], subPath, selected);
+			html += `<ul class="sidebar-unordered-list ${parity}">\n`;
+			html += generateSidebar(item[2], subPath, selected, idx);
 			html += `</ul>\n`;
 		}
 		html += `</li>\n`;
