@@ -17,7 +17,6 @@ function generateSidebar(list, basePath = '', selected = null) {
 		if(item.length > 1 && item[1] != null) {
 			visualName = item[1];
 		}
-		console.log(visualName);
 		visualName = visualName.replace("UNFINISHED", "<span style='color: #FF0000;'>UNFINISHED</span>")
 		var hasChildren = item.length > 2 && item[2] != null;
 		html += `<li class="sidebar-list-item">`;
@@ -72,7 +71,7 @@ function buildHtml(_pageDir, _exportPath) {
 
 			var sidebar = generateSidebar(parsedSidebar, "", i);
 			var vars = {
-				title: filename.replace(".md", ""),
+				title: filename.replace(/\.md$/, ""),
 				content: renderer.render(fs.readFileSync("./src/" + wikiDir + i, 'utf8')),
 				sidebar: sidebar,
 				header: header
@@ -89,7 +88,7 @@ function buildHtml(_pageDir, _exportPath) {
 
 			//console.log(data);
 			fs.writeFileSync(
-				exportPath + i.replace(".md", ".html"),
+				exportPath + i.replace(/\.md$/, ".html"),
 				dom.serialize(),
 				'utf8'
 			);
