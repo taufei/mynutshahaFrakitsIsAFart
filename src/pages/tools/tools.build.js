@@ -17,6 +17,7 @@ function buildHtml(_pageDir, _exportPath) {
 	console.log("Building Tools");
 
 	var tools = [
+		"index",
 		"event-packer"
 	];
 
@@ -24,7 +25,13 @@ function buildHtml(_pageDir, _exportPath) {
 		if (!fs.existsSync(exportPath + tool)) {
 			fs.mkdirSync(exportPath + tool, {recursive: true});
 		}
-		var templatePage = fs.readFileSync("./src/pages/tools/" + tool + "/index.html", 'utf8');
+		var path = "./src/pages/tools/" + tool + "/index.html";
+		var outpath = exportPath + tool + "/index.html";
+		if(tool == "index") {
+			path = "./src/pages/tools/index.html";
+			outpath = exportPath + "index.html";
+		}
+		var templatePage = fs.readFileSync(path, 'utf8');
 		var vars = {
 			title: tool,
 			header: header
@@ -41,7 +48,7 @@ function buildHtml(_pageDir, _exportPath) {
 
 		//console.log(data);
 		fs.writeFileSync(
-			exportPath + tool + "/index.html",
+			outpath,
 			dom.serialize(),
 			'utf8'
 		);
