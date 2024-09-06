@@ -70,7 +70,7 @@ Avoid using the following types:
 - `ivec2`, `ivec3`, `ivec4`
 - `bvec2`, `bvec3`, `bvec4`
 - `uvec2`, `uvec3`, `uvec4`
-- uint
+- `uint`
 
 as they are unsupported on certain platforms.
 
