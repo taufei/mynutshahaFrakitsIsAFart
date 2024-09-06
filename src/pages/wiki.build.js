@@ -17,6 +17,8 @@ function generateSidebar(list, basePath = '', selected = null) {
 		if(item.length > 1 && item[1] != null) {
 			visualName = item[1];
 		}
+		console.log(visualName);
+		visualName = visualName.replace("UNFINISHED", "<span style='color: #FF0000;'>UNFINISHED</span>")
 		var hasChildren = item.length > 2 && item[2] != null;
 		html += `<li class="sidebar-list-item">`;
 		var href = `/${basePath}/${item[0]}.md`;

@@ -7,15 +7,15 @@
             ["Chart Editor Features"]
         ]],
         ["Creating characters/index", "Creating characters", [
-            ["Character Editor Features"]
+            ["Character Editor Features", "Character Editor Features - UNFINISHED"]
         ]],
         ["Creating stages"],
-        ["Cutscenes or Dialogues", "Cutscenes/Dialogues"],
+        ["Cutscenes or Dialogues", "Cutscenes/Dialogues - UNFINISHED"],
         ["Scripting/index", "Scripting", [
             ["PlayState Scripts/index", "PlayState Scripts", [
                 ["Gameplay Scripts"],
                 ["Events or Notetype Scripts", "Events/Notetype Scripts"],
-                ["Cutscenes or Dialogue Scripts", "Cutscenes/Dialogue Scripts"],
+                ["Cutscenes or Dialogue Scripts", "Cutscenes/Dialogue Scripts - UNFINISHED"],
                 ["Character or Stage Scripts", "Character/Stage Scripts"],
                 ["Pause or Game Over Scripts", "Pause/Game Over Scripts"]
             ]],
@@ -25,11 +25,12 @@
             ["Using hxvlc for videos"],
             ["Custom options"],
             ["Custom Classes"],
-            ["3D rendering"],
-            ["Useful script snippets for modders"],
-            ["Scripted Assets Libraries"],
-            ["NDLL Scripting"]
+            ["3D rendering", "3D rendering - UNFINISHED"],
+            ["All of the script calls", "All of the script calls - UNFINISHED"],
+            ["Useful script snippets for modders", "Useful script snippets for modders - UNFINISHED"],
+            ["Scripted Assets Libraries", "Scripted Assets Libraries - UNFINISHED"],
+            ["NDLL Scripting", "NDLL Scripting - UNFINISHED"]
         ]],
-        ["Hardcoding"]
+        ["Hardcoding/index", "Hardcoding - UNFINISHED"]
     ]]
 ]
