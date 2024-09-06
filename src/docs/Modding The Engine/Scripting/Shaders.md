@@ -24,7 +24,7 @@ camGame.addShader(shader);
 A basic shader looks like this:
 ```glsl
 #pragma header //important to prevent your game from crashing
-function main() {
+void main() {
     vec2 uv = openfl_TextureCoordv;
 
     vec4 col = flixel_texture2D(bitmap, uv);
