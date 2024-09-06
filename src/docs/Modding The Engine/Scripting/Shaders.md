@@ -24,7 +24,7 @@ camGame.addShader(shader);
 A basic shader looks like this:
 ```glsl
 #pragma header //important to prevent your game from crashing
-function main() {
+void main() {
     vec2 uv = openfl_TextureCoordv;
 
     vec4 col = flixel_texture2D(bitmap, uv);
@@ -67,9 +67,9 @@ Ints are not recommended when initiating vectors. *(ex, vec2(1, 1) is not suppor
 Instead, use floats where it's expected. Like mod(1.0, 2.0) instead of mod(1, 2)
 
 Avoid using the following types:
-- ivec2,3,4
-- bvec2,3,4
-- uvec2,3,4
+- `ivec2`, `ivec3`, `ivec4`
+- `bvec2`, `bvec3`, `bvec4`
+- `uvec2`, `uvec3`, `uvec4`
 - uint
 
 as they are unsupported on certain platforms.
