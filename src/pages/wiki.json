@@ -1,7 +1,7 @@
 [
     ["index", "Home"],
     ["How to navigate the engine"],
-    ["Differences between the other FNF engines"],
+    ["Differences between the other FNF engines", "Differences between other FNF engines"],
     ["Modding The Engine/index", "Modding The Engine", [
         ["Creating songs/index", "Creating songs", [
             ["Chart Editor Features"]

@@ -12,50 +12,59 @@
 
 ### draw(event:DrawEvent), postDraw(event:DrawEvent)
 
-### onStateSwitch(event:StateEvent)
+The ``event`` has no parameters but can be cancelled
 
-### onOpenSubState(event:StateEvent)
+### onStateSwitch(event:StateEvent), onOpenSubState(event:StateEvent)
+
+The ``event`` in question has the following parameter:
+- ``substate`` which represents the state/substate it's about to open
 
 ### onResize(event:ResizeEvent)
+
+The ``event`` in question has the following parameters:
+- ``width`` and ``height`` which represents the new width and height of the game.
+- ``oldWidth`` and ``oldHeight`` which represents the old width and height of the game.
 
 ### destroy()
 
 ## PlayState.hx
 
-### onStageXMLParsed, onStageNodeParsed
+### onStageXMLParsed(event:StageXMLEvent), onStageNodeParsed(event:StageNodeEvent)
 
-### onPreGenerateStrums, onPostGenerateStrums
+### onPreGenerateStrums(event:AmountEvent), onPostGenerateStrums(event:AmountEvent)
 
-### onStrumCreation, onPostStrumCreation
+### onStrumCreation(event:StrumCreationEvent), onPostStrumCreation(event:StrumCreationEvent)
 
-### onNoteCreation, onPostNoteCreation
+### onNoteCreation(event:NoteCreationEvent), onPostNoteCreation(event:NoteCreationEvent)
 
-### onStartCountdown, onPostStartCountdown
+### onStartCountdown(event:CancellableEvent), onPostStartCountdown()
 
-### onCountdown, onPostCountdown
+### onCountdown(event:CountdownEvent), onPostCountdown(event:CountdownEvent)
 
-### onSongStart, onStartSong, onSongEnd
+### onSongStart(), onStartSong(), onSongEnd()
 
-### onInputUpdate, onPostInputUpdate
+### onInputUpdate(event:InputSystemEvent), onPostInputUpdate()
 
-### onRatingUpdate
+### onRatingUpdate(event:RatingUpdateEvent)
 
-### onPlayerHit, onDadHit, onNoteHit
+### onPlayerHit(event:NoteHitEvent), onDadHit(event:NoteHitEvent), onNoteHit(event:NoteHitEvent)
 
-### onPlayerMiss
+### onPlayerMiss(event:NoteMissEvent)
 
-### onCameraMove
+### onCameraMove(event:CamMoveEvent)
 
-### onEvent
+### onEvent(event:EventGameEvent)
 
-### onSubstateOpen, onSubstateClose
+### onSubstateOpen(event:StateEvent), onSubstateClose(event:StateEvent)
 
-### onGamePause
+### onGamePause(event:CancellableEvent)
 
-### onGameOver, onPostGameOver
+### onGameOver(event:GameOverEvent), onPostGameOver(event:GameOverEvent)
 
-### onVocalsResync
+### onVocalsResync()
 
 ## Global Scripts
 
 ### focusLost(), focusGained()
+
+more coming soon
