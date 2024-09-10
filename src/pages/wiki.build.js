@@ -78,8 +78,13 @@ function buildHtml(_pageDir, _exportPath) {
 			var filename = parsedName.name;
 
 			var sidebar = generateSidebar(parsedSidebar, "", i);
+
+			var title = filename.replace(/\.md$/, "");
+			if(title == "index") {
+				title = "Home";
+			}
 			var vars = {
-				title: filename.replace(/\.md$/, ""),
+				title: title,
 				content: renderer.render(fs.readFileSync("./src/" + wikiDir + i, 'utf8')),
 				sidebar: sidebar,
 				header: header
