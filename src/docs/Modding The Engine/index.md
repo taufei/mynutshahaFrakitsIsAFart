@@ -129,7 +129,7 @@ And when you're done with the basic steps you're finally ready for release, or i
 - <a href="./Scripting/Shaders.md">Shaders</a>
 - <a href="./Scripting/3D rendering.md">3D rendering</a>
 - <a href="./Scripting/Global Scripts.md">Global Scripts</a>
-- <a href="./Scripting/Custom options.md">Custom Options</a>
+- <a href="./Scripting/Custom Options.md">Custom Options</a>
 - <a href="./Scripting/Scripted Assets Libraries.md">Scripted Assets Libraries</a>
 - <a href="./Scripting/NDLL Scripting.md">NDLL Scripting</a>
 

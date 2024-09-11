@@ -45,4 +45,4 @@ These will load the video ``./videos/video.mp4``, and display it on the screen.
 
 Other thing to note is that when you type ``Paths.video("video")``, keep in mind that you can write the extension next to the path, which let's you load filetypes other than .mp4.
 
-*(btw tiny thing to also note is that if your video suffers from huge filesize i recommend using .webm instead of .mp4)*
+*(btw tiny thing to also note is that if your video suffers from huge file size i recommend using .webm instead of .mp4)*

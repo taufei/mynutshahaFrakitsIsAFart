@@ -4,7 +4,7 @@ The engine's biggest feature yet, scripting.<br>
 Currently, you can script in HScript *(haxe scripting language)*, or in NDLL format *(compiled C++ code)*, but mainly in HScript, which should make the experience similar to coding in source code.<br>
 Scripting can change not only gameplay, but also menus and other engine functions.<br>
 
-We will focus on writting in HScript, so whenever you have to create a script, the filename has to end with an ``.hx``.<br>
+We will focus on writing in HScript, so whenever you have to create a script, the filename has to end with an ``.hx``.<br>
 *(you can also use ``.hscript``, ``.hxc`` and ``.hxs``)*
 
 ### Scripting relies heavily on having a console opened at all times.
@@ -52,7 +52,7 @@ Despite all of that, functions like ``update``, ``beatHit``, ``stepHit`` still r
 
 ### Class importing.
 
-Some classes are pre-imported (FlxSprite, FlxMath, FlxAxis etc.), but for classes that aren't pre-imported, it's still possible to import like this: 
+Some classes are pre-imported (FlxSprite, FlxMath, FlxAxis etc.), but for classes that aren't pre-imported, it's still possible to import like this:
 ```haxe
 import flixel.addons.display.FlxBackdrop;
 ```
@@ -70,7 +70,7 @@ And if you wanna go advanced, follow the rest of the articles here:
 - <a href="./PlayState Scripts/Cutscenes or Dialogue Scripts.md.md">Cutscenes/Dialogue Scripts</a>
 - <a href="./PlayState Scripts/Character or Stage Scripts.md.md">Character/Stage Scripts</a><br><br>
 - <a href="./Global Scripts.md">Global Scripts</a>
-- <a href="./Custom options.md">Custom options</a>
+- <a href="./Custom Options.md">Custom Options</a>
 - <a href="./Shaders.md">Shaders</a>
 - <a href="./3D rendering.md">3D rendering</a>
 - <a href="./Using hxvlc for videos.md">Using hxvlc for videos</a><br><br>
