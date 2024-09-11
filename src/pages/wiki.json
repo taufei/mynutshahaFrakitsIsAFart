@@ -10,7 +10,7 @@
             ["Character Editor Features", "Character Editor Features - UNFINISHED"]
         ]],
         ["Creating stages"],
-        ["Cutscenes or Dialogues", "Cutscenes/Dialogues - UNFINISHED"],
+        ["Cutscenes or Dialogues", "Cutscenes/Dialogues"],
         ["Scripting/index", "Scripting", [
             ["PlayState Scripts/index", "PlayState Scripts", [
                 ["Gameplay Scripts"],
