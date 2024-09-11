@@ -64,9 +64,12 @@ You have to do this otherwise your options won't save correctly!
 
 This is rather easy to do, put this in `./data/global.hx`:
 ```haxe
-function create() {
+function new() {
     // FlxG.save is your mod's save data
     if(FlxG.save.data.checkboxExample == null)
         FlxG.save.data.checkboxExample = true;
+
+    // You can also do
+    // FlxG.save.data.checkboxExample ??= true;
 }
 ```
