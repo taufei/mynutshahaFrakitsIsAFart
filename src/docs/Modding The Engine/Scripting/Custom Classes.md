@@ -33,3 +33,4 @@ As of writing this, this system is very limited and also presents some defects. 
 - static functions are not supported. (yet)
 - private variables are not supported. They act as public variables.
 - private functions are not supported. They act as public functions.
+- You cannot extend a custom class. (yet)
