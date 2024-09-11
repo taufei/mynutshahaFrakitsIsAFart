@@ -25,7 +25,7 @@ There already exists a template for you to look on, and it looks something like 
 </menu>
 ```
 
-<img src="./Custom options.png"/>
+<img src="./Custom Options.png"/>
 
 You're likely wondering: "how does each type of option work?"
 That's what is about to be explained!!
@@ -36,7 +36,7 @@ All option types (except for `menu`) share 2 common properties:
 
 ## Here's what the properties for each type are:
 
-- `menu` - A menu to put your options into, you can have sub-menus inside of them aswell
+- `menu` - A menu to put your options into, you can have sub-menus inside of them as well
     - `name` - This is the name of the menu displayed on screen
     - `desc` - This is the description of the menu displayed on screen
 
@@ -65,7 +65,7 @@ You have to do this otherwise your options won't save correctly!
 This is rather easy to do, put this in `./data/global.hx`:
 ```haxe
 function create() {
-    // FlxG.save is your mod's savedata
+    // FlxG.save is your mod's save data
     if(FlxG.save.data.checkboxExample == null)
         FlxG.save.data.checkboxExample = true;
 }

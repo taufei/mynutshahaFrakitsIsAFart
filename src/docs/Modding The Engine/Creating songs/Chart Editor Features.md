@@ -64,11 +64,11 @@ Events are also movable.<br>
 
 <img src="./Chart Editor Features-9.png"/>
 
-You can code your own notetypes, or use the pre-existing one *(though only 2 exists currently)*. They need to first be added to the Notetypes list before being able to use them. Afterwards you can simply select them from the dropdown here.
+You can code your own note types, or use the pre-existing one *(though only 2 exists currently)*. They need to first be added to the note types list before being able to use them. Afterwards you can simply select them from the dropdown here.
 
 <img src="./Chart Editor Features-10.png"/>
 
-You can also change the graphic of a Notetype without programming, by putting the Notetype's spritesheet in ``images/game/notes``.
+You can also change the graphic of a Note type without programming, by putting the Note type's spritesheet in ``images/game/notes``.
 
 ## Changing additional chart/meta data.
 

@@ -14,8 +14,8 @@ var redirectStates:Map<FlxState, String> = [
 ];
 
 function preStateSwitch() {
-    for (redirectState in redirectStates.keys()) 
-        if (Std.isOfType(FlxG.game._requestedState, redirectState)) 
+    for (redirectState in redirectStates.keys())
+        if (Std.isOfType(FlxG.game._requestedState, redirectState))
             FlxG.game._requestedState = new ModState(redirectStates.get(redirectState));
 }
 ```
@@ -27,7 +27,7 @@ function update(elapsed) {
             if (Assets.exists(Path.withoutExtension(Paths.image("icons/"+i.curCharacter)) + ".xml") && i.frames.frames[0].name != "losing0000") {
                 i.frames = Paths.getFrames("icons/"+i.curCharacter);
                 i.animation.addByPrefix("losing", "losing", 24, true);
-                i.animation.addByPrefix("normal", "normal", 24, true); 
+                i.animation.addByPrefix("normal", "normal", 24, true);
                 i.animation.play("normal", true);
                 i.curAnimState = -1;
             }
@@ -35,7 +35,7 @@ function update(elapsed) {
 function onHealthIconAnimChange(e) {
     if (e.healthIcon.animation.exists("normal")) {
         e.cancel();
-        e.healthIcon.animation.play(e.amount == 0 ? 'normal' : 'losing', true);  
+        e.healthIcon.animation.play(e.amount == 0 ? 'normal' : 'losing', true);
     }
 }
 ```

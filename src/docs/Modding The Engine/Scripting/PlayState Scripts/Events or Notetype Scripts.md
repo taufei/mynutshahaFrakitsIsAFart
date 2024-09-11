@@ -53,15 +53,15 @@ There's a lot of them but we'll go over each one.
 - **String** returns a string.
 - **StrumLine** creates a dropdown menu that contains the current StrumLine in the chart. Returns Ints corresponding the StrumLine index in the group ``strumLines``.
 - **ColorWheel** creates a color wheel that returns the color in Int hex format.
-- **DropDown()** generates a dropdown menu that contains the entries inside the brackets.
+- **DropDown()** generates a dropdown menu that contains the entries inside the parentheses.
 
 <img src="./Events or Notetype Scripts-1.png"/>
 
 Now that we have established the Parameters, we can go over scripting the event now. A basic flash camera event looks something like this:
 ```haxe
 function onEvent(e) {
-    var params:Array = e.event.params;
     if (e.event.name == "Flash Camera") {
+        var params:Array = e.event.params;
         camGame.flash(params[1], params[0]);
     }
 }
@@ -69,18 +69,18 @@ function onEvent(e) {
 In this example, we assume that we set our parameters to be the duration of the flash *(float)*, and the color of it *(colorwheel)*. <br>
 <img src="./Events or Notetype Scripts.png"/>
 
-The order of the parameters in ``e.event.params`` coresponds to the order you've put the params in.
+The order of the parameters in ``e.event.params`` corresponds to the order you've put the params in.
 
-For the icon, place a *(preferabily 16x16)* image in the same directory as the event files.
+For the icon, place a *(preferably 16x16)* image in the same directory as the event files.
 
 *Write about .pack files later*
 
-## Notetypes
-Making notetypes only consists of 2 files: the script file and the note sprites.
+## Note types
+Making note types only consists of 2 files: the script file and the note sprites.
 
-Putting the sprites in ``./images/game/notes`` and naming them after the notetype name will automatically replace the default note sprites with those.
+Putting the sprites in ``./images/game/notes`` and naming them after the note type name will automatically replace the default note sprites with those.
 
-Writing a script for the notetypes is very easy. Though only one script is ran for all existing notetypes instead of each note, you can still code actions for them. <br>
+Writing a script for the note types is very easy. Though only one script is ran for all existing note types instead of each note, you can still code actions for them. <br>
 For example here is code for triggering actions when the player presses it:
 ```haxe
 function onPlayerHit(event) {

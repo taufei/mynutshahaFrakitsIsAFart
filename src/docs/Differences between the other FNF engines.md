@@ -5,7 +5,7 @@
 Codename engine is based on **Base Game's week 6 code** (AKA. version 0.2.7.1), and shows heavy modifications from the original source (for example, optimized PlayState ~1400 lines, rewritten systems etc.). It is not a fork of any other engines and hasn't taken code from other engines either.
 
 Compared to the usual engines (Psych Engine, FPS plus), these are the few differences that makes it stand out:
-- Scripting system is specifically HScript Improved, a custom fork made by the devs themselves.
+- Scripting system is specifically HScript Improved, a custom fork made by the developers themselves.
 - Uses forks of popular libraries tailored specifically for the engine for the goal of better optimization.
 - Modding system and softcoding is as capable as source coding.
 - Focuses heavily on optimization, and encourages its users to also take on optimization practices.
