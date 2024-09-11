@@ -34,3 +34,4 @@ As of writing this, this system is very limited and also presents some defects. 
 - private variables are not supported. They act as public variables.
 - private functions are not supported. They act as public functions.
 - You cannot extend a custom class. (yet)
+- You can only extend a class that is in the packages, `flixel`, `funkin`
