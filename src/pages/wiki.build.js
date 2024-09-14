@@ -47,7 +47,7 @@ function generateSidebar(list, basePath = '', selected = null, idx = null) {
 	return html;
 }
 
-var wikiDir = "docs/";
+var wikiDir = "pages/wiki/";
 
 var sidebarRaw = fs.readFileSync("./src/pages/wiki.json", "utf8");
 var parsedSidebar = JSON.parse(sidebarRaw);
