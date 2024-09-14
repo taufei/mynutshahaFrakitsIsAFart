@@ -19,6 +19,7 @@ if (!fs.existsSync(exportPath)) {
 
 fs.copyFileSync("./src/style.css", exportPath + "style.css");
 fs.copyFileSync("./src/pages/wiki.css", exportPath + "/wiki.css");
+fs.copyFileSync("./src/pages/index.css", exportPath + "/index.css");
 
 indexPage.buildHtml(pageDir, exportPath); // builds into /
 wiki.buildHtml(pageDir, exportPath); // builds into /wiki
