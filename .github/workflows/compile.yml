@@ -30,7 +30,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - run: npm install
-      - run: npm run build New-folder/
+      - run: npm run build cne-web/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
