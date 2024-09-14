@@ -3,6 +3,7 @@ var hljs = require('highlight.js');
 var haxeformat = require('./haxeformat.js');
 var wiki = require('./pages/wiki.build.js');
 var tools = require('./pages/tools/tools.build.js');
+var docs = require('./pages/docs.build.js');
 
 hljs.registerLanguage('haxe', haxeformat);
 
@@ -20,3 +21,4 @@ fs.copyFileSync("./src/pages/wiki.css", exportPath + "/wiki.css");
 
 wiki.buildHtml(pageDir, exportPath); // builds into /wiki
 tools.buildHtml(pageDir, exportPath); // builds into /tools
+docs.buildHtml(pageDir, exportPath); // builds into /docs
