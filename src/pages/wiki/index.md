@@ -39,4 +39,4 @@ Credits:
 - swordcube - helping hand for documentation.
 - Care or usb_port_2 - helped with keeping my sanity.
 
-**PSA**. if you wish to contribute to this website, whether it be a page modification or adding a brand new page, visit the <a href="https://github.com/FNF-CNE-Devs/cne-web">Github Repository</a> and contribute via pull requests. (contributions are heavily encouraged, as we're not able to cover all possible cases.)
+**PSA**. if you wish to contribute to this website, whether it be a page modification or adding a brand new page, visit the <a href="https://github.com/FNF-CNE-Devs/FNF-CNE-Devs.github.io">Github Repository</a> and contribute via pull requests. (contributions are heavily encouraged, as we're not able to cover all possible cases.)
