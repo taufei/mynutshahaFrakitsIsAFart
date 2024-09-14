@@ -1,6 +1,6 @@
 # Codename Engine Docs
 
-**To contribute to this wiki's pages**, please go to ``./src/docs/``, and change the .md files (if you add a new one make sure to add it in ``./src/pages/wiki.json``.)
+**To contribute to this wiki's pages**, please go to ``./src/pages/wiki/``, and change the .md files (if you add a new one make sure to add it in ``./src/pages/wiki.json``.)
 
 **To update the API Docs**, please go to ``./src/pages/api-docs/``, and paste the results from the ``art/generateDocs.bat`` (From the main repo) script.
 
