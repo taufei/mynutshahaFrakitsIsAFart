@@ -25,14 +25,20 @@ function buildHtml(_pageDir, _exportPath) {
     var outpath = exportPath + "index.html";
     var templatePage = fs.readFileSync(path, 'utf8');
     var vars = {
+        title: "Home",
         header: header
     };
 
-    var html = Mustache.render(templatePage, vars, null, {
-        escape: function(text) {
-            return text;
-        }
-    });
+    let html = templatePage;
+    let old;
+    do {
+        old = html;
+        html = Mustache.render(html, vars, null, {
+            escape: function(text) {
+                return text;
+            }
+        });
+    } while(html != old);
 
     var dom = fixHtmlRefs(html, pageDir, _pageDir);
 
