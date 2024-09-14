@@ -1,4 +1,4 @@
-# PlayState Scritps
+# PlayState Scripts
 PlayState Scripts can do various things, check out these articles:
 - <a href="Gameplay Scripts.md">Gameplay Scripts</a>
 - <a href="./Events or Notetype Scripts.md">Events/Notetype Scripts</a>
