@@ -91,11 +91,16 @@ function buildHtml(_pageDir, _exportPath) {
 			};
 			console.log(i);
 
-			var html = Mustache.render(templatePage, vars, null, {
-				escape: function(text) {
-					return text;
-				}
-			});
+			let html = templatePage;
+			let old;
+			do {
+				old = html;
+				html = Mustache.render(html, vars, null, {
+					escape: function(text) {
+						return text;
+					}
+				});
+			} while(html != old);
 
 			var dom = fixHtmlRefs(html, pageDir, _pageDir);
 
