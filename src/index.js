@@ -1,31 +1,42 @@
 var fs = require('fs');
-var hljs = require('highlight.js');
-var haxeformat = require('./haxeformat.js');
-var wiki = require('./pages/wiki.build.js');
-var tools = require('./pages/tools/tools.build.js');
-var apiDocs = require('./pages/apiDocs.build.js');
-var indexPage = require('./pages/index.build.js');
+var { spawn } = require('child_process');
 
-var { copyDir } = require('./utils.js');
+var isWatch = process.argv.includes('--watch');
+process.argv = process.argv.filter(arg => arg != '--watch');
 
-hljs.registerLanguage('haxe', haxeformat);
+function startChild() {
+    console.log('Starting build process...');
 
-var pageDir = process.argv[2] || "";
-var exportPath = "./export/" + (process.argv[3] || '');
+    child = spawn('node', ['src/build.js', ...process.argv], {
+        stdio: 'inherit'
+    });
 
-if(!pageDir.endsWith('/')) pageDir += '/';
-
-if (!fs.existsSync(exportPath)) {
-	fs.mkdirSync(exportPath, {recursive: true});
+    child.on('exit', function (code) {
+        if(isWatch) {
+			console.log("Watching for file changes... Press Ctrl+C to stop.");
+		}
+    });
 }
 
-copyDir("./src/img/", exportPath + "/img/");
+function restartChild() {
+    if (child) {
+        console.log('Restarting build process...');
+        child.kill();
+        startChild();
+    } else {
+        startChild();
+    }
+}
 
-fs.copyFileSync("./src/style.css", exportPath + "style.css");
-fs.copyFileSync("./src/pages/wiki.css", exportPath + "/wiki.css");
-fs.copyFileSync("./src/pages/index.css", exportPath + "/index.css");
+startChild();
 
-indexPage.buildHtml(pageDir, exportPath); // builds into /
-wiki.buildHtml(pageDir, exportPath); // builds into /wiki
-tools.buildHtml(pageDir, exportPath); // builds into /tools
-apiDocs.buildHtml(pageDir, exportPath); // builds into /api-docs
+if (isWatch) {
+    fs.watch('./src/', { recursive: true }, (eventType, filename) => {
+        if (filename) {
+            console.log(`${filename} changed. Rebuilding...`);
+            restartChild();
+        }
+    });
+
+    setInterval(() => {}, 1000);
+}
