@@ -139,7 +139,7 @@ Some config is still required for things like Discord RPC. so we're gonna get ov
 All of these configs can be found in ``./data/config/``
 
 ### discord.json
-```
+```json
 {
 	"clientID": discord token,
 	"logoKey": "icon"
@@ -158,10 +158,10 @@ Here's a template provided by the engine:
 
 </menu>
 ```
-As you can see, there's 2 types of nodes: ``credit`` and ``github``. ``credit`` is the basic crediting node which can be applied to anyone, and ``github`` pulls the user from it's database and can only be used for people who have accounts on GitHub *(also automatically redirects to their GitHub profile page.)*
+As you can see, there's 2 types of nodes: <code class="hljs-name">credit</code> and <code class="hljs-name">github</code>. <code class="hljs-name">credit</code> is the basic crediting node which can be applied to anyone, and <code class="hljs-name">github</code> pulls the user from it's database and can only be used for people who have accounts on GitHub *(also automatically redirects to their GitHub profile page.)*
 
 Their parameters are as follows:
-- ``credit``
+- <code class="hljs-name">credit</code> <!-- applies special coloring -->
     - ``name`` which is the name of the person.
     - ``desc`` determines the description of that person.
     - ``icon`` determines which PNG file to pick from ``./images/credits``.
@@ -169,14 +169,14 @@ Their parameters are as follows:
     - ``url`` is the page where you get redirected when pressing enter on the person.
     - ``color`` changes the color of the text that displays the name.
     - ``portrait`` determines whether or not to crop the picture to a circular form.
-- ``github``
+- <code class="hljs-name">github</code>
     - ``user`` determines which user to grab from the GitHub database.
     - ``customName`` is the display name you wish to refer to the person.
     - ``size`` defines the size of the icon i think.
     - ``color`` changes the color of the text that displays the name.
     - ``portrait`` determines whether or not to crop the picture to a circular form.
 
-Also, if you notice, you can wrap these with the ``menu`` node to separate the credits *(like probably having an artist submenu and stuff)*
+Also, if you notice, you can wrap these with the <code class="hljs-name">menu</code> node to separate the credits *(like probably having an artist submenu and stuff)*
 
 ### options.xml
 options.xml is explained in this article <a href="./Scripting/Custom options.md">Custom options</a>.
