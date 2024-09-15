@@ -1,4 +1,4 @@
-# Codename Engine Docs
+# Codename Engine Website
 
 **To contribute to this wiki's pages**, please go to ``./src/pages/wiki/``, and change the .md files (if you add a new one make sure to add it in ``./src/pages/wiki.json``.)
 

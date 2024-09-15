@@ -80,8 +80,13 @@ function buildHtml(_pageDir, _exportPath) {
 			var sidebar = generateSidebar(parsedSidebar, "", i);
 
 			var title = filename.replace(/\.md$/, "");
-			if(title == "index") {
-				title = "Home";
+			var fullTitlePath = i.replace(/\.md$/, "");
+			if(fullTitlePath == "index") {
+				title = "Wiki";
+			} else if(title == "index") {
+				var split = fullTitlePath.split("/");
+				split.pop();
+				title = split[split.length - 1];
 			}
 			var vars = {
 				title: title,
