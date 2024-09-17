@@ -1,0 +1,15 @@
+li.expando > ul {
+  display: none;
+}
+
+li.expando.expanded > ul {
+  display: block;
+}
+
+ul.sidebar-unordered-list {
+    margin: 0 0;
+}
+
+a.treeLink {
+    padding: 0;
+}

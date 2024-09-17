@@ -21,6 +21,11 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Setting up Haxe (for api docs)
+        uses: krdlab/setup-haxe@v1
+        with:
+          haxe-version: 4.2.5
+
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
@@ -30,7 +35,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - run: npm install
-      - run: npm run build ./
+      - run: npm run build ./ --full
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4

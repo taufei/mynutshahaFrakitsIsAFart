@@ -144,3 +144,13 @@
     display: inline-block;
   }
 }
+
+i.fa::before {
+  position: absolute;
+  left: -20px;
+  top: -13px;
+}
+
+i.fa {
+  position: relative;
+}
