@@ -46,7 +46,7 @@ function onNoteHit(event) {
 }
 ```
 There's a lot of other events, such as ``onStartCountdown``, ``onGamePause``, ``onCameraMove`` and more.<br>
-You can find them all in <a href="../All of the script calls.md">All of the script calls</a>.
+You can find them all in <a href="./All of the script calls.md">All of the script calls</a>.
 
 Despite all of that, functions like ``update``, ``beatHit``, ``stepHit`` still receive one parameter *(``elapsed:Float``, ``curBeat:Int``, ``curStep:Int``)
 
@@ -67,8 +67,8 @@ import flixel.addons.display.FlxBackdrop;
 
 And if you wanna go advanced, follow the rest of the articles here:
 - <a href="./PlayState Scripts/Pause or Game Over Scripts.md">Pause/Game Over Scripts</a>
-- <a href="./PlayState Scripts/Cutscenes or Dialogue Scripts.md.md">Cutscenes/Dialogue Scripts</a>
-- <a href="./PlayState Scripts/Character or Stage Scripts.md.md">Character/Stage Scripts</a><br><br>
+- <a href="./PlayState Scripts/Cutscenes or Dialogue Scripts.md">Cutscenes/Dialogue Scripts</a>
+- <a href="./PlayState Scripts/Character or Stage Scripts.md">Character/Stage Scripts</a><br><br>
 - <a href="./Global Scripts.md">Global Scripts</a>
 - <a href="./Custom Options.md">Custom Options</a>
 - <a href="./Shaders.md">Shaders</a>
