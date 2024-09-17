@@ -4,10 +4,9 @@
 		::set pack = api.getTreePack(tree)::
 		<a class="treeLink" href="::api.getTreeUrl(tree)::" title=":: pack + "." + api.getTreeName(tree) ::">
 			::api.getTreeName(tree)::
-			<!-- ::if pack != ""::
+			::if pack != ""::
 				<span class="pack">&nbsp;-&nbsp;::pack::</span>
-				<span class="pack">&nbsp;-&nbsp;::pack::</span>
-			::end:: -->
+			::end::
 		</a>
 	</li>
 	::case::

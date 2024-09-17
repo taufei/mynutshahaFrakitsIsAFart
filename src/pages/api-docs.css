@@ -13,3 +13,11 @@ ul.sidebar-unordered-list {
 a.treeLink {
     padding: 0;
 }
+
+.pack {
+    display: none;
+}
+
+.searching .pack {
+    display: inline;
+}
