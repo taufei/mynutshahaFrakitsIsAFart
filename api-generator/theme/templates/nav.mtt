@@ -26,6 +26,6 @@
 		</li>
 	::end::
 </macro>
-var navContent='::foreach tree root::
+var navContent='<ul class="sidebar-unordered-list package-tree">::foreach tree root::
 	$$makeTree(::tree::,::0::)
-::end::';
+::end::</ul>';

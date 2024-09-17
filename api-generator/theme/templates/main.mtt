@@ -39,7 +39,9 @@
 					Top-level
 				</a></li>
 			</ul>
-			<ul class="sidebar-unordered-list package-tree" id="nav"></ul> <!-- Automatically populated by index.js -->
+			<span id="nav">
+				<!-- Automatically populated by index.js -->
+			</span>
 		</div>
 	</div>
 	<!-- <div class="span3">
