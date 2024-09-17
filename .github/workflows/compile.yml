@@ -35,7 +35,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - run: npm install
-      - run: npm run build ./ --full
+      - run: npm run build:full ./
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4

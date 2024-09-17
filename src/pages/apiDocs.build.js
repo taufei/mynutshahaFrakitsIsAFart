@@ -4,10 +4,12 @@ var Mustache = require('mustache');
 var jsdom = require("jsdom");
 var fs = require('fs');
 var hljs = require('highlight.js');
-const { exec } = require('child_process');
+const { execSync } = require('child_process');
 
 var { fixHtmlRefs, copyDir, parseTemplate } = require("../utils.js");
 var header = fs.readFileSync("./src/pages/templates/header.html", 'utf8')
+
+const apiGenerator = path.join(__dirname, "..", "..", 'api-generator');
 
 function buildHtml(_pageDir, _exportPath, isWatch) {
 	var pageDir = _pageDir + "api-docs/";
@@ -16,19 +18,17 @@ function buildHtml(_pageDir, _exportPath, isWatch) {
 		fs.mkdirSync(exportPath, {recursive: true});
 	}
 	console.log("Building Api Docs");
+	console.log("Using api generator at " + apiGenerator);
 
-	// TODO: fix cwd
 	if(isWatch) {
 		// build with haxe
-		exec("haxe api/doc.hxml", function(error, stdout, stderr) {
+		execSync("haxe doc.hxml", {cwd: apiGenerator}, function(error, stdout, stderr) {
 			console.log(stdout);
-			console.log(stderr);
 		});
 	} else {
 		// build with neko
-		exec("neko api/bin/doc.n", function(error, stdout, stderr) {
+		execSync("neko bin/main.n", {cwd: apiGenerator}, function(error, stdout, stderr) {
 			console.log(stdout);
-			console.log(stderr);
 		});
 	}
 
