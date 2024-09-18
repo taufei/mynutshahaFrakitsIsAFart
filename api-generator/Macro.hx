@@ -10,8 +10,9 @@ class Macro {
 	public macro static function getDoxPath():Expr {
 		var output = getProcessOutput('haxelib', ['--global', 'path', 'dox']);
 		for (line in output.split("\n")) {
-			if (FileSystem.exists(line)) {
-				var path = Path.directory(Path.removeTrailingSlashes(line.trim()));
+			var path = Path.normalize(line.trim());
+			if (FileSystem.exists(path)) {
+				var path = Path.directory(Path.removeTrailingSlashes(path.trim()));
 				return macro $v{path};
 			}
 		}
