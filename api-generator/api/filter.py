@@ -3,7 +3,7 @@ from lxml import etree
 # This script filters out unnecessary classes from the doc.xml file, so its smaller and faster to load
 
 parser = etree.XMLParser(recover=True) # recover=True to ignore invalid XML
-tree = etree.parse('doc.xml', parser)
+tree = etree.parse('./doc.xml', parser)
 
 root = tree.getroot()
 
@@ -30,7 +30,8 @@ for child in filtered:
 
 tree = etree.ElementTree(haxe)
 
-tree.write("doc-filter.xml", pretty_print=False, xml_declaration=True, encoding="utf-8")
+with open("./doc-filter.xml", "wb") as f:
+    f.write(etree.tostring(haxe, pretty_print=True, xml_declaration=True, encoding="utf-8"))
 
 print(f"Cleaned up {total - len(filtered)} classes")
 print(f"{total} to {len(filtered)}")
