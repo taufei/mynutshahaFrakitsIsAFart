@@ -179,4 +179,4 @@ Their parameters are as follows:
 Also, if you notice, you can wrap these with the <code class="hljs-name">menu</code> node to separate the credits *(like probably having an artist submenu and stuff)*
 
 ### options.xml
-options.xml is explained in this article <a href="./Scripting/Custom options.md">Custom options</a>.
+options.xml is explained in this article <a href="./Scripting/Custom Options.md">Custom options</a>.

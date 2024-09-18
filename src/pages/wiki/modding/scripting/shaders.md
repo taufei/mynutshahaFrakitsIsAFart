@@ -51,7 +51,7 @@ We'll show each step to converting this shader into an usable openfl/flixel shad
 
 1. replace ``void mainImage( out vec4 fragColor, in vec2 fragCoord )`` with a simple ``void main()`` *(flixel and openfl do not have any parameters since the coords are defined outside the function)*
 2. replace ``vec2 uv = fragCoord/iResolution.xy;`` with ``vec2 uv = openfl_TextureCoordv`` *(or in some cases, add ``vec2 fragCoord = openfl_TextureCoordv*openfl_TextureSize.xy`` before it and replace `iResolution.xy` with ``openfl_TextureSize.xy`` (if the uv value is different than usual))*
-3. replace ``vec4 col = texture(iChannel0, uv);`` with ``vec4 col = texture2D(bitmap, uv);`` or ``vec4 col = flixel_texture2D(bitmap, uv);`` *(keep in mind bitmap is the pixels of the camera/sprite the shader is aplied to)*
+3. replace ``vec4 col = texture(iChannel0, uv);`` with ``vec4 col = texture2D(bitmap, uv);`` or ``vec4 col = flixel_texture2D(bitmap, uv);`` *(keep in mind bitmap is the pixels of the camera/sprite the shader is applied to)*
 4. finally, replace ``fragColor = col;`` with ``gl_FragColor = col;``
 
 ### Keep in mind that this covers the most basic on how to convert a shader from shadertoy.com, complex shaders will need more expertise with handling shaders before converting those.
@@ -63,7 +63,7 @@ Avoid using `0.` or `.0` for floats, instead, use `0.0` (ending the float number
 Avoid using switch cases, and use if statements where possible.
 *(switch cases are not supported on macOS or miscellaneous platforms)*
 
-Ints are not recommended when initiating vectors. *(ex, vec2(1, 1) is not supported on certain platforms)*.
+Ints are not recommended when initiating vectors. *(ex, vec2(1, 1) is not supported on certain platforms, use vec2(1.0, 1.0) instead)*.
 Instead, use floats where it's expected. Like mod(1.0, 2.0) instead of mod(1, 2)
 
 Avoid using the following types:
@@ -76,12 +76,12 @@ as they are unsupported on certain platforms.
 
 Avoid using `gl_` at the start of your variables *(ex, `float gl_Number` can break your shaders)*.
 
-Applying defaults to uniforms is not possible, so please set the defaults in your shader constructor or after initializing the shader.
+Setting defaults on uniforms is not recommended, since its not supported on all platforms, so please set the defaults in your shader constructor or after initializing the shader.
 
 Avoid using `<number>u` *(ex, 8u)*
 
 Avoid initializing variables with the name `input` or `sample`, as those cause the shader to stop working on AMD gpus or other platforms.
 
-Avoid using the % operator and instead use the mod function.
+Avoid using the % (modulo) operator and instead use the mod function.
 
-Avoid using arrays.
+Avoid using arrays. Since some platforms don't support them.

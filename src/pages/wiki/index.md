@@ -18,7 +18,7 @@ Here is documentation on functions of the engine (gameplay and modding), and how
             - <a href="./Modding The Engine/Scripting/PlayState Scripts/Cutscenes or Dialogue Scripts.md">Cutscenes/Dialogue Scripts</a>
             - <a href="./Modding The Engine/Scripting/PlayState Scripts/Pause or Game Over Scripts.md">Pause/Game Over Scripts</a>
             - <a href="./Modding The Engine/Scripting/PlayState Scripts/Events or Notetype Scripts.md">Events/Notetype Scripts</a>
-        - <a href="./Modding The Engine/Scripting/State Scripts.md">State Scripts</a>
+        - <a href="./Modding The Engine/Scripting/State or Substate Scripts.md">State/Substate Scripts</a>
         - <a href="./Modding The Engine/Scripting/Global Scripts.md">Global Scripts</a>
         - <a href="./Modding The Engine/Scripting/Custom Options.md">Custom Options</a>
         - <a href="./Modding The Engine/Scripting/Scripted Assets Libraries.md">Scripted Assets Libraries</a>
