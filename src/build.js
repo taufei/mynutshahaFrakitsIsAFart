@@ -6,7 +6,7 @@ var tools = require('./pages/tools/tools.build.js');
 var apiDocs = require('./pages/apiDocs.build.js');
 var indexPage = require('./pages/index.build.js');
 
-var { copyDir, fixHtmlRefs, parseTemplate } = require('./utils.js');
+var { copyDir, fixHtmlRefs, parseTemplate, compileSass } = require('./utils.js');
 
 var isFullBuild = process.argv.includes('--full');
 process.argv = process.argv.filter(arg => arg != '--full');
@@ -29,15 +29,14 @@ if (!fs.existsSync(exportPath)) {
 	fs.mkdirSync(exportPath, {recursive: true});
 }
 
-
 console.log("Building pages...");
 
 copyDir("./src/img/", exportPath + "/img/");
 
-fs.copyFileSync("./src/style.css", exportPath + "/style.css");
-fs.copyFileSync("./src/pages/wiki.css", exportPath + "/wiki.css");
-fs.copyFileSync("./src/pages/index.css", exportPath + "/index.css");
-fs.copyFileSync("./src/pages/api-docs.css", exportPath + "/api-docs.css");
+compileSass("./src/style.scss", exportPath + "/style.css");
+compileSass("./src/pages/wiki.scss", exportPath + "/wiki.css");
+compileSass("./src/pages/index.scss", exportPath + "/index.css");
+compileSass("./src/pages/api-docs.scss", exportPath + "/api-docs.css");
 
 indexPage.buildHtml(pageDir, exportPath); // builds into /
 wiki.buildHtml(pageDir, exportPath); // builds into /wiki

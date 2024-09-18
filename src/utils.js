@@ -3,6 +3,7 @@ var Mustache = require('mustache');
 var path = require("path");
 var hljs = require('highlight.js');
 var fs = require('fs');
+var sass = require('sass');
 
 function fixHtmlRefs(html, pageDir, _pageDir) {
 	var dom = new jsdom.JSDOM(html);
@@ -89,8 +90,14 @@ function parseTemplate(html, vars) {
 	return html;
 }
 
+function compileSass(file, dest) {
+	var result = sass.compileString(fs.readFileSync(file, 'utf8'));
+	fs.writeFileSync(dest, result.css);
+}
+
 module.exports = {
 	fixHtmlRefs: fixHtmlRefs,
 	copyDir: copyDir,
-	parseTemplate: parseTemplate
+	parseTemplate: parseTemplate,
+	compileSass: compileSass
 }
