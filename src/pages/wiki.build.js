@@ -9,11 +9,14 @@ var { fixHtmlRefs } = require("../utils.js");
 
 var header = fs.readFileSync("./src/pages/templates/header.html", 'utf8');
 
-function generateSidebar(list, basePath = '', selected = null, idx = null) {
+function generateSidebar(list, basePath = '', selected = null, idx = null, nameMap = null) {
 	if(!idx) {
 		idx = {
 			value: 0
 		}
+	}
+	if(!nameMap) {
+		nameMap = {};
 	}
 	let html = '';
 
@@ -21,14 +24,21 @@ function generateSidebar(list, basePath = '', selected = null, idx = null) {
 		var parity = idx.value % 2 == 0 ? "even" : "odd";
 		idx.value++;
 
+		var href = `/${basePath}/${item[0]}.md`;
+
 		var visualName = item[0];
 		if(item.length > 1 && item[1] != null) {
 			visualName = item[1];
 		}
+
+		var nameMapKey = href.replace(/\.md$/, "").replace(/^\/+/, "");
+
+		nameMap[nameMapKey] = visualName.replace(" - UNFINISHED", "");
+
 		visualName = visualName.replace("UNFINISHED", "<span style='color: #FF0000;'>UNFINISHED</span>")
+
 		var hasChildren = item.length > 2 && item[2] != null;
 		html += `<li class="sidebar-list-item ${parity}">`;
-		var href = `/${basePath}/${item[0]}.md`;
 		var isSelected = href.replace(/^\/+/g, "") == selected.replace(/^\/+/g, "");
 
 		var classAttr = isSelected ? ` class="${parity} selected"` : ` class="${parity}"`;
@@ -38,13 +48,13 @@ function generateSidebar(list, basePath = '', selected = null, idx = null) {
 			var path = item[0].split("/")[0];
 			const subPath = basePath ? `${basePath}/${path}` : path;
 			html += `<ul class="sidebar-unordered-list ${parity}">\n`;
-			html += generateSidebar(item[2], subPath, selected, idx);
+			html += generateSidebar(item[2], subPath, selected, idx, nameMap).html;
 			html += `</ul>\n`;
 		}
 		html += `</li>\n`;
 	});
 
-	return html;
+	return {html, nameMap};
 }
 
 var wikiDir = "pages/wiki/";
@@ -77,17 +87,16 @@ function buildHtml(_pageDir, _exportPath) {
 		if (ext == ".md") {
 			var filename = parsedName.name;
 
-			var sidebar = generateSidebar(parsedSidebar, "", i);
+			var {html:sidebar, nameMap:nameMap} = generateSidebar(parsedSidebar, "", i);
 
-			var title = filename.replace(/\.md$/, "");
-			var fullTitlePath = i.replace(/\.md$/, "");
-			if(fullTitlePath == "index") {
-				title = "Wiki";
-			} else if(title == "index") {
-				var split = fullTitlePath.split("/");
-				split.pop();
-				title = split[split.length - 1];
+			var visualName = nameMap[i] || filename.replace(/\.md$/, "");
+
+			var title = visualName;
+			var nameMapKey = i.replace(/\.md$/, "").replace(/^\/+/, "");
+			if(nameMap[nameMapKey]) {
+				title = nameMap[nameMapKey];
 			}
+
 			var vars = {
 				title: title,
 				content: renderer.render(fs.readFileSync("./src/" + wikiDir + i, 'utf8')),
