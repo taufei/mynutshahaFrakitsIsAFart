@@ -1,3 +1,7 @@
+.label-meta {
+  display: none;
+}
+
 li.expando>ul {
   display: none;
 }
@@ -20,6 +24,102 @@ a.treeLink {
 
 .searching .pack {
   display: inline;
+}
+
+.page-header > h1, .page-header > h4 {
+  border: none !important;
+  margin: 0.2em 0em;
+}
+
+.page-header > h1 {
+  margin-bottom: -0.3em;
+}
+
+.page-header {
+  padding-bottom: 0.5em;
+  border-bottom: solid thin rgba(255, 255, 255, 0.4);
+}
+
+.fields {
+  margin-top: -1.5em;
+  margin-left: 20px;
+  font-family: monospace;
+}
+
+.field {
+  border-top: 1px solid #222;
+}
+
+code {
+  font-family: monospace;
+  color: white !important;
+  padding: 0.3em;
+}
+
+.anchor > code {
+  padding: 0.4em;
+  font-size: 13px;
+  font-family: monospace;
+}
+
+.anchor > code > span, .anchor > code > span > span,  .anchor > code > a > span{
+  font-size: 13px;
+  font-family: monospace;
+}
+
+.section {
+  border-bottom: solid thin rgba(255, 255, 255, 0.4);
+  font-size: 24px;
+  padding-bottom: 5px;
+}
+
+span > .type, a.type, span.type {
+  color: deepskyblue !important;
+}
+
+.table {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+table.params { 
+  border-left: 5px solid rgba(255, 255, 255, 0.2);
+  margin-left: 20px;
+}
+
+.table-bordered {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-collapse: separate;
+}
+
+.table th,
+.table td {
+  padding-left: 0.3em;
+  text-align: left;
+  height: fit-content !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+td > p {
+  margin: 0.4em 0.4em; 
+}
+
+.table-bordered th,
+.table-bordered td {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.label {
+  background: rgba(255, 255, 255, 0.1);
+  margin-right: 0.5em;
+  padding: 0.2em;
+  font-size: 10px !important;
+}
+
+small, .type{
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: normal;
 }
 
 .sidebar-wrapper {
