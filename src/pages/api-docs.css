@@ -82,7 +82,7 @@ span > .type, a.type, span.type {
   margin-bottom: 20px;
 }
 
-table.params { 
+table.params {
   border-left: 5px solid rgba(255, 255, 255, 0.2);
   margin-left: 20px;
 }
@@ -101,7 +101,7 @@ table.params {
 }
 
 td > p {
-  margin: 0.4em 0.4em; 
+  margin: 0.4em 0.4em;
 }
 
 .table-bordered th,
@@ -116,7 +116,7 @@ td > p {
   font-size: 10px !important;
 }
 
-small, .type{
+small, .type, small > .muted {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.4);
   font-weight: normal;
