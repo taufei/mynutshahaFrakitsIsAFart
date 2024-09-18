@@ -34,6 +34,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
+      - name: Install Haxelib dependencies
+        run:
+          haxelib --global install dox
+          haxelib --global install hxtemplo
+          haxelib --global install hxparse
+          haxelib --global install hxargs
+          haxelib --global install markdown
+
       - run: npm install
       - run: npm run build:full ./
 

@@ -20,17 +20,17 @@ function buildHtml(_pageDir, _exportPath, isWatch) {
 	console.log("Building Api Docs");
 	console.log("Using api generator at " + apiGenerator);
 
-	if(isWatch) {
+	//if(isWatch) {
 		// build with haxe
 		execSync("haxe doc.hxml", {cwd: apiGenerator}, function(error, stdout, stderr) {
 			console.log(stdout);
 		});
-	} else {
-		// build with neko
-		execSync("neko bin/main.n", {cwd: apiGenerator}, function(error, stdout, stderr) {
-			console.log(stdout);
-		});
-	}
+	//} else {
+	//	// build with neko
+	//	execSync("neko bin/main.n", {cwd: apiGenerator}, function(error, stdout, stderr) {
+	//		console.log(stdout);
+	//	});
+	//}
 
 	//copyDir("./src/pages/api-docs/", exportPath);
 }
