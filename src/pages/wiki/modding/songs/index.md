@@ -20,7 +20,7 @@ Although we have made our song, it's still missing the charts. This is where cre
 
 <img src="./index-2.png"/>
 
-Upon selecting New Difficulty, after selecting on our newly created song, brings us to this window. Now this looks overwhelming at first, but keep in mind you only have to focus on the top part the most. <br> Looking at the top part we can change the difficulty name, the stage and the scroll speed. Once you're done filling those you can proceed with pressing Save & Close, and your difficulty will be created. <br> *(If you're curious about the bottom part, see <a href="./Chart Editor Features.md">Chart Editor Features</a>)*
+Upon selecting New Difficulty, after selecting on our newly created song, brings us to this window. Now this looks overwhelming at first, but keep in mind you only have to focus on the top part the most. <br> Looking at the top part we can change the difficulty name, the stage and the scroll speed. Once you're done filling those you can proceed with pressing Save & Close, and your difficulty will be created. <br> *(If you're curious about the bottom part, see <a href="./editor-features.md">Chart Editor Features</a>)*
 
 ## Opening the chart editor.
 
@@ -32,7 +32,7 @@ Opening the chart editor is done by selecting one of the song's difficulties dis
 
 As you can see, there's a lot of options on how to save the chart, but for now only focus on the first 2 save options. Of course, you get to save without having to deal with a file dialogue, as the engine will automatically save the chart on the correct charts folder. <br> While saving normally is highly recommended, we also offer the option to save separately.
 
-Now that you've learned to make and chart a song, you can proceed to <a href="./Chart Editor Features.md">Chart Editor Features</a>, to learn about advanced features.
+Now that you've learned to make and chart a song, you can proceed to <a href="./editor-features.md">Chart Editor Features</a>, to learn about advanced features.
 
 ## ADDITIONAL. Different audio per difficulty.
 

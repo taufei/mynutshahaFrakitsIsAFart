@@ -1,5 +1,5 @@
 # Creating stages
-Stages are defined via XML files, similar to <a href="./Creating characters/index.md">Creating characters</a>. By creating an XML file in ``./data/stages``, you officially created a stage.
+Stages are defined via XML files, similar to <a href="./characters/index.md">Creating characters</a>. By creating an XML file in ``./data/stages``, you officially created a stage.
 
 The default stage XML looks something like this:
 ```xml
@@ -24,7 +24,7 @@ Noting options that you can set there:
 - ``folder`` which changes the destination of where the sprites are taken from *(like ``images/stages/default/``)*.
 - ``startCamPosX, startCamPosY`` set the destination of where the camera starts from *(before countdown)*
 
-As for the other nodes, there's about *7 types* of them *(and more if you script them in, see <a href="./Scripting/PlayState Scripts/Character or Stage Scripts.md">Character/Stage Scripts</a>)*, we'll go through each of them.
+As for the other nodes, there's about *7 types* of them *(and more if you script them in, see <a href="./scripting/playstate-scripts/character-stage-scripts.md">Character/Stage Scripts</a>)*, we'll go through each of them.
 
 *(note that it's important which order you put them in because they will take the same order in-game too)*
 
@@ -98,7 +98,7 @@ Character nodes are used to position characters in the stage. A Character node l
 ```xml
 <boyfriend x="200" y="400"/>
 ```
-Accepted parametters are:
+Accepted parameters are:
 - ``x`` and ``y`` for positioning.
 - ``camxoffset`` and ``camyoffset`` for changing the character's camera point.
 - ``skewx`` and ``skewy`` for skewing.

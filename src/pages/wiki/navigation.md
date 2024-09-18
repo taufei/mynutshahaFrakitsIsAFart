@@ -5,7 +5,7 @@ While the engine has pretty much not changed the usual look and feel of the orig
 ## The Warning Screen
 <img src="./How to navigate the engine-2.png"/>
 
-Although not very notable, it's still important to read the message to understand why the engine doesn't feel "complete". And also, this state can be modified to show your own message (see <a href="./Modding The Engine/Scripting/State or Substate Scripts.md">State Scripts</a>).
+Although not very notable, it's still important to read the message to understand why the engine doesn't feel "complete". And also, this state can be modified to show your own message (see <a href="./modding/scripting/state-substate-scripts.md">State Scripts</a>).
 
 ## Mod Select Menu
 <img src="./How to navigate the engine.png"/>

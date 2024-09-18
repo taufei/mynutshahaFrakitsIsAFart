@@ -47,7 +47,7 @@ For this, you have to obviously have different vocal audio files ready, with a s
 
 ## Events & Notetypes.
 ### Events
-Events exist in the Chart Editor to avoid coding a lot of code for just a few events. Some of them are already built-in but you can also code your own *(see <a href="../Scripting/PlayState Scripts/Events or Notetype Scripts.md">Events/Notetype Scripts</a>)*.
+Events exist in the Chart Editor to avoid coding a lot of code for just a few events. Some of them are already built-in but you can also code your own *(see <a href="../scripting/playstate-scripts/events-notetypes-scripts.md">Events/Notetype Scripts</a>)*.
 
 <img src="./Chart Editor Features-5.png"/>
 <img src="./Chart Editor Features-6.png"/>
@@ -86,7 +86,7 @@ Editing chart data has only 2 options, and they're self explanatory.
 
 <img src="./Chart Editor Features-14.png"/>
 
-Editing metadata information, is also self-explanatory, though you can notice this menu is similar to what you've seen in <a href="./index.md">Creating songs</a>, so this should be easy to figure out. Though you might also notice there's a new option, **Custom Values**. These are extra values that let's you set certain values specifically for the song *(for example, crediting someone for a song)*. This will be covered in <a href="../Scripting/PlayState Scripts/Gameplay Scripts.md">Gameplay Scripts</a>.
+Editing metadata information, is also self-explanatory, though you can notice this menu is similar to what you've seen in <a href="./index.md">Creating songs</a>, so this should be easy to figure out. Though you might also notice there's a new option, **Custom Values**. These are extra values that let's you set certain values specifically for the song *(for example, crediting someone for a song)*. This will be covered in <a href="../scripting/playstate-scripts/gameplay-scripts.md">Gameplay Scripts</a>.
 
 ## Saving.
 
