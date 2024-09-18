@@ -1,7 +1,8 @@
 {
-  "name": "compiler",
+  "name": "codename-website",
   "version": "1.0.0",
   "main": "index.js",
+  "private": true,
   "directories": {
     "doc": "docs"
   },
