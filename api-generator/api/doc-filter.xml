@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <haxe><class path="funkin.backend.system.Main" params="" file="source/funkin/backend/system/Main.hx">
 		<extends path="openfl.display.Sprite"/>
 		<releaseCycle final="1" public="1" set="null" expr="&quot;Beta&quot;" line="32" static="1">
@@ -19,10 +19,10 @@
 				<m n=":keep"/>
 			</meta>
 		</modToLoad>
-		<forceGPUOnlyBitmapsOff public="1" expr="true" line="37" static="1">
+		<forceGPUOnlyBitmapsOff public="1" expr="false" line="37" static="1">
 			<x path="Bool"/>
 			<meta>
-				<m n=":value"><e>true</e></m>
+				<m n=":value"><e>false</e></m>
 				<m n=":keep"/>
 			</meta>
 		</forceGPUOnlyBitmapsOff>
@@ -74,10 +74,10 @@
 				<m n=":keep"/>
 			</meta>
 		</changeID>
-		<pathBack public="1" expr="&quot;../../../../../../../&quot;" line="83" static="1">
+		<pathBack public="1" expr="&quot;../../../../&quot;" line="81" static="1">
 			<c path="String"/>
 			<meta>
-				<m n=":value"><e>"../../../../../../../"</e></m>
+				<m n=":value"><e>"../../../../"</e></m>
 				<m n=":keep"/>
 			</meta>
 		</pathBack>
@@ -162,7 +162,6 @@
 			<m n=":directlyUsed"/>
 			<m n=":build"><e>openfl.utils._internal.AssetsMacro.initBinding()</e></m>
 			<m n=":autoBuild"><e>openfl.utils._internal.AssetsMacro.initBinding()</e></m>
-			<m n=":keep"/>
 		</meta>
 	</class>
 	<class path="funkin.backend.FlxAnimate" params="" file="source/funkin/backend/FlxAnimate.hx">
@@ -491,7 +490,7 @@
 	<c path="String"/>
 	<x path="Bool"/>
 </f></hasAnimation>
-		<getAnimName public="1" get="inline" set="null" line="340"><f a=""><x path="Null"><c path="String"/></x></f></getAnimName>
+		<getAnimName public="1" get="inline" set="null" line="340"><f a=""><c path="String"/></f></getAnimName>
 		<isAnimReversed public="1" get="inline" set="null" line="354"><f a=""><x path="Bool"/></f></isAnimReversed>
 		<removeAnimation public="1" get="inline" set="null" line="358"><f a="name">
 	<c path="String"/>
@@ -1699,7 +1698,7 @@
 			<f a="folder:?folders" v=":false">
 				<c path="String"/>
 				<x path="Bool"/>
-				<x path="Null"><x path="Null"><c path="Array"><c path="String"/></c></x></x>
+				<x path="Null"><c path="Array"><c path="String"/></c></x>
 			</f>
 			<meta><m n=":value"><e>{ folders : false }</e></m></meta>
 		</__getFiles>
@@ -1708,10 +1707,10 @@
 	<c path="String"/>
 	<x path="Bool"/>
 </f></exists>
-		<getAssetPath set="method" line="102" override="1"><f a=""><x path="Null"><x path="Null"><c path="String"/></x></x></f></getAssetPath>
+		<getAssetPath set="method" line="102" override="1"><f a=""><x path="Null"><c path="String"/></x></f></getAssetPath>
 		<list public="1" set="method" line="110" override="1"><f a="type">
 	<c path="String"/>
-	<x path="Null"><x path="Null"><c path="Array"><c path="String"/></c></x></x>
+	<x path="Null"><c path="Array"><c path="String"/></c></x>
 </f></list>
 		<__isCacheValid set="method" line="118" override="1">
 			<f a="cache:asset:?isLocalCache" v="::false">
@@ -1787,7 +1786,7 @@
 </f></getPath>
 		<unzip public="1" get="inline" set="null" line="82"><f a="f">
 	<t path="funkin.backend.utils.SysZipEntry"/>
-	<x path="Null"><x path="Null"><c path="haxe.io.Bytes"/></x></x>
+	<x path="Null"><c path="haxe.io.Bytes"/></x>
 </f></unzip>
 		<__parseAsset public="1" set="method" line="84"><f a="asset">
 	<c path="String"/>
@@ -1854,14 +1853,11 @@
 			</f>
 			<meta><m n=":value"><e>{ difficulty : "normal" }</e></m></meta>
 		</parse>
-		<addNoteType public="1" set="method" line="176" static="1">
-			<f a="chart:noteTypeName">
-				<t path="funkin.backend.chart.ChartData"/>
-				<c path="String"/>
-				<x path="Int"/>
-			</f>
-			<haxe_doc>* events.json LOADING</haxe_doc>
-		</addNoteType>
+		<addNoteType public="1" set="method" line="176" static="1"><f a="chart:noteTypeName">
+	<t path="funkin.backend.chart.ChartData"/>
+	<c path="String"/>
+	<x path="Int"/>
+</f></addNoteType>
 		<save public="1" set="method" line="197" static="1">
 			<f a="songFolderPath:chart:?difficulty:?saveSettings" v="::&quot;normal&quot;:">
 				<c path="String"/>
@@ -4592,29 +4588,29 @@
 		</meta>
 	</class>
 	<class path="funkin.backend.shaders.ShaderTemplates" params="" file="source/funkin/backend/shaders/FunkinShader.hx" module="funkin.backend.shaders.FunkinShader">
-		<fragHeader final="1" public="1" set="null" expr="&quot;varying float openfl_Alphav;\nvarying vec4 openfl_ColorMultiplierv;\nvarying vec4 openfl_ColorOffsetv;\nvarying vec2 openfl_TextureCoordv;\n\nuniform bool openfl_HasColorTransform;\nuniform vec2 openfl_TextureSize;\nuniform sampler2D bitmap;\n\nuniform bool hasTransform;\nuniform bool hasColorTransform;\n\nvec4 flixel_texture2D(sampler2D bitmap, vec2 coord)\n{\n\tvec4 color = texture2D(bitmap, coord);\n\tif (!hasTransform)\n\t{\n\t\treturn color;\n\t}\n\n\tif (color.a == 0.0)\n\t{\n\t\treturn vec4(0.0, 0.0, 0.0, 0.0);\n\t}\n\n\tif (!hasColorTransform)\n\t{\n\t\treturn color * openfl_Alphav;\n\t}\n\n\tcolor = vec4(color.rgb / color.a, color.a);\n\n\tmat4 colorMultiplier = mat4(0);\n\tcolorMultiplier[0][0] = openfl_ColorMultiplierv.x;\n\tcolorMultiplier[1][1] = openfl_ColorMultiplierv.y;\n\tcolorMultiplier[2][2] = openfl_ColorMultiplierv.z;\n\tcolorMultiplier[3][3] = openfl_ColorMultiplierv.w;\n\n\tcolor = clamp(openfl_ColorOffsetv + (color * colorMultiplier), 0.0, 1.0);\n\n\tif (color.a &gt; 0.0)\n\t{\n\t\treturn vec4(color.rgb * color.a * openfl_Alphav, color.a * openfl_Alphav);\n\t}\n\treturn vec4(0.0, 0.0, 0.0, 0.0);\n}\n\nuniform vec4 _camSize;\n\nfloat map(float value, float min1, float max1, float min2, float max2) {\n\treturn min2 + (value - min1) * (max2 - min2) / (max1 - min1);\n}\n\nvec2 getCamPos(vec2 pos) {\n\tvec4 size = _camSize / vec4(openfl_TextureSize, openfl_TextureSize);\n\treturn vec2(map(pos.x, size.x, size.x + size.z, 0.0, 1.0), map(pos.y, size.y, size.y + size.w, 0.0, 1.0));\n}\nvec2 camToOg(vec2 pos) {\n\tvec4 size = _camSize / vec4(openfl_TextureSize, openfl_TextureSize);\n\treturn vec2(map(pos.x, 0.0, 1.0, size.x, size.x + size.z), map(pos.y, 0.0, 1.0, size.y, size.y + size.w));\n}\nvec4 textureCam(sampler2D bitmap, vec2 pos) {\n\treturn flixel_texture2D(bitmap, camToOg(pos));\n}&quot;" line="443" static="1">
+		<fragHeader final="1" public="1" set="null" expr="&quot;varying float openfl_Alphav;\r\nvarying vec4 openfl_ColorMultiplierv;\r\nvarying vec4 openfl_ColorOffsetv;\r\nvarying vec2 openfl_TextureCoordv;\r\n\r\nuniform bool openfl_HasColorTransform;\r\nuniform vec2 openfl_TextureSize;\r\nuniform sampler2D bitmap;\r\n\r\nuniform bool hasTransform;\r\nuniform bool hasColorTransform;\r\n\r\nvec4 flixel_texture2D(sampler2D bitmap, vec2 coord)\r\n{\r\n\tvec4 color = texture2D(bitmap, coord);\r\n\tif (!hasTransform)\r\n\t{\r\n\t\treturn color;\r\n\t}\r\n\r\n\tif (color.a == 0.0)\r\n\t{\r\n\t\treturn vec4(0.0, 0.0, 0.0, 0.0);\r\n\t}\r\n\r\n\tif (!hasColorTransform)\r\n\t{\r\n\t\treturn color * openfl_Alphav;\r\n\t}\r\n\r\n\tcolor = vec4(color.rgb / color.a, color.a);\r\n\r\n\tmat4 colorMultiplier = mat4(0);\r\n\tcolorMultiplier[0][0] = openfl_ColorMultiplierv.x;\r\n\tcolorMultiplier[1][1] = openfl_ColorMultiplierv.y;\r\n\tcolorMultiplier[2][2] = openfl_ColorMultiplierv.z;\r\n\tcolorMultiplier[3][3] = openfl_ColorMultiplierv.w;\r\n\r\n\tcolor = clamp(openfl_ColorOffsetv + (color * colorMultiplier), 0.0, 1.0);\r\n\r\n\tif (color.a &gt; 0.0)\r\n\t{\r\n\t\treturn vec4(color.rgb * color.a * openfl_Alphav, color.a * openfl_Alphav);\r\n\t}\r\n\treturn vec4(0.0, 0.0, 0.0, 0.0);\r\n}\r\n\r\nuniform vec4 _camSize;\r\n\r\nfloat map(float value, float min1, float max1, float min2, float max2) {\r\n\treturn min2 + (value - min1) * (max2 - min2) / (max1 - min1);\r\n}\r\n\r\nvec2 getCamPos(vec2 pos) {\r\n\tvec4 size = _camSize / vec4(openfl_TextureSize, openfl_TextureSize);\r\n\treturn vec2(map(pos.x, size.x, size.x + size.z, 0.0, 1.0), map(pos.y, size.y, size.y + size.w, 0.0, 1.0));\r\n}\r\nvec2 camToOg(vec2 pos) {\r\n\tvec4 size = _camSize / vec4(openfl_TextureSize, openfl_TextureSize);\r\n\treturn vec2(map(pos.x, 0.0, 1.0, size.x, size.x + size.z), map(pos.y, 0.0, 1.0, size.y, size.y + size.w));\r\n}\r\nvec4 textureCam(sampler2D bitmap, vec2 pos) {\r\n\treturn flixel_texture2D(bitmap, camToOg(pos));\r\n}&quot;" line="443" static="1">
 			<c path="String"/>
-			<meta><m n=":value"><e>"varying float openfl_Alphav;\nvarying vec4 openfl_ColorMultiplierv;\nvarying vec4 openfl_ColorOffsetv;\nvarying vec2 openfl_TextureCoordv;\n\nuniform bool openfl_HasColorTransform;\nuniform vec2 openfl_TextureSize;\nuniform sampler2D bitmap;\n\nuniform bool hasTransform;\nuniform bool hasColorTransform;\n\nvec4 flixel_texture2D(sampler2D bitmap, vec2 coord)\n{\n\tvec4 color = texture2D(bitmap, coord);\n\tif (!hasTransform)\n\t{\n\t\treturn color;\n\t}\n\n\tif (color.a == 0.0)\n\t{\n\t\treturn vec4(0.0, 0.0, 0.0, 0.0);\n\t}\n\n\tif (!hasColorTransform)\n\t{\n\t\treturn color * openfl_Alphav;\n\t}\n\n\tcolor = vec4(color.rgb / color.a, color.a);\n\n\tmat4 colorMultiplier = mat4(0);\n\tcolorMultiplier[0][0] = openfl_ColorMultiplierv.x;\n\tcolorMultiplier[1][1] = openfl_ColorMultiplierv.y;\n\tcolorMultiplier[2][2] = openfl_ColorMultiplierv.z;\n\tcolorMultiplier[3][3] = openfl_ColorMultiplierv.w;\n\n\tcolor = clamp(openfl_ColorOffsetv + (color * colorMultiplier), 0.0, 1.0);\n\n\tif (color.a &gt; 0.0)\n\t{\n\t\treturn vec4(color.rgb * color.a * openfl_Alphav, color.a * openfl_Alphav);\n\t}\n\treturn vec4(0.0, 0.0, 0.0, 0.0);\n}\n\nuniform vec4 _camSize;\n\nfloat map(float value, float min1, float max1, float min2, float max2) {\n\treturn min2 + (value - min1) * (max2 - min2) / (max1 - min1);\n}\n\nvec2 getCamPos(vec2 pos) {\n\tvec4 size = _camSize / vec4(openfl_TextureSize, openfl_TextureSize);\n\treturn vec2(map(pos.x, size.x, size.x + size.z, 0.0, 1.0), map(pos.y, size.y, size.y + size.w, 0.0, 1.0));\n}\nvec2 camToOg(vec2 pos) {\n\tvec4 size = _camSize / vec4(openfl_TextureSize, openfl_TextureSize);\n\treturn vec2(map(pos.x, 0.0, 1.0, size.x, size.x + size.z), map(pos.y, 0.0, 1.0, size.y, size.y + size.w));\n}\nvec4 textureCam(sampler2D bitmap, vec2 pos) {\n\treturn flixel_texture2D(bitmap, camToOg(pos));\n}"</e></m></meta>
+			<meta><m n=":value"><e>"varying float openfl_Alphav;\r\nvarying vec4 openfl_ColorMultiplierv;\r\nvarying vec4 openfl_ColorOffsetv;\r\nvarying vec2 openfl_TextureCoordv;\r\n\r\nuniform bool openfl_HasColorTransform;\r\nuniform vec2 openfl_TextureSize;\r\nuniform sampler2D bitmap;\r\n\r\nuniform bool hasTransform;\r\nuniform bool hasColorTransform;\r\n\r\nvec4 flixel_texture2D(sampler2D bitmap, vec2 coord)\r\n{\r\n\tvec4 color = texture2D(bitmap, coord);\r\n\tif (!hasTransform)\r\n\t{\r\n\t\treturn color;\r\n\t}\r\n\r\n\tif (color.a == 0.0)\r\n\t{\r\n\t\treturn vec4(0.0, 0.0, 0.0, 0.0);\r\n\t}\r\n\r\n\tif (!hasColorTransform)\r\n\t{\r\n\t\treturn color * openfl_Alphav;\r\n\t}\r\n\r\n\tcolor = vec4(color.rgb / color.a, color.a);\r\n\r\n\tmat4 colorMultiplier = mat4(0);\r\n\tcolorMultiplier[0][0] = openfl_ColorMultiplierv.x;\r\n\tcolorMultiplier[1][1] = openfl_ColorMultiplierv.y;\r\n\tcolorMultiplier[2][2] = openfl_ColorMultiplierv.z;\r\n\tcolorMultiplier[3][3] = openfl_ColorMultiplierv.w;\r\n\r\n\tcolor = clamp(openfl_ColorOffsetv + (color * colorMultiplier), 0.0, 1.0);\r\n\r\n\tif (color.a &gt; 0.0)\r\n\t{\r\n\t\treturn vec4(color.rgb * color.a * openfl_Alphav, color.a * openfl_Alphav);\r\n\t}\r\n\treturn vec4(0.0, 0.0, 0.0, 0.0);\r\n}\r\n\r\nuniform vec4 _camSize;\r\n\r\nfloat map(float value, float min1, float max1, float min2, float max2) {\r\n\treturn min2 + (value - min1) * (max2 - min2) / (max1 - min1);\r\n}\r\n\r\nvec2 getCamPos(vec2 pos) {\r\n\tvec4 size = _camSize / vec4(openfl_TextureSize, openfl_TextureSize);\r\n\treturn vec2(map(pos.x, size.x, size.x + size.z, 0.0, 1.0), map(pos.y, size.y, size.y + size.w, 0.0, 1.0));\r\n}\r\nvec2 camToOg(vec2 pos) {\r\n\tvec4 size = _camSize / vec4(openfl_TextureSize, openfl_TextureSize);\r\n\treturn vec2(map(pos.x, 0.0, 1.0, size.x, size.x + size.z), map(pos.y, 0.0, 1.0, size.y, size.y + size.w));\r\n}\r\nvec4 textureCam(sampler2D bitmap, vec2 pos) {\r\n\treturn flixel_texture2D(bitmap, camToOg(pos));\r\n}"</e></m></meta>
 		</fragHeader>
-		<fragBody final="1" public="1" set="null" expr="&quot;vec4 color = texture2D (bitmap, openfl_TextureCoordv);\n\nif (color.a == 0.0) {\n\n\tgl_FragColor = vec4 (0.0, 0.0, 0.0, 0.0);\n\n} else if (openfl_HasColorTransform) {\n\n\tcolor = vec4 (color.rgb / color.a, color.a);\n\n\tmat4 colorMultiplier = mat4 (0);\n\tcolorMultiplier[0][0] = openfl_ColorMultiplierv.x;\n\tcolorMultiplier[1][1] = openfl_ColorMultiplierv.y;\n\tcolorMultiplier[2][2] = openfl_ColorMultiplierv.z;\n\tcolorMultiplier[3][3] = 1.0; // openfl_ColorMultiplierv.w;\n\n\tcolor = clamp (openfl_ColorOffsetv + (color * colorMultiplier), 0.0, 1.0);\n\n\tif (color.a &gt; 0.0) {\n\n\t\tgl_FragColor = vec4 (color.rgb * color.a * openfl_Alphav, color.a * openfl_Alphav);\n\n\t} else {\n\n\t\tgl_FragColor = vec4 (0.0, 0.0, 0.0, 0.0);\n\n\t}\n\n} else {\n\n\tgl_FragColor = color * openfl_Alphav;\n\n}&quot;" line="508" static="1">
+		<fragBody final="1" public="1" set="null" expr="&quot;vec4 color = texture2D (bitmap, openfl_TextureCoordv);\r\n\r\nif (color.a == 0.0) {\r\n\r\n\tgl_FragColor = vec4 (0.0, 0.0, 0.0, 0.0);\r\n\r\n} else if (openfl_HasColorTransform) {\r\n\r\n\tcolor = vec4 (color.rgb / color.a, color.a);\r\n\r\n\tmat4 colorMultiplier = mat4 (0);\r\n\tcolorMultiplier[0][0] = openfl_ColorMultiplierv.x;\r\n\tcolorMultiplier[1][1] = openfl_ColorMultiplierv.y;\r\n\tcolorMultiplier[2][2] = openfl_ColorMultiplierv.z;\r\n\tcolorMultiplier[3][3] = 1.0; // openfl_ColorMultiplierv.w;\r\n\r\n\tcolor = clamp (openfl_ColorOffsetv + (color * colorMultiplier), 0.0, 1.0);\r\n\r\n\tif (color.a &gt; 0.0) {\r\n\r\n\t\tgl_FragColor = vec4 (color.rgb * color.a * openfl_Alphav, color.a * openfl_Alphav);\r\n\r\n\t} else {\r\n\r\n\t\tgl_FragColor = vec4 (0.0, 0.0, 0.0, 0.0);\r\n\r\n\t}\r\n\r\n} else {\r\n\r\n\tgl_FragColor = color * openfl_Alphav;\r\n\r\n}&quot;" line="508" static="1">
 			<c path="String"/>
-			<meta><m n=":value"><e>"vec4 color = texture2D (bitmap, openfl_TextureCoordv);\n\nif (color.a == 0.0) {\n\n\tgl_FragColor = vec4 (0.0, 0.0, 0.0, 0.0);\n\n} else if (openfl_HasColorTransform) {\n\n\tcolor = vec4 (color.rgb / color.a, color.a);\n\n\tmat4 colorMultiplier = mat4 (0);\n\tcolorMultiplier[0][0] = openfl_ColorMultiplierv.x;\n\tcolorMultiplier[1][1] = openfl_ColorMultiplierv.y;\n\tcolorMultiplier[2][2] = openfl_ColorMultiplierv.z;\n\tcolorMultiplier[3][3] = 1.0; // openfl_ColorMultiplierv.w;\n\n\tcolor = clamp (openfl_ColorOffsetv + (color * colorMultiplier), 0.0, 1.0);\n\n\tif (color.a &gt; 0.0) {\n\n\t\tgl_FragColor = vec4 (color.rgb * color.a * openfl_Alphav, color.a * openfl_Alphav);\n\n\t} else {\n\n\t\tgl_FragColor = vec4 (0.0, 0.0, 0.0, 0.0);\n\n\t}\n\n} else {\n\n\tgl_FragColor = color * openfl_Alphav;\n\n}"</e></m></meta>
+			<meta><m n=":value"><e>"vec4 color = texture2D (bitmap, openfl_TextureCoordv);\r\n\r\nif (color.a == 0.0) {\r\n\r\n\tgl_FragColor = vec4 (0.0, 0.0, 0.0, 0.0);\r\n\r\n} else if (openfl_HasColorTransform) {\r\n\r\n\tcolor = vec4 (color.rgb / color.a, color.a);\r\n\r\n\tmat4 colorMultiplier = mat4 (0);\r\n\tcolorMultiplier[0][0] = openfl_ColorMultiplierv.x;\r\n\tcolorMultiplier[1][1] = openfl_ColorMultiplierv.y;\r\n\tcolorMultiplier[2][2] = openfl_ColorMultiplierv.z;\r\n\tcolorMultiplier[3][3] = 1.0; // openfl_ColorMultiplierv.w;\r\n\r\n\tcolor = clamp (openfl_ColorOffsetv + (color * colorMultiplier), 0.0, 1.0);\r\n\r\n\tif (color.a &gt; 0.0) {\r\n\r\n\t\tgl_FragColor = vec4 (color.rgb * color.a * openfl_Alphav, color.a * openfl_Alphav);\r\n\r\n\t} else {\r\n\r\n\t\tgl_FragColor = vec4 (0.0, 0.0, 0.0, 0.0);\r\n\r\n\t}\r\n\r\n} else {\r\n\r\n\tgl_FragColor = color * openfl_Alphav;\r\n\r\n}"</e></m></meta>
 		</fragBody>
-		<vertHeader final="1" public="1" set="null" expr="&quot;attribute float openfl_Alpha;\nattribute vec4 openfl_ColorMultiplier;\nattribute vec4 openfl_ColorOffset;\nattribute vec4 openfl_Position;\nattribute vec2 openfl_TextureCoord;\n\nvarying float openfl_Alphav;\nvarying vec4 openfl_ColorMultiplierv;\nvarying vec4 openfl_ColorOffsetv;\nvarying vec2 openfl_TextureCoordv;\n\nuniform mat4 openfl_Matrix;\nuniform bool openfl_HasColorTransform;\nuniform vec2 openfl_TextureSize;&quot;" line="541" static="1">
+		<vertHeader final="1" public="1" set="null" expr="&quot;attribute float openfl_Alpha;\r\nattribute vec4 openfl_ColorMultiplier;\r\nattribute vec4 openfl_ColorOffset;\r\nattribute vec4 openfl_Position;\r\nattribute vec2 openfl_TextureCoord;\r\n\r\nvarying float openfl_Alphav;\r\nvarying vec4 openfl_ColorMultiplierv;\r\nvarying vec4 openfl_ColorOffsetv;\r\nvarying vec2 openfl_TextureCoordv;\r\n\r\nuniform mat4 openfl_Matrix;\r\nuniform bool openfl_HasColorTransform;\r\nuniform vec2 openfl_TextureSize;&quot;" line="541" static="1">
 			<c path="String"/>
-			<meta><m n=":value"><e>"attribute float openfl_Alpha;\nattribute vec4 openfl_ColorMultiplier;\nattribute vec4 openfl_ColorOffset;\nattribute vec4 openfl_Position;\nattribute vec2 openfl_TextureCoord;\n\nvarying float openfl_Alphav;\nvarying vec4 openfl_ColorMultiplierv;\nvarying vec4 openfl_ColorOffsetv;\nvarying vec2 openfl_TextureCoordv;\n\nuniform mat4 openfl_Matrix;\nuniform bool openfl_HasColorTransform;\nuniform vec2 openfl_TextureSize;"</e></m></meta>
+			<meta><m n=":value"><e>"attribute float openfl_Alpha;\r\nattribute vec4 openfl_ColorMultiplier;\r\nattribute vec4 openfl_ColorOffset;\r\nattribute vec4 openfl_Position;\r\nattribute vec2 openfl_TextureCoord;\r\n\r\nvarying float openfl_Alphav;\r\nvarying vec4 openfl_ColorMultiplierv;\r\nvarying vec4 openfl_ColorOffsetv;\r\nvarying vec2 openfl_TextureCoordv;\r\n\r\nuniform mat4 openfl_Matrix;\r\nuniform bool openfl_HasColorTransform;\r\nuniform vec2 openfl_TextureSize;"</e></m></meta>
 		</vertHeader>
-		<vertBody final="1" public="1" set="null" expr="&quot;openfl_Alphav = openfl_Alpha;\nopenfl_TextureCoordv = openfl_TextureCoord;\n\nif (openfl_HasColorTransform) {\n\n\topenfl_ColorMultiplierv = openfl_ColorMultiplier;\n\topenfl_ColorOffsetv = openfl_ColorOffset / 255.0;\n\n}\n\ngl_Position = openfl_Matrix * openfl_Position;&quot;" line="556" static="1">
+		<vertBody final="1" public="1" set="null" expr="&quot;openfl_Alphav = openfl_Alpha;\r\nopenfl_TextureCoordv = openfl_TextureCoord;\r\n\r\nif (openfl_HasColorTransform) {\r\n\r\n\topenfl_ColorMultiplierv = openfl_ColorMultiplier;\r\n\topenfl_ColorOffsetv = openfl_ColorOffset / 255.0;\r\n\r\n}\r\n\r\ngl_Position = openfl_Matrix * openfl_Position;&quot;" line="556" static="1">
 			<c path="String"/>
-			<meta><m n=":value"><e>"openfl_Alphav = openfl_Alpha;\nopenfl_TextureCoordv = openfl_TextureCoord;\n\nif (openfl_HasColorTransform) {\n\n\topenfl_ColorMultiplierv = openfl_ColorMultiplier;\n\topenfl_ColorOffsetv = openfl_ColorOffset / 255.0;\n\n}\n\ngl_Position = openfl_Matrix * openfl_Position;"</e></m></meta>
+			<meta><m n=":value"><e>"openfl_Alphav = openfl_Alpha;\r\nopenfl_TextureCoordv = openfl_TextureCoord;\r\n\r\nif (openfl_HasColorTransform) {\r\n\r\n\topenfl_ColorMultiplierv = openfl_ColorMultiplier;\r\n\topenfl_ColorOffsetv = openfl_ColorOffset / 255.0;\r\n\r\n}\r\n\r\ngl_Position = openfl_Matrix * openfl_Position;"</e></m></meta>
 		</vertBody>
-		<defaultVertexSource final="1" public="1" set="null" expr="&quot;#pragma header\n\nattribute float alpha;\nattribute vec4 colorMultiplier;\nattribute vec4 colorOffset;\nuniform bool hasColorTransform;\n\nvoid main(void)\n{\n\t#pragma body\n\n\topenfl_Alphav = openfl_Alpha * alpha;\n\n\tif (hasColorTransform)\n\t{\n\t\topenfl_ColorOffsetv = colorOffset / 255.0;\n\t\topenfl_ColorMultiplierv = colorMultiplier;\n\t}\n}&quot;" line="569" static="1">
+		<defaultVertexSource final="1" public="1" set="null" expr="&quot;#pragma header\r\n\r\nattribute float alpha;\r\nattribute vec4 colorMultiplier;\r\nattribute vec4 colorOffset;\r\nuniform bool hasColorTransform;\r\n\r\nvoid main(void)\r\n{\r\n\t#pragma body\r\n\r\n\topenfl_Alphav = openfl_Alpha * alpha;\r\n\r\n\tif (hasColorTransform)\r\n\t{\r\n\t\topenfl_ColorOffsetv = colorOffset / 255.0;\r\n\t\topenfl_ColorMultiplierv = colorMultiplier;\r\n\t}\r\n}&quot;" line="569" static="1">
 			<c path="String"/>
-			<meta><m n=":value"><e>"#pragma header\n\nattribute float alpha;\nattribute vec4 colorMultiplier;\nattribute vec4 colorOffset;\nuniform bool hasColorTransform;\n\nvoid main(void)\n{\n\t#pragma body\n\n\topenfl_Alphav = openfl_Alpha * alpha;\n\n\tif (hasColorTransform)\n\t{\n\t\topenfl_ColorOffsetv = colorOffset / 255.0;\n\t\topenfl_ColorMultiplierv = colorMultiplier;\n\t}\n}"</e></m></meta>
+			<meta><m n=":value"><e>"#pragma header\r\n\r\nattribute float alpha;\r\nattribute vec4 colorMultiplier;\r\nattribute vec4 colorOffset;\r\nuniform bool hasColorTransform;\r\n\r\nvoid main(void)\r\n{\r\n\t#pragma body\r\n\r\n\topenfl_Alphav = openfl_Alpha * alpha;\r\n\r\n\tif (hasColorTransform)\r\n\t{\r\n\t\topenfl_ColorOffsetv = colorOffset / 255.0;\r\n\t\topenfl_ColorMultiplierv = colorMultiplier;\r\n\t}\r\n}"</e></m></meta>
 		</defaultVertexSource>
-		<defaultFragmentSource final="1" public="1" set="null" expr="&quot;#pragma header\n\nvoid main(void)\n{\n\tgl_FragColor = flixel_texture2D(bitmap, openfl_TextureCoordv);\n}&quot;" line="591" static="1">
+		<defaultFragmentSource final="1" public="1" set="null" expr="&quot;#pragma header\r\n\r\nvoid main(void)\r\n{\r\n\tgl_FragColor = flixel_texture2D(bitmap, openfl_TextureCoordv);\r\n}&quot;" line="591" static="1">
 			<c path="String"/>
-			<meta><m n=":value"><e>"#pragma header\n\nvoid main(void)\n{\n\tgl_FragColor = flixel_texture2D(bitmap, openfl_TextureCoordv);\n}"</e></m></meta>
+			<meta><m n=":value"><e>"#pragma header\r\n\r\nvoid main(void)\r\n{\r\n\tgl_FragColor = flixel_texture2D(bitmap, openfl_TextureCoordv);\r\n}"</e></m></meta>
 		</defaultFragmentSource>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
@@ -4639,7 +4635,7 @@
 		</uBlendColor>
 		<new public="1" set="method" line="30">
 			<f a=""><x path="Void"/></f>
-			<meta><m n=":glFragmentSource"><e>"\n#pragma header\nuniform vec4 uBlendColor;\n\nvec3 blendLighten(base:Vec3, blend:Vec3) : Vec3 {\n\treturn mix(\n\t\t1.0 - 2.0 * (1.0 - base) * (1.0 - blend),\n\t\t2.0 * base * blend,\n\t\tstep( base, vec3(0.5) )\n\t);\n}\n\nvec4 blendLighten(vec4 base, vec4 blend, float opacity)\n{\n\treturn (blendLighten(base, blend) * opacity + base * (1.0 - opacity));\n}\n\nvoid main()\n{\n\tvec4 base = texture2D(bitmap, openfl_TextureCoordv);\n\tgl_FragColor = blendLighten(base, uBlendColor, uBlendColor.a);\n}"</e></m></meta>
+			<meta><m n=":glFragmentSource"><e>"\r\n#pragma header\r\nuniform vec4 uBlendColor;\r\n\r\nvec3 blendLighten(base:Vec3, blend:Vec3) : Vec3 {\r\n\treturn mix(\r\n\t\t1.0 - 2.0 * (1.0 - base) * (1.0 - blend),\r\n\t\t2.0 * base * blend,\r\n\t\tstep( base, vec3(0.5) )\r\n\t);\r\n}\r\n\r\nvec4 blendLighten(vec4 base, vec4 blend, float opacity)\r\n{\r\n\treturn (blendLighten(base, blend) * opacity + base * (1.0 - opacity));\r\n}\r\n\r\nvoid main()\r\n{\r\n\tvec4 base = texture2D(bitmap, openfl_TextureCoordv);\r\n\tgl_FragColor = blendLighten(base, uBlendColor, uBlendColor.a);\r\n}"</e></m></meta>
 		</new>
 		<meta>
 			<m n=":build"><e>openfl.utils._internal.ShaderMacro.build()</e></m>
@@ -4728,7 +4724,7 @@
 		</uWaveAmplitude>
 		<new public="1" set="method" line="130">
 			<f a=""><x path="Void"/></f>
-			<meta><m n=":glFragmentSource"><e>"\n#pragma header\n//uniform float tx, ty; // x,y waves phase\nuniform float uTime;\n\nconst int EFFECT_TYPE_DREAMY = 0;\nconst int EFFECT_TYPE_WAVY = 1;\nconst int EFFECT_TYPE_HEAT_WAVE_HORIZONTAL = 2;\nconst int EFFECT_TYPE_HEAT_WAVE_VERTICAL = 3;\nconst int EFFECT_TYPE_FLAG = 4;\n\nuniform int effectType;\n\n/**\n\t* How fast the waves move over time\n\t*/\nuniform float uSpeed;\n\n/**\n\t* Number of waves over time\n\t*/\nuniform float uFrequency;\n\n/**\n\t* How much the pixels are going to stretch over the waves\n\t*/\nuniform float uWaveAmplitude;\n\nvec2 sineWave(vec2 pt)\n{\n\tfloat x = 0.0;\n\tfloat y = 0.0;\n\n\tif (effectType == EFFECT_TYPE_DREAMY)\n\t{\n\t\tfloat offsetX = sin(pt.y * uFrequency + uTime * uSpeed) * uWaveAmplitude;\n\t\tpt.x += offsetX; // * (pt.y - 1.0); // &lt;- Uncomment to stop bottom part of the screen from moving\n\t}\n\telse if (effectType == EFFECT_TYPE_WAVY)\n\t{\n\t\tfloat offsetY = sin(pt.x * uFrequency + uTime * uSpeed) * uWaveAmplitude;\n\t\tpt.y += offsetY; // * (pt.y - 1.0); // &lt;- Uncomment to stop bottom part of the screen from moving\n\t}\n\telse if (effectType == EFFECT_TYPE_HEAT_WAVE_HORIZONTAL)\n\t{\n\t\tx = sin(pt.x * uFrequency + uTime * uSpeed) * uWaveAmplitude;\n\t}\n\telse if (effectType == EFFECT_TYPE_HEAT_WAVE_VERTICAL)\n\t{\n\t\ty = sin(pt.y * uFrequency + uTime * uSpeed) * uWaveAmplitude;\n\t}\n\telse if (effectType == EFFECT_TYPE_FLAG)\n\t{\n\t\ty = sin(pt.y * uFrequency + 10.0 * pt.x + uTime * uSpeed) * uWaveAmplitude;\n\t\tx = sin(pt.x * uFrequency + 5.0 * pt.y + uTime * uSpeed) * uWaveAmplitude;\n\t}\n\n\treturn vec2(pt.x + x, pt.y + y);\n}\n\nvoid main()\n{\n\tvec2 uv = sineWave(openfl_TextureCoordv);\n\tgl_FragColor = texture2D(bitmap, uv);\n}"</e></m></meta>
+			<meta><m n=":glFragmentSource"><e>"\r\n#pragma header\r\n//uniform float tx, ty; // x,y waves phase\r\nuniform float uTime;\r\n\r\nconst int EFFECT_TYPE_DREAMY = 0;\r\nconst int EFFECT_TYPE_WAVY = 1;\r\nconst int EFFECT_TYPE_HEAT_WAVE_HORIZONTAL = 2;\r\nconst int EFFECT_TYPE_HEAT_WAVE_VERTICAL = 3;\r\nconst int EFFECT_TYPE_FLAG = 4;\r\n\r\nuniform int effectType;\r\n\r\n/**\r\n\t* How fast the waves move over time\r\n\t*/\r\nuniform float uSpeed;\r\n\r\n/**\r\n\t* Number of waves over time\r\n\t*/\r\nuniform float uFrequency;\r\n\r\n/**\r\n\t* How much the pixels are going to stretch over the waves\r\n\t*/\r\nuniform float uWaveAmplitude;\r\n\r\nvec2 sineWave(vec2 pt)\r\n{\r\n\tfloat x = 0.0;\r\n\tfloat y = 0.0;\r\n\r\n\tif (effectType == EFFECT_TYPE_DREAMY)\r\n\t{\r\n\t\tfloat offsetX = sin(pt.y * uFrequency + uTime * uSpeed) * uWaveAmplitude;\r\n\t\tpt.x += offsetX; // * (pt.y - 1.0); // &lt;- Uncomment to stop bottom part of the screen from moving\r\n\t}\r\n\telse if (effectType == EFFECT_TYPE_WAVY)\r\n\t{\r\n\t\tfloat offsetY = sin(pt.x * uFrequency + uTime * uSpeed) * uWaveAmplitude;\r\n\t\tpt.y += offsetY; // * (pt.y - 1.0); // &lt;- Uncomment to stop bottom part of the screen from moving\r\n\t}\r\n\telse if (effectType == EFFECT_TYPE_HEAT_WAVE_HORIZONTAL)\r\n\t{\r\n\t\tx = sin(pt.x * uFrequency + uTime * uSpeed) * uWaveAmplitude;\r\n\t}\r\n\telse if (effectType == EFFECT_TYPE_HEAT_WAVE_VERTICAL)\r\n\t{\r\n\t\ty = sin(pt.y * uFrequency + uTime * uSpeed) * uWaveAmplitude;\r\n\t}\r\n\telse if (effectType == EFFECT_TYPE_FLAG)\r\n\t{\r\n\t\ty = sin(pt.y * uFrequency + 10.0 * pt.x + uTime * uSpeed) * uWaveAmplitude;\r\n\t\tx = sin(pt.x * uFrequency + 5.0 * pt.y + uTime * uSpeed) * uWaveAmplitude;\r\n\t}\r\n\r\n\treturn vec2(pt.x + x, pt.y + y);\r\n}\r\n\r\nvoid main()\r\n{\r\n\tvec2 uv = sineWave(openfl_TextureCoordv);\r\n\tgl_FragColor = texture2D(bitmap, uv);\r\n}"</e></m></meta>
 		</new>
 		<meta>
 			<m n=":directlyUsed"/>
@@ -6161,7 +6157,7 @@
 		<nativeTrace public="1" expr="Log.trace" line="12" static="1">
 			<f a="v:?infos">
 				<d/>
-				<x path="Null"><t path="haxe.PosInfos"/></x>
+				<t path="haxe.PosInfos"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":value"><e>Log.trace</e></m></meta>
@@ -6451,9 +6447,9 @@
 		<fpsCounter public="1" static="1"><c path="funkin.backend.system.framerate.FramerateCounter"/></fpsCounter>
 		<memoryCounter public="1" static="1"><c path="funkin.backend.system.framerate.MemoryCounter"/></memoryCounter>
 		<codenameBuildField public="1" static="1"><c path="funkin.backend.system.framerate.CodenameBuildField"/></codenameBuildField>
-		<fontName public="1" expr="&quot;_sans&quot;" line="24" static="1">
+		<fontName public="1" expr="&quot;${Sys.getEnv(\&quot;windir\&quot;)}\\Fonts\\consola.ttf&quot;" line="24" static="1">
 			<c path="String"/>
-			<meta><m n=":value"><e>"_sans"</e></m></meta>
+			<meta><m n=":value"><e>"${Sys.getEnv(\"windir\")}\\Fonts\\consola.ttf"</e></m></meta>
 		</fontName>
 		<debugMode public="1" expr="1" line="31" static="1">
 			<x path="Int"/>
@@ -6968,10 +6964,10 @@
 			</t>
 			<haxe_doc>* Returns the defined values</haxe_doc>
 		</defines>
-		<get_defines get="inline" set="null" line="17" static="1"><f a=""><t path="Map">
+		<get_defines get="inline" set="null" line="17" static="1"><f a=""><x path="haxe.ds.Map">
 	<c path="String"/>
-	<d/>
-</t></f></get_defines>
+	<c path="String"/>
+</x></f></get_defines>
 	</class>
 	<class path="funkin.backend.system.macros.GitCommitMacro" params="" file="source/funkin/backend/system/macros/GitCommitMacro.hx">
 		<commitNumber public="1" get="accessor" set="null" static="1">
@@ -7246,7 +7242,7 @@
 		<parseJson public="1" set="method" line="59" static="1">
 			<f a="assetPath">
 				<c path="String"/>
-				<d/>
+				<unknown/>
 			</f>
 			<haxe_doc>* Shortcut to parse JSON from an Asset path
 	 * @param assetPath Path to the JSON asset.</haxe_doc>
@@ -7374,7 +7370,7 @@
 		<parseJsonString public="1" get="inline" set="null" line="194" static="1">
 			<f a="str">
 				<c path="String"/>
-				<d/>
+				<unknown/>
 			</f>
 			<haxe_doc>* Shortcut to parse a JSON string
 	 * @param str Path to the JSON string
@@ -7654,7 +7650,7 @@
 			<f a="xml:name">
 				<x path="haxe.xml.Access"/>
 				<c path="String"/>
-				<x path="Null"><c path="String"/></x>
+				<c path="String"/>
 			</f>
 			<haxe_doc>* Gets an XML attribute from an `Access` abstract, without throwing an exception if invalid.
 	 * Example: `xml.getAtt("test").getDefault("Hello, World!");`
@@ -8547,11 +8543,11 @@
 		</userAgent>
 		<requestText public="1" set="method" line="9" static="1"><f a="url">
 	<c path="String"/>
-	<x path="Null"><c path="String"/></x>
+	<c path="String"/>
 </f></requestText>
 		<requestBytes public="1" set="method" line="35" static="1"><f a="url">
 	<c path="String"/>
-	<x path="Null"><c path="haxe.io.Bytes"/></x>
+	<c path="haxe.io.Bytes"/>
 </f></requestBytes>
 		<isRedirect set="method" line="61" static="1"><f a="status">
 	<x path="Int"/>
@@ -9353,9 +9349,9 @@
 		<meta><m n=":enum"/></meta>
 	</class>
 	<class path="funkin.backend.utils.NdllUtil" params="" file="source/funkin/backend/utils/NdllUtil.hx">
-		<os final="1" public="1" set="null" expr="&quot;mac&quot;" line="23" static="1">
+		<os final="1" public="1" set="null" expr="&quot;windows&quot;" line="21" static="1">
 			<c path="String"/>
-			<meta><m n=":value"><e>"mac"</e></m></meta>
+			<meta><m n=":value"><e>"windows"</e></m></meta>
 		</os>
 		<getFunction public="1" set="method" line="36" static="1">
 			<f a="ndll:name:args">
@@ -9885,20 +9881,86 @@
 </f></new>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
-	<class path="funkin.backend.utils.native.Mac" params="" file="source/funkin/backend/utils/native/Mac.hx">
-		<getTotalRam public="1" set="method" line="17" static="1">
+	<class path="funkin.backend.utils.native.Windows" params="" file="source/funkin/backend/utils/native/Windows.hx">
+		<__audioChangeCallback public="1" expr="function() {  trace(&quot;test&quot;); }" line="119" static="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n=":value"><e>function() {
+	trace("test");
+}</e></m></meta>
+		</__audioChangeCallback>
+		<registerAudio public="1" set="method" line="127" static="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n=":functionCode"><e>"\r\n\tif (!curAudioFix) curAudioFix = new AudioFixClient();\r\n\t"</e></m></meta>
+		</registerAudio>
+		<setDarkMode public="1" set="method" line="142" static="1">
+			<f a="title:enable">
+				<c path="String"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":functionCode"><e>"\r\n\t\tint darkMode = enable ? 1 : 0;\r\n\r\n\t\tHWND window = FindWindowA(NULL, title.c_str());\r\n\t\t// Look for child windows if top level aint found\r\n\t\tif (window == NULL) window = FindWindowExA(GetActiveWindow(), NULL, NULL, title.c_str());\r\n\r\n\t\tif (window != NULL &amp;&amp; S_OK != DwmSetWindowAttribute(window, 19, &amp;darkMode, sizeof(darkMode))) {\r\n\t\t\tDwmSetWindowAttribute(window, 20, &amp;darkMode, sizeof(darkMode));\r\n\t\t}\r\n\t"</e></m></meta>
+		</setDarkMode>
+		<allocConsole public="1" set="method" line="154" static="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n=":functionCode"><e>"\r\n\t// https://stackoverflow.com/questions/15543571/allocconsole-not-displaying-cout\r\n\r\n\tif (!AllocConsole())\r\n\t\treturn;\r\n\r\n\tfreopen(\"CONIN$\", \"r\", stdin);\r\n\tfreopen(\"CONOUT$\", \"w\", stdout);\r\n\tfreopen(\"CONOUT$\", \"w\", stderr);\r\n\t"</e></m></meta>
+		</allocConsole>
+		<getFileAttributes public="1" set="method" line="161" static="1">
+			<f a="path">
+				<c path="String"/>
+				<x path="funkin.backend.utils.FileAttribute"/>
+			</f>
+			<meta><m n=":functionCode"><e>"\r\n\t\treturn GetFileAttributes(path);\r\n\t"</e></m></meta>
+		</getFileAttributes>
+		<setFileAttributes public="1" set="method" line="169" static="1">
+			<f a="path:attrib">
+				<c path="String"/>
+				<x path="funkin.backend.utils.FileAttribute"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":functionCode"><e>"\r\n\t\treturn SetFileAttributes(path, attrib);\r\n\t"</e></m></meta>
+		</setFileAttributes>
+		<setConsoleColors public="1" set="method" line="178" static="1">
+			<f a="color">
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":functionCode"><e>"\r\n\t\tHANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);\r\n\t\tSetConsoleTextAttribute(console, color);\r\n\t"</e></m></meta>
+		</setConsoleColors>
+		<clearScreen public="1" set="method" line="186" static="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n=":functionCode"><e>"\r\n\t\tsystem(\"CLS\");\r\n\t\tstd::cout&lt;&lt; \"\" &lt;&lt;std::flush;\r\n\t"</e></m></meta>
+		</clearScreen>
+		<showMessageBox public="1" set="method" line="194" static="1">
+			<f a="caption:message:?icon" v="::MSG_WARNING">
+				<c path="String"/>
+				<c path="String"/>
+				<x path="funkin.backend.utils.MessageBoxIcon"/>
+				<x path="Void"/>
+			</f>
+			<meta>
+				<m n=":value"><e>{ icon : MSG_WARNING }</e></m>
+				<m n=":functionCode"><e>"\r\n\t\tMessageBox(GetActiveWindow(), message, caption, icon | MB_SETFOREGROUND);\r\n\t"</e></m>
+			</meta>
+		</showMessageBox>
+		<registerAsDPICompatible public="1" set="method" line="201" static="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n=":functionCode"><e>"\r\n\t\tSetProcessDPIAware();\r\n\t"</e></m></meta>
+		</registerAsDPICompatible>
+		<getTotalRam public="1" set="method" line="210" static="1">
 			<f a=""><x path="Float"/></f>
-			<meta><m n=":functionCode"><e>"\n\tint mib [] = { CTL_HW, HW_MEMSIZE };\n\tint64_t value = 0;\n\tsize_t length = sizeof(value);\n\n\tif(-1 == sysctl(mib, 2, &amp;value, &amp;length, NULL, 0))\n\t\treturn -1; // An error occurred\n\n\treturn value / 1024 / 1024;\n\t"</e></m></meta>
+			<meta><m n=":functionCode"><e>"\r\n\t\t// simple but effective code\r\n\t\tunsigned long long allocatedRAM = 0;\r\n\t\tGetPhysicallyInstalledSystemMemory(&amp;allocatedRAM);\r\n\t\treturn (allocatedRAM / 1024);\r\n\t"</e></m></meta>
 		</getTotalRam>
 		<meta>
 			<m n=":directlyUsed"/>
-			<m n=":cppFileCode"><e>"#include &lt;sys/sysctl.h&gt;"</e></m>
+			<m n=":buildXml"><e>"\r\n&lt;target id=\"haxe\"&gt;\r\n\t&lt;lib name=\"dwmapi.lib\" if=\"windows\" /&gt;\r\n\t&lt;lib name=\"shell32.lib\" if=\"windows\" /&gt;\r\n\t&lt;lib name=\"gdi32.lib\" if=\"windows\" /&gt;\r\n\t&lt;lib name=\"ole32.lib\" if=\"windows\" /&gt;\r\n\t&lt;lib name=\"uxtheme.lib\" if=\"windows\" /&gt;\r\n&lt;/target&gt;\r\n"</e></m>
+			<m n=":cppFileCode"><e>"\r\n#include \"mmdeviceapi.h\"\r\n#include \"combaseapi.h\"\r\n#include &lt;iostream&gt;\r\n#include &lt;Windows.h&gt;\r\n#include &lt;cstdio&gt;\r\n#include &lt;tchar.h&gt;\r\n#include &lt;dwmapi.h&gt;\r\n#include &lt;winuser.h&gt;\r\n#include &lt;Shlobj.h&gt;\r\n#include &lt;wingdi.h&gt;\r\n#include &lt;shellapi.h&gt;\r\n#include &lt;uxtheme.h&gt;\r\n\r\n#define SAFE_RELEASE(punk)  \\\r\n\t\t\t  if ((punk) != NULL)  \\\r\n\t\t\t\t{ (punk)-&gt;Release(); (punk) = NULL; }\r\n\r\nstatic long lastDefId = 0;\r\n\r\nclass AudioFixClient : public IMMNotificationClient {\r\n\tLONG _cRef;\r\n\tIMMDeviceEnumerator *_pEnumerator;\r\n\r\n\tpublic:\r\n\tAudioFixClient() :\r\n\t\t_cRef(1),\r\n\t\t_pEnumerator(NULL)\r\n\t{\r\n\t\tHRESULT result = CoCreateInstance(__uuidof(MMDeviceEnumerator),\r\n\t\t\t\t\t\t\t  NULL, CLSCTX_INPROC_SERVER,\r\n\t\t\t\t\t\t\t  __uuidof(IMMDeviceEnumerator),\r\n\t\t\t\t\t\t\t  (void**)&amp;_pEnumerator);\r\n\t\tif (result == S_OK) {\r\n\t\t\t_pEnumerator-&gt;RegisterEndpointNotificationCallback(this);\r\n\t\t}\r\n\t}\r\n\r\n\t~AudioFixClient()\r\n\t{\r\n\t\tSAFE_RELEASE(_pEnumerator);\r\n\t}\r\n\r\n\tULONG STDMETHODCALLTYPE AddRef()\r\n\t{\r\n\t\treturn InterlockedIncrement(&amp;_cRef);\r\n\t}\r\n\r\n\tULONG STDMETHODCALLTYPE Release()\r\n\t{\r\n\t\tULONG ulRef = InterlockedDecrement(&amp;_cRef);\r\n\t\tif (0 == ulRef)\r\n\t\t{\r\n\t\t\tdelete this;\r\n\t\t}\r\n\t\treturn ulRef;\r\n\t}\r\n\r\n\tHRESULT STDMETHODCALLTYPE QueryInterface(\r\n\t\t\t\t\t\t\t\tREFIID riid, VOID **ppvInterface)\r\n\t{\r\n\t\treturn S_OK;\r\n\t}\r\n\r\n\tHRESULT STDMETHODCALLTYPE OnDeviceAdded(LPCWSTR pwstrDeviceId)\r\n\t{\r\n\t\treturn S_OK;\r\n\t};\r\n\r\n\tHRESULT STDMETHODCALLTYPE OnDeviceRemoved(LPCWSTR pwstrDeviceId)\r\n\t{\r\n\t\treturn S_OK;\r\n\t}\r\n\r\n\tHRESULT STDMETHODCALLTYPE OnDeviceStateChanged(\r\n\t\t\t\t\t\t\t\tLPCWSTR pwstrDeviceId,\r\n\t\t\t\t\t\t\t\tDWORD dwNewState)\r\n\t{\r\n\t\treturn S_OK;\r\n\t}\r\n\r\n\tHRESULT STDMETHODCALLTYPE OnPropertyValueChanged(\r\n\t\t\t\t\t\t\t\tLPCWSTR pwstrDeviceId,\r\n\t\t\t\t\t\t\t\tconst PROPERTYKEY key)\r\n\t{\r\n\t\treturn S_OK;\r\n\t}\r\n\r\n\tHRESULT STDMETHODCALLTYPE OnDefaultDeviceChanged(\r\n\t\tEDataFlow flow, ERole role,\r\n\t\tLPCWSTR pwstrDeviceId)\r\n\t{\r\n\t\t::funkin::backend::_hx_system::Main_obj::audioDisconnected = true;\r\n\t\treturn S_OK;\r\n\t};\r\n};\r\n\r\nAudioFixClient *curAudioFix;\r\n"</e></m>
+			<m n=":dox"><e>hide</e></m>
 		</meta>
 	</class>
 	<class path="funkin.editors.ui.UIState" params="" file="source/funkin/editors/ui/UIState.hx">
 		<extends path="funkin.backend.MusicBeatState"/>
 		<state public="1" get="accessor" set="null" static="1"><c path="funkin.editors.ui.UIState"/></state>
-		<get_state get="inline" set="null" line="28" static="1"><f a=""><c path="funkin.editors.ui.UIState"/></f></get_state>
+		<get_state get="inline" set="null" line="28" static="1"><f a=""><x path="Null"><c path="funkin.editors.ui.UIState"/></x></f></get_state>
 		<curContextMenu public="1" expr="null">
 			<c path="funkin.editors.ui.UIContextMenu"/>
 			<meta><m n=":value"><e>null</e></m></meta>
@@ -10569,7 +10631,7 @@
 		<extends path="funkin.editors.ui.UIState"/>
 		<__character static="1"><c path="String"/></__character>
 		<instance public="1" get="accessor" set="null" static="1"><c path="funkin.editors.character.CharacterEditor"/></instance>
-		<get_instance get="inline" set="null" line="20" static="1"><f a=""><c path="funkin.editors.character.CharacterEditor"/></f></get_instance>
+		<get_instance get="inline" set="null" line="20" static="1"><f a=""><x path="Null"><c path="funkin.editors.character.CharacterEditor"/></x></f></get_instance>
 		<character public="1"><c path="funkin.game.Character"/></character>
 		<ghosts public="1"><c path="funkin.editors.character.CharacterGhostsHandler"/></ghosts>
 		<characterBG public="1">
@@ -10610,7 +10672,7 @@
 	<x path="Void"/>
 </f></_file_new>
 		<_file_save set="method" line="331"><f a="_">
-	<x path="Null"><t path="funkin.editors.ui.UIContextMenuOption"/></x>
+	<t path="funkin.editors.ui.UIContextMenuOption"/>
 	<x path="Void"/>
 </f></_file_save>
 		<_file_saveas set="method" line="343"><f a="_">
@@ -11038,7 +11100,7 @@
 		<__diff static="1"><c path="String"/></__diff>
 		<__reload static="1"><x path="Bool"/></__reload>
 		<instance public="1" get="accessor" set="null" static="1"><c path="funkin.editors.charter.Charter"/></instance>
-		<get_instance get="inline" set="null" line="41" static="1"><f a=""><c path="funkin.editors.charter.Charter"/></f></get_instance>
+		<get_instance get="inline" set="null" line="41" static="1"><f a=""><x path="Null"><c path="funkin.editors.charter.Charter"/></x></f></get_instance>
 		<autoSaveTimer public="1" expr="0" line="90" static="1">
 			<x path="Float"/>
 			<meta><m n=":value"><e>0</e></m></meta>
@@ -11192,13 +11254,10 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></updateNoteLogic>
-		<quantStep public="1" set="method" line="951">
-			<f a="step">
-				<x path="Float"/>
-				<x path="Float"/>
-			</f>
-			<haxe_doc>* NOTE DRAG HANDLING</haxe_doc>
-		</quantStep>
+		<quantStep public="1" set="method" line="951"><f a="step">
+	<x path="Float"/>
+	<x path="Float"/>
+</f></quantStep>
 		<quantStepRounded public="1" set="method" line="956">
 			<f a="step:?roundRatio" v=":0.5">
 				<x path="Float"/>
@@ -11228,7 +11287,7 @@
 			<f a="selection:?addToUndo" v=":true">
 				<x path="funkin.editors.charter.Selection"/>
 				<x path="Bool"/>
-				<c path="Array"><d/></c>
+				<c path="Array"><unknown/></c>
 			</f>
 			<meta><m n=":value"><e>{ addToUndo : true }</e></m></meta>
 		</createSelection>
@@ -11306,15 +11365,15 @@
 	<x path="Void"/>
 </f></_file_exit>
 		<_file_save set="method" line="1287"><f a="_">
-	<x path="Null"><t path="funkin.editors.ui.UIContextMenuOption"/></x>
+	<t path="funkin.editors.ui.UIContextMenuOption"/>
 	<x path="Void"/>
 </f></_file_save>
 		<_file_saveas set="method" line="1296"><f a="_">
-	<x path="Null"><t path="funkin.editors.ui.UIContextMenuOption"/></x>
+	<t path="funkin.editors.ui.UIContextMenuOption"/>
 	<x path="Void"/>
 </f></_file_saveas>
 		<_file_save_no_events set="method" line="1303"><f a="_">
-	<x path="Null"><t path="funkin.editors.ui.UIContextMenuOption"/></x>
+	<t path="funkin.editors.ui.UIContextMenuOption"/>
 	<x path="Void"/>
 </f></_file_save_no_events>
 		<_file_saveas_no_events set="method" line="1312"><f a="_">
@@ -15327,7 +15386,6 @@
 				<x path="Void"/>
 			</f>
 			<meta><m n=":value"><e>{ evt : null }</e></m></meta>
-			<haxe_doc>* CALCULATES RATING</haxe_doc>
 		</displayRating>
 		<displayCombo public="1" set="method" line="1716">
 			<f a="?evt" v="null">
@@ -15465,7 +15523,7 @@
 		<__splash><c path="funkin.backend.FunkinSprite"/></__splash>
 		<showOnStrum public="1" set="method" line="107"><f a="strum">
 	<c path="funkin.game.Strum"/>
-	<x path="Null"><c path="funkin.backend.FunkinSprite"/></x>
+	<c path="funkin.backend.FunkinSprite"/>
 </f></showOnStrum>
 		<new public="1" set="method" line="26">
 			<f a="path">
@@ -15513,7 +15571,7 @@
 	<class path="funkin.game.Stage" params="" file="source/funkin/game/Stage.hx">
 		<extends path="flixel.FlxBasic"/>
 		<implements path="funkin.backend.system.interfaces.IBeatReceiver"/>
-		<getList public="1" set="method" line="242" static="1">
+		<getList public="1" set="method" line="273" static="1">
 			<f a="?mods" v="false">
 				<x path="Bool"/>
 				<c path="Array"><c path="String"/></c>
@@ -15538,21 +15596,28 @@
 			</t>
 			<meta><m n=":value"><e>[]</e></m></meta>
 		</characterPoses>
+		<xmlImportedScripts public="1" expr="[]">
+			<t path="Map">
+				<c path="String"/>
+				<x path="Bool"/>
+			</t>
+			<meta><m n=":value"><e>[]</e></m></meta>
+		</xmlImportedScripts>
 		<spritesParentFolder expr="&quot;&quot;">
 			<c path="String"/>
 			<meta><m n=":value"><e>""</e></m></meta>
 		</spritesParentFolder>
-		<getSprite public="1" set="method" line="24"><f a="name">
+		<getSprite public="1" set="method" line="26"><f a="name">
 	<c path="String"/>
 	<x path="Null"><c path="flixel.FlxSprite"/></x>
 </f></getSprite>
-		<addCharPos public="1" set="method" line="181"><f a="name:node:?nonXMLInfo">
+		<addCharPos public="1" set="method" line="212"><f a="name:node:?nonXMLInfo">
 	<c path="String"/>
 	<x path="haxe.xml.Access"/>
 	<x path="Null"><t path="funkin.game.StageCharPosInfo"/></x>
 	<c path="funkin.game.StageCharPos"/>
 </f></addCharPos>
-		<isCharFlipped public="1" get="inline" set="null" line="224">
+		<isCharFlipped public="1" get="inline" set="null" line="255">
 			<f a="posName:?def" v=":false">
 				<c path="String"/>
 				<x path="Bool"/>
@@ -15560,7 +15625,7 @@
 			</f>
 			<meta><m n=":value"><e>{ def : false }</e></m></meta>
 		</isCharFlipped>
-		<applyCharStuff public="1" set="method" line="226">
+		<applyCharStuff public="1" set="method" line="257">
 			<f a="char:posName:?id" v="::0">
 				<c path="funkin.game.Character"/>
 				<c path="String"/>
@@ -15569,19 +15634,19 @@
 			</f>
 			<meta><m n=":value"><e>{ id : 0 }</e></m></meta>
 		</applyCharStuff>
-		<beatHit public="1" set="method" line="236"><f a="curBeat">
+		<beatHit public="1" set="method" line="267"><f a="curBeat">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></beatHit>
-		<stepHit public="1" set="method" line="238"><f a="curStep">
+		<stepHit public="1" set="method" line="269"><f a="curStep">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></stepHit>
-		<measureHit public="1" set="method" line="240"><f a="curMeasure">
+		<measureHit public="1" set="method" line="271"><f a="curMeasure">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></measureHit>
-		<new public="1" set="method" line="28"><f a="stage:?state">
+		<new public="1" set="method" line="30"><f a="stage:?state">
 	<c path="String"/>
 	<c path="flixel.FlxState"/>
 	<x path="Void"/>
@@ -15626,8 +15691,8 @@
 			<x path="flixel.math.FlxPoint"/>
 			<meta><m n=":value"><e>FlxPoint.get(1, 1)</e></m></meta>
 		</scale>
-		<destroy public="1" set="method" line="271" override="1"><f a=""><x path="Void"/></f></destroy>
-		<prepareCharacter public="1" set="method" line="276">
+		<destroy public="1" set="method" line="302" override="1"><f a=""><x path="Void"/></f></destroy>
+		<prepareCharacter public="1" set="method" line="307">
 			<f a="char:?id" v=":0">
 				<c path="funkin.game.Character"/>
 				<x path="Float"/>
@@ -15635,7 +15700,7 @@
 			</f>
 			<meta><m n=":value"><e>{ id : 0 }</e></m></meta>
 		</prepareCharacter>
-		<new public="1" set="method" line="265"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="296"><f a=""><x path="Void"/></f></new>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<typedef path="funkin.game.StageCharPosInfo" params="" file="source/funkin/game/Stage.hx" module="funkin.game.Stage"><a>
@@ -16917,7 +16982,7 @@
 			<meta><m n=":value"><e>{ force : false }</e></m></meta>
 		</changeWeek>
 		<__oldDiffName expr="null">
-			<x path="Null"><c path="String"/></x>
+			<c path="String"/>
 			<meta><m n=":value"><e>null</e></m></meta>
 		</__oldDiffName>
 		<changeDifficulty public="1" set="method" line="179">
@@ -17410,9 +17475,9 @@
 			<x path="Int"/>
 			<meta><m n=":value"><e>120</e></m></meta>
 		</framerate>
-		<gpuOnlyBitmaps public="1" expr="false" line="37" static="1">
+		<gpuOnlyBitmaps public="1" expr="true" line="37" static="1">
 			<x path="Bool"/>
-			<meta><m n=":value"><e>false</e></m></meta>
+			<meta><m n=":value"><e>true</e></m></meta>
 		</gpuOnlyBitmaps>
 		<lastLoadedMod public="1" expr="null" line="39" static="1">
 			<c path="String"/>
