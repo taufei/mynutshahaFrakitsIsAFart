@@ -10,7 +10,7 @@ var { copyDir, compileSass } = require('./utils.js');
 
 hljs.registerLanguage('haxe', haxeformat);
 
-var pageDir = process.argv[2] || "";
+var pageDir = process.argv[2] || "./";
 var exportPath = "./export/" + (process.argv[3] || '');
 
 if(!pageDir.endsWith('/')) pageDir += '/';

@@ -4,6 +4,10 @@ var hljs = require('highlight.js');
 var fs = require('fs');
 var sass = require('sass');
 
+function fixPath(url) {
+	return url.replaceAll(path.sep, path.posix.sep);
+}
+
 function fixHtmlRefs(html, pageDir, _pageDir) {
 	var dom = new jsdom.JSDOM(html);
 	var links = dom.window.document.querySelectorAll("[href]");
@@ -26,6 +30,7 @@ function fixHtmlRefs(html, pageDir, _pageDir) {
 	}
 
 	for(const link of links) {
+		link.href = fixPath(link.href);
 		link.href = link.href.replace(/\.md$/, ".html").replace("./" + pageDir, "./");
 		if(link.href.startsWith("/")) {
 			link.href = path.normalize("/" + pageDir + link.href.substring(1));
@@ -33,9 +38,11 @@ function fixHtmlRefs(html, pageDir, _pageDir) {
 		if(link.href.startsWith("root/")) {
 			link.href = path.normalize("/" + _pageDir + link.href.substring(5));
 		}
+		link.href = fixPath(link.href);
 	}
 
 	for(const image of imageSrcs) {
+		image.src = fixPath(image.src);
 		image.src = image.src.replace(/\.md$/, ".html").replace("./" + pageDir, "./");
 		if(image.src.startsWith("/")) {
 			image.src = path.normalize("/" + _pageDir + image.src.substring(1));
@@ -43,6 +50,7 @@ function fixHtmlRefs(html, pageDir, _pageDir) {
 		if(image.src.startsWith("root/")) {
 			image.src = path.normalize("/" + _pageDir + image.src.substring(5));
 		}
+		image.src = fixPath(image.src);
 	}
 
 	var codeblocks = dom.window.document.querySelectorAll('pre code[class^="language-"]');
@@ -78,7 +86,6 @@ function fixHtmlRefs(html, pageDir, _pageDir) {
 		var format = codeblock.getAttribute("lang");
 		codeblock.removeAttribute("lang");
 
-		console.log(codeblock.textContent);
 		if(format != null)
 			codeblock.innerHTML = hljs.highlight(codeblock.textContent, {language: format}).value;
 	}
@@ -100,8 +107,11 @@ function copyDir(src, dest) {
 	const items = fs.readdirSync(src);
 
 	for (let item of items) {
-		const srcPath = path.join(src, item);
-		const destPath = path.join(dest, item);
+		let srcPath = path.join(src, item);
+		let destPath = path.join(dest, item);
+
+		srcPath = fixPath(srcPath);
+		destPath = fixPath(destPath);
 
 		const stats = fs.statSync(srcPath);
 		if (stats.isDirectory()) {
@@ -118,6 +128,7 @@ function compileSass(file, dest) {
 }
 
 module.exports = {
+	fixPath: fixPath,
 	fixHtmlRefs: fixHtmlRefs,
 	copyDir: copyDir,
 	compileSass: compileSass,
