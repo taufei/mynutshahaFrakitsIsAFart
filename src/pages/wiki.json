@@ -9,7 +9,9 @@
         ["characters/index", "Creating characters", [
             ["editor-features", "Character Editor Features - UNFINISHED"]
         ]],
-        ["stages", "Creating stages"],
+        ["stages/index", "Creating stages", [
+            ["stage-extensions", "Stage Extensions - UNFINISHED"]
+        ]],
         ["cutscenes-dialogues", "Cutscenes/Dialogues"],
         ["scripting/index", "Scripting", [
             ["playstate-scripts/index", "PlayState Scripts", [

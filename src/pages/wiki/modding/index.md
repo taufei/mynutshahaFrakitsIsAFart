@@ -121,7 +121,7 @@ Here you'll find the essential tools, and some options for debug *(for example, 
 The next steps are covered in these articles:
 - <a href="./songs/index.md">Creating songs</a>
 - <a href="./characters/index.md">Creating characters</a>
-- <a href="./stages.md">Creating stages</a>
+- <a href="./stages/index.md">Creating stages</a>
 - <a href="./scripting/index.md">Scripting</a>
 
 And when you're done with the basic steps you're finally ready for release, or if you want, go through more advanced stuff, like these:

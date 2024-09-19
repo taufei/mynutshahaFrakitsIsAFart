@@ -18,5 +18,8 @@
     "jsdom": "^25.0.0",
     "mustache": "^4.2.0",
     "remarkable": "^2.0.1"
+  },
+  "devDependencies": {
+    "sass": "^1.79.1"
   }
 }

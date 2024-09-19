@@ -6,7 +6,7 @@ var tools = require('./pages/tools/tools.build.js');
 var apiDocs = require('./pages/apiDocs.build.js');
 var indexPage = require('./pages/index.build.js');
 
-var { copyDir } = require('./utils.js');
+var { copyDir, compileSass } = require('./utils.js');
 
 hljs.registerLanguage('haxe', haxeformat);
 
@@ -24,9 +24,9 @@ console.log("Building pages...");
 
 copyDir("./src/img/", exportPath + "/img/");
 
-fs.copyFileSync("./src/style.css", exportPath + "style.css");
-fs.copyFileSync("./src/pages/wiki.css", exportPath + "/wiki.css");
-fs.copyFileSync("./src/pages/index.css", exportPath + "/index.css");
+compileSass("./src/style.scss", exportPath + "/style.css");
+compileSass("./src/pages/wiki.scss", exportPath + "/wiki.css");
+compileSass("./src/pages/index.scss", exportPath + "/index.css");
 
 indexPage.buildHtml(pageDir, exportPath); // builds into /
 wiki.buildHtml(pageDir, exportPath); // builds into /wiki

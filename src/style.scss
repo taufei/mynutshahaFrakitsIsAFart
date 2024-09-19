@@ -131,6 +131,14 @@ code.inline-code {
 
   font-family: monospace;
   white-space: pre-wrap;
+
+  &.inline-syntax {
+    color: #fff;
+  }
+}
+
+code.inline-code * {
+  font-family: monospace;
 }
 
 pre.inline-code code {
