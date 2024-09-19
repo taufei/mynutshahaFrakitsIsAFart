@@ -28,6 +28,10 @@ a {
   scrollbar-color: var(--scrollbar-color) var(--background-secondary-color);
 }
 
+*, *::before,*::after {
+  box-sizing: border-box;
+}
+
 header {
   display: flex;
   padding: 0em 2em;

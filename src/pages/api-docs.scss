@@ -73,6 +73,11 @@ code {
   padding-bottom: 5px;
 }
 
+.type-text {
+  color: rgb(91, 255, 206);
+}
+
+
 span > .type, a.type, span.type {
   color: deepskyblue !important;
 }
@@ -97,7 +102,15 @@ table.params {
   padding-left: 0.3em;
   text-align: left;
   height: fit-content !important;
+}
+
+.table tr {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: block;
+
+  &:first-of-type {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
 }
 
 td > p {
@@ -116,7 +129,7 @@ td > p {
   font-size: 10px !important;
 }
 
-small, .type, small > .muted {
+small, small > .muted {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.4);
   font-weight: normal;
