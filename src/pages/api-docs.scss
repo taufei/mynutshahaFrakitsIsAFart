@@ -26,6 +26,13 @@ a.treeLink {
   display: inline;
 }
 
+.content a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
 .page-header > h1, .page-header > h4 {
   border: none !important;
   margin: 0.2em 0em;
@@ -62,7 +69,7 @@ code {
   font-family: monospace;
 }
 
-.anchor > code > span, .anchor > code > span > span,  .anchor > code > a > span{
+.anchor > code * {
   font-size: 13px;
   font-family: monospace;
 }
@@ -147,7 +154,7 @@ small, small > .muted, small > span {
 }
 
 .sidebar-wrapper {
-  width: 40vw;
+  width: 30vw;
   display: inline-block;
   box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.3);
 }
@@ -248,7 +255,7 @@ small, small > .muted, small > span {
   display: none;
 }
 
-@media screen and (max-width: 50.5em) {
+@media screen and (max-width: 40.5em) {
   .sidebar-button-front {
     display: flex;
   }
@@ -305,7 +312,7 @@ small, small > .muted, small > span {
 
 @media screen and (min-width: 60.5em) {
   .sidebar-wrapper {
-    width: 25vw;
+    width: 20vw;
     display: inline-block;
   }
 }
