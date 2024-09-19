@@ -77,6 +77,16 @@ code {
   color: rgb(91, 255, 206);
 }
 
+code.treeType {
+  padding: 0;
+  background-color: transparent;
+
+  & > span {
+    width: 45px;
+    display: inline-block;
+    text-align: center;
+  }
+}
 
 span > .type, a.type, span.type {
   color: deepskyblue !important;

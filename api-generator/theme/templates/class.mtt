@@ -11,7 +11,7 @@
 		::if type.superClass != null::
 		<h4>
 			::set inheritedFields = api.getInheritedFields(type)::
-			<small>extends 
+			<small>extends
 				::if (inheritedFields.types.length>0)::
 					::foreach t inheritedFields.types::
 					$$printLinkedPath(::t.path::,::null::,::false::)::if ((inheritedFields.types.length!=1)&&(repeat.t.index<(inheritedFields.types.length-1))):: &rsaquo; ::end::
@@ -22,15 +22,15 @@
 			</small>
 		</h4>
 		::end::
-    
+
 		<h4 ::cond (type.interfaces.length>0)::>
-		<small>::if type.isInterface::extends::else::implements::end:: 
+		<small>::if type.isInterface::extends::else::implements::end::
 		::foreach i type.interfaces::
 			$$printLinkedPath(::i.path::,::i.params::,::false::)::if ((type.interfaces.length!=1)&&(repeat.i.index<(type.interfaces.length-1)))::, ::end::
 		::end::
 		</small>
 		</h4>
-		
+
 		$$printModule(::type.module::)
 
 		<h4 ::cond subClasses !=null::>
@@ -42,7 +42,7 @@
 		</h4>
 		<h4 ::cond implementors !=null::>
 			<small>
-			::if type.isInterface:: 
+			::if type.isInterface::
 				::set title = "extended by "::
 			::else::
 				::set title = "implemented by "::

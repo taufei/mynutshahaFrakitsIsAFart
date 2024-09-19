@@ -1,9 +1,9 @@
 ::use 'main.mtt'::
 
 <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function (event) {
-        errorSearch();
-    });
+	document.addEventListener("DOMContentLoaded", function (event) {
+		errorSearch();
+	});
 </script>
 
 <h1><small>404</small> Page not found</h1>

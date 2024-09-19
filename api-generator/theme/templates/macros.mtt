@@ -122,6 +122,29 @@
 	::end::
 </macro>
 
+<macro name="printTreeType(treeType)">
+	<code class="treeType">
+	::if treeType == "class"::
+		<span class="label label-class">class</span>
+	::end::
+	::if treeType == "enum"::
+		<span class="label label-enum">enum</span>
+	::end::
+	::if treeType == "typedef"::
+		<span class="label label-typedef">typedef</span>
+	::end::
+	::if treeType == "abstract"::
+		<span class="label label-abstract">abstract</span>
+	::end::
+	::if treeType == "interface"::
+		<span class="label label-interface">interface</span>
+	::end::
+	::if treeType == "type"::
+		<span class="label label-typedef">typedef</span>
+	::end::
+	</code>
+</macro>
+
 <macro name="printMetaParam(param)">::if (param.substr(0,9) == "<![CDATA[")::::param.substr(9,param.length-3-9)::::else::::param::::end::</macro>
 
 <macro name="printFieldSignature(field, isStatic, type)">
