@@ -49,7 +49,7 @@ Other options include:
 - ``updateHitbox`` determines whether or not to update the sprite's hitbox.
 - ``zoomFactor`` defines how much the sprite should scale with the camera's zoom. *(setting it to 0 will make it stay to the original size no matter what)*
 - ``alpha`` is the "opacity" of the sprite
-- ``color`` tints the sprite in the color you set it to *(example #FF0000 will tint the sprite in full red)*
+- ``color`` tints the sprite in the color you set it to *(example <code class="hljs-string">#FF0000</code> will tint the sprite in full red)*
 - ``playOnCountdown`` tells the sprite whether or not to play it's animation during countdown or not.
 - ``beatInterval, beatOffset``, honestly, I don't even know what this shit is okay.
 
@@ -64,7 +64,7 @@ An <syntax lang="xml">&lt;anim&gt;</syntax> node can define these options:
 - ``name`` defines the internal name of the animation *(used for scripting)*
 - ``anim`` is the prefix for finding the animation in the spritesheet.
 - ``indices`` indicates which frames to play from the previously found frames.
-- ``type`` determines the type of the animation. either ``beat`` or ``loop``.
+- ``type`` determines the type of the animation. either <code class="hljs-string">beat</code> or <code class="hljs-string">loop</code>.
 - ``fps`` is the framerate of your animation.
 - ``x`` and ``y`` are the animation offset. *(offset is only applied when the animation is played)*
 - ``forced`` whether or not to force animation playback while a different one is already playing.
@@ -138,10 +138,10 @@ The only parameters are ``x`` and ``y``.
 
 Accepted parameters:
 - ``script`` which is the name of the script to load.
-- ``folder`` which is the folder to load the script from. (defaults to ``data/scripts/``)
-- ``isShortLived`` which determines whether or not the script is destroyed after the stage has finished loading. (defaults to ``false``)
-- ``importStageSprites`` which determines whether or not to import the stage sprites into the script. (defaults to ``false``)
-- ``loadBefore`` which determines whether or not to load the script before going through the other stage's nodes, exactly like the default stage's script allowing for example to call ``onStageXMLParsed``. If instead you want the script to load after a certain node or such, set this to ``false``. (defaults to ``true``)
+- ``folder`` which is the folder to load the script from. (defaults to <code class="hljs-string">"data/scripts/"</code>)
+- ``isShortLived`` which determines whether or not the script is destroyed after the stage has finished loading. (defaults to <code class="hljs-string">false</code>)
+- ``importStageSprites`` which determines whether or not to import the stage sprites into the script. (defaults to <code class="hljs-string">false</code>)
+- ``loadBefore`` which determines whether or not to load the script before going through the other stage's nodes, exactly like the default stage's script allowing for example to call ``onStageXMLParsed``. If instead you want the script to load after a certain node or such, set this to <code class="hljs-string">false</code>. (defaults to <code class="hljs-string">true</code>)
 
 This allows you to load custom scripts for your stages, that allow for adding custom stage nodes, or whatever else you can think of.
 

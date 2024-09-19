@@ -34,7 +34,7 @@ As for the <syntax lang="xml">&lt;anim&gt;</syntax> nodes, they're pretty self-e
 - ``name`` defines the internal name of the animation *(used for scripting)*
 - ``anim`` is the prefix for finding the animation in the spritesheet.
 - ``indices`` indicates which frames to play from the previously found frames.
-- ``type`` determines the type of the animation. either ``beat`` or ``loop``.
+- ``type`` determines the type of the animation. either <code class="hljs-string">beat</code> or <code class="hljs-string">loop</code>.
 - ``fps`` is the framerate of your animation.
 - ``x`` and ``y`` are the animation offset. *(offset is only applied when the animation is played)*
 - ``forced`` whether or not to force animation playback while a different one is already playing.

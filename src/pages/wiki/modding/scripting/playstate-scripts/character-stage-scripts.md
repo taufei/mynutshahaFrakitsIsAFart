@@ -15,7 +15,7 @@ function update(elapsed) {
 
 ## Stage Scripts.
 Creating one of those also goes next to the Stage XML data file *(``./data/stages/``)*.<br>
-This script also takes the Stage as it's parent, thus not needing to use ``stage.getSprite()``, instead, sprites becomes the variables
+This script also takes the Stage as it's parent, thus not needing to use <syntax lang="haxe">stage.getSprite()</syntax>, instead, sprites becomes the variables
 
 Here's an example:
 ```haxe
