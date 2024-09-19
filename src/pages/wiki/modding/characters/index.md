@@ -14,7 +14,7 @@ Writing the XML file is pretty simple, here is what Dad's XML data looks like:
     <anim name="singDOWN" anim="Dad Sing Note DOWN" fps="24" loop="false" x="0" y="-30"/>
 </character>
 ```
-There's a lot to unpack, but we'll go over the <code class="hljs-name">character</code> node's properties first:
+There's a lot to unpack, but we'll go over the <syntax lang="xml">&lt;character&gt;</syntax> node's properties first:
 - ``sprite`` determines which sprite to load, if you have a spritesheet with a different name.
 - ``isPlayer`` determines whether your character is a player character or not *(for example, boyfriend is a player character)*.
 - ``x`` and ``y`` determine the character's position in the stage. *(keep in mind that stages can override these values)*
@@ -30,7 +30,7 @@ There's a lot to unpack, but we'll go over the <code class="hljs-name">character
 These are about all properties you can apply to the character node.<br>
 You can obviously apply more properties and access them in Scripts, see <a href="../scripting/playstate-scripts/character-stage-scripts.md">Character/Stage Scripts</a>.
 
-As for the <code class="hljs-name">anim</code> nodes, they're pretty self-explanatory but here's a list of properties of them too:
+As for the <syntax lang="xml">&lt;anim&gt;</syntax> nodes, they're pretty self-explanatory but here's a list of properties of them too:
 - ``name`` defines the internal name of the animation *(used for scripting)*
 - ``anim`` is the prefix for finding the animation in the spritesheet.
 - ``indices`` indicates which frames to play from the previously found frames.
