@@ -40,20 +40,10 @@
 				</a></li>
 			</ul>
 			<span id="nav">
-				<!-- Automatically populated by index.js -->
+				$$comment(::" Automatically populated by index.js "::)
 			</span>
 		</div>
 	</div>
-	<!-- <div class="span3">
-		<div class="well sidebar-nav">
-			<form class="form-search" id="searchForm">
-			<div class="input-prepend input-block-level">
-				<span class="add-on"><i class="fa fa-search"></i></span>
-				<input id="search" type="text" placeholder="Filter (Ctrl+P)" autocomplete="off"/>
-			</div>
-			</form>
-		</div>
-	</div> -->
 	<div class="content">::raw __content__::</div>
 </div>
 

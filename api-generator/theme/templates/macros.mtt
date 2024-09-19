@@ -1,3 +1,7 @@
+<macro name="comment(text)">
+
+</macro>
+
 <macro name="printTypeParams(params)">
 	::if params.length > 0::
 		&lt;
