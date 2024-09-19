@@ -30,6 +30,7 @@ Here is documentation on functions of the engine (gameplay and modding), and how
         - <a href="./modding/scripting/script-calls.md">All of the script calls</a>
         - <a href="./modding/scripting/custom-classes.md">Custom Classes</a>
         - <a href="./modding/scripting/ndll-scripting.md">NDLL Scripting</a>
+        - <a href="./modding/scripting/custom-transitions.md">Custom Transitions</a>
     - <a href="./modding/hardcoding/index.md">Hardcoding</a>
         - idk lol
 
