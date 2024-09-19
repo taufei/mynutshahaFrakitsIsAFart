@@ -46,6 +46,28 @@ class Main {
 		config.addFilter("funkin|scripting", true);
 		//config.rootPath = "";
 
-		Dox.run(config, Api.new);
+		Dox.run(config, CodenameApi.new);
+	}
+}
+
+class CodenameApi extends Api {
+	override function getSourceLink(type:TypeInfos):Null<String> {
+		var module = type.module != null ? type.module : type.path;
+		var ending = ".hx";
+		var url = "https://github.com/FNF-CNE-Devs/CodenameEngine/blob/main/source/";
+
+		return haxe.io.Path.join([url, module.replace(".", "/") + ending]);
+	}
+
+	function isOneOf(module:String, classes:Array<String>):Bool {
+		for (cl in classes) {
+			if (module.indexOf(cl) >= 0)
+				return true;
+		}
+		return false;
+	}
+
+	override function hasSourceLink(type:TypeInfos):Bool {
+		return type.file != null && type.file.endsWith(".hx");
 	}
 }
