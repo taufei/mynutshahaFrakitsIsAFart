@@ -59,6 +59,14 @@ class CodenameApi extends Api {
 		return haxe.io.Path.join([url, module.replace(".", "/") + ending]);
 	}
 
+	public function getSourceLinkWithLine(type:TypeInfos, line:Int):Null<String> {
+		var module = type.module != null ? type.module : type.path;
+		var ending = ".hx";
+		var url = "https://github.com/FNF-CNE-Devs/CodenameEngine/blob/main/source/";
+
+		return haxe.io.Path.join([url, module.replace(".", "/") + ending + "#L" + line]);
+	}
+
 	function isOneOf(module:String, classes:Array<String>):Bool {
 		for (cl in classes) {
 			if (module.indexOf(cl) >= 0)

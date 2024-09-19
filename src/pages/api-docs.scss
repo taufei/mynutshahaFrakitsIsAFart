@@ -84,6 +84,14 @@ code {
   color: rgb(91, 255, 206);
 }
 
+.field > .field-source {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.field:hover > .field-source {
+  opacity: 1;
+}
+
 code.treeType {
   padding: 0;
   background-color: transparent;
