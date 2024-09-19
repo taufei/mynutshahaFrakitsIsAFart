@@ -317,12 +317,13 @@ small, small > .muted, small > span {
   }
 }
 
-i.fa::before {
-  position: absolute;
-  left: -20px;
-  top: -13px;
-}
+//i.fa::before {
+//  position: relative;
+//  left: -20px;
+//  top: -13px;
+//}
 
 i.fa {
   position: relative;
+  margin-right: 0.5em;
 }
