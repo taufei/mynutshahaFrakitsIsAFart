@@ -67,7 +67,7 @@ import flixel.addons.display.FlxBackdrop;
 
 And if you wanna go advanced, follow the rest of the articles here:
 - <a href="./playstate-scripts/pause-gamover-scripts.md">Pause/Game Over Scripts</a>
-- <a href="./playstate-scripts/cutscenes-dialogues.md">Cutscenes/Dialogue Scripts</a>
+- <a href="./playstate-scripts/cutscenes-dialogue-scripts.md">Cutscenes/Dialogue Scripts</a>
 - <a href="./playstate-scripts/character-stage-scripts.md">Character/Stage Scripts</a><br><br>
 - <a href="./global-scripts.md">Global Scripts</a>
 - <a href="./custom-options.md">Custom Options</a>
