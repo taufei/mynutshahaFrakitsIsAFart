@@ -133,7 +133,7 @@ The only parameters are ``x`` and ``y``.
 <extension script="example" />
 <ext script="example" />
 
-<ext script="example" folder="data/scripts/" isShortLived="true" importStageSprites="true" />
+<ext script="example" folder="data/scripts/" isShortLived="true" importStageSprites="true" loadBefore="false" />
 ```
 
 Accepted parameters:
@@ -141,6 +141,7 @@ Accepted parameters:
 - ``folder`` which is the folder to load the script from. (defaults to ``data/scripts/``)
 - ``isShortLived`` which determines whether or not the script is destroyed after the stage has finished loading. (defaults to ``false``)
 - ``importStageSprites`` which determines whether or not to import the stage sprites into the script. (defaults to ``false``)
+- ``loadBefore`` which determines whether or not to load the script before going through the other stage's nodes, exactly like the default stage's script allowing for example to call ``onStageXMLParsed``. If instead you want the script to load after a certain node or such, set this to ``false``. (defaults to ``true``)
 
 This allows you to load custom scripts for your stages, that allow for adding custom stage nodes, or whatever else you can think of.
 
