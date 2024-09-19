@@ -28,7 +28,7 @@ There's a lot to unpack, but we'll go over the <code class="hljs-name">character
 - ``holdTime`` defines how many steps it should wait until resuming to it's idle.
 
 These are about all properties you can apply to the character node.<br>
-You can obviously apply more properties and access them in Scripts, see <a href="../Scripting/PlayState Scripts/Character or Stage Scripts.md">Character/Stage Scripts</a>.
+You can obviously apply more properties and access them in Scripts, see <a href="../scripting/playstate-scripts/character-stage-scripts.md">Character/Stage Scripts</a>.
 
 As for the <code class="hljs-name">anim</code> nodes, they're pretty self-explanatory but here's a list of properties of them too:
 - ``name`` defines the internal name of the animation *(used for scripting)*

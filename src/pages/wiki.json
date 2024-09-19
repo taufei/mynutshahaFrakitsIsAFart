@@ -1,36 +1,36 @@
 [
     ["index", "Home"],
-    ["How to navigate the engine"],
-    ["Differences between the other FNF engines", "Differences between other FNF engines"],
-    ["Modding The Engine/index", "Modding The Engine", [
-        ["Creating songs/index", "Creating songs", [
-            ["Chart Editor Features"]
+    ["navigation", "How to navigate the engine"],
+    ["differences", "Differences between other FNF engines"],
+    ["modding/index", "Modding The Engine", [
+        ["songs/index", "Creating songs", [
+            ["editor-features", "Chart Editor Features"]
         ]],
-        ["Creating characters/index", "Creating characters", [
-            ["Character Editor Features", "Character Editor Features - UNFINISHED"]
+        ["characters/index", "Creating characters", [
+            ["editor-features", "Character Editor Features - UNFINISHED"]
         ]],
-        ["Creating stages"],
-        ["Cutscenes or Dialogues", "Cutscenes/Dialogues"],
-        ["Scripting/index", "Scripting", [
-            ["PlayState Scripts/index", "PlayState Scripts", [
-                ["Gameplay Scripts"],
-                ["Events or Notetype Scripts", "Events/Notetype Scripts"],
-                ["Cutscenes or Dialogue Scripts", "Cutscenes/Dialogue Scripts - UNFINISHED"],
-                ["Character or Stage Scripts", "Character/Stage Scripts"],
-                ["Pause or Game Over Scripts", "Pause/Game Over Scripts"]
+        ["stages", "Creating stages"],
+        ["cutscenes-dialogues", "Cutscenes/Dialogues"],
+        ["scripting/index", "Scripting", [
+            ["playstate-scripts/index", "PlayState Scripts", [
+                ["gameplay-scripts", "Gameplay Scripts"],
+                ["events-notetypes-scripts", "Events/Notetype Scripts"],
+                ["cutscenes-dialogue-scripts", "Cutscenes/Dialogue Scripts - UNFINISHED"],
+                ["character-stage-scripts", "Character/Stage Scripts"],
+                ["pause-gamover-scripts", "Pause/Game Over Scripts"]
             ]],
-            ["State or Substate Scripts", "State/Substate Scripts"],
-            ["Global Scripts"],
-            ["Shaders"],
-            ["Using hxvlc for videos"],
-            ["Custom Options"],
-            ["Custom Classes"],
-            ["3D rendering", "3D rendering - UNFINISHED"],
-            ["All of the script calls", "All of the script calls - UNFINISHED"],
-            ["Useful script snippets for modders", "Useful script snippets for modders - UNFINISHED"],
-            ["Scripted Assets Libraries", "Scripted Assets Libraries - UNFINISHED"],
-            ["NDLL Scripting", "NDLL Scripting - UNFINISHED"]
+            ["state-substate-scripts", "State/Substate Scripts"],
+            ["global-scripts", "Global Scripts"],
+            ["shaders", "Shaders"],
+            ["hxvlc", "Using hxvlc for videos"],
+            ["custom-options", "Custom Options"],
+            ["custom-classes", "Custom Classes"],
+            ["3d-rendering", "3D rendering - UNFINISHED"],
+            ["script-calls", "All of the script calls - UNFINISHED"],
+            ["script-snippets", "Useful script snippets for modders - UNFINISHED"],
+            ["scripted-assets-libraries", "Scripted Assets Libraries - UNFINISHED"],
+            ["ndll-scripting", "NDLL Scripting - UNFINISHED"]
         ]],
-        ["Hardcoding/index", "Hardcoding - UNFINISHED"]
+        ["hardcoding/index", "Hardcoding - UNFINISHED"]
     ]]
 ]

@@ -2,34 +2,34 @@
 Here is documentation on functions of the engine (gameplay and modding), and how to use them for your mod.
 
 ### Navigation is done via either the sidebar, or by using this chart below:
-- <a href="./How to navigate the engine.md">How to navigate the engine</a>
-- <a href="./Differences between the other FNF engines.md">Differences between the other FNF engines</a>
-- <a href="./Modding The Engine/index.md">Modding the engine</a>
-    - <a href="./Modding The Engine/Creating songs/index.md">Creating songs</a>
-        - <a href="./Modding The Engine/Creating songs/Chart Editor Features.md">Chart Editor Features</a>
-    - <a href="./Modding The Engine/Creating characters/index.md">Creating characters</a>
-        - <a href="./Modding The Engine/Creating characters/Character Editor Features.md">Character Editor Features</a>
-    - <a href="./Modding The Engine/Creating stages.md">Creating stages</a>
-    - <a href="./Modding The Engine/Cutscenes or Dialogues.md">Cutscenes/Dialogues</a>
-    - <a href="./Modding The Engine/Scripting/index.md">Scripting</a>
-        - <a href="./Modding The Engine/Scripting/PlayState Scripts/index.md">PlayState Scripts</a>
-            - <a href="./Modding The Engine/Scripting/PlayState Scripts/Gameplay Scripts.md">Gameplay Scripts</a>
-            - <a href="./Modding The Engine/Scripting/PlayState Scripts/Character or Stage Scripts.md">Character/Stage Scripts</a>
-            - <a href="./Modding The Engine/Scripting/PlayState Scripts/Cutscenes or Dialogue Scripts.md">Cutscenes/Dialogue Scripts</a>
-            - <a href="./Modding The Engine/Scripting/PlayState Scripts/Pause or Game Over Scripts.md">Pause/Game Over Scripts</a>
-            - <a href="./Modding The Engine/Scripting/PlayState Scripts/Events or Notetype Scripts.md">Events/Notetype Scripts</a>
-        - <a href="./Modding The Engine/Scripting/State or Substate Scripts.md">State/Substate Scripts</a>
-        - <a href="./Modding The Engine/Scripting/Global Scripts.md">Global Scripts</a>
-        - <a href="./Modding The Engine/Scripting/Custom Options.md">Custom Options</a>
-        - <a href="./Modding The Engine/Scripting/Scripted Assets Libraries.md">Scripted Assets Libraries</a>
-        - <a href="./Modding The Engine/Scripting/Shaders.md">Shaders</a>
-        - <a href="./Modding The Engine/Scripting/3D rendering.md">3D rendering</a>
-        - <a href="./Modding The Engine/Scripting/Using hxvlc for videos.md">Using hxvlc for videos</a>
-        - <a href="./Modding The Engine/Scripting/Useful script snippets for modders.md">Useful script snippets for modders</a>
-        - <a href="./Modding The Engine/Scripting/All of the script calls.md">All of the script calls</a>
-        - <a href="./Modding The Engine/Scripting/Custom Classes.md">Custom Classes</a>
-        - <a href="./Modding The Engine/Scripting/NDLL Scripting.md">NDLL Scripting</a>
-    - <a href="./Modding The Engine/Hardcoding/index.md">Hardcoding</a>
+- <a href="./navigation.md">How to navigate the engine</a>
+- <a href="./differences.md">Differences between the other FNF engines</a>
+- <a href="./modding/index.md">Modding the engine</a>
+    - <a href="./modding/songs/index.md">Creating songs</a>
+        - <a href="./modding/songs/editor-features.md">Chart Editor Features</a>
+    - <a href="./modding/characters/index.md">Creating characters</a>
+        - <a href="./modding/characters/editor-features.md">Character Editor Features</a>
+    - <a href="./modding/stages.md">Creating stages</a>
+    - <a href="./modding/cutscenes-dialogues.md">Cutscenes/Dialogues</a>
+    - <a href="./modding/scripting/index.md">Scripting</a>
+        - <a href="./modding/scripting/playstate-scripts/index.md">PlayState Scripts</a>
+            - <a href="./modding/scripting/playstate-scripts/gameplay-scripts.md">Gameplay Scripts</a>
+            - <a href="./modding/scripting/playstate-scripts/character-stage-scripts.md">Character/Stage Scripts</a>
+            - <a href="./modding/scripting/playstate-scripts/cutscenes-dialogue-scripts.md">Cutscenes/Dialogue Scripts</a>
+            - <a href="./modding/scripting/playstate-scripts/Pause or Game Over Scripts.md">Pause/Game Over Scripts</a>
+            - <a href="./modding/scripting/playstate-scripts/events-notetypes-scripts.md">Events/Notetype Scripts</a>
+        - <a href="./modding/scripting/state-substate-scripts.md">State/Substate Scripts</a>
+        - <a href="./modding/scripting/global-scripts.md">Global Scripts</a>
+        - <a href="./modding/scripting/custom-options.md">Custom Options</a>
+        - <a href="./modding/scripting/scripted-assets-libraries.md">Scripted Assets Libraries</a>
+        - <a href="./modding/scripting/shaders.md">Shaders</a>
+        - <a href="./modding/scripting/3d-rendering.md">3D rendering</a>
+        - <a href="./modding/scripting/hxvlc.md">Using hxvlc for videos</a>
+        - <a href="./modding/scripting/script-snippets.md">Useful script snippets for modders</a>
+        - <a href="./modding/scripting/script-calls.md">All of the script calls</a>
+        - <a href="./modding/scripting/custom-classes.md">Custom Classes</a>
+        - <a href="./modding/scripting/ndll-scripting.md">NDLL Scripting</a>
+    - <a href="./modding/hardcoding/index.md">Hardcoding</a>
         - idk lol
 
 

@@ -119,19 +119,19 @@ Afterwards, you have to find the devtools (or basically just the editors), by go
 Here you'll find the essential tools, and some options for debug *(for example, enabling the console in Debug Options)*
 
 The next steps are covered in these articles:
-- <a href="./Creating songs/index.md">Creating songs</a>
-- <a href="./Creating characters/index.md">Creating characters</a>
-- <a href="./Creating stages.md">Creating stages</a>
-- <a href="./Scripting/index.md">Scripting</a>
+- <a href="./songs/index.md">Creating songs</a>
+- <a href="./characters/index.md">Creating characters</a>
+- <a href="./stages.md">Creating stages</a>
+- <a href="./scripting/index.md">Scripting</a>
 
 And when you're done with the basic steps you're finally ready for release, or if you want, go through more advanced stuff, like these:
-- <a href="./Cutscenes or Dialogues.md">Cutscenes/Dialogues</a>
-- <a href="./Scripting/Shaders.md">Shaders</a>
-- <a href="./Scripting/3D rendering.md">3D rendering</a>
-- <a href="./Scripting/Global Scripts.md">Global Scripts</a>
-- <a href="./Scripting/Custom Options.md">Custom Options</a>
-- <a href="./Scripting/Scripted Assets Libraries.md">Scripted Assets Libraries</a>
-- <a href="./Scripting/NDLL Scripting.md">NDLL Scripting</a>
+- <a href="./cutscenes-dialogues.md">Cutscenes/Dialogues</a>
+- <a href="./scripting/shaders.md">Shaders</a>
+- <a href="./scripting/3d-rendering.md">3D rendering</a>
+- <a href="./scripting/global-scripts.md">Global Scripts</a>
+- <a href="./scripting/custom-options.md">Custom Options</a>
+- <a href="./scripting/scripted-assets-libraries.md">Scripted Assets Libraries</a>
+- <a href="./scripting/ndll-scripting.md">NDLL Scripting</a>
 
 ## Config
 
@@ -141,7 +141,7 @@ All of these configs can be found in ``./data/config/``
 ### discord.json
 ```json
 {
-	"clientID": discord token,
+	"clientID": "discord token",
 	"logoKey": "icon"
 }
 ```
@@ -179,4 +179,4 @@ Their parameters are as follows:
 Also, if you notice, you can wrap these with the <code class="hljs-name">menu</code> node to separate the credits *(like probably having an artist submenu and stuff)*
 
 ### options.xml
-options.xml is explained in this article <a href="./Scripting/Custom Options.md">Custom options</a>.
+options.xml is explained in this article <a href="./scripting/custom-options.md">Custom options</a>.

@@ -48,7 +48,7 @@ For the <code class="hljs-name">char</code> node, it has the following parameter
 
 As for the <code class="hljs-name">line</code> node, the example shows it's default usage, so the next parameters are mostly for advanced usage:
 - ``bubble`` determines the animation the textbox should play.
-- ``callback`` determines what function to call in a Dialogue Script *(see <a href="./Scripting/PlayState Scripts/Cutscenes or Dialogue Scripts.md">Cutscenes/Dialogue Scripts</a>)*
+- ``callback`` determines what function to call in a Dialogue Script *(see <a href="./scripting/playstate-scripts/cutscenes-dialogue-scripts.md">Cutscenes/Dialogue Scripts</a>)*
 - ``changeDefAnim`` to play a different animation for the character *(``changeDefAnim="scared"``)*.
 - ``speed`` is the typing speed *(default is `0.05`)*.
 - ``musicVolume`` changes the music volume *(default is `0.8`)*
@@ -149,7 +149,7 @@ For the <code class="hljs-name">text</code> node, which is required for this Dia
 - ``antialiasing`` to determine whether or not your text should use antialiasing.
 - ``borderStyle`` determines if it has a border and which type of border the text should use *(``outline``, ``shadow``, ``outline_fast`` or ``none``)*.
     - ``borderQuality`` for determining the quality of the border.
-    - ``shadowOffsetX`` and ``shadowOffsetY`` for offseting the shadow *(if selected that style)*.
+    - ``shadowOffsetX`` and ``shadowOffsetY`` for offsetting the shadow *(if selected that style)*.
     - ``borderSize`` for sizing the border.
     - ``borderColor`` for coloring the border.
 
