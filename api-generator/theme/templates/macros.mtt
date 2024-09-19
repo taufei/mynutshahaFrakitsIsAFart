@@ -318,8 +318,8 @@
 		<div class="fields" ::cond hasFields::>
 			::set fields=inheritedFields.fields::
 			::foreach cl inheritedFields.types::
-				<h4 ::cond fields.get(cl).length>0::><a href="#" class="expand-button"><i class="fa fa-arrow-circle-o-right"></i></a> Defined by $$printLinkedPath(::cl.path::,::null::,::false::)</h4>
-				<div style="display:none">
+				<h4 ::cond fields.get(cl).length>0::><a class="expand-button"><i class="fa fa-arrow-circle-o-right"></i></a> Defined by $$printLinkedPath(::cl.path::,::null::,::false::)</h4>
+				<div class="inherited">
 				::foreach field fields.get(cl)::
 					::set isStatic = false::
 					::set type=cl::
@@ -333,8 +333,8 @@
 		<div class="fields" ::cond hasMethods::>
 			::set fields=inheritedFields.methods::
 			::foreach cl inheritedFields.types::
-				<h4 ::cond fields.get(cl).length>0::><a href="#" class="expand-button"><i class="fa fa-arrow-circle-o-right"></i></a> Defined by $$printLinkedPath(::cl.path::,::null::,::false::)</h4>
-				<div style="display:none">
+				<h4 ::cond fields.get(cl).length>0::><a class="expand-button"><i class="fa fa-arrow-circle-o-right"></i></a> Defined by $$printLinkedPath(::cl.path::,::null::,::false::)</h4>
+				<div class="inherited">
 				::foreach field fields.get(cl)::
 				::set isStatic = false::
 					::if field.name != "new" ::

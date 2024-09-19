@@ -162,11 +162,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	});
 
 	document.querySelectorAll("a.expand-button").forEach(function (el) {
+		var inheritedBlock = el.parentElement.parentElement.querySelector(".inherited");
+		var icon = el.querySelector("i");
 		el.addEventListener("click", function (e) {
-			var container = el.parentElement.nextElementSibling;
-			container.classList.toggle("expanded");
-			el.classList.toggle("fa-folder-open");
-			el.classList.toggle("fa-folder");
+			inheritedBlock.classList.toggle("expanded");
+			icon.classList.toggle("expanded");
+			//icon.classList.toggle("fa-folder-open");
+			//icon.classList.toggle("fa-folder");
 			return false;
 		});
 	});

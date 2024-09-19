@@ -21,8 +21,10 @@
 					<a href="::api.getTreeUrl(tree)::" title="::full::.::name::">::name::</a>
 				</td>
 				::else::
-				<td style="width:300px;">
+				<td style="width:45px;">
 					$$printTreeType(::treeType::)
+				</td>
+				<td style="width:255px;">
 					<a href="::api.getTreeUrl(tree)::" title="::full::.::name::">::name::</a>
 				</td>
 				<td>

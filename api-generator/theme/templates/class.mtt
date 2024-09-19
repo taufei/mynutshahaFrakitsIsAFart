@@ -11,7 +11,7 @@
 		::if type.superClass != null::
 		<h4>
 			::set inheritedFields = api.getInheritedFields(type)::
-			<small>extends
+			<small><span>extends </span>
 				::if (inheritedFields.types.length>0)::
 					::foreach t inheritedFields.types::
 					$$printLinkedPath(::t.path::,::null::,::false::)::if ((inheritedFields.types.length!=1)&&(repeat.t.index<(inheritedFields.types.length-1))):: &rsaquo; ::end::
@@ -24,7 +24,7 @@
 		::end::
 
 		<h4 ::cond (type.interfaces.length>0)::>
-		<small>::if type.isInterface::extends::else::implements::end::
+		<small><span>::if type.isInterface::extends::else::implements::end:: </span>
 		::foreach i type.interfaces::
 			$$printLinkedPath(::i.path::,::i.params::,::false::)::if ((type.interfaces.length!=1)&&(repeat.i.index<(type.interfaces.length-1)))::, ::end::
 		::end::

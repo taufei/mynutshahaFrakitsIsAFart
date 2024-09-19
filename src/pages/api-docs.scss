@@ -83,6 +83,7 @@ code.treeType {
 
   & > span {
     width: 45px;
+    margin: 0;
     display: inline-block;
     text-align: center;
   }
@@ -139,7 +140,7 @@ td > p {
   font-size: 10px !important;
 }
 
-small, small > .muted {
+small, small > .muted, small > span {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.4);
   font-weight: normal;
@@ -217,6 +218,24 @@ small, small > .muted {
   border-radius: 50%;
   fill: var(--text-color);
   box-shadow: 0 5px 5px var(--list-background-color);
+}
+
+.fields > .inherited {
+  display: none;
+
+  &.expanded {
+    display: block;
+  }
+}
+
+.fields .expand-button i {
+  &::before {
+    transition: rotate 0.3s;
+  }
+
+  &.expanded::before {
+    rotate: 90deg;
+  }
 }
 
 .sidebar-button-front>svg {
