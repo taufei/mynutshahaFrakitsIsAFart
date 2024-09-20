@@ -143,6 +143,8 @@ Accepted parameters:
 - ``importStageSprites`` which determines whether or not to import the stage sprites into the script. (defaults to <code class="hljs-string">false</code>)
 - ``loadBefore`` which determines whether or not to load the script before going through the other stage's nodes, exactly like the default stage's script allowing for example to call <code class="hljs-title">onStageXMLParsed</code>. If instead you want the script to load after a certain node or such, set this to <code class="hljs-string">false</code>. (defaults to <code class="hljs-string">true</code>)
 
+All of these attributes above get stored inside a list, singular Imported XML scripts can access their infos easily through a variable called ``scriptInfo`` (this variable uses a <syntax lang="haxe">XMLImportedScriptInfo</syntax> class and it's automatically imported into these scripts).
+
 This allows you to load custom scripts for your stages, that allow for adding custom stage nodes, or whatever else you can think of.
 
 Check out the <a href="./stage-extensions.md">Stage Extensions</a> page for more information.
