@@ -1,7 +1,7 @@
-@import "style.css";
+@use "root/_style-vars.scss";
 
 *, ::after, ::before {
-  border: var(--list-background-color);
+  border: none;
 }
 .gsc-comment-box-tabs {
   border: none !important;
@@ -23,7 +23,7 @@
   font-weight: 400; 
 }
 .gsc-comment-box-bottom button {
-  background: #531a7d;
+  background: var(--primary-color);
   padding: 5px 16px;
   border-radius: 0 !important;
   border: solid rgba(0, 0, 0, 0.2) 2px !important;
@@ -37,14 +37,14 @@
 }
 .gsc-reactions-popover {
   border: solid rgba(0, 0, 0, 0.2) 2px !important;
-  background: #110d15 !important;
+  background: var(--list-background-color) !important;
   border-radius: 0 !important;
 }
 .gsc-reactions-popover.open::before {
   color: #0e0a11 !important;
 }
 .gsc-timeline {
-  background: #110d15;
+  background: var(--list-background-color);
   gap: 0 !important;
 }
 .gsc-comment {
@@ -64,7 +64,7 @@
 .gsc-comment-box:not(.gsc-comment-box-is-reply ) {
   border-radius: 0 !important;
   border: solid rgba(0, 0, 0, 0.2) 2px !important;
-  background: #110d15 !important;
+  background: var(--list-background-color) !important;
 }
 .gsc-comment-box-write {
   border-radius: 0 !important;;
