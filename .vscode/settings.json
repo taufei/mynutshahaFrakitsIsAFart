@@ -1,0 +1,4 @@
+{
+    "livePreview.defaultPreviewPath": "./export/",
+    "livePreview.serverRoot": "./export/"
+}
