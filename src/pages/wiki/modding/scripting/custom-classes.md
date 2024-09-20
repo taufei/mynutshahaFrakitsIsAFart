@@ -1,6 +1,6 @@
 # Custom Classes
 
-Custom classes can be made either inside the script you need it in or you can make a script file corresponding with the name of the class in ``./source``, and using `import` to import it.
+Custom classes can be made either inside the script you need it in or you can make a script file corresponding with the name of the class in ``./source``, and using <syntax lang="haxe">import</syntax> to import it.
 
 Here is a basic Song Script code that uses it:
 ```haxe
@@ -27,7 +27,7 @@ function create() {
 As of writing this, this system is very limited and also presents some defects. For example:
 - You cannot extend FlxGroups or other typed classes *(the ones that end with a ``<T>``)*.
 - Classes that override a class needs to have the same arguments on the constructor as the class it overrides. Same when creating the instance of the class.
-- Compiled Classes that do not override a function in their code cannot have that function overridden by custom classes. For example, you can't override the `draw` method in a custom class that extends `FlxParticle`, because `FlxParticle` does not override `draw`.
+- Compiled Classes that do not override a function in their code cannot have that function overridden by custom classes. For example, you can't override the `draw` method in a custom class that extends <syntax lang="haxe">FlxParticle</syntax>, because <syntax lang="haxe">FlxParticle</syntax> does not override `draw`.
 - all variables need to be public in order to be accessed inside the class.
 - static variables are not supported. (yet)
 - static functions are not supported. (yet)

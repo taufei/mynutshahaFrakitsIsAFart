@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #531a7d;
+  --secondary-color: #43206e;
+  --background-primary-color: #1e1826;
+  --background-secondary-color: #17121d;
+  --list-background-color: #110d15;
+  --text-color: white;
+  --scrollbar-color: #2a2235;
+  --code-background: #100d15;
+}
+
+* {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+  color: var(--text-color);
+  scrollbar-color: var(--scrollbar-color) var(--background-secondary-color);
+}

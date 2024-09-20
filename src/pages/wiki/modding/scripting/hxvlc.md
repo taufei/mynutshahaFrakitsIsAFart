@@ -3,8 +3,8 @@
 Using hxvlc, you can display videos anywhere, and can be used as a sprite as well.
 
 To get started, you get 2 choices:
-- ``FlxVideo`` which runs based on flash bitmap, and
-- ``FlxSpriteVideo`` which runs based on an FlxSprite.
+- <syntax lang="haxe">FlxVideo</syntax> which runs based on flash bitmap, and
+- <syntax lang="haxe">FlxSpriteVideo</syntax> which runs based on an FlxSprite.
 
 Using an FlxVideo looks something like this:
 ```haxe
@@ -43,6 +43,6 @@ if (video.load(Paths.video("video")))
 ```
 These will load the video ``./videos/video.mp4``, and display it on the screen.
 
-Other thing to note is that when you type ``Paths.video("video")``, keep in mind that you can write the extension next to the path, which let's you load filetypes other than .mp4.
+Other thing to note is that when you type <syntax lang="haxe">Paths.video("video")</syntax>, keep in mind that you can write the extension next to the path, which let's you load filetypes other than .mp4.
 
 *(btw tiny thing to also note is that if your video suffers from huge file size i recommend using .webm instead of .mp4)*

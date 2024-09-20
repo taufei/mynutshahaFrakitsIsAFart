@@ -16,7 +16,7 @@ function create() {
     var sprite = new FlxSprite(x, y).loadGraphic(Paths.image("my new sprite")); //picks the png image from the ./images folder
 }
 ```
-If you notice, this looks slightly like source code, aside from the usual <code class="hljs-formula">override function</code> or ``super.create()``, which does not exist in our scripting language.<br>
+If you notice, this looks slightly like source code, aside from the usual <syntax lang="haxe">override function</syntax> or <syntax lang="haxe">super.create()</syntax>, which does not exist in our scripting language.<br>
 If you already got the hang of source coding, then scripting will feel like a breeze. If not.. well.. prepare to learn!
 
 ## Particularities

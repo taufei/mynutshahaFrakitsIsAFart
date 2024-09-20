@@ -49,6 +49,8 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 ```
 We'll show each step to converting this shader into an usable openfl/flixel shader.
 
+<!-- I could use <syntax lang="glsl"> but it looks weird af -->
+
 1. replace ``void mainImage( out vec4 fragColor, in vec2 fragCoord )`` with a simple ``void main()`` *(flixel and openfl do not have any parameters since the coords are defined outside the function)*
 2. replace ``vec2 uv = fragCoord/iResolution.xy;`` with ``vec2 uv = openfl_TextureCoordv`` *(or in some cases, add ``vec2 fragCoord = openfl_TextureCoordv*openfl_TextureSize.xy`` before it and replace `iResolution.xy` with ``openfl_TextureSize.xy`` (if the uv value is different than usual))*
 3. replace ``vec4 col = texture(iChannel0, uv);`` with ``vec4 col = texture2D(bitmap, uv);`` or ``vec4 col = flixel_texture2D(bitmap, uv);`` *(keep in mind bitmap is the pixels of the camera/sprite the shader is applied to)*

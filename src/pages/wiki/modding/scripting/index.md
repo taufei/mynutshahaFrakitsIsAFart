@@ -45,35 +45,36 @@ function onNoteHit(event) {
     event.cancel(); // cancels out any other handling (useful if you want to write custom note pressing)
 }
 ```
-There's a lot of other events, such as ``onStartCountdown``, ``onGamePause``, ``onCameraMove`` and more.<br>
-You can find them all in <a href="./All of the script calls.md">All of the script calls</a>.
+There's a lot of other events, such as <code class="hljs-title">onStartCountdown</code>, <code class="hljs-title">onGamePause</code>, <code class="hljs-title">onCameraMove</code> and more.<br>
+You can find them all in <a href="./script-calls.md">All of the script calls</a>.
 
-Despite all of that, functions like ``update``, ``beatHit``, ``stepHit`` still receive one parameter *(``elapsed:Float``, ``curBeat:Int``, ``curStep:Int``)
+Despite all of that, functions like <code class="hljs-title">update</code>, <code class="hljs-title">beatHit</code>, <code class="hljs-title">stepHit</code> still receive one parameter *(<syntax lang="haxe">elapsed:Float</syntax>, <syntax lang="haxe">curBeat:Int</syntax>, <syntax lang="haxe">curStep:Int</syntax>)*
 
 ### Class importing.
 
-Some classes are pre-imported (FlxSprite, FlxMath, FlxAxis etc.), but for classes that aren't pre-imported, it's still possible to import like this:
+Some classes are pre-imported (<syntax lang="haxe">FlxSprite</syntax>, <syntax lang="haxe">FlxMath</syntax>, <syntax lang="haxe">FlxAxis</syntax> etc.), but for classes that aren't pre-imported, it's still possible to import like this:
 ```haxe
 import flixel.addons.display.FlxBackdrop;
 ```
-*(``using`` does not work, yet)*
+*(<code class="hljs-keyword">using</code> does not work, yet)*
 
 ## To start on basic scripting, you can follow these articles here:
-- <a href="./PlayState Scripts/Gameplay Scripts.md">Gameplay Scripts</a>
-- <a href="./PlayState Scripts/Events or Notetype Scripts.md">Events/Notetype Scripts</a>
-- <a href="./State or Substate Scripts.md">State/Substate Scripts</a><br><br>
-- <a href="./Useful script snippets for modders.md">Useful script snippets for modders</a>
-- <a href="./All of the script calls.md">All of the script calls</a>
+- <a href="./playstate-scripts/gameplay-scripts.md">Gameplay Scripts</a>
+- <a href="./playstate-scripts/events-notetypes-scripts.md">Events/Notetype Scripts</a>
+- <a href="./state-substate-scripts.md">State/Substate Scripts</a><br><br>
+- <a href="./script-snippets.md">Useful script snippets for modders</a>
+- <a href="./script-calls.md">All of the script calls</a>
 
 And if you wanna go advanced, follow the rest of the articles here:
-- <a href="./PlayState Scripts/Pause or Game Over Scripts.md">Pause/Game Over Scripts</a>
-- <a href="./PlayState Scripts/Cutscenes or Dialogue Scripts.md">Cutscenes/Dialogue Scripts</a>
-- <a href="./PlayState Scripts/Character or Stage Scripts.md">Character/Stage Scripts</a><br><br>
-- <a href="./Global Scripts.md">Global Scripts</a>
-- <a href="./Custom Options.md">Custom Options</a>
-- <a href="./Shaders.md">Shaders</a>
-- <a href="./3D rendering.md">3D rendering</a>
-- <a href="./Using hxvlc for videos.md">Using hxvlc for videos</a><br><br>
-- <a href="./Scripted Assets Libraries.md">Scripted Assets Libraries</a>
-- <a href="./Custom Classes.md">Custom Classes</a>
-- <a href="./NDLL Scripting.md">NDLL Scripting</a>
+- <a href="./playstate-scripts/pause-gamover-scripts.md">Pause/Game Over Scripts</a>
+- <a href="./playstate-scripts/cutscenes-dialogue-scripts.md">Cutscenes/Dialogue Scripts</a>
+- <a href="./playstate-scripts/character-stage-scripts.md">Character/Stage Scripts</a><br><br>
+- <a href="./global-scripts.md">Global Scripts</a>
+- <a href="./custom-options.md">Custom Options</a>
+- <a href="./shaders.md">Shaders</a>
+- <a href="./3d-rendering.md">3D rendering</a>
+- <a href="./hxvlc.md">Using hxvlc for videos</a><br><br>
+- <a href="./scripted-assets-libraries.md">Scripted Assets Libraries</a>
+- <a href="./custom-classes.md">Custom Classes</a>
+- <a href="./ndll-scripting.md">NDLL Scripting</a>
+- <a href="./custom-transitions.md">Custom Transitions</a>

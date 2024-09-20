@@ -9,14 +9,15 @@ Here is documentation on functions of the engine (gameplay and modding), and how
         - <a href="./modding/songs/editor-features.md">Chart Editor Features</a>
     - <a href="./modding/characters/index.md">Creating characters</a>
         - <a href="./modding/characters/editor-features.md">Character Editor Features</a>
-    - <a href="./modding/stages.md">Creating stages</a>
+    - <a href="./modding/stages/index.md">Creating stages</a>
+        - <a href="./modding/stages/stage-extensions.md">Stage Extensions</a>
     - <a href="./modding/cutscenes-dialogues.md">Cutscenes/Dialogues</a>
     - <a href="./modding/scripting/index.md">Scripting</a>
         - <a href="./modding/scripting/playstate-scripts/index.md">PlayState Scripts</a>
             - <a href="./modding/scripting/playstate-scripts/gameplay-scripts.md">Gameplay Scripts</a>
             - <a href="./modding/scripting/playstate-scripts/character-stage-scripts.md">Character/Stage Scripts</a>
             - <a href="./modding/scripting/playstate-scripts/cutscenes-dialogue-scripts.md">Cutscenes/Dialogue Scripts</a>
-            - <a href="./modding/scripting/playstate-scripts/Pause or Game Over Scripts.md">Pause/Game Over Scripts</a>
+            - <a href="./modding/scripting/playstate-scripts/pause-gamover-scripts.md">Pause/Game Over Scripts</a>
             - <a href="./modding/scripting/playstate-scripts/events-notetypes-scripts.md">Events/Notetype Scripts</a>
         - <a href="./modding/scripting/state-substate-scripts.md">State/Substate Scripts</a>
         - <a href="./modding/scripting/global-scripts.md">Global Scripts</a>
@@ -29,6 +30,7 @@ Here is documentation on functions of the engine (gameplay and modding), and how
         - <a href="./modding/scripting/script-calls.md">All of the script calls</a>
         - <a href="./modding/scripting/custom-classes.md">Custom Classes</a>
         - <a href="./modding/scripting/ndll-scripting.md">NDLL Scripting</a>
+        - <a href="./modding/scripting/custom-transitions.md">Custom Transitions</a>
     - <a href="./modding/hardcoding/index.md">Hardcoding</a>
         - idk lol
 

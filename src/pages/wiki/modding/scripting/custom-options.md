@@ -30,30 +30,30 @@ There already exists a template for you to look on, and it looks something like 
 You're likely wondering: "how does each type of option work?"
 That's what is about to be explained!!
 
-All option types (except for `menu`) share 2 common properties:
+All option types (except for <syntax lang="xml">&lt;menu&gt;</syntax>) share 2 common properties:
 - `id` - The ID of the option to pull from save data (which we cover just below this section!)
 - `name` - This is the name of the option displayed on screen
 
 ## Here's what the properties for each type are:
 
-- `menu` - A menu to put your options into, you can have sub-menus inside of them as well
+- <syntax lang="xml">&lt;menu&gt;</syntax> - A menu to put your options into, you can have sub-menus inside of them as well
     - `name` - This is the name of the menu displayed on screen
     - `desc` - This is the description of the menu displayed on screen
 
-- `checkbox` - Makes a checkbox to toggle an option on and off
+- <syntax lang="xml">&lt;checkbox&gt;</syntax> - Makes a checkbox to toggle an option on and off
     - There is no properties, this is the simplest an option can get
 
-- `number` - Self-explanatory i think
+- <syntax lang="xml">&lt;number&gt;</syntax> - Self-explanatory i think
     - `min` - The minimum value this number is allowed to stay at
     - `max` - The maximum value this number is allowed to stay at
     - `change` - How much this number is allowed to change by, could be in 5s, 10s, etc
 
-- `choice` - A multiple choice option, which can cycle through several given values
-    - `value` - A value that can be chosen
+- <syntax lang="xml">&lt;choice&gt;</syntax> - A multiple choice option, which can cycle through several given values
+    - <syntax lang="xml">&lt;value&gt;</syntax> - A value that can be chosen
         - `name` - This is the name of the value displayed on screen
         - `value` - This is the actual data/value applied to the option when chosen
 
-Accessing them in Scripts is done via ``FlxG.save.data``, as you can see below.
+Accessing them in Scripts is done via <syntax lang="haxe">FlxG.save.data</syntax>, as you can see below.
 ```haxe
 var checkboxExample = FlxG.save.data.checkboxExample;
 ```

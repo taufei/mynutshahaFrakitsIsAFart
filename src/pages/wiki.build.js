@@ -5,7 +5,7 @@ var jsdom = require("jsdom");
 var fs = require('fs');
 var hljs = require('highlight.js');
 
-var { fixHtmlRefs, copyDir, parseTemplate } = require("../utils.js");
+var { fixHtmlRefs, copyDir, parseTemplate, fixPath } = require("../utils.js");
 
 var header = fs.readFileSync("./src/pages/templates/header.html", 'utf8');
 
@@ -30,6 +30,8 @@ function generateSidebar(list, basePath = '', selected = null, idx = null, nameM
 		if(item.length > 1 && item[1] != null) {
 			visualName = item[1];
 		}
+
+		href = href.replace(/\/{2,}/g, "/");
 
 		var nameMapKey = href.replace(/\.md$/, "").replace(/^\/+/, "");
 
@@ -77,6 +79,7 @@ function buildHtml(_pageDir, _exportPath) {
 	});
 
 	for (i of filenames) {
+		i = fixPath(i);
 		var parsedName = path.parse(i);
 		var ext = parsedName.ext;
 		if (ext == "" && !fs.existsSync(exportPath + i))
@@ -109,7 +112,6 @@ function buildHtml(_pageDir, _exportPath) {
 
 			var dom = fixHtmlRefs(html, pageDir, _pageDir);
 
-			//console.log(data);
 			fs.writeFileSync(
 				exportPath + i.replace(/\.md$/, ".html"),
 				dom.serialize(),

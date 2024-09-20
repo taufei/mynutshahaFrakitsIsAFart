@@ -24,8 +24,8 @@ function create(event){
 This script will prevent the base pause menu from loading and allows you to add whatever you want to it.
 
 Important functions to use when coding the pause menu:
-- `close();` - Closes the pause menu, resumes gameplay.
-- `FlxG.switchState(new PlayState());` - Reloads the state, restarts the song.
+- <syntax lang="haxe">close();</syntax> - Closes the pause menu, resumes gameplay.
+- <syntax lang="haxe">FlxG.switchState(new PlayState());</syntax> - Reloads the state, restarts the song.
 
 ## Game Over Scripts
 Game over scripts work the same as Pause Scripts, though presents some differences.

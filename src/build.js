@@ -19,7 +19,7 @@ process.argv = process.argv.filter(arg => arg != '--first-run');
 
 hljs.registerLanguage('haxe', haxeformat);
 
-var pageDir = process.argv[2] || "";
+var pageDir = process.argv[2] || "./";
 var exportPath = "./export/" + (process.argv[3] || '');
 
 if(!pageDir.endsWith('/')) pageDir += '/';
@@ -37,6 +37,7 @@ compileSass("./src/style.scss", exportPath + "/style.css");
 compileSass("./src/pages/wiki.scss", exportPath + "/wiki.css");
 compileSass("./src/pages/index.scss", exportPath + "/index.css");
 compileSass("./src/pages/api-docs.scss", exportPath + "/api-docs.css");
+compileSass("./src/giscus-theme.scss", exportPath + "/giscus-theme.css");
 
 indexPage.buildHtml(pageDir, exportPath); // builds into /
 wiki.buildHtml(pageDir, exportPath); // builds into /wiki

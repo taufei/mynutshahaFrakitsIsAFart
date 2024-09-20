@@ -18,6 +18,6 @@ function update(elapsed:Float) {
     if (cashAmount > 1000000) playerTitle = "millionaire";
 }
 ```
-This basic example shows how you can use ``static`` variables and trigger actions depending on them. As you can see, these variables are accessible in any script, so you can basically use them in any PlayState Scripts and State Scripts too.
+This basic example shows how you can use <syntax lang="haxe">static</syntax> variables and trigger actions depending on them. As you can see, these variables are accessible in any script, so you can basically use them in any PlayState Scripts and State Scripts too.
 
 <a href="./script-snippets.md">Useful script snippets for modders</a> contains a few useful code snippets that take advantage of Global Scripts.

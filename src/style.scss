@@ -1,13 +1,4 @@
-:root {
-  --primary-color: #531a7d;
-  --secondary-color: #43206e;
-  --background-primary-color: #1e1826;
-  --background-secondary-color: #17121d;
-  --list-background-color: #110d15;
-  --text-color: white;
-  --scrollbar-color: #2a2235;
-  --code-background: #100d15;
-}
+@use "root/_style-vars.scss";
 
 a {
   color: deepskyblue;
@@ -20,12 +11,6 @@ a {
   padding: 0.7em;
   background: var(--primary-color);
   border: solid rgba(0, 0, 0, 0.2) 2px;
-}
-
-* {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
-  color: var(--text-color);
-  scrollbar-color: var(--scrollbar-color) var(--background-secondary-color);
 }
 
 *, *::before,*::after {
@@ -135,6 +120,14 @@ code.inline-code {
 
   font-family: monospace;
   white-space: pre-wrap;
+
+  &.inline-syntax {
+    color: #fff;
+  }
+}
+
+code.inline-code * {
+  font-family: monospace;
 }
 
 pre.inline-code code {
@@ -302,7 +295,7 @@ hue-6-2: #e6c07b
 
 .hljs-comment,
 .hljs-quote {
-  color: #5c6370;
+  color: #5c6370!important;
   font-style: italic;
 }
 
@@ -321,7 +314,7 @@ hue-6-2: #e6c07b
 }
 
 .hljs-literal {
-  color: #56b6c2;
+  color: #56b6c2!important;
 }
 
 .hljs-string,
@@ -340,7 +333,7 @@ hue-6-2: #e6c07b
 .hljs-selector-attr,
 .hljs-selector-pseudo,
 .hljs-number {
-  color: #d19a66;
+  color: #d19a66!important;
 }
 
 .hljs-symbol,
@@ -349,13 +342,13 @@ hue-6-2: #e6c07b
 .hljs-meta,
 .hljs-selector-id,
 .hljs-title {
-  color: #61aeee;
+  color: #61aeee!important;
 }
 
 .hljs-built_in,
 .hljs-title.class_,
 .hljs-class .hljs-title {
-  color: #e6c07b;
+  color: #e6c07b!important;
 }
 
 .hljs-emphasis {
