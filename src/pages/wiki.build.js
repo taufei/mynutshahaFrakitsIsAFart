@@ -44,6 +44,8 @@ function generateSidebar(list, basePath = '', selected = null, idx = null, nameM
 		var isSelected = href.replace(/^\/+/g, "") == selected.replace(/^\/+/g, "");
 
 		var classAttr = isSelected ? ` class="${parity} selected"` : ` class="${parity}"`;
+
+		href = href.replace(/\/index\.(html|md)$/g, "/");
 		html += `<a href="${href}"${classAttr}>${visualName}</a>`;
 
 		if(hasChildren) {

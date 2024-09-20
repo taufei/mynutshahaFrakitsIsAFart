@@ -1,6 +1,6 @@
 # Additional Chart Editor Features
 
-while we have only covered the basic of charting in <a href="./index.md">Creating songs</a>, we will cover the additional chart editor features here, in no particular order.
+while we have only covered the basic of charting in <a href="../songs/">Creating songs</a>, we will cover the additional chart editor features here, in no particular order.
 
 ## Strumlines.
 ### More than 2.
@@ -86,7 +86,7 @@ Editing chart data has only 2 options, and they're self explanatory.
 
 <img src="./Chart Editor Features-14.png"/>
 
-Editing metadata information, is also self-explanatory, though you can notice this menu is similar to what you've seen in <a href="./index.md">Creating songs</a>, so this should be easy to figure out. Though you might also notice there's a new option, **Custom Values**. These are extra values that let's you set certain values specifically for the song *(for example, crediting someone for a song)*. This will be covered in <a href="../scripting/playstate-scripts/gameplay-scripts.md">Gameplay Scripts</a>.
+Editing metadata information, is also self-explanatory, though you can notice this menu is similar to what you've seen in <a href="../songs/">Creating songs</a>, so this should be easy to figure out. Though you might also notice there's a new option, **Custom Values**. These are extra values that let's you set certain values specifically for the song *(for example, crediting someone for a song)*. This will be covered in <a href="../scripting/playstate-scripts/gameplay-scripts.md">Gameplay Scripts</a>.
 
 ## Saving.
 

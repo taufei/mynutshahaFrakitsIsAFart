@@ -4,16 +4,16 @@ Here is documentation on functions of the engine (gameplay and modding), and how
 ### Navigation is done via either the sidebar, or by using this chart below:
 - <a href="./navigation.md">How to navigate the engine</a>
 - <a href="./differences.md">Differences between the other FNF engines</a>
-- <a href="./modding/index.md">Modding the engine</a>
-    - <a href="./modding/songs/index.md">Creating songs</a>
+- <a href="./modding/">Modding the engine</a>
+    - <a href="./modding/songs/">Creating songs</a>
         - <a href="./modding/songs/editor-features.md">Chart Editor Features</a>
-    - <a href="./modding/characters/index.md">Creating characters</a>
+    - <a href="./modding/characters/">Creating characters</a>
         - <a href="./modding/characters/editor-features.md">Character Editor Features</a>
-    - <a href="./modding/stages/index.md">Creating stages</a>
+    - <a href="./modding/stages/">Creating stages</a>
         - <a href="./modding/stages/stage-extensions.md">Stage Extensions</a>
     - <a href="./modding/cutscenes-dialogues.md">Cutscenes/Dialogues</a>
-    - <a href="./modding/scripting/index.md">Scripting</a>
-        - <a href="./modding/scripting/playstate-scripts/index.md">PlayState Scripts</a>
+    - <a href="./modding/scripting/">Scripting</a>
+        - <a href="./modding/scripting/playstate-scripts/">PlayState Scripts</a>
             - <a href="./modding/scripting/playstate-scripts/gameplay-scripts.md">Gameplay Scripts</a>
             - <a href="./modding/scripting/playstate-scripts/character-stage-scripts.md">Character/Stage Scripts</a>
             - <a href="./modding/scripting/playstate-scripts/cutscenes-dialogue-scripts.md">Cutscenes/Dialogue Scripts</a>
@@ -31,7 +31,7 @@ Here is documentation on functions of the engine (gameplay and modding), and how
         - <a href="./modding/scripting/custom-classes.md">Custom Classes</a>
         - <a href="./modding/scripting/ndll-scripting.md">NDLL Scripting</a>
         - <a href="./modding/scripting/custom-transitions.md">Custom Transitions</a>
-    - <a href="./modding/hardcoding/index.md">Hardcoding</a>
+    - <a href="./modding/hardcoding/">Hardcoding</a>
         - idk lol
 
 
