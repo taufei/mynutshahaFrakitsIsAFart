@@ -11,10 +11,10 @@
 }
 
 .gsc-comment-box-tabs button {
-    font-weight: 600;
-    border-radius: 0 !important;
-    border: solid rgba(0, 0, 0, 0.2) 2px !important;
-    background: rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  border-radius: 0 !important;
+  border: solid rgba(0, 0, 0, 0.2) 2px !important;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .color-box-border-info {
@@ -26,8 +26,8 @@
 }
 
 .gsc-comment-box-tabs button.color-text-secondary {
-    color: gray;
-    font-weight: 400;
+  color: gray;
+  font-weight: 400;
 }
 
 .gsc-comment-box-bottom button {
@@ -74,23 +74,20 @@
 }
 
 .gsc-reply-box button {
-    border: solid rgba(0, 0, 0, 0.2) 2px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 0 !important;
-    ;
+  border: solid rgba(0, 0, 0, 0.2) 2px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0 !important;
 }
-
 .gsc-comment-box:not(.gsc-comment-box-is-reply) {
-    border-radius: 0 !important;
-    border: solid rgba(0, 0, 0, 0.2) 2px !important;
-    background: var(--list-background-color) !important;
+  border-radius: 0 !important;
+  border: solid rgba(0, 0, 0, 0.2) 2px !important;
+  background: var(--list-background-color) !important;
 }
 
 .gsc-comment-box-write {
-    border-radius: 0 !important;
-    ;
-    border: solid rgba(0, 0, 0, 0.2) 2px;
-    background: rgba(0, 0, 0, 0.2);
+  border-radius: 0 !important;
+  border: solid rgba(0, 0, 0, 0.2) 2px;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .gsc-comment-box-textarea {
