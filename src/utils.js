@@ -123,7 +123,31 @@ function copyDir(src, dest) {
 }
 
 function compileSass(file, dest) {
-	var result = sass.compileString(fs.readFileSync(file, 'utf8'));
+	var result = sass.compileString(fs.readFileSync(file, 'utf8'), {
+		importers: [{
+			canonicalize(url) {
+				if (!url.endsWith('.scss')) return null;
+				if (!url.startsWith('root/')) return null;
+				return new URL("file:///" + url.substring(5));
+			},
+			load(canonicalUrl) {
+				if (!canonicalUrl.pathname.endsWith('.scss')) return null;
+
+				var filePath = "./" + path.join("./src", canonicalUrl.pathname);
+
+				//console.log(canonicalUrl.pathname, canonicalUrl);
+				//console.log(filePath);
+
+				//console.log(fs.existsSync(filePath));
+				if (!fs.existsSync(filePath)) return null;
+
+				return {
+					contents: fs.readFileSync(filePath, 'utf8'),
+					syntax: 'scss'
+				};
+			}
+		}]
+	});
 	fs.writeFileSync(dest, result.css);
 }
 
