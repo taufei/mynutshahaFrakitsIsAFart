@@ -13,6 +13,7 @@
             ["stage-extensions", "Stage Extensions - UNFINISHED"]
         ]],
         ["cutscenes-dialogues", "Cutscenes/Dialogues"],
+        ["note-splashes", "Note Splashes"],
         ["scripting/index", "Scripting", [
             ["playstate-scripts/index", "PlayState Scripts", [
                 ["gameplay-scripts", "Gameplay Scripts"],
