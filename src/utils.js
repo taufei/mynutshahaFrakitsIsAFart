@@ -138,7 +138,7 @@ function compileSass(file, dest) {
 				//console.log(canonicalUrl.pathname, canonicalUrl);
 				//console.log(filePath);
 
-				console.log(fs.existsSync(filePath));
+				//console.log(fs.existsSync(filePath));
 				if (!fs.existsSync(filePath)) return null;
 
 				return {
