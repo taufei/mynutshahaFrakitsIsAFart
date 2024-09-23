@@ -39,3 +39,16 @@ As for the <syntax lang="xml">&lt;anim&gt;</syntax> nodes, they're pretty self-e
 - ``x`` and ``y`` are the animation offset. *(offset is only applied when the animation is played)*
 - ``forced`` whether or not to force animation playback while a different one is already playing.
 - ``loop`` to make your animation loop.
+
+## Health Icons
+
+In this engine, health icons have a bit more functionality than the ordinary engine. Such as:
+
+### Adding more than just a neutral and a losing icon.
+
+Meaning that you can also add a winning icon *(by making the icon image 450x150 instead of 300x150)*, but it doesn't stop at just the winning icon, because you can add as many icons as you like *(for example pre winning or pre pre losing etc)*<br>
+Keep in mind that the width of the icon image is determined by 150 * the amount of icons you want to have.
+
+### Script Event for when the icon changes it's icon state.
+
+Using this event in a Global Script to run code for when the icon changes it's state: ``onHealthIconAnimChange``.
