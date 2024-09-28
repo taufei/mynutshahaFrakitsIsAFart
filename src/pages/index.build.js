@@ -38,7 +38,7 @@ function buildHtml(_pageDir, _exportPath) {
             author: meta.author,
             source: meta.source,
             version: meta.version,
-            lastUpdated: meta.lastUpdated ?? "1970-01-01T00:00:00.000Z"
+            lastUpdated: meta.lastUpdated ?? "unknown"
         });
     }
 

@@ -17,7 +17,11 @@ function randomizeOrder() {
 }
 
 function sortByTime(a, b) {
-	return new Date(b.getAttribute("data-time")) - new Date(a.getAttribute("data-time"));
+	var aTime = a.getAttribute("data-time");
+	var bTime = b.getAttribute("data-time");
+	if(aTime == "unknown") return 1;
+	if(bTime == "unknown") return -1;
+	return new Date(bTime) - new Date(aTime);
 }
 
 function recentOrder() {
@@ -96,7 +100,10 @@ var lastUpdated = document.querySelectorAll(".last-updated");
 if(lastUpdated.length > 0 && window.Intl) {
 	const rtf1 = new Intl.RelativeTimeFormat('en', { style: 'short' });
 	lastUpdated.forEach(lastUpdated => {
-		lastUpdated.innerText = getRelativeTimeString(new Date(lastUpdated.getAttribute("data-time")));
-		lastUpdated.style.display = "inline";
+		var time = lastUpdated.getAttribute("data-time");
+		if(time != "unknown") {
+			lastUpdated.innerText = getRelativeTimeString(new Date(time));
+			lastUpdated.style.display = "inline";
+		}
 	});
 }
