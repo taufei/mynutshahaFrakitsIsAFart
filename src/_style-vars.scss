@@ -14,3 +14,11 @@
   color: var(--text-color);
   scrollbar-color: var(--scrollbar-color) var(--background-secondary-color);
 }
+
+.hide-nojs {
+  display: initial;
+}
+
+.nojs .hide-nojs {
+  display: none;
+}

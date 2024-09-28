@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="root/style.css">
     <link rel="stylesheet" href="root/index.css">
 </head>
-<body>
+<body class="nojs">
+    <script>
+        document.body.classList.remove("nojs");
+    </script>
     <div class="header">
         {{ header }}
     </div>
@@ -73,6 +76,45 @@
                 <br>
                 <i>You can contribute to this website by going to the <a href="https://github.com/FNF-CNE-Devs/FNF-CNE-Devs.github.io">GitHub repository</a></i>
             </div>
+        </div>
+        <div class="content mods">
+            <div>
+                <h2>Mods</h2>
+            </div>
+            <div class="sort-buttons hide-nojs">
+                <a href="./#" class="sort-button category-button default-button" data-sort="featured">
+                    Featured
+                </a>
+                <a href="./#" class="sort-button category-button default-button" data-sort="best">
+                    Best of all time
+                </a>
+                <a href="./#" class="sort-button category-button default-button selected" data-sort="all">
+                    All
+                </a>
+                <span class="space">&nbsp;&nbsp;&nbsp;</span>
+                <a href="./#" class="sort-button order-button default-button" data-sort="recent">
+                    Recent
+                </a>
+                <a href="./#" class="sort-button order-button default-button selected" data-sort="random">
+                    Random
+                </a>
+            </div>
+            <div class="featured-mods">
+                {{#mods}}
+                <div class="featured-mod {{#tags}}{{.}} {{/tags}}" data-time="{{lastUpdated}}">
+                    <a href="{{link}}">
+                        <img src="{{image}}" />
+                        <div class="card-content">
+                            <h3>{{name}}</h3>
+                            <p>{{description}}</p>
+                            <span class="last-updated hide-nojs" data-time="{{lastUpdated}}" style="display:none;">{{lastUpdated}}</span>
+                        </div>
+                    </a>
+                </div>
+                {{/mods}}
+            </div>
+
+            <script src="root/featuredMods.js"></script>
         </div>
     </div>
 </body>

@@ -75,6 +75,11 @@ div.compact {
 @media screen and (min-width: 30.5em) {
     .content {
         margin: 1.5em 1.5em;
+        margin-right: 0;
+
+        &.mods {
+            margin: 1.5em 1.5em;
+        }
     }
 
     img {
@@ -85,7 +90,12 @@ div.compact {
 
 @media screen and (min-width: 80.5em) {
     .content {
-        margin: 3em 10em;
+        margin: 3em 1.5em;
+        margin-right: 0;
+
+        &.mods {
+            margin: 3em 1.5em;
+        }
     }
 
     img {
@@ -101,4 +111,74 @@ div.compact {
     100% {
         transform: rotate(5deg);
     }
+}
+
+.content.mods {
+    padding: 0;
+}
+
+$mods-padding: 10px;
+
+.featured-mods {
+    width: 550px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.featured-mod {
+    width: 250px;
+    background-color: #2f273a;
+
+    border-radius: 10px;
+    border: 1px solid black;
+    transition: border 0.2s, background-color 0.2s;
+    margin: 6px;
+
+    a {
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: #3a2f4a;
+        border: 1px solid white;
+    }
+
+    img {
+        width: 250px;
+        max-width: 250px;
+        height: 141px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card-content {
+        text-align: left;
+        padding: $mods-padding;
+        height: 100px - $mods-padding * 2;
+
+        position: relative;
+    }
+
+    h3 {
+        display: inline;
+        text-align: left;
+    }
+
+    p {
+        display: block;
+        margin: 0;
+    }
+}
+
+.sort-button.selected {
+    background: #7c39ae;
+}
+
+.last-updated {
+    color: #8e7a9a;
+    font-size: 0.8em;
+
+    left: $mods-padding;
+    bottom: $mods-padding;
+    position: absolute;
 }
