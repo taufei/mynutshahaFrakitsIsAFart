@@ -17,7 +17,10 @@ function buildHtml(_pageDir, _exportPath) {
 	}
 	console.log("Building Index Page");
 
+    var warnings = [];
+
     var mods = [];
+    var links = {};
     var modsDir = "./featured-mods/";
     var files = fs.readdirSync(modsDir);
     for(const file of files) {
@@ -27,6 +30,11 @@ function buildHtml(_pageDir, _exportPath) {
 
         if(!fs.existsSync(exportPath + file)) fs.mkdirSync(exportPath + file);
         fs.copyFileSync(modsDir + file + "/cover.jpg", exportPath + file + "/cover.jpg");
+
+        if(links[meta.link]) {
+            warnings.push("Duplicate link: " + meta.link + " (mod: " + meta.name + " and " + links[meta.link] + ")");
+        }
+        links[meta.link] = meta.name;
 
         mods.push({
             name: meta.name,
@@ -48,7 +56,8 @@ function buildHtml(_pageDir, _exportPath) {
     var vars = {
         title: "Home",
         header: header,
-        mods: mods
+        mods: mods,
+        warnings: warnings
     };
 
     let html = templatePage;

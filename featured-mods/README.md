@@ -4,6 +4,10 @@
 
 1. **Image Resolution**
    All images provided within your mod or related to it **must** adhere to a resolution of **1280x720** or less.
+   And have a aspect ratio of **16:9**.
+   And have a file extension of **.jpg**.
+   It is recommended to use a photo editing software like [Photopea](https://www.photopea.com/) to crop and resize your images.
+   You can't have animated gifs or apngs.
 
 2. **Allowed Mods**
    Only **Codename Engine mods** are allowed. Mods pull requests that do not adhere to this standard will not be accepted.

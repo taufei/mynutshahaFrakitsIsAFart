@@ -210,3 +210,17 @@ $mods-padding: 10px;
     margin: 0.5em 0;
     padding: 0.2em;
 }
+
+.warning {
+    background: #75644d;
+    padding: 1px;
+    border: 1px solid #fff000;
+
+    h3 {
+        margin-bottom: 0;
+    }
+
+    p {
+        margin-top: 0.25em;
+    }
+}
