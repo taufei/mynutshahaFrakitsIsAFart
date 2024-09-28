@@ -139,6 +139,10 @@ div.compact {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+
+    height: 500px;
+    overflow-y: scroll;
+    overscroll-behavior: contain;
 }
 
 .featured-mod {
