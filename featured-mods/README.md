@@ -38,10 +38,28 @@
        - GameBanana: If the mod is on GameBanana you can use this script `document.querySelector(".DateModified time").getAttribute("datetime")` to get the correct date.
        - GameJolt: Open the Inspect Element (F12) on the relative time, and put the date in the format `"YYYY-MM-DDThh:mm:ss.000Z"`. (Make sure its in UTC)
        - GitHub: Open the latest commit and run the script: `document.querySelector("relative-time").getAttribute("datetime")`
-   - If you dont know how to get the correct date, you can use this website https://dencode.com/date/iso8601?v=Put%20the%20date%20here&tz=UTC&decimal-separator=%2E then use the value from ISO8601 Date (Extend) to get the correct date.
+   - If you don't know how to get the correct date, you can use this website https://dencode.com/date/iso8601?v=Put%20the%20date%20here&tz=UTC&decimal-separator=%2E then use the value from ISO8601 Date (Extend) to get the correct date.
 
 9. Tags
    - Only moderators can add these specific tags to mods.
        - `featured` - Mods that are featured on the website.
        - `best` - Mods that are the best of all time.
+
+   - Here's a list of tags that are allowed:
+       - `softcoded` - Use this if your mod is a **softcoded Codename Engine mod**.
+       - `hardcoded` - Use this if your mod is a **hardcoded Codename Engine mod**.
+       - `long-desc` - Use this if your mod has a long description. (sizes it down)
+       - `longer-desc` - Use this if your mod has a longer description. (sizes it down even more)
+       - `long-title` - Use this if your mod has a long title. (sizes it down)
+       - `longer-title` - Use this if your mod has a longer title. (sizes it down even more)
+       - `upcoming` - Use this if your mod is **not yet released**.
+       - `best` - [Only moderators] Use this if your mod is the **best of all time**.
+       - `featured` - [Only moderators] Use this if your mod is **featured on the website**.
+
+       - `difficulty-easy` - Use this if your mod is **easy**.
+       - `difficulty-normal` - Use this if your mod is **normal**.
+       - `difficulty-hard` - Use this if your mod is **hard**.
+       - `difficulty-expert` - Use this if your mod is **expert**.
+
+   - If you have custom tags that will be used when we add searching. add them to "userTags" in `meta.json`.
 ### Thank you for your contribution!
