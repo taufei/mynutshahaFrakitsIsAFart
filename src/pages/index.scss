@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .content {
     padding: 0 5%;
     padding-bottom: 2em;
@@ -143,16 +145,17 @@ div.compact {
     width: calc(50% - 16px);
     background-color: var(--background-secondary-color);
     border: solid rgba(0, 0, 0, 0.1) 2px;
-    transition: border 0.2s, background-color 0.2s;
+    transition: background-color 0.2s; // , transform 0.2s
     margin: 6px;
+    //will-change: transform;
 
     a {
         text-decoration: none;
     }
 
     &:hover {
-        filter: brightness(140%);
-        backdrop-filter: brightness(140%);
+        background-color: color.adjust(#17121d, $lightness: 10%);
+        //transform: scale(1.02);
     }
 
     img {
