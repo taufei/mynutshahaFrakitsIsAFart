@@ -75,6 +75,8 @@ function buildHtml(_pageDir, _exportPath) {
         });
     }
 
+    mods.sort((a, b) => a.name.localeCompare(b.name));
+
     var path = "./src/pages/index.html";
     var outpath = exportPath + "index.html";
     var templatePage = fs.readFileSync(path, 'utf8');
