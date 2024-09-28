@@ -39,6 +39,8 @@ compileSass("./src/pages/index.scss", exportPath + "/index.css");
 compileSass("./src/pages/api-docs.scss", exportPath + "/api-docs.css");
 compileSass("./src/giscus-theme.scss", exportPath + "/giscus-theme.css");
 
+fs.copyFileSync("./src/pages/featuredMods.js", exportPath + "/featuredMods.js");
+
 indexPage.buildHtml(pageDir, exportPath); // builds into /
 wiki.buildHtml(pageDir, exportPath); // builds into /wiki
 tools.buildHtml(pageDir, exportPath); // builds into /tools

@@ -31,6 +31,7 @@ function fixHtmlRefs(html, pageDir, _pageDir) {
 	}
 
 	for(const link of links) {
+		if(link.href == "#") continue;
 		link.href = fixPath(link.href);
 		link.href = link.href.replace(/\.md$/, ".html").replace("./" + pageDir, "./");
 		if(link.href.startsWith("/")) {
@@ -43,6 +44,8 @@ function fixHtmlRefs(html, pageDir, _pageDir) {
 	}
 
 	for(const image of imageSrcs) {
+		if(image.src == "#") continue;
+
 		image.src = fixPath(image.src);
 		image.src = image.src.replace(/\.md$/, ".html").replace("./" + pageDir, "./");
 		if(image.src.startsWith("/")) {

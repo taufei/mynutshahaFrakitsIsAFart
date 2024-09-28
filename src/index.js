@@ -47,6 +47,12 @@ function restartChild() {
 startChild();
 
 if (isWatch) {
+	fs.watch('./featured-mods/', { recursive: true }, (eventType, filename) => {
+		if (filename) {
+			console.log(`${filename} changed. Rebuilding...`);
+			restartChild();
+		}
+	});
 	fs.watch('./src/', { recursive: true }, (eventType, filename) => {
 		if (filename) {
 			console.log(`${filename} changed. Rebuilding...`);

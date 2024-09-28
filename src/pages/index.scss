@@ -1,11 +1,13 @@
+@use "sass:color";
+
 .content {
-    padding: 0 5%;
+    padding: 0!important;
     padding-bottom: 2em;
     text-align: center;
-}
 
-.content > div {
-    margin: 1em;
+    >div {
+        margin: 1em;
+    }
 }
 
 div.compact {
@@ -21,24 +23,23 @@ div.compact {
     position: relative;
     width: 100px;
     height: 100px;
-}
 
-.logo img {
-    max-width: none;
-    width: 100%;
-    height: 100%;
-}
+    img {
+        max-width: none;
+        width: 100%;
+        height: 100%;
 
-.logo img.logo-bg {
-    border-radius: 15px;
-}
+        &.logo-bg {
+            border-radius: 15px;
+        }
 
-.logo img.question {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    animation: rotate 1.5s infinite ease-in-out alternate;
+        &.question {
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: rotate 1.5s infinite ease-in-out alternate;
+        }
+    }
 }
 
 .os-button {
@@ -57,48 +58,176 @@ div.compact {
     flex-direction: row;
     align-items: stretch;
     justify-content: center;
-}
 
-.downloads a span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    a span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 50.5em) {
     .container {
         width: 100%;
         overflow: hidden;
+        display: block;
+    }
+
+    .content.mods {
+        width: fit-content !important;
+        margin: 0 !important;
     }
 }
 
 @media screen and (min-width: 30.5em) {
     .content {
         margin: 1.5em 1.5em;
+        margin-right: 0;
+
+        &.mods {
+            margin: 1.5em 1.5em;
+        }
     }
 
     img {
         max-width: 60%;
     }
-
 }
 
 @media screen and (min-width: 80.5em) {
     .content {
-        margin: 3em 10em;
+        margin: 3em 1.5em;
+        margin-right: 0;
+
+        &.mods {
+            margin: 3em 1.5em;
+        }
     }
 
     img {
         max-width: 60%;
     }
-
 }
 
 @keyframes rotate {
     0% {
         transform: rotate(-5deg);
     }
+
     100% {
         transform: rotate(5deg);
+    }
+}
+
+.content {
+    flex-grow: 1;
+
+    &.mods {
+        flex-grow: 0;
+        width: 565px;
+        display: table;
+        padding: 0;
+    }
+}
+
+.featured-mods {
+    outline: solid rgb(13, 11, 16) 2px;
+    outline-offset: 2px 2px;
+    background: var(--list-background-color);
+    margin-top: 0 !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    height: 500px;
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+}
+
+.featured-mod {
+    width: calc(50% - 16px);
+    background-color: var(--background-secondary-color);
+    border: solid rgba(0, 0, 0, 0.1) 2px;
+    transition: background-color 0.2s; // , transform 0.2s
+    margin: 6px;
+    //will-change: transform;
+    height: min-content;
+
+    a {
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: color.adjust(#17121d, $lightness: 10%);
+        //transform: scale(1.02);
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .card-content {
+        text-align: left;
+        padding: 10px;
+        height: 80px;
+        position: relative;
+    }
+
+    h3 {
+        display: inline;
+        text-align: left;
+    }
+
+    p {
+        display: block;
+        margin: 0;
+    }
+}
+
+.featured-mod.upcoming {
+    display: none;
+}
+
+.sort-button.selected {
+    background: #7c39ae;
+}
+
+.last-updated {
+    color: #8e7a9a;
+    font-size: 0.8em;
+    left: 10px;
+    bottom: 10px;
+    position: absolute;
+}
+
+.sort-buttons {
+    margin: 0 !important;
+}
+
+.category-button {
+    margin-bottom: 0;
+    border: solid rgba(0, 0, 0, 0.1) 2px;
+    border-bottom: none;
+    outline: solid rgb(13, 11, 16) 2px;
+    background: var(--list-background-color);
+}
+
+.order-button {
+    margin: 0.5em 0;
+    padding: 0.2em;
+}
+
+.warning {
+    background: #75644d;
+    padding: 1px;
+    border: 1px solid #fff000;
+
+    h3 {
+        margin-bottom: 0;
+    }
+
+    p {
+        margin-top: 0.25em;
     }
 }

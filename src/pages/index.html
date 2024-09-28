@@ -6,8 +6,13 @@
     <title>Home - Codename Engine Docs</title>
     <link rel="stylesheet" href="root/style.css">
     <link rel="stylesheet" href="root/index.css">
+
+    <link href='https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css' rel='stylesheet' type='text/css' />
 </head>
-<body>
+<body class="nojs">
+    <script>
+        document.body.classList.remove("nojs");
+    </script>
     <div class="header">
         {{ header }}
     </div>
@@ -69,10 +74,64 @@
                 </div>
             </div>
             <div>
-                <i>Make sure to join our official <a href="https://discord.gg/WTzm35kekB">Discord Server</a>!</i>
+                <i>Make sure to join our official <img class="icon" src="img/icons/discord.svg"> <a href="https://discord.gg/WTzm35kekB">Discord&nbsp;Server</a>!</i>
                 <br>
-                <i>You can contribute to this website by going to the <a href="https://github.com/FNF-CNE-Devs/FNF-CNE-Devs.github.io">GitHub repository</a></i>
+                <i>You can contribute to this website by going to the <i class="fa fa-github"></i> <a href="https://github.com/FNF-CNE-Devs/FNF-CNE-Devs.github.io">GitHub&nbsp;repository</a></i>
             </div>
+        </div>
+        <div class="content mods">
+            <div>
+                <h2>Mods</h2>
+            </div>
+            <div class="sort-buttons hide-nojs">
+                <div>
+                    <a href="./#" class="sort-button category-button default-button" data-sort="featured">
+                        Featured
+                    </a>
+                    <a href="./#" class="sort-button category-button default-button" data-sort="best">
+                        Best of all time
+                    </a>
+                    <a href="./#" class="sort-button category-button default-button selected" data-sort="all">
+                        All
+                    </a>
+                    <a href="./#" class="sort-button category-button default-button" data-sort="upcoming">
+                        Upcoming
+                    </a>
+                </div>
+                <!-- <span class="space">&nbsp;&nbsp;&nbsp;</span> -->
+                <div>
+                    <a href="./#" class="sort-button order-button default-button" data-sort="recent">
+                        <i class="fa fa-clock-o"></i>
+                        Recent
+                    </a>
+                    <a href="./#" class="sort-button order-button default-button selected" data-sort="random">
+                        <i class="fa fa-random"></i>
+                        Random
+                    </a>
+                </div>
+            </div>
+            {{#warnings}}
+            <div class="warning">
+                <h3>Warning</h3>
+                <p>{{.}}</p>
+            </div>
+            {{/warnings}}
+            <div class="featured-mods">
+                {{#mods}}
+                <div class="featured-mod {{#tags}}{{.}} {{/tags}}" data-time="{{lastUpdated}}" data-author="{{author}}" data-source="{{source}}" data-version="{{version}}" data-tags="{{tagsRaw}}">
+                    <a href="{{link}}">
+                        <img src="{{image}}" />
+                        <div class="card-content">
+                            <h3>{{name}}</h3>
+                            <p>{{description}}</p>
+                            <span class="last-updated hide-nojs" data-time="{{lastUpdated}}" style="display:none;">{{lastUpdated}}</span>
+                        </div>
+                    </a>
+                </div>
+                {{/mods}}
+            </div>
+
+            <script src="root/featuredMods.js"></script>
         </div>
     </div>
 </body>
