@@ -61,5 +61,10 @@
        - `difficulty-hard` - Use this if your mod is **hard**.
        - `difficulty-expert` - Use this if your mod is **expert**.
 
+       - `length-short` - Use this if your mod is **short**.
+       - `length-medium` - Use this if your mod is **medium**.
+       - `length-long` - Use this if your mod is **long**.
+       - `length-very-long` - Use this if your mod is **very long**.
+
    - If you have custom tags that will be used when we add searching. add them to "userTags" in `meta.json`.
 ### Thank you for your contribution!
