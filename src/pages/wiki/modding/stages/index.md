@@ -1,5 +1,5 @@
 # Creating stages
-Stages are defined via XML files, similar to <a href="../characters/index.md">Creating characters</a>. By creating an XML file in ``./data/stages``, you officially created a stage.
+Stages are defined via XML files, similar to <a href="../characters/">Creating characters</a>. By creating an XML file in ``./data/stages``, you officially created a stage.
 
 The default stage XML looks something like this:
 ```xml

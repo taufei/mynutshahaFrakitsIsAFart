@@ -119,10 +119,10 @@ Afterwards, you have to find the devtools (or basically just the editors), by go
 Here you'll find the essential tools, and some options for debug *(for example, enabling the console in Debug Options)*
 
 The next steps are covered in these articles:
-- <a href="./songs/index.md">Creating songs</a>
-- <a href="./characters/index.md">Creating characters</a>
-- <a href="./stages/index.md">Creating stages</a>
-- <a href="./scripting/index.md">Scripting</a>
+- <a href="./songs/">Creating songs</a>
+- <a href="./characters/">Creating characters</a>
+- <a href="./stages/">Creating stages</a>
+- <a href="./scripting/">Scripting</a>
 
 And when you're done with the basic steps you're finally ready for release, or if you want, go through more advanced stuff, like these:
 - <a href="./cutscenes-dialogues.md">Cutscenes/Dialogues</a>
