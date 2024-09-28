@@ -13,6 +13,11 @@ a {
   border: solid rgba(0, 0, 0, 0.2) 2px;
 }
 
+.default-button:hover {
+  filter: brightness(140%) saturate(140%);
+  backdrop-filter: brightness(140%) saturate(140%);
+}
+
 header {
   display: flex;
   padding: 0em 2em;
