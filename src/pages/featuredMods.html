@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Mods - Codename Engine Docs</title>
+    <link rel="stylesheet" href="root/style.css">
+    <link rel="stylesheet" href="root/featuredMods.css">
+</head>
+<body>
+    <div class="header">
+        {{ header }}
+    </div>
+    <div class="container">
+        <div class="content">
+            <div>
+                <h2>Featured Mods</h2>
+            </div>
+            <div class="featured-mods">
+                {{#mods}}
+                <div class="featured-mod">
+                    <h3>{{name}}</h3>
+                    <p>{{description}}</p>
+                    <img src="{{image}}" />
+                    <a href="{{link}}"></a>
+                </div>
+                {{/mods}}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
