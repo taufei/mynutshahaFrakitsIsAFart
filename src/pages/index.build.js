@@ -29,7 +29,9 @@ function buildHtml(_pageDir, _exportPath) {
         if(!fs.existsSync(modsDir + file + "/meta.json")) continue;
         var meta = JSON.parse(fs.readFileSync(modsDir + file + "/meta.json", 'utf8'));
 
-        if(!fs.existsSync(exportPath + file)) fs.mkdirSync(exportPath + file);
+        let modExport = exportPath + "featuredMods/" + file;
+
+        if(!fs.existsSync(modExport)) fs.mkdirSync(modExport, { recursive: true });
 
         var imageExt = null;
         if(fs.existsSync(modsDir + file + "/cover.jpg")) {
@@ -48,8 +50,8 @@ function buildHtml(_pageDir, _exportPath) {
             //warnings.push("No cover image found for mod: " + meta.name);
             imgLink = "img/missing.png";
         } else {
-            fs.copyFileSync(modsDir + file + "/cover." + imageExt, exportPath + file + "/cover." + imageExt);
-            imgLink = "./" + file + "/cover." + imageExt;
+            fs.copyFileSync(modsDir + file + "/cover." + imageExt, modExport + "/cover." + imageExt);
+            imgLink = "./featuredMods/" + file + "/cover." + imageExt;
         }
 
         if(meta.link != null && meta.link != "") {
