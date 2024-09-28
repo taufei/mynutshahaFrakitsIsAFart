@@ -117,7 +117,7 @@ div.compact {
         transform: rotate(5deg);
     }
 }
-.content:not(.mods) {
+.content {
     flex-grow: 1;
 }
 .content.mods {
