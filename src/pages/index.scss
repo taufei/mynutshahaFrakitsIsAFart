@@ -69,6 +69,11 @@ div.compact {
     .container {
         width: 100%;
         overflow: hidden;
+        display: block;
+    }
+    .content.mods {
+        width: fit-content !important;
+        margin: 0 !important;
     }
 }
 
@@ -117,7 +122,7 @@ div.compact {
 }
 .content.mods {
     flex-grow: 0;
-    width: 563px;
+    width: 565px;
     display: table;
     padding: 0;
 }
@@ -130,12 +135,13 @@ div.compact {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 $mods-padding: 10px;
 
 .featured-mod {
-    width: 250px;
+    width: calc(50% - 16px);
     background-color: var(--background-secondary-color);
 
     border: solid rgba(0, 0, 0, 0.1) 2px;
@@ -152,8 +158,7 @@ $mods-padding: 10px;
     }
 
     img {
-        width: 250px;
-        max-width: 250px;
+        max-width: 100%;
         height: 141px;
     }
 
