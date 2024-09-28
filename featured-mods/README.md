@@ -35,6 +35,7 @@
 7. Unreleased mods
    - If your mod is **not yet released**, you must set the `version` field to `"unreleased"`.
    - and add the tag `"upcoming"` to your `meta.json` file for proper categorization.
+   - You also need to set the `lastUpdated` field to `"unreleased"`.
 
 8. Correct timestamps
    - If your mod is **not yet released**, you must set the `lastUpdated` field to `"unreleased"`.
