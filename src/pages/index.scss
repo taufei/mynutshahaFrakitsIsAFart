@@ -152,6 +152,7 @@ div.compact {
     transition: background-color 0.2s; // , transform 0.2s
     margin: 6px;
     //will-change: transform;
+    height: min-content;
 
     a {
         text-decoration: none;
