@@ -177,11 +177,31 @@ div.compact {
     h3 {
         display: inline;
         text-align: left;
+
+        font-size: 1.17em;
+    }
+
+    &.long-title h3 {
+        font-size: 1.0em;
+    }
+
+    &.longer-title h3 {
+        font-size: 0.9em;
     }
 
     p {
         display: block;
         margin: 0;
+
+        font-size: 16px;
+    }
+
+    &.long-desc p {
+        font-size: 14px;
+    }
+
+    &.longer-desc p {
+        font-size: 12px;
     }
 }
 
