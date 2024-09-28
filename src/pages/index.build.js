@@ -81,6 +81,7 @@ function buildHtml(_pageDir, _exportPath) {
     var outpath = exportPath + "index.html";
     var templatePage = fs.readFileSync(path, 'utf8');
     var vars = {
+        pageTitle: "Home",
         title: "Home",
         header: header,
         mods: mods,
