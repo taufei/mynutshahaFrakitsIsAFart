@@ -2,6 +2,16 @@
   display: none;
 }
 
+.viewsource {
+  width: 100%;
+  display: inline-block;
+}
+.viewsource > a, .field-source {
+  position: relative;
+  float: right;
+  padding: 0.2em 0.4em;
+}
+
 li.expando>ul {
   display: none;
 }
@@ -54,7 +64,7 @@ a.treeLink {
 }
 
 .field {
-  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
 }
 
 code {

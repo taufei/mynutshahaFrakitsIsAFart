@@ -54,7 +54,7 @@
 		$$printPlatforms(::type.platforms::,::true::)
 
 		<span ::cond api.hasSourceLink(type):: class="viewsource">
-			<a href="::api.getSourceLink(type)::" class="btn btn-medium"><i class="fa fa-eye"></i> View source</a>
+			<a href="::api.getSourceLink(type)::" class="btn btn-medium default-button"><i class="fa fa-eye"></i> View source</a>
 		</span>
 	</div>
 	<div class="body">
