@@ -6,6 +6,7 @@ var fs = require('fs');
 var hljs = require('highlight.js');
 
 var { fixHtmlRefs, copyDir } = require("../utils.js");
+const { warn } = require('console');
 
 var header = fs.readFileSync("./src/pages/templates/header.html", 'utf8')
 
@@ -29,17 +30,39 @@ function buildHtml(_pageDir, _exportPath) {
         var meta = JSON.parse(fs.readFileSync(modsDir + file + "/meta.json", 'utf8'));
 
         if(!fs.existsSync(exportPath + file)) fs.mkdirSync(exportPath + file);
-        fs.copyFileSync(modsDir + file + "/cover.jpg", exportPath + file + "/cover.jpg");
 
-        if(links[meta.link]) {
-            warnings.push("Duplicate link: " + meta.link + " (mod: " + meta.name + " and " + links[meta.link] + ")");
+        var imageExt = null;
+        if(fs.existsSync(modsDir + file + "/cover.jpg")) {
+            imageExt = "jpg";
         }
-        links[meta.link] = meta.name;
+        else if(fs.existsSync(modsDir + file + "/cover.jpeg")) {
+            imageExt = "jpeg";
+        }
+        else if(fs.existsSync(modsDir + file + "/cover.png")) {
+            imageExt = "png";
+        }
+
+        var imgLink;
+
+        if(imageExt == null) {
+            //warnings.push("No cover image found for mod: " + meta.name);
+            imgLink = "img/missing.png";
+        } else {
+            fs.copyFileSync(modsDir + file + "/cover." + imageExt, exportPath + file + "/cover." + imageExt);
+            imgLink = "./" + file + "/cover." + imageExt;
+        }
+
+        if(meta.link != null && meta.link != "") {
+            if(links[meta.link]) {
+                warnings.push("Duplicate link: " + meta.link + " (mod: " + meta.name + " and " + links[meta.link] + ")");
+            }
+            links[meta.link] = meta.name;
+        }
 
         mods.push({
             name: meta.name,
             description: meta.description,
-            image: "./" + file + "/cover.jpg",
+            image: imgLink,
             link: meta.link,
             tags: meta.tags ?? [],
             tagsRaw: (meta.tags ?? []).join(","),

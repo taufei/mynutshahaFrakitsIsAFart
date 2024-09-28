@@ -5,7 +5,7 @@
 1. **Image Resolution**
    All images provided within your mod or related to it **must** adhere to a resolution of **1280x720** or less.
    And have a aspect ratio of **16:9**.
-   And have a file extension of **.jpg**.
+   And have a file extension of **.jpg**. Unless the png version has a smaller file size.
    It is recommended to use a photo editing software like [Photopea](https://www.photopea.com/) to crop and resize your images.
    You can't have animated gifs or apngs.
 

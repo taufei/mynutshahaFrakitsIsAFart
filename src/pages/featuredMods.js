@@ -25,10 +25,6 @@ function sortByTime(a, b) {
 }
 
 function recentOrder() {
-	document.querySelectorAll(".featured-mod").forEach(mod => {
-		mod.style.display = "block";
-	});
-
 	var mods = document.querySelectorAll(".featured-mod");
 	var parent = mods[0].parentNode;
 	var modsArray = Array.from(mods);
@@ -61,14 +57,22 @@ sortButtons.forEach(button => {
 		} else {
 			if(sort == "all") {
 				document.querySelectorAll(".featured-mod").forEach(mod => {
-					mod.style.display = "block";
+					if(mod.classList.contains("upcoming")) {
+						mod.style.display = "none";
+					} else {
+						mod.style.display = "block";
+					}
 				});
 			} else {
 				document.querySelectorAll(".featured-mod").forEach(mod => {
 					mod.style.display = "none";
 				});
 				document.querySelectorAll(".featured-mod." + sort).forEach(mod => {
-					mod.style.display = "block";
+					if(sort != "upcoming" && mod.classList.contains("upcoming")) {
+						mod.style.display = "none";
+					} else {
+						mod.style.display = "block";
+					}
 				});
 			}
 
@@ -101,8 +105,11 @@ if(lastUpdated.length > 0 && window.Intl) {
 	const rtf1 = new Intl.RelativeTimeFormat('en', { style: 'short' });
 	lastUpdated.forEach(lastUpdated => {
 		var time = lastUpdated.getAttribute("data-time");
-		if(time != "unknown") {
+		if(time != "unknown" && time != null && time != "unreleased") {
 			lastUpdated.innerText = getRelativeTimeString(new Date(time));
+			lastUpdated.style.display = "inline";
+		}
+		if(time == "unreleased") {
 			lastUpdated.style.display = "inline";
 		}
 	});
