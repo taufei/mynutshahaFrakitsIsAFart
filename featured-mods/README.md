@@ -56,5 +56,10 @@
        - `best` - [Only moderators] Use this if your mod is the **best of all time**.
        - `featured` - [Only moderators] Use this if your mod is **featured on the website**.
 
+       - `difficulty-easy` - Use this if your mod is **easy**.
+       - `difficulty-normal` - Use this if your mod is **normal**.
+       - `difficulty-hard` - Use this if your mod is **hard**.
+       - `difficulty-expert` - Use this if your mod is **expert**.
+
    - If you have custom tags that will be used when we add searching. add them to "userTags" in `meta.json`.
 ### Thank you for your contribution!
