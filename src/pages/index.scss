@@ -146,6 +146,7 @@ div.compact {
 }
 
 .featured-mod {
+    position: relative;
     width: calc(50% - 16px);
     background-color: var(--background-secondary-color);
     border: solid rgba(0, 0, 0, 0.1) 2px;
@@ -165,6 +166,18 @@ div.compact {
 
     img {
         max-width: 100%;
+    }
+
+    .sparkles {
+        display: none;
+    }
+
+    &.best .sparkles{
+        width: 250px;
+        display: initial;
+        position: absolute;
+        top: 0;
+        left: -5;
     }
 
     .card-content {
