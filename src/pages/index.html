@@ -101,7 +101,7 @@
             </div>
             <div class="featured-mods">
                 {{#mods}}
-                <div class="featured-mod {{#tags}}{{.}} {{/tags}}" data-time="{{lastUpdated}}">
+                <div class="featured-mod {{#tags}}{{.}} {{/tags}}" data-time="{{lastUpdated}}" data-author="{{author}}" data-source="{{source}}" data-version="{{version}}" data-tags="{{tagsRaw}}">
                     <a href="{{link}}">
                         <img src="{{image}}" />
                         <div class="card-content">

@@ -34,6 +34,10 @@ function buildHtml(_pageDir, _exportPath) {
             image: "./" + file + "/cover.jpg",
             link: meta.link,
             tags: meta.tags ?? [],
+            tagsRaw: (meta.tags ?? []).join(","),
+            author: meta.author,
+            source: meta.source,
+            version: meta.version,
             lastUpdated: meta.lastUpdated ?? "1970-01-01T00:00:00.000Z"
         });
     }
