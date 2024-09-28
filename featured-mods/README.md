@@ -36,4 +36,9 @@
    - If your mod is **not yet released**, you must set the `lastUpdated` field to `"unreleased"`.
    - If your mod is **released**, you must set the `lastUpdated` field to the date in the format `"YYYY-MM-DDThh:mm:ss.000Z"`. If the mod is on GameBanana you can use this script `document.querySelector(".DateModified time").getAttribute("datetime")` to get the correct date.
    - If you dont know how to get the correct date, you can use this website https://dencode.com/date/iso8601?v=Put%20the%20date%20here&tz=UTC&decimal-separator=%2E then use the value from ISO8601 Date (Extend) to get the correct date.
+
+9. Tags
+   - Only moderators can add these specific tags to mods.
+       - `featured` - Mods that are featured on the website.
+       - `best` - Mods that are the best of all time.
 ### Thank you for your contribution!
