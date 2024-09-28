@@ -264,6 +264,11 @@ small, small > .muted, small > span {
 }
 
 @media screen and (max-width: 40.5em) {
+  .content {
+    background: none;
+    border: none;
+  }
+
   .sidebar-button-front {
     display: flex;
   }
