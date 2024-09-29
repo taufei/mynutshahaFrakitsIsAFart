@@ -5,8 +5,6 @@
 
 	<link href="/style.css" rel="stylesheet" />
 	<link href="/api-docs.css" rel="stylesheet" />
-	<!-- <link href="::api.config.rootPath::extra-styles.css" rel="stylesheet" /> -->
-	<!-- <link href="::api.config.rootPath::haxe-nav.css" rel="stylesheet" /> -->
 	<script>var dox = {
 		rootPath: "::api.config.rootPath::",
 		platforms: [
@@ -20,6 +18,23 @@
 	<script src="::api.config.rootPath::index.js"></script>
 	<link rel="icon" href="::api.config.rootPath::favicon.ico" type="image/x-icon"/>
 	<title>::api.currentPageName::::if api.config.pageTitle !=null:: - ::api.config.pageTitle::::end::</title>
+
+	<meta name="title" content="::api.currentPageName::::if api.config.pageTitle !=null:: - ::api.config.pageTitle::::end::" />
+	<meta name="description" content="Website dedicated to things for Codename Engine!" />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://fnf-cne-devs.github.io/" />
+	<meta property="og:title" content="::api.currentPageName::::if api.config.pageTitle !=null:: - ::api.config.pageTitle::::end::" />
+	<meta property="og:description" content="Website dedicated to things for Codename Engine!" />
+	<meta property="og:image" content="https://fnf-cne-devs.github.io/img/banner.png" />
+
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://fnf-cne-devs.github.io/" />
+	<meta property="twitter:title" content="::api.currentPageName::::if api.config.pageTitle !=null:: - ::api.config.pageTitle::::end::" />
+	<meta property="twitter:description" content="Website dedicated to things for Codename Engine!" />
+	<meta property="twitter:image" content="https://fnf-cne-devs.github.io/img/banner.png" />
+
+	<meta name="theme-color" content="#7f33b8">
 
 	::set description = api.getShortDesc(type)::
 	::set description = description.substr(3, description.length-7)::
