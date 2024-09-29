@@ -22,7 +22,7 @@ function buildHtml(_pageDir, _exportPath, isWatch) {
 
 	//if(isWatch) {
 		// build with haxe
-		execSync("haxe doc.hxml", {cwd: apiGenerator}, function(error, stdout, stderr) {
+		execSync("haxe dox.hxml", {cwd: apiGenerator}, function(error, stdout, stderr) {
 			console.log(stdout);
 		});
 	//} else {

@@ -254,11 +254,10 @@ small, small > .muted, small > span {
 }
 
 .fields .expand-button i {
-  &::before {
-    transition: rotate 0.3s;
-  }
+  transition: rotate 0.3s;
+  will-change: rotate;
 
-  &.expanded::before {
+  &.expanded {
     rotate: 90deg;
   }
 }
