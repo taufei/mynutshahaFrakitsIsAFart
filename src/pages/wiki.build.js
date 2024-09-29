@@ -103,6 +103,7 @@ function buildHtml(_pageDir, _exportPath) {
 			}
 
 			var vars = {
+				pageTitle: title,
 				title: title,
 				content: renderer.render(fs.readFileSync("./src/" + wikiDir + i, 'utf8')),
 				sidebar: sidebar,

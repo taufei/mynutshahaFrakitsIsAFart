@@ -146,6 +146,7 @@ div.compact {
 }
 
 .featured-mod {
+    position: relative;
     width: calc(50% - 16px);
     background-color: var(--background-secondary-color);
     border: solid rgba(0, 0, 0, 0.1) 2px;
@@ -167,21 +168,53 @@ div.compact {
         max-width: 100%;
     }
 
+    //.sparkles {
+    //    display: none;
+    //}
+
+    //&.loved .sparkles{
+    //    width: 250px;
+    //    display: initial;
+    //    position: absolute;
+    //    top: 0;
+    //    left: -5;
+    //}
+
     .card-content {
         text-align: left;
         padding: 10px;
-        height: 80px;
+        height: 90px;
         position: relative;
     }
 
     h3 {
         display: inline;
         text-align: left;
+
+        font-size: 1.17em;
+    }
+
+    &.long-title h3 {
+        font-size: 1.0em;
+    }
+
+    &.longer-title h3 {
+        font-size: 0.9em;
     }
 
     p {
         display: block;
         margin: 0;
+
+        font-size: 16px;
+    }
+
+    &.long-desc p {
+        font-size: 14px;
+    }
+
+    &.longer-desc p {
+        font-size: 12px;
     }
 }
 
