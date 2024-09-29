@@ -1,5 +1,8 @@
 ::use 'main.mtt'::
 	<div class="page-header">
+		<span ::cond api.hasSourceLink(type):: class="viewsource">
+			<a href="::api.getSourceLink(type)::" class="btn btn-medium default-button"><i class="fa fa-eye"></i> View source</a>
+		</span>
 		<h1>
 			<small>::if type.isFinal::final ::end::::if type.isInterface::interface::else::class::end::</small> ::api.getPathName(type.path)::$$printTypeParams(::type.params::)
 		</h1>
@@ -52,10 +55,6 @@
 		$$printDeprecation(::type::)
 
 		$$printPlatforms(::type.platforms::,::true::)
-
-		<span ::cond api.hasSourceLink(type):: class="viewsource">
-			<a href="::api.getSourceLink(type)::" class="btn btn-medium default-button"><i class="fa fa-eye"></i> View source</a>
-		</span>
 	</div>
 	<div class="body">
 		<div class="doc doc-main" ::cond type.doc != null::>

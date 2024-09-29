@@ -1,5 +1,8 @@
 ::use 'main.mtt'::
 	<div class="page-header">
+		<span ::cond api.hasSourceLink(type):: class="viewsource">
+			<a href="::api.getSourceLink(type)::" class="btn btn-medium default-button"><i class="fa fa-eye"></i> View source</a>
+		</span>
 		<h1><small>::if api.isEnumAbstract(type)::enum ::end::abstract</small> ::api.getPathName(type.path)::$$printTypeParams(::type.params::)::if !api.isCoreType(type)::($$printLinkedType(::type.athis::,::false::))::end::</h1>
 		$$printPackage(::type::)
 		<h4 ::cond (type.from != null || type.to != null)::>
@@ -18,9 +21,6 @@
 		$$printMeta(::type::)
 		$$printDeprecation(::type::)
 		$$printPlatforms(::type.platforms::,::true::)
-		<span ::cond api.hasSourceLink(type):: class="viewsource">
-			<a href="::api.getSourceLink(type)::" class="btn btn-medium default-button"><i class="fa fa-eye"></i> View source</a>
-		</span>
 	</div>
 
 	<div class="body">

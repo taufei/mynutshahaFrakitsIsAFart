@@ -4,7 +4,9 @@
 
 .viewsource {
   width: 100%;
-  display: inline-block;
+  display: inline;
+  //position: absolute;
+  //top: 10px;
 }
 .viewsource > a, .field-source {
   position: relative;
@@ -55,6 +57,7 @@ a.treeLink {
 .page-header {
   padding-bottom: 0.5em;
   border-bottom: solid thin rgba(255, 255, 255, 0.4);
+  //position: relative;
 }
 
 .fields {
@@ -65,6 +68,10 @@ a.treeLink {
 
 .field {
   border-bottom: 1px solid #222;
+}
+
+.field:last-child {
+  border-bottom: none;
 }
 
 code {
