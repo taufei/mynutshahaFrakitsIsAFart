@@ -18,6 +18,10 @@ a {
   }
 }
 
+*, *::before,*::after {
+  box-sizing: border-box;
+}
+
 header {
   height: 75px;
   display: flex;
@@ -217,6 +221,26 @@ li {
   }
 }
 
+li:has(form) {
+  width: unset;
+}
+
+#search {
+  width: 100%;
+}
+
+li>form {
+  z-index: 1;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  line-height: 250%;
+}
+
+form input {
+  color: black;
+}
+
 /*li:hover:not(:has(li:hover)) {
   background: rgba(255, 255, 255, 0.05);
 }*/
@@ -225,7 +249,7 @@ img {
   max-width: 100%;
 }
 
-@media screen and (max-width: 50.5em) {
+@media screen and (max-width: 35.5em) {
   .container {
     width: 100%;
     overflow: hidden;

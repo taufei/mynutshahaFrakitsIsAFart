@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Codename Engine Docs</title>
-    <link rel="stylesheet" href="root/style.css?index">
-    <link rel="stylesheet" href="root/index.css?index">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ pageTitle }} - Codename Engine Docs</title>
+	<link rel="stylesheet" href="root/style.css?index">
+	<link rel="stylesheet" href="root/index.css?index">
 
-    <link href='https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css' rel='stylesheet' type='text/css' />
+	<meta name="title" content="{{ pageTitle }} - Codename Engine Docs" />
+	<meta name="description" content="Website dedicated to things for Codename Engine!" />
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://fnf-cne-devs.github.io/" />
+	<meta property="og:title" content="{{ pageTitle }} - Codename Engine Docs" />
+	<meta property="og:description" content="Website dedicated to things for Codename Engine!" />
+	<meta property="og:image" content="https://fnf-cne-devs.github.io/img/banner.png" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://fnf-cne-devs.github.io/" />
+	<meta property="twitter:title" content="{{ pageTitle }} - Codename Engine Docs" />
+	<meta property="twitter:description" content="Website dedicated to things for Codename Engine!" />
+	<meta property="twitter:image" content="https://fnf-cne-devs.github.io/img/banner.png" />
+
+	<meta name="theme-color" content="#7f33b8">
+
+	<link href='https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css' rel='stylesheet' type='text/css' />
 </head>
 <body class="nojs">
 	<script>
@@ -20,113 +39,115 @@
 		<div class="content">
 			<img src="root/img/codename-animated.gif" style="margin-top: 1em"><br>
 
-            <a href="/api-docs/" class="default-button">API</a>
-            <a href="/wiki/" class="default-button">Wiki</a>
-            <!-- <a href="./tools/">Tools</a> -->
-            <div>
-                <h2>Downloads</h2>
-            </div>
-            <div class="downloads">
-                <div class="os-button">
-                    <a href="https://nightly.link/FNF-CNE-Devs/CodenameEngine/workflows/windows/main/Codename%20Engine.zip" class="default-button">
-                        <span>
-                            <img class="os-logo" src="img/os/windows.svg"> Windows
-                        </span>
-                    </a>
-                </div>
-                <div class="os-button">
-                    <a href="https://nightly.link/FNF-CNE-Devs/CodenameEngine/workflows/macos/main/Codename%20Engine.zip" class="default-button">
-                        <span>
-                            <img class="os-logo" src="img/os/apple.svg"> MacOS
-                        </span>
-                    </a>
-                </div>
-                <div class="os-button">
-                    <a href="https://nightly.link/FNF-CNE-Devs/CodenameEngine/workflows/linux/main/Codename%20Engine.zip" class="default-button">
-                        <span>
-                            <img class="os-logo" src="img/os/linux.svg"> Linux
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <h4>Unofficial port for mobile phones:</h4>
-            <div class="downloads">
-                <div class="os-button">
-                    <a href="https://nightly.link/MobilePorting/CodenameEngine-Mobile/workflows/android/cne-pr/Codename%20Engine.zip" class="default-button">
-                        <span>
-                            <img class="os-logo" src="img/os/android.svg"> Android
-                        </span>
-                    </a>
-                </div>
-                <div class="os-button">
-                    <a href="https://nightly.link/MobilePorting/CodenameEngine-Mobile/workflows/ios/cne-pr/Codename%20Engine.zip" class="default-button">
-                        <span>
-                            <img class="os-logo" src="img/os/apple.svg"> iOS
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <div>
-                <i>Make sure to join our official <img class="icon" src="img/icons/discord.svg"> <a href="https://discord.gg/WTzm35kekB">Discord&nbsp;Server</a>!</i>
-                <br>
-                <i>You can contribute to this website by going to the <i class="fa fa-github"></i> <a href="https://github.com/FNF-CNE-Devs/FNF-CNE-Devs.github.io">GitHub&nbsp;repository</a></i>
-            </div>
-        </div>
-        <div class="content mods">
-            <div>
-                <h2>Mods</h2>
-            </div>
-            <div class="sort-buttons hide-nojs">
-                <div>
-                    <a href="./#" class="sort-button category-button default-button" data-sort="featured">
-                        Featured
-                    </a>
-                    <a href="./#" class="sort-button category-button default-button" data-sort="best">
-                        Best of all time
-                    </a>
-                    <a href="./#" class="sort-button category-button default-button selected" data-sort="all">
-                        All
-                    </a>
-                    <a href="./#" class="sort-button category-button default-button" data-sort="upcoming">
-                        Upcoming
-                    </a>
-                </div>
-                <!-- <span class="space">&nbsp;&nbsp;&nbsp;</span> -->
-                <div>
-                    <a href="./#" class="sort-button order-button default-button" data-sort="recent">
-                        <i class="fa fa-clock-o"></i>
-                        Recent
-                    </a>
-                    <a href="./#" class="sort-button order-button default-button selected" data-sort="random">
-                        <i class="fa fa-random"></i>
-                        Random
-                    </a>
-                </div>
-            </div>
-            {{#warnings}}
-            <div class="warning">
-                <h3>Warning</h3>
-                <p>{{.}}</p>
-            </div>
-            {{/warnings}}
-            <div class="featured-mods">
-                {{#mods}}
-                <div class="featured-mod {{#tags}}{{.}} {{/tags}}" data-time="{{lastUpdated}}" data-author="{{author}}" data-source="{{source}}" data-version="{{version}}" data-tags="{{tagsRaw}}">
-                    <a href="{{link}}">
-                        <img class="sparkles" src="https://i.gifer.com/XZ5V.gif">
-                        <img src="{{image}}" />
-                        <div class="card-content">
-                            <h3>{{name}}</h3>
-                            <p>{{description}}</p>
-                            <span class="last-updated hide-nojs" data-time="{{lastUpdated}}" style="display:none;">{{lastUpdated}}</span>
-                        </div>
-                    </a>
-                </div>
-                {{/mods}}
-            </div>
+			<a href="/api-docs/" class="default-button">API</a>
+			<a href="/wiki/" class="default-button">Wiki</a>
+			<!-- <a href="./tools/">Tools</a> -->
+			<div>
+				<h2>Downloads</h2>
+			</div>
+			<div class="downloads">
+				<div class="os-button">
+					<a href="https://nightly.link/FNF-CNE-Devs/CodenameEngine/workflows/windows/main/Codename%20Engine.zip" class="default-button">
+						<span>
+							<img class="os-logo" src="img/os/windows.svg"> Windows
+						</span>
+					</a>
+				</div>
+				<div class="os-button">
+					<a href="https://nightly.link/FNF-CNE-Devs/CodenameEngine/workflows/macos/main/Codename%20Engine.zip" class="default-button">
+						<span>
+							<img class="os-logo" src="img/os/apple.svg"> MacOS
+						</span>
+					</a>
+				</div>
+				<div class="os-button">
+					<a href="https://nightly.link/FNF-CNE-Devs/CodenameEngine/workflows/linux/main/Codename%20Engine.zip" class="default-button">
+						<span>
+							<img class="os-logo" src="img/os/linux.svg"> Linux
+						</span>
+					</a>
+				</div>
+			</div>
+			<h4>Unofficial port for mobile phones:</h4>
+			<div class="downloads">
+				<div class="os-button">
+					<a href="https://nightly.link/MobilePorting/CodenameEngine-Mobile/workflows/android/cne-pr/Codename%20Engine.zip" class="default-button">
+						<span>
+							<img class="os-logo" src="img/os/android.svg"> Android
+						</span>
+					</a>
+				</div>
+				<div class="os-button">
+					<a href="https://nightly.link/MobilePorting/CodenameEngine-Mobile/workflows/ios/cne-pr/Codename%20Engine.zip" class="default-button">
+						<span>
+							<img class="os-logo" src="img/os/apple.svg"> iOS
+						</span>
+					</a>
+				</div>
+			</div>
+			<div>
+				<i>Make sure to join our official <img class="icon" src="img/icons/discord.svg"> <a href="https://discord.gg/WTzm35kekB">Discord&nbsp;Server</a>!</i>
+				<br>
+				<i>You can contribute to this website by going to the <i class="fa fa-github"></i> <a href="https://github.com/FNF-CNE-Devs/FNF-CNE-Devs.github.io">GitHub&nbsp;repository</a></i>
+			</div>
+		</div>
+		<div class="content mods">
+			<div>
+				<h2>Mods</h2>
+			</div>
+			<div class="sort-buttons hide-nojs">
+				<div>
+					<a href="./#" class="sort-button category-button default-button selected" data-sort="all">
+						All
+					</a>
+					<a href="./#" class="sort-button category-button default-button" data-sort="featured">
+						Featured
+					</a>
+					<a href="./#" class="sort-button category-button default-button" data-sort="loved">
+						Loved
+					</a>
+					<a href="./#" class="sort-button category-button default-button" data-sort="admin-pick">
+						Admin Pick
+					</a>
+					<a href="./#" class="sort-button category-button default-button" data-sort="upcoming">
+						Upcoming
+					</a>
+				</div>
+				<div>
+					<a href="./#" class="sort-button order-button default-button" data-sort="recent">
+						<i class="fa fa-clock-o"></i>
+						Recent
+					</a>
+					<a href="./#" class="sort-button order-button default-button selected" data-sort="random">
+						<i class="fa fa-random"></i>
+						Random
+					</a>
+				</div>
+			</div>
+			{{#warnings}}
+			<div class="warning">
+				<h3>Warning</h3>
+				<p>{{.}}</p>
+			</div>
+			{{/warnings}}
+			<div class="featured-mods">
+				<!-- <img class="sparkles" src="https://i.gifer.com/XZ5V.gif"> -->
+				{{#mods}}
+				<div class="featured-mod{{#tags}} {{.}}{{/tags}}" data-time="{{lastUpdated}}" data-author="{{author}}" data-source="{{source}}" data-version="{{version}}" data-tags="{{tagsRaw}}">
+					<a href="{{link}}">
+						<img src="{{image}}" />
+						<div class="card-content">
+							<h3>{{name}}</h3>
+							<p>{{description}}</p>
+							<span class="last-updated hide-nojs" data-time="{{lastUpdated}}" style="display:none;">{{lastUpdated}}</span>
+						</div>
+					</a>
+				</div>
+				{{/mods}}
+			</div>
 
-            <script src="root/featuredMods.js"></script>
-        </div>
-    </div>
+			<script src="root/featuredMods.js"></script>
+		</div>
+	</div>
 </body>
 </html>

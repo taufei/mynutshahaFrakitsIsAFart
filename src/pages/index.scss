@@ -168,11 +168,11 @@ div.compact {
         max-width: 100%;
     }
 
-    .sparkles {
-        display: none;
-    }
+    //.sparkles {
+    //    display: none;
+    //}
 
-    //&.best .sparkles{
+    //&.loved .sparkles{
     //    width: 250px;
     //    display: initial;
     //    position: absolute;
@@ -183,7 +183,7 @@ div.compact {
     .card-content {
         text-align: left;
         padding: 10px;
-        height: 90px;
+        height: 100px;
         position: relative;
     }
 

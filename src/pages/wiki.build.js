@@ -5,7 +5,7 @@ var jsdom = require("jsdom");
 var fs = require('fs');
 var hljs = require('highlight.js');
 
-var { fixHtmlRefs, fixPath } = require("../utils.js");
+var { fixHtmlRefs, copyDir, parseTemplate, fixPath } = require("../utils.js");
 
 var header = fs.readFileSync("./src/pages/templates/header.html", 'utf8');
 
@@ -103,6 +103,7 @@ function buildHtml(_pageDir, _exportPath) {
 			}
 
 			var vars = {
+				pageTitle: title,
 				title: title,
 				content: renderer.render(fs.readFileSync("./src/" + wikiDir + i, 'utf8')),
 				sidebar: sidebar,
@@ -110,16 +111,7 @@ function buildHtml(_pageDir, _exportPath) {
 			};
 			console.log(i);
 
-			let html = templatePage;
-			let old;
-			do {
-				old = html;
-				html = Mustache.render(html, vars, null, {
-					escape: function(text) {
-						return text;
-					}
-				});
-			} while(html != old);
+			let html = parseTemplate(templatePage, vars);
 
 			var dom = fixHtmlRefs(html, pageDir, _pageDir);
 
