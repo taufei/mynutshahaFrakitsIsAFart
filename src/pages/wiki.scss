@@ -38,11 +38,12 @@
   > {
     .selected {
       &:hover:before {
-        background: rgb(166, 86, 241);
+        background: var(--primary-color);
+        filter: brightness(140%);
       }
 
       &:before {
-        background: #531a7d;
+        background: var(--primary-color);
       }
     }
 
