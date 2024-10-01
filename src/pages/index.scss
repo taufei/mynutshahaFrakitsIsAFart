@@ -173,7 +173,7 @@ div.compact {
     transition: background-color 0.2s; // , transform 0.2s
     margin: 6px;
     //will-change: transform;
-    height: min-content;
+    //height: min-content;
 
     a {
         text-decoration: none;
@@ -203,8 +203,12 @@ div.compact {
     .card-content {
         text-align: left;
         padding: 10px;
-        height: 100px;
-        position: relative;
+    }
+
+    .last-updated {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
     }
 
     h3 {
@@ -238,6 +242,10 @@ div.compact {
     }
 }
 
+.placement {
+    opacity: 0;
+}
+
 .featured-mod.upcoming {
     display: none;
 }
@@ -253,9 +261,6 @@ div.compact {
 .last-updated {
     color: #8e7a9a;
     font-size: 0.8em;
-    left: 10px;
-    bottom: 10px;
-    position: absolute;
 }
 
 .sort-buttons {
