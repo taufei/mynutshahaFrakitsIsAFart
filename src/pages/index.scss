@@ -73,14 +73,22 @@ div.compact {
         display: block;
     }
 
-    .content.mods {
-        width: fit-content !important;
-        margin: 0 !important;
+    div.content {
+        &.main-content {
+            width: 100%;
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        &.mods {
+            width: fit-content !important;
+            margin: 0 !important;
+        }
     }
 }
 
 @media screen and (min-width: 30.5em) {
-    .content {
+    div.content {
         margin: 1.5em 1.5em;
         margin-right: 0;
 
@@ -94,8 +102,16 @@ div.compact {
     }
 }
 
+@media screen and (max-width: 35.5em) {
+    div.content {
+        &.main-content {
+            width: 100%;
+        }
+    }
+}
+
 @media screen and (min-width: 80.5em) {
-    .content {
+    div.content {
         margin: 3em 1.5em;
         margin-right: 0;
 
