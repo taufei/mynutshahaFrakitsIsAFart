@@ -4,6 +4,23 @@ var path = require("path");
 var hljs = require('highlight.js');
 var fs = require('fs');
 var sass = require('sass');
+var CleanCSS = require('clean-css');
+
+var isFullBuild = false;
+var isWatch = false;
+var isFirstRun = false;
+var isRelease = false;
+
+function setGlobals(data) {
+	isFullBuild = data.isFullBuild;
+	isWatch = data.isWatch;
+	isFirstRun = data.isFirstRun;
+	isRelease = data.isRelease;
+}
+
+function getGlobals() {
+	return {isFullBuild, isWatch, isFirstRun, isRelease};
+}
 
 function fixPath(url) {
 	return url.replaceAll(path.sep, path.posix.sep);
@@ -166,10 +183,17 @@ function compileSass(file, dest) {
 			}
 		}]
 	});
+	if(isRelease) {
+		result.css = new CleanCSS({
+			level: 2
+		}).minify(result.css).styles;
+	}
 	fs.writeFileSync(dest, result.css);
 }
 
 module.exports = {
+	setGlobals: setGlobals,
+	getGlobals: getGlobals,
 	fixPath: fixPath,
 	fixHtmlRefs: fixHtmlRefs,
 	copyDir: copyDir,

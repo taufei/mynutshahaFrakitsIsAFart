@@ -6,7 +6,7 @@ var tools = require('./pages/tools/tools.build.js');
 var apiDocs = require('./pages/apiDocs.build.js');
 var indexPage = require('./pages/index.build.js');
 
-var { copyDir, fixHtmlRefs, parseTemplate, compileSass } = require('./utils.js');
+var { copyDir, fixHtmlRefs, parseTemplate, compileSass, setGlobals, getGlobals } = require('./utils.js');
 
 var isFullBuild = process.argv.includes('--full');
 process.argv = process.argv.filter(arg => arg != '--full');
@@ -16,6 +16,11 @@ process.argv = process.argv.filter(arg => arg != '--watch');
 
 var isFirstRun = process.argv.includes('--first-run');
 process.argv = process.argv.filter(arg => arg != '--first-run');
+
+var isRelease = process.argv.includes('--release') || isFullBuild;
+process.argv = process.argv.filter(arg => arg != '--release');
+
+setGlobals({isFullBuild, isWatch, isFirstRun, isRelease});
 
 hljs.registerLanguage('haxe', haxeformat);
 
