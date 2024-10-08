@@ -176,7 +176,6 @@ div.compact {
     width: calc(50% - 16px);
     background-color: var(--background-secondary-color);
     border: solid rgba(0, 0, 0, 0.1) 2px;
-    transition: background-color 0.2s; // , transform 0.2s
     margin: 6px;
     //will-change: transform;
     //height: min-content;
@@ -193,6 +192,35 @@ div.compact {
     img {
         max-width: 100%;
     }
+
+    .sparkle {
+        display: none;
+    }
+
+    &.premium {
+        background: linear-gradient(-45deg, var(--secondary-color), var(--primary-color) 22%, var(--secondary-color) 75%);
+        &:hover {
+            filter: brightness(115%);
+            .sparkle {
+                opacity: 0.6;
+            }
+        }
+
+        .sparkle {
+            display: initial;
+            left: -5%;
+            max-width: 110%;
+            position: absolute;
+    
+            &.top {
+                top: -5%;
+            }
+            &.bottom {
+                bottom: -10%;
+            }
+        }
+    }
+
 
     //.sparkles {
     //    display: none;

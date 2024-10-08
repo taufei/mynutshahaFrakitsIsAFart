@@ -134,6 +134,7 @@
 				{{#mods}}
 				<div class="featured-mod{{#tags}} {{.}}{{/tags}}" data-time="{{lastUpdated}}" data-author="{{author}}" data-source="{{source}}" data-version="{{version}}" data-tags="{{tagsRaw}}">
 					<a href="{{link}}">
+						<img src="img/sparkle-top.gif" class="sparkle top">
 						<img src="{{image}}" loading="lazy" alt="{{name}}"/>
 						<div class="card-content">
 							<h3>{{name}}</h3>
@@ -141,6 +142,7 @@
 						</div>
 						<span class="placement hide-nojs">cne</span>
 						<span class="last-updated hide-nojs" data-time="{{lastUpdated}}" style="display:none;">{{lastUpdated}}</span>
+						<img src="img/sparkle-bottom.gif" class="sparkle bottom">
 					</a>
 				</div>
 				{{/mods}}
