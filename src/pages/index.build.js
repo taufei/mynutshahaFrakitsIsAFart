@@ -60,17 +60,20 @@ function buildHtml(_pageDir, _exportPath) {
             links[meta.link] = meta.name;
         }
 
+        var tags = meta.tags ?? [];
+
         mods.push({
             name: meta.name,
             description: meta.description,
             image: imgLink,
             link: meta.link,
-            tags: meta.tags ?? [],
-            tagsRaw: (meta.tags ?? []).join(","),
+            tags: tags,
+            tagsRaw: (tags).join(","),
             author: meta.author,
             source: meta.source,
             version: meta.version,
-            lastUpdated: meta.lastUpdated ?? "unknown"
+            lastUpdated: meta.lastUpdated ?? "unknown",
+            premium: tags.includes("premium")
         });
     }
 
