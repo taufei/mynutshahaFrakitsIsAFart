@@ -201,6 +201,9 @@ div.compact {
         background: linear-gradient(-45deg, var(--secondary-color), var(--primary-color) 22%, var(--secondary-color) 75%);
         &:hover {
             filter: brightness(115%);
+            img {
+                filter: brightness(86.95652174%); // to counteract the filter above (1/1.15)
+            }
             .sparkle {
                 opacity: 0.6;
             }
