@@ -23,16 +23,16 @@
 	<meta name="description" content="Website dedicated to things for Codename Engine!" />
 
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://fnf-cne-devs.github.io/" />
+	<meta property="og:url" content="https://codename-engine.com/" />
 	<meta property="og:title" content="::api.currentPageName::::if api.config.pageTitle !=null:: - ::api.config.pageTitle::::end::" />
 	<meta property="og:description" content="Website dedicated to things for Codename Engine!" />
-	<meta property="og:image" content="https://fnf-cne-devs.github.io/img/banner.png" />
+	<meta property="og:image" content="https://codename-engine.com/img/banner.png" />
 
 	<meta property="twitter:card" content="summary_large_image" />
-	<meta property="twitter:url" content="https://fnf-cne-devs.github.io/" />
+	<meta property="twitter:url" content="https://codename-engine.com/" />
 	<meta property="twitter:title" content="::api.currentPageName::::if api.config.pageTitle !=null:: - ::api.config.pageTitle::::end::" />
 	<meta property="twitter:description" content="Website dedicated to things for Codename Engine!" />
-	<meta property="twitter:image" content="https://fnf-cne-devs.github.io/img/banner.png" />
+	<meta property="twitter:image" content="https://codename-engine.com/img/banner.png" />
 
 	<meta name="theme-color" content="#7f33b8" />
 
