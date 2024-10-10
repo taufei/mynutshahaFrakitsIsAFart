@@ -158,10 +158,6 @@ div.compact {
     }
 }
 
-.vertical-stack {
-    width: 60%;
-}
-
 .content {
     flex-grow: 1;
 
@@ -363,11 +359,17 @@ div.compact {
 
 .content.donators {
     padding: 1em !important;
+    margin-bottom: 0;
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 0.5em;
+    }
 }
 
-.content.donators h2 {
-    margin-top: 0;
-    margin-bottom: 0.5em;
+.vertical-stack {
+    width: 60%;
+    height: min-content;
 }
 
 .donators-list {
