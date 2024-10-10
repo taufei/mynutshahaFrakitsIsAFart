@@ -1,4 +1,4 @@
-name: GitHub Pages
+name: Cloudflare Pages Deploy
 
 on:
   push:
@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-22.04
     permissions:
       contents: write
+      deployments: write
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
@@ -45,9 +46,13 @@ jobs:
       - run: npm install
       - run: npm run build:full ./
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
         if: github.ref == 'refs/heads/main'
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./export
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: codename-website # e.g. 'my-project'
+          directory: export # e.g. 'dist'
+          branch: cf-pages
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}

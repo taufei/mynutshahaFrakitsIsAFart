@@ -11,4 +11,4 @@ The engine provides a lot of ways to do stuff without needing to hardcode it.
 
 Like custom classes, custom options, custom states, etc.
 
-If you need access to c++ code you can use <a href="../scripting/ndll-scripting.md">NDLL Scripts</a> to do it.
+If you need access to C++ code you can use <a href="../scripting/ndll-scripting.md">NDLL Scripts</a> to do it.
