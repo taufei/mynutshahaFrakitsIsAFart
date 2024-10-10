@@ -54,5 +54,12 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: codename-website
           directory: export
-          branch: cf-pages
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push the changes to cf-pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./export
+          publish_branch: cf-pages
