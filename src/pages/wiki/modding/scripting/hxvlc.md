@@ -1,3 +1,9 @@
+---
+author: Frakits
+desc: This page explains how to play videos using hxvlc
+lastUpdated: 2024-09-01T14:39:03.000Z
+title: Using hxvlc for videos
+---
 # Using hxvlc for videos
 
 Using hxvlc, you can display videos anywhere, and can be used as a sprite as well.

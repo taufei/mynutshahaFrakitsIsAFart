@@ -1,3 +1,9 @@
+---
+author: Frakits & Swordcube
+desc: This page explains how to create custom options for your mod!
+lastUpdated: 2024-09-11T09:27:20.000Z
+title: Custom Options
+---
 # Custom Options
 You may find it useful to have custom options specific to your mod, thankfully you can do just that!
 

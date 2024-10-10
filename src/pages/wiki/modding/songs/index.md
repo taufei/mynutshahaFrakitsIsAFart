@@ -1,3 +1,9 @@
+---
+author: Frakits
+desc: How to make songs.
+lastUpdated: 2024-08-26T13:35:32.000Z
+title: Creating songs
+---
 # Creating Songs.
 
 Creating songs is very simple, there's currently 2 ways of making them, and we will be focusing on the in-engine way for now.

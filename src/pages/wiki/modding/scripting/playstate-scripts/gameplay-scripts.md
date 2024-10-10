@@ -1,3 +1,9 @@
+---
+author: Frakits
+desc: This page explains how to use Gameplay Scripts in your mod!
+lastUpdated: 2024-09-03T18:08:41.000Z
+title: Gameplay Scripts
+---
 # Gameplay Scripts
 
 ## Gameplay scripts run during gameplay *(yep)*

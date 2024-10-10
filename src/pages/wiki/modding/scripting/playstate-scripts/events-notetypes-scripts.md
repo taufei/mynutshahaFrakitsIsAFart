@@ -1,3 +1,9 @@
+---
+author: Frakits
+desc: This page explains how to use Events/Notetype Scripts in your mod!
+lastUpdated: 2024-08-29T14:15:47.000Z
+title: Events/Notetype Scripts
+---
 # Events/Notetype Scripts
 
 ## Events

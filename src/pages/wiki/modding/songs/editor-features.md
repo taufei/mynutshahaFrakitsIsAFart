@@ -1,3 +1,9 @@
+---
+author: Frakits
+desc: How to use the chart editor.
+lastUpdated: 2024-09-18T14:25:17.000Z
+title: Additional Chart Editor Features
+---
 # Additional Chart Editor Features
 
 while we have only covered the basic of charting in <a href="../songs/">Creating songs</a>, we will cover the additional chart editor features here, in no particular order.

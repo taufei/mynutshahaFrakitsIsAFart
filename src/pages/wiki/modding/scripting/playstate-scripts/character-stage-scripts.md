@@ -1,3 +1,9 @@
+---
+author: Frakits
+desc: This page explains how to create character/stage scripts
+lastUpdated: 2024-09-02T18:14:26.000Z
+title: Character/Stage Scripts
+---
 # Character/Stage Scripts
 
 Character/Stage Scripts run alongside them, or something like that.

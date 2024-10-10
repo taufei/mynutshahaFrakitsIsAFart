@@ -1,3 +1,9 @@
+---
+author: Frakits
+desc: How to make cutscenes and dialogues.
+lastUpdated: 2024-09-19T22:39:13.000Z
+title: Cutscenes and Dialogues
+---
 # Cutscenes and dialogues.
 
 ## Cutscenes

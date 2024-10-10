@@ -1,3 +1,9 @@
+---
+author: Frakits
+desc: This page explains how to script the engine
+lastUpdated: 2024-09-05T18:06:23.000Z
+title: Scripting
+---
 # Scripting
 
 The engine's biggest feature yet, scripting.<br>

@@ -1,3 +1,9 @@
+---
+author: Frakits
+desc: This page contains a list of all script calls
+lastUpdated: 2024-09-10T13:10:47.000Z
+title: All script calls
+---
 # List of all script calls
 
 ## All states/substates

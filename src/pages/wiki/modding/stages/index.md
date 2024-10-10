@@ -1,3 +1,9 @@
+---
+author: Frakits & Ne_Eo
+desc: How to make custom stages.
+lastUpdated: 2024-09-20T15:19:41.000Z
+title: Creating stages
+---
 # Creating stages
 Stages are defined via XML files, similar to <a href="../characters/">Creating characters</a>. By creating an XML file in ``./data/stages``, you officially created a stage.
 

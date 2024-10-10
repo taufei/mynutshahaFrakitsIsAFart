@@ -1,3 +1,9 @@
+---
+author: Ne_Eo & Frakits
+desc: This page explains how to add custom shaders
+lastUpdated: 2024-09-05T11:31:01.000Z
+title: Shaders
+---
 # Shaders
 Shaders are pretty easy to do due to our shader backend that does the hard work for us. All you have to do is make a file in ``./shaders/``. Our system supports both fragment and vertex shaders to change both pixels and vertices. *(for example ``./shaders/example.frag`` and ``./shaders/example.vert``)*
 

@@ -1,3 +1,9 @@
+---
+author: Frakits & Ne_Eo & Nex_isDumb
+desc: This page explains how to create characters for your mod!
+lastUpdated: 2024-09-23T07:49:54.000Z
+title: Creating Characters
+---
 # Creating Characters
 
 Creating characters thru the engine is not available yet, so you have to manually add the files yourself.<br>

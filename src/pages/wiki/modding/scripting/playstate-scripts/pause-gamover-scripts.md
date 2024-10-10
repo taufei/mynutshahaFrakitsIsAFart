@@ -1,3 +1,9 @@
+---
+author: Frakits & usb_port_2
+desc: This page explains how to use Pause and Game Over Scripts in your mod!
+lastUpdated: 2024-08-31T18:37:25.000Z
+title: Pause and Game Over Scripts
+---
 # Pause and Game Over Scripts
 
 ## Pause Scripts

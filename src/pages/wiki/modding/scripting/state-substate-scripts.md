@@ -1,3 +1,9 @@
+---
+author: Frakits
+desc: This page explains how to modify the engine's states and substates
+lastUpdated: 2024-09-05T18:39:28.000Z
+title: State/Substate Scripts
+---
 # State/Substate Scripts
 State/Substate Scripts are scripts that can change any state or substate of the game.<br>
 You can change the Main Menu, the Freeplay Menu and even the Chart Editor.

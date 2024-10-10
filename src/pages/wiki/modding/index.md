@@ -1,3 +1,9 @@
+---
+author: Frakits
+desc: How to mod the engine.
+lastUpdated: 2024-09-20T15:19:41.000Z
+title: Modding The Engine
+---
 # Modding The Engine
 
 To start modding the engine, you simply make a folder in ``./mods``. It's really that simple, as making a mod does not require any setup.
