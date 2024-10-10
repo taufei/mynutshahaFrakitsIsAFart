@@ -1,7 +1,7 @@
 <header>
 	<a href="/">
 		<img src="/img/logo-banner.png" alt="Codename Logo" class="desktop"/>
-        <img src="/img/logo-banner-mini.png" alt="Codename Logo" class="mobile"/>
+		<img src="/img/logo-banner-mini.png" alt="Codename Logo" class="mobile"/>
 	</a>
 	<h2 class="header-title">::api.currentPageName::</h2>
 	<div>
