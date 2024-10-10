@@ -93,10 +93,22 @@
 			</div>
 
 			<div class="content donators">
+				<!-- {{#hasMembers}}
+				{{#members}}
+				<h2>Members</h2>
+				<div class="donator membership">
+					<img src="{{profilePicture}}" alt="{{name}}" width="32" height="32">
+					<div class="donator-info">
+						<span>{{name}}</span>
+						<span>{{amount}} {{currency}}</span>
+					</div>
+				</div>
+				{{/members}}
+				{{/hasMembers}} -->
 				<h2>Donators</h2>
 				<span class="donators-list">
 					{{#donators}}
-					<div class="donator{{#hasMemberShip}} membership{{/hasMemberShip}}">
+					<div class="donator{{#hasMembership}} membership{{/hasMembership}}">
 						<img src="{{profilePicture}}" alt="{{name}}" width="32" height="32">
 						<div class="donator-info">
 							<span>{{name}}</span>

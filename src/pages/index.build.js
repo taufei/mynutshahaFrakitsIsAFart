@@ -80,15 +80,20 @@ function buildHtml(_pageDir, _exportPath) {
 
     mods.sort((a, b) => a.name.localeCompare(b.name));
 
+    var members = [];
     var donators = [];
-    for(const donator of donatorsData) {
-        donators.push({
+    for(const donator of donatorsData.donators) {
+        var obj = {
             name: donator.name,
             profilePicture: donator.profilePicture,
             amount: donator.amount,
             currency: donator.currency,
-            hasMemberShip: donator.hasMemberShip != 0
-        });
+            hasMembership: donator.hasMembership != 0
+        };
+        donators.push(obj);
+        if(donator.hasMembership) {
+            members.push(obj);
+        }
     }
 
     donators.sort((a, b) => b.amount - a.amount);
@@ -102,7 +107,9 @@ function buildHtml(_pageDir, _exportPath) {
         header: header,
         mods: mods,
         warnings: warnings,
-        donators: donators
+        donators: donators,
+        members: members,
+        hasMembers: members.length > 0
     };
 
     let html = parseTemplate(templatePage, vars);
