@@ -151,6 +151,15 @@
 
 			<script src="root/featuredMods.js"></script>
 		</div>
+
+		<div class="donators">
+			{{#donators}}
+			<div class="donator{{#hasMemberShip}} membership{{/hasMemberShip}}">
+				<img src="{{profilePicture}}" alt="{{name}}" width="32" height="32">
+				<span>{{name}} - {{amount}} {{currency}}</span>
+			</div>
+			{{/donators}}
+		</div>
 	</div>
 
 	<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>

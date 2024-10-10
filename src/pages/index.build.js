@@ -7,7 +7,8 @@ var hljs = require('highlight.js');
 
 var { fixHtmlRefs, copyDir, parseTemplate } = require("../utils.js");
 
-var header = fs.readFileSync("./src/pages/templates/header.html", 'utf8')
+var header = fs.readFileSync("./src/pages/templates/header.html", 'utf8');
+var donatorsData = JSON.parse(fs.readFileSync("./donators.json", 'utf8'));
 
 function buildHtml(_pageDir, _exportPath) {
 	var pageDir = _pageDir + "/";
@@ -79,6 +80,19 @@ function buildHtml(_pageDir, _exportPath) {
 
     mods.sort((a, b) => a.name.localeCompare(b.name));
 
+    var donators = [];
+    for(const donator of donatorsData) {
+        donators.push({
+            name: donator.name,
+            profilePicture: donator.profilePicture,
+            amount: donator.amount,
+            currency: donator.currency,
+            hasMemberShip: donator.hasMemberShip != 0
+        });
+    }
+
+    donators.sort((a, b) => b.amount - a.amount);
+
     var path = "./src/pages/index.html";
     var outpath = exportPath + "index.html";
     var templatePage = fs.readFileSync(path, 'utf8');
@@ -87,7 +101,8 @@ function buildHtml(_pageDir, _exportPath) {
         title: "Home",
         header: header,
         mods: mods,
-        warnings: warnings
+        warnings: warnings,
+        donators: donators
     };
 
     let html = parseTemplate(templatePage, vars);
