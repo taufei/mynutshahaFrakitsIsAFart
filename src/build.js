@@ -48,6 +48,8 @@ compileSass("./src/pages/ko-fi.scss", exportPath + "/ko-fi.css");
 compileJs("./src/pages/featuredMods.js", exportPath + "/featuredMods.js");
 compileJs("./src/pages/wiki.js", exportPath + "/wiki.js");
 
+copyDir("./src/toplevel/", exportPath + "/");
+
 indexPage.buildHtml(pageDir, exportPath); // builds into /
 wiki.buildHtml(pageDir, exportPath); // builds into /wiki
 tools.buildHtml(pageDir, exportPath); // builds into /tools
