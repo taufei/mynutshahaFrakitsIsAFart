@@ -52,7 +52,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: codename-website # e.g. 'my-project'
-          directory: export # e.g. 'dist'
+          projectName: codename-website
+          directory: export
           branch: cf-pages
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
