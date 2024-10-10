@@ -38,11 +38,11 @@ Above is a direct quoted response from Yoshman29.
 ## Who are the main owners of the engine?
 
 The main owners consists of:
-- [Ne_Eo](https://github.com/Ne_Eo)
+- [Ne_Eo](https://github.com/NeeEoo)
 - [Lunarcleint](https://github.com/Lunarcleint)
 - [WizardMantis441](https://github.com/WizardMantis441)
 - [Frakits](https://github.com/Frakits)
-- [Nex_isDumb](https://github.com/Nex_isDumb)
+- [Nex_isDumb](https://github.com/NexIsDumb)
 
 <small>(You can click on the names to go to their GitHub profile)</small>
 
