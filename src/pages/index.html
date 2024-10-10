@@ -152,11 +152,14 @@
 			<script src="root/featuredMods.js"></script>
 		</div>
 
-		<div class="donators">
+		<div class="content donators">
 			{{#donators}}
 			<div class="donator{{#hasMemberShip}} membership{{/hasMemberShip}}">
 				<img src="{{profilePicture}}" alt="{{name}}" width="32" height="32">
-				<span>{{name}} - {{amount}} {{currency}}</span>
+				<br>
+				<span>{{name}}</span>
+				<br>
+				<span>{{amount}} {{currency}}</span>
 			</div>
 			{{/donators}}
 		</div>

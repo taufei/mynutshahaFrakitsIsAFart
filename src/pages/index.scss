@@ -343,3 +343,16 @@ div.compact {
     width: 90%;
     margin-top: 1em;
 }
+
+.donators {
+    display: flex;
+
+    .donator {
+        display: block;
+        width: max-content;
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
