@@ -1,6 +1,7 @@
 @use "sass:color";
 
 .content {
+    margin: 0;
     padding: 0!important;
     padding-bottom: 2em;
     text-align: center;
@@ -179,7 +180,7 @@ div.compact {
     flex-wrap: wrap;
     justify-content: space-evenly;
 
-    height: 500px;
+    height: 530px;
     overflow-y: scroll;
     overscroll-behavior: contain;
 }
@@ -359,7 +360,6 @@ div.compact {
 
 .content.donators {
     padding: 1em !important;
-    margin-bottom: 0;
 
     h2 {
         margin-top: 0;
