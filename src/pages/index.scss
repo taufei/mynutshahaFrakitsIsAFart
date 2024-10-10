@@ -393,6 +393,29 @@ div.compact {
     img {
         margin: 0.3em;
     }
+
+    &.membership {
+        //background: linear-gradient(-45deg, rgba(255,193,0,1) 0%, rgba(255,227,0,1) 31%, rgba(255,247,202,1) 40%, rgba(255,227,0,1) 41%, rgba(255,189,0,1) 61%) !important;
+        box-shadow: 0px 0px 10px #eed43a;
+        img {
+            border: 1px solid rgb(255, 197, 72);
+        }
+    }
+
+    &:nth-child(1) {
+        background-color: #ffd16d3e;
+        border: 1px solid rgb(215, 165, 55);
+    }
+
+    &:nth-child(2) {
+        background-color: #cbcbcb3e;
+        border: 1px solid rgb(163, 163, 163);
+    }
+
+    //&:nth-child(3) {
+    //    background-color: #622b1a3e;
+    //    border: 1px solid rgb(135, 68, 34);
+    //}
 }
 
 .donator-info {
