@@ -6,4 +6,10 @@
     -o-border-radius: 0px!important;
 
     border: solid rgba(0, 0, 0, 0.2) 2px;
+
+    padding: 0 10px;
+
+    span {
+        display: none;
+    }
 }

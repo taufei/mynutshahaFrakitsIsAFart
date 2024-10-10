@@ -60,5 +60,12 @@ if (isWatch) {
 		}
 	});
 
+	fs.watch('./donators.json', { recursive: true }, (eventType, filename) => {
+		if (filename) {
+			console.log(`${filename} changed. Rebuilding...`);
+			restartChild();
+		}
+    });
+
 	setInterval(() => {}, 1000);
 }

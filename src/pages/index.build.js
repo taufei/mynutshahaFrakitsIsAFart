@@ -7,7 +7,8 @@ var hljs = require('highlight.js');
 
 var { fixHtmlRefs, copyDir, parseTemplate } = require("../utils.js");
 
-var header = fs.readFileSync("./src/pages/templates/header.html", 'utf8')
+var header = fs.readFileSync("./src/pages/templates/header.html", 'utf8');
+var donatorsData = JSON.parse(fs.readFileSync("./donators.json", 'utf8'));
 
 function buildHtml(_pageDir, _exportPath) {
 	var pageDir = _pageDir + "/";
@@ -79,6 +80,24 @@ function buildHtml(_pageDir, _exportPath) {
 
     mods.sort((a, b) => a.name.localeCompare(b.name));
 
+    var members = [];
+    var donators = [];
+    for(const donator of donatorsData.donators) {
+        var obj = {
+            name: donator.name,
+            profilePicture: donator.profilePicture,
+            amount: donator.amount,
+            currency: donator.currency,
+            hasMembership: donator.hasMembership != 0
+        };
+        donators.push(obj);
+        if(donator.hasMembership) {
+            members.push(obj);
+        }
+    }
+
+    donators.sort((a, b) => b.amount - a.amount);
+
     var path = "./src/pages/index.html";
     var outpath = exportPath + "index.html";
     var templatePage = fs.readFileSync(path, 'utf8');
@@ -87,7 +106,10 @@ function buildHtml(_pageDir, _exportPath) {
         title: "Home",
         header: header,
         mods: mods,
-        warnings: warnings
+        warnings: warnings,
+        donators: donators,
+        members: members,
+        hasMembers: members.length > 0
     };
 
     let html = parseTemplate(templatePage, vars);
