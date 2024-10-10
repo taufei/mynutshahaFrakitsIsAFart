@@ -1,7 +1,7 @@
 ---
 author: Ne_Eo & Frakits
 desc: This page explains the most commonly asked questions about the engine.
-lastUpdated: 2024-10-10T17:54:14.760Z
+lastUpdated: 2024-10-10T19:39:46.666Z
 title: FAQ
 ---
 # Frequently Asked Questions
