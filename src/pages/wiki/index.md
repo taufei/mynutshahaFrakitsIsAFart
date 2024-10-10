@@ -9,6 +9,8 @@ Here is documentation on functions of the engine (gameplay and modding), and how
 ### Navigation is done via either the sidebar, or by using this chart below:
 - <a href="./navigation.md">How to navigate the engine</a>
 - <a href="./differences.md">Differences between the other FNF engines</a>
+- <a href="./faq.md">FAQ</a>
+- <a href="./troubleshooting.md">Troubleshooting</a>
 - <a href="./modding/">Modding the engine</a>
     - <a href="./modding/songs/">Creating songs</a>
         - <a href="./modding/songs/editor-features.md">Chart Editor Features</a>
