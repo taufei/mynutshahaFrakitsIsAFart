@@ -34,60 +34,77 @@
 		{{ header }}
 	</div>
 	<div class="container">
-		<div class="content main-content">
-			<img class="content-logo" src="root/img/codename-animated.gif" />
-			<br />
+		<div class="vertical-stack">
+			<div class="content main-content">
+				<img class="content-logo" src="root/img/codename-animated.gif" />
+				<br />
+	
+				<a href="/api-docs/" class="default-button">API</a>
+				<a href="/wiki/" class="default-button">Wiki</a>
+				<!-- <a href="./tools/">Tools</a> -->
+				<div>
+					<h2>Downloads</h2>
+				</div>
+				<div class="downloads">
+					<div class="os-button">
+						<a href="https://nightly.link/FNF-CNE-Devs/CodenameEngine/workflows/windows/main/Codename%20Engine.zip" class="default-button">
+							<span>
+								<img class="os-logo" src="img/os/windows.svg"> Windows
+							</span>
+						</a>
+					</div>
+					<div class="os-button">
+						<a href="https://nightly.link/FNF-CNE-Devs/CodenameEngine/workflows/macos/main/Codename%20Engine.zip" class="default-button">
+							<span>
+								<img class="os-logo" src="img/os/apple.svg"> MacOS
+							</span>
+						</a>
+					</div>
+					<div class="os-button">
+						<a href="https://nightly.link/FNF-CNE-Devs/CodenameEngine/workflows/linux/main/Codename%20Engine.zip" class="default-button">
+							<span>
+								<img class="os-logo" src="img/os/linux.svg"> Linux
+							</span>
+						</a>
+					</div>
+				</div>
+				<h4>Unofficial port for mobile phones:</h4>
+				<div class="downloads">
+					<div class="os-button">
+						<a href="https://nightly.link/MobilePorting/CodenameEngine-Mobile/workflows/android/cne-pr/Codename%20Engine.zip" class="default-button">
+							<span>
+								<img class="os-logo" src="img/os/android.svg"> Android
+							</span>
+						</a>
+					</div>
+					<div class="os-button">
+						<a href="https://nightly.link/MobilePorting/CodenameEngine-Mobile/workflows/ios/cne-pr/Codename%20Engine.zip" class="default-button">
+							<span>
+								<img class="os-logo" src="img/os/apple.svg"> iOS
+							</span>
+						</a>
+					</div>
+				</div>
+				<div>
+					<i>Make sure to join our official <img class="icon" src="img/icons/discord.svg"> <a href="https://discord.gg/WTzm35kekB">Discord&nbsp;Server</a>!</i>
+					<br>
+					<i>You can contribute to this website by going to the <i class="fa fa-github"></i> <a href="https://github.com/FNF-CNE-Devs/FNF-CNE-Devs.github.io">GitHub&nbsp;repository</a></i>
+				</div>
+			</div>
 
-			<a href="/api-docs/" class="default-button">API</a>
-			<a href="/wiki/" class="default-button">Wiki</a>
-			<!-- <a href="./tools/">Tools</a> -->
-			<div>
-				<h2>Downloads</h2>
-			</div>
-			<div class="downloads">
-				<div class="os-button">
-					<a href="https://nightly.link/FNF-CNE-Devs/CodenameEngine/workflows/windows/main/Codename%20Engine.zip" class="default-button">
-						<span>
-							<img class="os-logo" src="img/os/windows.svg"> Windows
-						</span>
-					</a>
-				</div>
-				<div class="os-button">
-					<a href="https://nightly.link/FNF-CNE-Devs/CodenameEngine/workflows/macos/main/Codename%20Engine.zip" class="default-button">
-						<span>
-							<img class="os-logo" src="img/os/apple.svg"> MacOS
-						</span>
-					</a>
-				</div>
-				<div class="os-button">
-					<a href="https://nightly.link/FNF-CNE-Devs/CodenameEngine/workflows/linux/main/Codename%20Engine.zip" class="default-button">
-						<span>
-							<img class="os-logo" src="img/os/linux.svg"> Linux
-						</span>
-					</a>
-				</div>
-			</div>
-			<h4>Unofficial port for mobile phones:</h4>
-			<div class="downloads">
-				<div class="os-button">
-					<a href="https://nightly.link/MobilePorting/CodenameEngine-Mobile/workflows/android/cne-pr/Codename%20Engine.zip" class="default-button">
-						<span>
-							<img class="os-logo" src="img/os/android.svg"> Android
-						</span>
-					</a>
-				</div>
-				<div class="os-button">
-					<a href="https://nightly.link/MobilePorting/CodenameEngine-Mobile/workflows/ios/cne-pr/Codename%20Engine.zip" class="default-button">
-						<span>
-							<img class="os-logo" src="img/os/apple.svg"> iOS
-						</span>
-					</a>
-				</div>
-			</div>
-			<div>
-				<i>Make sure to join our official <img class="icon" src="img/icons/discord.svg"> <a href="https://discord.gg/WTzm35kekB">Discord&nbsp;Server</a>!</i>
-				<br>
-				<i>You can contribute to this website by going to the <i class="fa fa-github"></i> <a href="https://github.com/FNF-CNE-Devs/FNF-CNE-Devs.github.io">GitHub&nbsp;repository</a></i>
+			<div class="content donators">
+				<h2>Donators</h2>
+				<span class="donators-list">
+					{{#donators}}
+					<div class="donator{{#hasMemberShip}} membership{{/hasMemberShip}}">
+						<img src="{{profilePicture}}" alt="{{name}}" width="32" height="32">
+						<div class="donator-info">
+							<span>{{name}}</span>
+							<span>{{amount}} {{currency}}</span>
+						</div>
+					</div>
+					{{/donators}}
+				</span>
 			</div>
 		</div>
 		<div class="content mods">
@@ -150,18 +167,6 @@
 			</div>
 
 			<script src="root/featuredMods.js"></script>
-		</div>
-
-		<div class="content donators">
-			{{#donators}}
-			<div class="donator{{#hasMemberShip}} membership{{/hasMemberShip}}">
-				<img src="{{profilePicture}}" alt="{{name}}" width="32" height="32">
-				<br>
-				<span>{{name}}</span>
-				<br>
-				<span>{{amount}} {{currency}}</span>
-			</div>
-			{{/donators}}
 		</div>
 	</div>
 

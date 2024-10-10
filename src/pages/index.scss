@@ -73,8 +73,18 @@ div.compact {
         display: block;
     }
 
+    div.vertical-stack {
+        width: 100%;
+    }
+
     div.content {
         &.main-content {
+            width: 100%;
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        &.donators {
             width: 100%;
             margin-right: 0;
             margin-left: 0;
@@ -103,8 +113,15 @@ div.compact {
 }
 
 @media screen and (max-width: 35.5em) {
+    div.vertical-stack {
+        width: 100%;
+    }
+
     div.content {
         &.main-content {
+            width: 100%;
+        }
+        &.donators {
             width: 100%;
         }
     }
@@ -141,12 +158,12 @@ div.compact {
     }
 }
 
+.vertical-stack {
+    width: 60%;
+}
+
 .content {
     flex-grow: 1;
-
-    &.main-content {
-        width: 60%;
-    }
 
     &.mods {
         flex-grow: 0;
@@ -344,15 +361,40 @@ div.compact {
     margin-top: 1em;
 }
 
-.donators {
-    display: flex;
+.content.donators {
+    padding: 1em !important;
+}
 
-    .donator {
-        display: block;
-        width: max-content;
-        img {
-            width: 32px;
-            height: 32px;
-        }
+.content.donators h2 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.donators-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.donator {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin: 0.3em!important;
+
+    padding: 5px;
+    background: #00000040;
+    border: 1px solid black;
+
+    img {
+        margin: 0.3em;
     }
+}
+
+.donator-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
