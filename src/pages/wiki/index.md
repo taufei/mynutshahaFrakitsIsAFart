@@ -1,3 +1,8 @@
+---
+desc: Main Page to the Wiki
+title: Home
+lastUpdated: 2024-09-20T15:19:41.000Z
+---
 # Welcome to the Codename Engine Wiki
 Here is documentation on functions of the engine (gameplay and modding), and how to use them for your mod.
 

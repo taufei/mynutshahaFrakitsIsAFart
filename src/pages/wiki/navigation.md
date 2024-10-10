@@ -1,3 +1,9 @@
+---
+author: Frakits
+desc: This page explains how to navigate the engine
+lastUpdated: 2024-09-18T14:44:39.000Z
+title: How to navigate the engine
+---
 # How to navigate the engine
 
 While the engine has pretty much not changed the usual look and feel of the original game, it's worth noting that there are a few additions to the game that needs to be studied, a bit.

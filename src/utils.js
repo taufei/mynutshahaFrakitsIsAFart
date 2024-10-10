@@ -7,6 +7,8 @@ var sass = require('sass');
 var CleanCSS = require('clean-css');
 var UglifyJS = require("uglify-js");
 
+var wax = require('@jvitela/mustache-wax');
+
 var isFullBuild = false;
 var isWatch = false;
 var isFirstRun = false;
@@ -172,6 +174,37 @@ function compileJs(file, dest) {
 	}
 	fs.copyFileSync(file, dest);
 }
+
+wax(Mustache);
+
+Mustache.Formatters = {
+	formatDate: function(rdate) {
+		var date = new Date(rdate);
+
+		var year = date.getUTCFullYear();
+		var month = ('0' + (date.getUTCMonth() + 1)).slice(-2);
+		var day = ('0' + date.getUTCDate()).slice(-2);
+		var hours = ('0' + date.getUTCHours()).slice(-2);
+		var minutes = ('0' + date.getUTCMinutes()).slice(-2);
+		var seconds = ('0' + date.getUTCSeconds()).slice(-2);
+
+		return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+	},
+	shortDate: function(rdate) {
+		var date = new Date(rdate);
+
+		var year = date.getUTCFullYear();
+		var month = ('0' + (date.getUTCMonth() + 1)).slice(-2);
+		var day = ('0' + date.getUTCDate()).slice(-2);
+
+		return `${year}-${month}-${day}`;
+	},
+	isoDate: function(rdate) {
+		var date = new Date(rdate);
+		return date.toISOString();
+	}
+};
+
 
 function parseTemplate(html, vars) {
 	let old;

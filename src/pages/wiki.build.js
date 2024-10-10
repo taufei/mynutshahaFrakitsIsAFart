@@ -1,9 +1,10 @@
 const { Remarkable } = require('remarkable');
-var path = require("path");
-var Mustache = require('mustache');
-var jsdom = require("jsdom");
-var fs = require('fs');
-var hljs = require('highlight.js');
+const path = require("path");
+const Mustache = require('mustache');
+const jsdom = require("jsdom");
+const fs = require('fs');
+const hljs = require('highlight.js');
+const matter = require('gray-matter');
 
 var { fixHtmlRefs, copyDir, parseTemplate, fixPath } = require("../utils.js");
 
@@ -102,12 +103,19 @@ function buildHtml(_pageDir, _exportPath) {
 				title = nameMap[nameMapKey];
 			}
 
+			var rawData = fs.readFileSync("./src/" + wikiDir + i, 'utf8');
+			var markdown = matter(rawData, { excerpt: true });
+			var content = markdown.content;
+
 			var vars = {
-				pageTitle: title,
-				title: title,
-				content: renderer.render(fs.readFileSync("./src/" + wikiDir + i, 'utf8')),
+				pageTitle: markdown.data.title ?? title,
+				title: markdown.data.title ?? title,
+				content: renderer.render(content),
 				sidebar: sidebar,
-				header: header
+				header: header,
+				shortDesc: markdown.data.desc ?? null,
+				lastUpdated: markdown.data.lastUpdated ?? null,
+				author: markdown.data.author ?? null,
 			};
 			console.log(i);
 

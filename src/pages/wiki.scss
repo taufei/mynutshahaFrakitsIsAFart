@@ -159,3 +159,21 @@ i.fa::before {
 i.fa {
   position: relative;
 }
+
+.info {
+  margin-bottom: 1em;
+
+  .written {
+    font-size: 0.8em;
+    color: #8e7a9a;
+  }
+
+  .last-updated {
+    font-size: 0.8em;
+    color: #8e7a9a;
+
+    span {
+      color: #8e7a9a;
+    }
+  }
+}

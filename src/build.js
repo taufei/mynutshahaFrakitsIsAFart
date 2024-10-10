@@ -46,6 +46,7 @@ compileSass("./src/giscus-theme.scss", exportPath + "/giscus-theme.css");
 compileSass("./src/pages/ko-fi.scss", exportPath + "/ko-fi.css");
 
 compileJs("./src/pages/featuredMods.js", exportPath + "/featuredMods.js");
+compileJs("./src/pages/wiki.js", exportPath + "/wiki.js");
 
 indexPage.buildHtml(pageDir, exportPath); // builds into /
 wiki.buildHtml(pageDir, exportPath); // builds into /wiki
