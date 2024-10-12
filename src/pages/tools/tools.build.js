@@ -22,14 +22,19 @@ function buildHtml(_pageDir, _exportPath) {
 	];
 
 	for(const tool of tools) {
-		if (!fs.existsSync(exportPath + tool)) {
-			fs.mkdirSync(exportPath + tool, {recursive: true});
-		}
 		var path = "./src/pages/tools/" + tool + "/index.html";
 		var outpath = exportPath + tool + "/index.html";
 		if(tool == "index") {
 			path = "./src/pages/tools/index.html";
 			outpath = exportPath + "index.html";
+		}
+
+		var filePath = outpath.split("/");
+		filePath.pop();
+		filePath = filePath.join("/");
+
+		if (!fs.existsSync(filePath)) {
+			fs.mkdirSync(filePath, {recursive: true});
 		}
 		var templatePage = fs.readFileSync(path, 'utf8');
 		var vars = {

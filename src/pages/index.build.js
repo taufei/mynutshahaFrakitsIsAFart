@@ -1,9 +1,4 @@
-const { Remarkable } = require('remarkable');
-var path = require("path");
-var Mustache = require('mustache');
-var jsdom = require("jsdom");
 var fs = require('fs');
-var hljs = require('highlight.js');
 
 var { fixHtmlRefs, copyDir, parseTemplate } = require("../utils.js");
 

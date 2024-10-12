@@ -60,6 +60,7 @@ function fixHtmlRefs(html, pageDir, _pageDir) {
 		if(link.href.startsWith("root/")) {
 			link.href = path.normalize("/" + _pageDir + link.href.substring(5));
 		}
+		link.href = link.href.replace(/\.force-md$/, "");
 		link.href = fixPath(link.href);
 	}
 
@@ -74,6 +75,7 @@ function fixHtmlRefs(html, pageDir, _pageDir) {
 		if(image.src.startsWith("root/")) {
 			image.src = path.normalize("/" + _pageDir + image.src.substring(5));
 		}
+		image.src = image.src.replace(/\.force-md$/, "");
 		image.src = fixPath(image.src);
 	}
 

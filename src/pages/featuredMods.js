@@ -1,3 +1,4 @@
+(function () {
 function randomizeOrder() {
 	var mods = document.querySelectorAll(".featured-mod");
 	var parent = mods[0].parentNode;
@@ -135,3 +136,4 @@ if(lastUpdated.length > 0 && window.Intl) {
 		}
 	});
 }
+})();

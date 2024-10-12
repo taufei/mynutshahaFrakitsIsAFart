@@ -1,7 +1,8 @@
 ---
+author: Frakits & Ne_Eo
 desc: Main Page to the Wiki
 title: Home
-lastUpdated: 2024-09-20T15:19:41.000Z
+lastUpdated: 2024-10-12T18:34:34.185Z
 ---
 # Welcome to the Codename Engine Wiki
 Here is documentation on functions of the engine (gameplay and modding), and how to use them for your mod.
@@ -39,7 +40,6 @@ Here is documentation on functions of the engine (gameplay and modding), and how
         - <a href="./modding/scripting/ndll-scripting.md">NDLL Scripting</a>
         - <a href="./modding/scripting/custom-transitions.md">Custom Transitions</a>
     - <a href="./modding/hardcoding/">Hardcoding</a>
-        - idk lol
 
 
 Credits:
@@ -48,4 +48,7 @@ Credits:
 - swordcube - helping hand for documentation.
 - Care or usb_port_2 - helped with keeping my sanity.
 
-**PSA**. if you wish to contribute to this website, whether it be a page modification or adding a brand new page, visit the <a href="https://github.com/FNF-CNE-Devs/FNF-CNE-Devs.github.io">Github Repository</a> and contribute via pull requests. (contributions are heavily encouraged, as we're not able to cover all possible cases.)
+If you wanna see who made a specific page check below at the bottom of the page above the comments.
+
+**PSA**. if you wish to contribute to this website, whether it be a page modification or adding a brand new page, visit the <a href="https://github.com/FNF-CNE-Devs/FNF-CNE-Devs.github.io">Github Repository</a> and contribute via pull requests. (contributions are heavily encouraged, as we're not able to cover all possible cases.) You can also click the button below to edit the page on GitHub.
+

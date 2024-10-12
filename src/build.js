@@ -55,7 +55,7 @@ wiki.buildHtml(pageDir, exportPath); // builds into /wiki
 tools.buildHtml(pageDir, exportPath); // builds into /tools
 if(isFirstRun) {
 	if(isFullBuild) {
-		apiDocs.buildHtml(pageDir, exportPath, isWatch); // builds into /api-docs
+		apiDocs.buildHtml(pageDir, exportPath); // builds into /api-docs
 	} else {
 		console.log("Skipping API Docs build (not full build)...");
 		apiDocs.buildNotBuilt(pageDir, exportPath); // builds into /api-docs

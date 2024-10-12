@@ -1,9 +1,6 @@
 const { Remarkable } = require('remarkable');
 const path = require("path");
-const Mustache = require('mustache');
-const jsdom = require("jsdom");
 const fs = require('fs');
-const hljs = require('highlight.js');
 const matter = require('gray-matter');
 
 var { fixHtmlRefs, copyDir, parseTemplate, fixPath } = require("../utils.js");
@@ -116,6 +113,8 @@ function buildHtml(_pageDir, _exportPath) {
 				shortDesc: markdown.data.desc ?? null,
 				lastUpdated: markdown.data.lastUpdated ?? null,
 				author: markdown.data.author ?? null,
+
+				url: i,
 			};
 			console.log(i);
 

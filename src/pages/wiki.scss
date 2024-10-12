@@ -185,3 +185,18 @@ blockquote {
   padding-right: 10px;
   margin-left: 0;
 }
+
+.info {
+  position: relative;
+}
+
+.github-edit-button {
+  font-size: .8em;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  a {
+    color: #8e7a9a;
+  }
+}

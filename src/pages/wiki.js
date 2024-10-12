@@ -1,3 +1,4 @@
+(function () {
 function getRelativeTimeString(
 	date, // Date | number
 	lang = "en" // navigator.language
@@ -19,3 +20,4 @@ if(lastUpdated.length > 0 && window.Intl) {
         lastUpdated.innerText = getRelativeTimeString(new Date(time));
 	});
 }
+})();

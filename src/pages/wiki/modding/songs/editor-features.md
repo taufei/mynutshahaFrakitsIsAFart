@@ -105,4 +105,4 @@ We know what the first option does, but what about those other ones? Well, here'
 - **Save Events Separately** saves the events in a separate file, which gets parsed on any difficulty chart you play on. *(Note that if you used this you have to also use **Save Without Events**, otherwise you will face issues with duplicate events)*
 - **Save Meta** saves the meta into a separate file.
 - **Export For FNF Legacy** saves the chart in a format that is supported by other FNF engines.
-- **Save For Psych Engine** saves the chart specifically in Psych Engine's format.
+- **Export For Psych Engine** saves the chart specifically in Psych Engine's format.
