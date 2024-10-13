@@ -1,5 +1,5 @@
 ---
-author: Frakits & Ne_Eo
+author: Frakits & Ne_Eo & Nex_isDumb
 desc: How to make custom stages.
 lastUpdated: 2024-09-20T15:19:41.000Z
 title: Creating stages

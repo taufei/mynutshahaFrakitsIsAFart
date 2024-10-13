@@ -1,5 +1,5 @@
 ---
-author: Ne_Eo & Frakits & lunarcleint
+author: Ne_Eo & Frakits & Nex_isDumb & lunarcleint
 desc: This page explains the most commonly asked questions about the engine.
 lastUpdated: 2024-10-12T17:38:10.934Z
 title: FAQ

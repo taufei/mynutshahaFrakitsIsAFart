@@ -16,7 +16,7 @@ This code points to the script that can be found in ``./data/scripts/`` and is c
 
 You can do many things in this script. For example, this is how you can override it and have your own entirely custom pause menu here:
 ```haxe
-function create(event){
+function create(event) {
     event.cancel();
 
     camera = pauseCam = new FlxCamera();

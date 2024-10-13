@@ -1,7 +1,7 @@
 ---
 author: Frakits
 desc: How to make cutscenes and dialogues.
-lastUpdated: 2024-09-19T22:39:13.000Z
+lastUpdated: 2024-10-13T22:48:19.093Z
 title: Cutscenes and Dialogues
 ---
 # Cutscenes and dialogues.
@@ -12,7 +12,8 @@ Making Cutscenes is easy, either drop an .mp4 file in ``./videos`` with the name
 
 <img src="./Cutscenes or Dialogues.png"/>
 
-You can also put an ``-end`` before ``-cutscene`` to make that cutscene appear at the end of the song.
+You can also put an ``-end`` before ``-cutscene`` to make that cutscene appear at the end of the song.<br>
+Starting them manually with also a custom prefix is also possible, check the <a href="./scripting/playstate-scripts/cutscenes-dialogue-scripts.md">Cutscenes/Dialogue Scripts</a> page.
 
 ## Dialogues
 
