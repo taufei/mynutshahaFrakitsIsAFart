@@ -110,7 +110,7 @@ h1 {
 }
 
 ul {
-  list-style: "> ";
+  list-style-type: "> ";
 
   &:has(li > a) {
     padding-left: 0em;
