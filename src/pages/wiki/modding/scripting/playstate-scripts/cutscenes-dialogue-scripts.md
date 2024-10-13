@@ -20,7 +20,7 @@ The cutscenes code is rather simple to recreate, you can find the most simple ex
 The code has SOME functions that can be found in the substates behaviour referenced in the <a href="../script-calls.md">All of the script calls</a> page, such as ``create``, ``destroy``, ``stepHit`` and more.<br>
 *(I'd recommend to actually mainly use ``destroy`` to for example destroy some eventual sprites, stop some eventual timers or such as the cutscene COULD get skipped and so end/finish prematurely)*
 
-Important functions to use when coding the pause menu:
+Important functions to use when coding the scripted cutscene:
 - <syntax lang="haxe">close();</syntax> - Closes the scripted cutscene.
 - <syntax lang="haxe">startVideo(path:String, ?callback:Void->Void);</syntax> - Starts a Video Cutscene and uses an optional ``callback`` whenever it ended. You can check if it's done through the boolean variable ``isVideoPlaying``.
 - <syntax lang="haxe">startDialogue(path:String, ?callback:Void->Void);</syntax> - Starts a Dialogue Cutscene and uses an optional ``callback`` whenever it ended. You can check if it's done through the boolean variable ``isDialoguePlaying``.
