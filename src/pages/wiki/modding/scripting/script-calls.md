@@ -1,5 +1,5 @@
 ---
-author: Frakits
+author: Frakits & Nex_isDumb
 desc: This page contains a list of all script calls
 lastUpdated: 2024-09-10T13:10:47.000Z
 title: All script calls
@@ -68,6 +68,68 @@ The ``event`` in question has the following parameters:
 ### <syntax lang="haxe">onGameOver(event:GameOverEvent)</syntax>, <syntax lang="haxe">onPostGameOver(event:GameOverEvent)</syntax>
 
 ### <syntax lang="haxe">onVocalsResync()</syntax>
+
+## Dialogue Scripts <small>(mostly substate like behaviour)</small>
+
+### <syntax lang="haxe">structureLoaded(event:DialogueStructureEvent)</syntax>
+
+The ``event`` replaces the <syntax lang="haxe">create()</syntax> call on normal dialogues scripts.
+
+### <syntax lang="haxe">next(playFirst:Bool = false)</syntax>, <syntax lang="haxe">postNext(playFirst:Bool)</syntax>
+
+The ``next`` call also calls custom callbacks based on the dialogue xml's line using the same argument.
+
+### <syntax lang="haxe">close(event:CancellableEvent)</syntax>
+
+The ``event`` also gets shared between dialogue's box and characters.
+
+## Dialogue Character Scripts
+
+### <syntax lang="haxe">create(event:DialogueBoxStructureEvent)</syntax>, <syntax lang="haxe">structureLoaded(event:DialogueBoxStructureEvent)</syntax>, <syntax lang="haxe">loadingError(message:String)</syntax>, <syntax lang="haxe">postCreate()</syntax>
+
+The ``event`` is shared between the first two calls but cancelling the ``create`` one won't even make the xml load and so ``structureLoaded`` not being called, saving some time.
+
+### <syntax lang="haxe">beatHit(curBeat:Int)</syntax>
+
+### <syntax lang="haxe">update(elapsed:Float)</syntax>
+
+### <syntax lang="haxe">playAnim(event:PlayAnimEvent)</syntax>
+
+### <syntax lang="haxe">show(event:DialogueCharShowEvent)</syntax>, <syntax lang="haxe">postShow(event:DialogueCharShowEvent)</syntax>, <syntax lang="haxe">showTweenCompleted(twn:FlxTween)</syntax>
+
+The ``event`` is shared between the first two (but makes no sense in cancelling it on the ``post`` part).
+
+### <syntax lang="haxe">hide(event:DialogueCharHideEvent)</syntax>, <syntax lang="haxe">postHide(event:DialogueCharHideEvent)</syntax>, <syntax lang="haxe">hideTweenCompleted(twn:FlxTween)</syntax>
+
+The ``event`` is shared between the first two (but makes no sense in cancelling it on the ``post`` part).
+
+### <syntax lang="haxe">destroy()</syntax>
+
+## Dialogue Box Scripts
+
+### <syntax lang="haxe">create(event:DialogueBoxStructureEvent)</syntax>, <syntax lang="haxe">structureLoaded(event:DialogueBoxStructureEvent)</syntax>, <syntax lang="haxe">postCreate()</syntax>
+
+The ``event`` is shared between the first two calls but cancelling the ``create`` one won't even make the xml load and so ``structureLoaded`` not being called, saving some time.
+
+### <syntax lang="haxe">beatHit(curBeat:Int)</syntax>
+
+### <syntax lang="haxe">update(elapsed:Float)</syntax>
+
+### <syntax lang="haxe">onPlayAnim(event:PlayAnimEvent)</syntax>
+
+### <syntax lang="haxe">playBubbleAnim(event:DialogueBoxPlayBubbleEvent)</syntax>, <syntax lang="haxe">postPlayBubbleAnim(event:DialogueBoxPlayBubbleEvent)</syntax>
+
+The ``event`` is shared between the two (but makes no sense in cancelling it on the ``post`` part).
+
+### <syntax lang="haxe">popupChar(event:DialogueBoxCharPopupEvent)</syntax>, <syntax lang="haxe">postPopupChar(event:DialogueBoxCharPopupEvent)</syntax>
+
+The ``event`` is shared between the two (but makes no sense in cancelling it on the ``post`` part).
+
+### <syntax lang="haxe">resetText(event:DialogueBoxSetTextEvent)</syntax>, <syntax lang="haxe">postResetText()</syntax>
+
+### <syntax lang="haxe">startText(event:DialogueBoxSetTextEvent)</syntax>, <syntax lang="haxe">postStartText()</syntax>
+
+### <syntax lang="haxe">destroy()</syntax>
 
 ## Global Scripts
 
