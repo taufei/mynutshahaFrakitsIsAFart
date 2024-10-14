@@ -20,6 +20,6 @@ To prevent this behavior, you can do <syntax lang="haxe">strum.noteAngle = 0;</s
 
 ## <h2 id="velocity-not-working" sidebar="Velocity not working">Velocity/Acceleration doesn't move my sprite</h2>
 
-You need to set `sprite.moves = true;` to make it move, its automatically enabled if you set the property using <syntax lang="xml">&lt;property /&gt;</syntax> in the stage xml.
+You need to set `sprite.moves = true;` to make it move, its automatically enabled if you set the property using <syntax lang="xml">&lt;property /&gt;</syntax> on `velocity.x` and `velocity.y` or `acceleration.x` and `acceleration.y` in the stage xml.
 
 We made it turned off automatically to optimize the game since it's useless to have it running for sprites that don't use it.
