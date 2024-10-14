@@ -20,7 +20,7 @@
             ["playstate-scripts/index", "PlayState Scripts", [
                 ["gameplay-scripts", "Gameplay Scripts"],
                 ["events-notetypes-scripts", "Events/Notetype Scripts"],
-                ["cutscenes-dialogue-scripts", "Cutscenes/Dialogue Scripts - UNFINISHED"],
+                ["cutscenes-dialogue-scripts", "Cutscenes/Dialogue Scripts"],
                 ["character-stage-scripts", "Character/Stage Scripts"],
                 ["pause-gamover-scripts", "Pause/Game Over Scripts"]
             ]],
