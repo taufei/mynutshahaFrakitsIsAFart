@@ -3,11 +3,11 @@ const path = require("path");
 const fs = require('fs');
 const matter = require('gray-matter');
 
-var { fixHtmlRefs, copyDir, parseTemplate, fixPath } = require("../utils.js");
+var { fixHtmlRefs, copyDir, parseTemplate, fixPath, parseHtml, htmlToString } = require("../utils.js");
 
 var header = fs.readFileSync("./src/pages/templates/header.html", 'utf8');
 
-function generateSidebar(list, basePath = '', selected = null, idx = null, nameMap = null) {
+function generateSidebar(list, basePath = '', selected = null, idx = null, nameMap = null, pagination = null) {
 	if(!idx) {
 		idx = {
 			value: 0
@@ -36,21 +36,28 @@ function generateSidebar(list, basePath = '', selected = null, idx = null, nameM
 		nameMap[nameMapKey] = visualName.replace(" - UNFINISHED", "");
 
 		visualName = visualName.replace("UNFINISHED", "<span style='color: #FF0000;'>UNFINISHED</span>")
-
-		var hasChildren = item.length > 2 && item[2] != null;
-		html += `<li class="sidebar-list-item ${parity}">`;
 		var isSelected = href.replace(/^\/+/g, "") == selected.replace(/^\/+/g, "");
 
-		var classAttr = isSelected ? ` class="${parity} selected"` : ` class="${parity}"`;
+		var selectedClass = isSelected ? " selected" : "";
+
+		var hasChildren = item.length > 2 && item[2] != null;
+		html += `<li class="sidebar-list-item ${parity}${selectedClass}">`;
 
 		href = href.replace(/\/index\.(html|md)$/g, "/");
-		html += `<a href="${href}"${classAttr}>${visualName}</a>`;
+		html += `<a href="${href}" class="${parity}${selectedClass}">${visualName}</a>`;
 
+		if(pagination != null && isSelected) {
+			html += `<ul class="sidebar-unordered-list ${parity} pagination">\n`;
+			for(const {id, name} of pagination) {
+				html += `<li><a href="${id}">${name}</a></li>\n`;
+			}
+			html += `</ul>\n`;
+		}
 		if(hasChildren) {
 			var path = item[0].split("/")[0];
 			const subPath = basePath ? `${basePath}/${path}` : path;
 			html += `<ul class="sidebar-unordered-list ${parity}">\n`;
-			html += generateSidebar(item[2], subPath, selected, idx, nameMap).html;
+			html += generateSidebar(item[2], subPath, selected, idx, nameMap, pagination).html;
 			html += `</ul>\n`;
 		}
 		html += `</li>\n`;
@@ -90,7 +97,35 @@ function buildHtml(_pageDir, _exportPath) {
 		if (ext == ".md") {
 			var filename = parsedName.name;
 
-			var {html:sidebar, nameMap:nameMap} = generateSidebar(parsedSidebar, "", i);
+			var rawData = fs.readFileSync("./src/" + wikiDir + i, 'utf8');
+			var markdown = matter(rawData, { excerpt: true });
+			var content = markdown.content;
+
+			var renderedContent = renderer.render(content);
+
+			var pagination = [];
+
+			var parsedHtml = parseHtml(renderedContent);
+			var children = parsedHtml.window.document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+			const idRegex = /ID-(\w+)\|(.*)$/; // ID-<id>|<name>
+			for(const child of children) {
+				if(!child.id && !child.textContent.trim().match(idRegex))
+					continue;
+
+				if(!child.id) {
+					child.id = child.textContent.match(idRegex)[0]
+				}
+				var id = child.id;
+				pagination.push({
+					id: `#${id}`,
+					name: child.textContent
+				});
+			}
+
+			renderedContent = htmlToString(parsedHtml);
+
+			// sidebar
+			var {html:sidebar, nameMap:nameMap} = generateSidebar(parsedSidebar, "", i, null, null, pagination);
 
 			var visualName = nameMap[i] || filename.replace(/\.md$/, "");
 
@@ -99,15 +134,12 @@ function buildHtml(_pageDir, _exportPath) {
 			if(nameMap[nameMapKey]) {
 				title = nameMap[nameMapKey];
 			}
-
-			var rawData = fs.readFileSync("./src/" + wikiDir + i, 'utf8');
-			var markdown = matter(rawData, { excerpt: true });
-			var content = markdown.content;
+			// end sidebar
 
 			var vars = {
 				pageTitle: markdown.data.title ?? title,
 				title: markdown.data.title ?? title,
-				content: renderer.render(content),
+				content: renderedContent,
 				sidebar: sidebar,
 				header: header,
 				shortDesc: markdown.data.desc ?? null,
@@ -124,7 +156,7 @@ function buildHtml(_pageDir, _exportPath) {
 
 			fs.writeFileSync(
 				exportPath + i.replace(/\.md$/, ".html"),
-				dom.serialize(),
+				htmlToString(dom),
 				'utf8'
 			);
 		}
