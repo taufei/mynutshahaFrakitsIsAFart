@@ -17,3 +17,9 @@ Please have some patience as we are working on fixing the issues that are causin
 ## <h2 id="rotating-strum-moves-notes">Rotating a strum moves the notes.</h2>
 
 To prevent this behavior, you can do <syntax lang="haxe">strum.noteAngle = 0;</syntax>
+
+## <h2 id="velocity-not-working" sidebar="Velocity not working">Velocity/Acceleration doesn't move my sprite</h2>
+
+You need to set `sprite.moves = true;` to make it move, its automatically enabled if you set the property using <syntax lang="xml">&lt;property /&gt;</syntax> in the stage xml.
+
+We made it turned off automatically to optimize the game since it's useless to have it running for sprites that don't use it.
