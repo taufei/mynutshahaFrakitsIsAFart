@@ -118,6 +118,8 @@ function buildHtml(_pageDir, _exportPath) {
 				if(!!child.attributes["sidebar"])
 					visibleName = child.attributes["sidebar"].value;
 
+				child.removeAttribute("sidebar");
+
 				var id = child.id;
 				pagination.push({
 					id: `#${id}`,
