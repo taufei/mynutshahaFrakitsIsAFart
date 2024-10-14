@@ -1,7 +1,7 @@
 ---
 author: Frakits & Nex_isDumb
 desc: This page contains a list of all script calls
-lastUpdated: 2024-09-10T13:10:47.000Z
+lastUpdated: 2024-10-14T16:54:14.259Z
 title: All script calls
 ---
 # List of all script calls
