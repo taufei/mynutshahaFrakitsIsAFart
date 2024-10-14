@@ -44,7 +44,10 @@ function generateSidebar(list, basePath = '', selected = null, idx = null, nameM
 		html += `<li class="sidebar-list-item ${parity}${selectedClass}">`;
 
 		href = href.replace(/\/index\.(html|md)$/g, "/");
-		html += `<a href="${href}" class="${parity}${selectedClass}">${visualName}</a>`;
+		if(isSelected)
+			html += `<a href="#main" class="${parity}${selectedClass}">${visualName}</a>`;
+		else
+			html += `<a href="${href}" class="${parity}${selectedClass}">${visualName}</a>`;
 
 		if(pagination != null && isSelected) {
 			html += `<ul class="sidebar-unordered-list ${parity} pagination">\n`;

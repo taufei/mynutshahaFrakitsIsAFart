@@ -17,7 +17,7 @@ Here is how the spritesheet should look like:
 
 Keep in mind the names of the animations in the .xml because you will need them to form the splashes data.
 
-### Making the splash xml
+## <h2 id="making-the-splash-xml">Making the splash xml</h2>
 
 Next, you need to make a .xml file for the data of the splashes, you can do this by placing the xml file in ``data/splashes/sploosh.xml``
 ```xml
@@ -56,7 +56,7 @@ Then, to define the animation of the splash (or animations since you can have mu
 - ``x``: This is the X offset (use this if the splash is not centered on the arrow).
 - ``y``: This is the Y offset (use this if the splash is not centered on the arrow).
 
-## Making the splash show up
+## <h2 id="making-the-splash-show-up">Making the splash show up</h2>
 
 Now that you setup the note splashes, you have to code them in. <br>
 All you have to do is add this one piece of code in a Gameplay Script: *(change <code class="hljs-string">"sploosh"</code> to the name of the splashes you just made)*

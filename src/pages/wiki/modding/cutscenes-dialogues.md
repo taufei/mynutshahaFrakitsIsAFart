@@ -6,7 +6,7 @@ title: Cutscenes and Dialogues
 ---
 # Cutscenes and dialogues.
 
-## Cutscenes
+## <h2 id="cutscenes">Cutscenes</h2>
 
 Making Cutscenes is easy, either drop an .mp4 file in ``./videos`` with the name of the song followed by `-cutscene` at the end, or drop it in the corresponding song folder and simply name it ``cutscene.mp4``
 
@@ -15,7 +15,7 @@ Making Cutscenes is easy, either drop an .mp4 file in ``./videos`` with the name
 You can also put an ``-end`` before ``-cutscene`` to make that cutscene appear at the end of the song.<br>
 Starting them manually with also a custom prefix is also possible, check the <a href="./scripting/playstate-scripts/cutscenes-dialogue-scripts.md">Cutscenes/Dialogue Scripts</a> page.
 
-## Dialogues
+## <h2 id="dialogues">Dialogues</h2>
 
 Codename Engine also supports Dialogues, though there's a lot to unwrap here, so please read with patience.
 

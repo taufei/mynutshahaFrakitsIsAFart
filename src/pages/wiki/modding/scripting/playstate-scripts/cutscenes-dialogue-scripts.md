@@ -11,7 +11,7 @@ Cutscenes/Dialogue Scripts make Scripted Cutscenes/Dialogues possible!
 For the both of them: you can start them manually with also with custom prefix through other scripts using the ``startCutscene`` PlayState function or other ways that will be said down below.<br>
 For more advanced users: if you even want to avoid using the ``startCutscene`` function you can play with classes like <syntax lang="haxe">VideoCutscene</syntax>, <syntax lang="haxe">ScriptedCutscene</syntax> and etc; check the source code!
 
-## Cutscenes
+## <h2 id="cutscenes">Cutscenes</h2>
 
 You can automatically start a scripted cutscene by placing the script in ``./song/YOUR SONG/cutscene.hx``.
 
@@ -25,7 +25,7 @@ Important functions to use when coding the scripted cutscene:
 - <syntax lang="haxe">startVideo(path:String, ?callback:Void->Void);</syntax> - Starts a Video Cutscene and uses an optional ``callback`` whenever it ended. You can check if it's done through the boolean variable ``isVideoPlaying``.
 - <syntax lang="haxe">startDialogue(path:String, ?callback:Void->Void);</syntax> - Starts a Dialogue Cutscene and uses an optional ``callback`` whenever it ended. You can check if it's done through the boolean variable ``isDialoguePlaying``.
 
-## Dialogues
+## <h2 id="dialogues">Dialogues</h2>
 
 Dialogue Scripts behave a little bit differently than Scripted Cutscenes.
 
