@@ -6,7 +6,7 @@ title: All script calls
 ---
 # List of all script calls
 
-## All states/substates
+## <h2 id="all-states-substates">All states/substates</h2>
 
 ### <syntax lang="haxe">preCreate()</syntax>, <syntax lang="haxe">create()</syntax>, <syntax lang="haxe">postCreate()</syntax>
 
@@ -33,7 +33,7 @@ The ``event`` in question has the following parameters:
 
 ### <syntax lang="haxe">destroy()</syntax>
 
-## PlayState.hx
+## <h2 id="playstate-hx">PlayState.hx</h2>
 
 ### <syntax lang="haxe">onStageXMLParsed(event:StageXMLEvent)</syntax>, <syntax lang="haxe">onStageNodeParsed(event:StageNodeEvent)</syntax>
 
@@ -69,7 +69,7 @@ The ``event`` in question has the following parameters:
 
 ### <syntax lang="haxe">onVocalsResync()</syntax>
 
-## Dialogue Scripts <small>(mostly substate like behaviour)</small>
+## <h2 id="dialogue-scripts" sidebar="Dialogue Scripts">Dialogue Scripts <small>(mostly substate like behaviour)</small></h2>
 
 ### <syntax lang="haxe">structureLoaded(event:DialogueStructureEvent)</syntax>
 
@@ -83,7 +83,7 @@ The ``next`` call also calls custom callbacks based on the dialogue xml's line u
 
 The ``event`` also gets shared between dialogue's box and characters.
 
-## Dialogue Character Scripts
+## <h2 id="dialogue-character-scripts">Dialogue Character Scripts</h2>
 
 ### <syntax lang="haxe">create(event:DialogueBoxStructureEvent)</syntax>, <syntax lang="haxe">structureLoaded(event:DialogueBoxStructureEvent)</syntax>, <syntax lang="haxe">loadingError(message:String)</syntax>, <syntax lang="haxe">postCreate()</syntax>
 
@@ -105,7 +105,7 @@ The ``event`` is shared between the first two (but makes no sense in cancelling 
 
 ### <syntax lang="haxe">destroy()</syntax>
 
-## Dialogue Box Scripts
+## <h2 id="dialogue-box-scripts">Dialogue Box Scripts</h2>
 
 ### <syntax lang="haxe">create(event:DialogueBoxStructureEvent)</syntax>, <syntax lang="haxe">structureLoaded(event:DialogueBoxStructureEvent)</syntax>, <syntax lang="haxe">postCreate()</syntax>
 
@@ -131,7 +131,7 @@ The ``event`` is shared between the two (but makes no sense in cancelling it on 
 
 ### <syntax lang="haxe">destroy()</syntax>
 
-## Global Scripts
+## <h2 id="global-scripts">Global Scripts</h2>
 
 ### <syntax lang="haxe">focusLost()</syntax>, <syntax lang="haxe">focusGained()</syntax>
 
