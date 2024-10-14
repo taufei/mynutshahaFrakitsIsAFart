@@ -151,7 +151,8 @@ All of these configs can be found in ``./data/config/``
 	"logoKey": "icon"
 }
 ```
-Before doing this, make sure to make a discord application at https://discord.com/developers/applications, if you don't know how... please search for a guide on google. After that, copy the application ID and insert it there.
+Before doing this, make sure to make a discord application at [https://discord.com/developers/applications](https://discord.com/developers/applications), if you don't know how... please search for a guide on google. After that, copy the application ID and insert it there.
+
 ### credits.xml
 Crediting people also uses XML data to parse members, though it has a lot of features to cover.<br>
 Here's a template provided by the engine:
@@ -167,7 +168,7 @@ Here's a template provided by the engine:
 As you can see, there's 2 types of nodes: <syntax lang="xml">&lt;credit&gt;</syntax> and <syntax lang="xml">&lt;github&gt;</syntax>. <syntax lang="xml">&lt;credit&gt;</syntax> is the basic crediting node which can be applied to anyone, and <syntax lang="xml">&lt;github&gt;</syntax> pulls the user from it's database and can only be used for people who have accounts on GitHub *(also automatically redirects to their GitHub profile page.)*
 
 Their parameters are as follows:
-- <syntax lang="xml">&lt;credit&gt;</syntax> <!-- applies special coloring -->
+- <syntax lang="xml">&lt;credit&gt;</syntax>
     - ``name`` which is the name of the person.
     - ``desc`` determines the description of that person.
     - ``icon`` determines which PNG file to pick from ``./images/credits``.

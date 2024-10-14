@@ -39,7 +39,7 @@ void main() {
 }
 ```
 
-If you got a shader from a site called https://shadertoy.com, you have to manually convert them to flixel/openfl accepted format.
+If you got a shader from a site called [ShaderToy](https://shadertoy.com), you have to manually convert them to flixel/openfl accepted format.
 
 Here's a sample shader that renders a basic texture.
 ```glsl
