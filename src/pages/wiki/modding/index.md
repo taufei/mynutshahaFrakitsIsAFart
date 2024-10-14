@@ -139,7 +139,7 @@ And when you're done with the basic steps you're finally ready for release, or i
 - <a href="./scripting/scripted-assets-libraries.md">Scripted Assets Libraries</a>
 - <a href="./scripting/ndll-scripting.md">NDLL Scripting</a>
 
-## Config
+## <h2 id="config" sidebar="Config">Config</h2>
 
 Some config is still required for things like Discord RPC. so we're gonna get over them here.<br>
 All of these configs can be found in ``./data/config/``

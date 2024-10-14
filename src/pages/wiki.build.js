@@ -107,18 +107,18 @@ function buildHtml(_pageDir, _exportPath) {
 
 			var parsedHtml = parseHtml(renderedContent);
 			var children = parsedHtml.window.document.querySelectorAll("h1, h2, h3, h4, h5, h6");
-			const idRegex = /ID-(\w+)\|(.*)$/; // ID-<id>|<name>
 			for(const child of children) {
-				if(!child.id && !child.textContent.trim().match(idRegex))
+				if(!child.id)
 					continue;
 
-				if(!child.id) {
-					child.id = child.textContent.match(idRegex)[0]
-				}
+				var visibleName = child.textContent;
+				if(!!child.attributes["sidebar"])
+					visibleName = child.attributes["sidebar"].value;
+
 				var id = child.id;
 				pagination.push({
 					id: `#${id}`,
-					name: child.textContent
+					name: visibleName
 				});
 			}
 

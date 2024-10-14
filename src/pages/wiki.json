@@ -11,7 +11,7 @@
         ["characters/index", "Creating characters", [
             ["editor-features", "Character Editor Features - UNFINISHED"]
         ]],
-        ["stages/index", "Creating stages", [
+        ["stages/index", "Creating Stages", [
             ["stage-extensions", "Stage Extensions - UNFINISHED"]
         ]],
         ["cutscenes-dialogues", "Cutscenes/Dialogues"],

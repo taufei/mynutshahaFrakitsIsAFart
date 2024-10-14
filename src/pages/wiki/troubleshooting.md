@@ -6,14 +6,14 @@ title: Troubleshooting
 ---
 # Troubleshooting
 
-## My notes are only appearing on the left side of the screen.
+## <h2 id="notes-only-on-left-side" sidebar="Notes only on left side of the screen.">My notes are only appearing on the left side of the screen.</h2>
 
 Open the strumline options and for the bf strumline set the X ratio to 0.75, and for the dad strumline set the X ratio to 0.25.
 
-## The character editor is buggy.
+## <h2 id="character-editor-buggy">The character editor is buggy.</h2>
 
 Please have some patience as we are working on fixing the issues that are causing this.
 
-## Rotating a strum moves the notes.
+## <h2 id="rotating-strum-moves-notes">Rotating a strum moves the notes.</h2>
 
 To prevent this behavior, you can do <syntax lang="haxe">strum.noteAngle = 0;</syntax>
