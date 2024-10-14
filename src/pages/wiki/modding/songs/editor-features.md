@@ -77,7 +77,7 @@ You can code your own note types, or use the pre-existing one *(though only 2 ex
 
 You can also change the graphic of a Note type without programming, by putting the Note type's spritesheet in ``images/game/notes``.
 
-## <h2 id="meta-data">Changing additional chart/meta data</h2>
+## <h2 id="meta-data" sidebar="Changing Metadata">Changing additional chart/meta data</h2>
 
 <img src="./Chart Editor Features-12.png"/>
 

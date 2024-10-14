@@ -6,7 +6,7 @@ title: Gameplay Scripts
 ---
 # Gameplay Scripts
 
-## <h2 id="gameplay-scripts">Gameplay scripts run during gameplay *(yep)*</h2>
+## <h2 id="gameplay-scripts" sidebar="Gameplay Scripts">Gameplay scripts run during gameplay *(yep)*</h2>
 
 You can run Gameplay Scripts in **a song**, by putting the scripts in ``./song/YOUR SONG/scripts``, or run them in **every song**, by putting them in the ``./songs`` folder itself.
 
