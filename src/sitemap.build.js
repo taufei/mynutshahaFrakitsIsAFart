@@ -131,7 +131,7 @@ function buildFile(pageDir, exportPath) {
                 prio = 0.6;
         }
         prioList.push({
-            link: (root + link).replace(/\/\//g, "/"),
+            link: (root + link).replace(/\/\//g, "/").replace(/^(https?):\/+/g, "$1://"),
             prio: prio,
             //prio: forcePrio[link] ?? (foundLinks[link] / total),
             //time: curTime
