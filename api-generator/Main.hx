@@ -51,6 +51,22 @@ class Main {
 }
 
 class CodenameApi extends Api {
+	override function pathToUrl(path:String):String {
+		var res = super.pathToUrl(path);
+		if(res.endsWith("index.html")) {
+			res = res.substr(0, res.length - 10);
+		}
+		return res;
+	}
+
+	override function packageToUrl(path:String):String {
+		var res = super.packageToUrl(path);
+		if(res.endsWith("index.html")) {
+			res = res.substr(0, res.length - 10);
+		}
+		return res;
+	}
+
 	override function getSourceLink(type:TypeInfos):Null<String> {
 		var module = type.module != null ? type.module : type.path;
 		var ending = ".hx";
