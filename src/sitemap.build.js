@@ -134,7 +134,7 @@ function buildFile(pageDir, exportPath) {
             link: (root + link).replace(/\/\//g, "/"),
             prio: prio,
             //prio: forcePrio[link] ?? (foundLinks[link] / total),
-            time: curTime
+            //time: curTime
         });
     }
 
