@@ -5,6 +5,7 @@ var wiki = require('./pages/wiki.build.js');
 var tools = require('./pages/tools/tools.build.js');
 var apiDocs = require('./pages/apiDocs.build.js');
 var indexPage = require('./pages/index.build.js');
+var sitemap = require("./sitemap.build.js");
 
 var { copyDir, fixHtmlRefs, parseTemplate, compileSass, compileJs, setGlobals, getGlobals } = require('./utils.js');
 
@@ -60,6 +61,10 @@ if(isFirstRun) {
 		console.log("Skipping API Docs build (not full build)...");
 		apiDocs.buildNotBuilt(pageDir, exportPath); // builds into /api-docs
 	}
+}
+
+if(isFirstRun && isFullBuild) {
+	sitemap.buildFile(pageDir, exportPath); // builds into /sitemap.xml
 }
 
 console.log("Build completed.");
