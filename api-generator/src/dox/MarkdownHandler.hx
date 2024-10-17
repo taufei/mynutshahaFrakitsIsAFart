@@ -76,7 +76,7 @@ class MarkdownHandler {
 				var type = possibleTypes.pop();
 				if (type != null) {
 					var href = resolveTypeLink(type, field);
-					return '<a href="$href">Meow $match</a>';
+					return '<a href="$href">$match</a>';
 				}
 			}
 
