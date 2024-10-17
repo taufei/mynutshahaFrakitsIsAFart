@@ -51,7 +51,6 @@
 
 
 <script src="::api.config.rootPath::highlighter.js"></script>
-<link href="::api.config.rootPath::highlighter.css" rel="stylesheet" />
 
 </body>
 </html>
