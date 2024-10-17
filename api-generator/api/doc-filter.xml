@@ -7001,9 +7001,11 @@
 		</meta>
 	</class>
 	<typedef path="funkin.backend.system.modules.PlayingSound" params="" file="source/funkin/backend/system/modules/AudioSwitchFix.hx" module="funkin.backend.system.modules.AudioSwitchFix"><a>
-	<time><x path="Float"/></time>
-	<sound><c path="flixel.sound.FlxSound"/></sound>
-</a></typedef>
+		<time><x path="Float"/></time>
+		<sound><c path="flixel.sound.FlxSound"/></sound>
+	</a><meta>
+	<m n=":dox"><e>hide</e></m>
+</meta></typedef>
 	<class path="funkin.backend.system.modules.CrashHandler" params="" file="source/funkin/backend/system/modules/CrashHandler.hx">
 		<init public="1" set="method" line="13" static="1">
 			<f a=""><x path="Void"/></f>
