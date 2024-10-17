@@ -94,4 +94,40 @@ class CodenameApi extends Api {
 	override function hasSourceLink(type:TypeInfos):Bool {
 		return type.file != null && type.file.endsWith(".hx");
 	}
+
+	function printInheritedFields_hasFields(inheritedFields:InheritedFields):Bool {
+		var fields = inheritedFields.fields;
+		for (cl in inheritedFields.types) {
+			for(field in fields.get(cl)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	function printInheritedFields_hasMethods(inheritedFields:InheritedFields):Bool {
+		var fields = inheritedFields.methods;
+		for (cl in inheritedFields.types) {
+			for(field in fields.get(cl)) {
+				if(field.name != "new" && !field.isOverride) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	function printInheritedFields_type_hasMethods(cl:Dynamic, inheritedFields:InheritedFields):Bool {
+		var fields = inheritedFields.methods;
+		for(field in fields.get(cl)) {
+			if(field.name != "new" && !field.isOverride) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	function trace(str:Dynamic) {
+		trace(str);
+	}
 }
