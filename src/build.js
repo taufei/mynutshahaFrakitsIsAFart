@@ -7,7 +7,7 @@ var apiDocs = require('./pages/apiDocs.build.js');
 var indexPage = require('./pages/index.build.js');
 var sitemap = require("./sitemap.build.js");
 
-var { copyDir, fixHtmlRefs, parseTemplate, compileSass, compileJs, setGlobals, getGlobals } = require('./utils.js');
+var { copyDir, compileSass, compileJs, setGlobals } = require('./utils.js');
 
 var isFullBuild = process.argv.includes('--full');
 process.argv = process.argv.filter(arg => arg != '--full');

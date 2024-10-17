@@ -7,6 +7,9 @@ process.argv = process.argv.filter(arg => arg != '--full');
 var isWatch = process.argv.includes('--watch');
 process.argv = process.argv.filter(arg => arg != '--watch');
 
+var isRelease = process.argv.includes('--release') || isFullBuild;
+process.argv = process.argv.filter(arg => arg != '--release');
+
 var firstRun = true;
 
 function startChild() {
@@ -19,6 +22,9 @@ function startChild() {
 	}
 	if(isWatch) {
 		args.push('--watch');
+	}
+	if(isRelease) {
+		args.push('--release');
 	}
 	if(firstRun) {
 		args.push('--first-run');
