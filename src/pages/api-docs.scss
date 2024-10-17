@@ -75,10 +75,12 @@ a.treeLink {
   border-bottom: none;
 }
 
-code {
+code, code a {
   font-family: monospace;
-  color: white !important;
   padding: 0.3em;
+}
+code {
+  color: white !important;
 }
 
 .anchor > code {
