@@ -38,6 +38,9 @@ function buildHtml(_pageDir, _exportPath) {
         else if(fs.existsSync(modsDir + file + "/cover.png")) {
             imageExt = "png";
         }
+        else if(fs.existsSync(modsDir + file + "/cover.webp")) {
+            imageExt = "webp";
+        }
 
         var imgLink;
 

@@ -4,9 +4,23 @@ var Mustache = require('mustache');
 var jsdom = require("jsdom");
 var fs = require('fs');
 var hljs = require('highlight.js');
-var { fixHtmlRefs, htmlToString } = require("../../utils.js");
+var { fixHtmlRefs, htmlToString, parseTemplate } = require("../../utils.js");
 
 var header = fs.readFileSync("./src/pages/templates/header.html", 'utf8')
+
+const tools = [
+	{
+		link: "index",
+		title: "Home",
+		desc: "Home of the tools",
+		internal: true
+	},
+	{
+		link: "event-packer",
+		title: "Event Packer",
+		desc: "Tool to pack events for the engine"
+	}
+];
 
 function buildHtml(_pageDir, _exportPath) {
 	var pageDir = _pageDir + "tools/";
@@ -16,15 +30,12 @@ function buildHtml(_pageDir, _exportPath) {
 	}
 	console.log("Building Tools");
 
-	var tools = [
-		"index",
-		"event-packer"
-	];
+	var diplayTools = tools.filter(tool => !tool.internal);
 
 	for(const tool of tools) {
-		var path = "./src/pages/tools/" + tool + "/index.html";
-		var outpath = exportPath + tool + "/index.html";
-		if(tool == "index") {
+		var path = "./src/pages/tools/" + tool.link + "/index.html";
+		var outpath = exportPath + tool.link + "/index.html";
+		if(tool.link == "index") {
 			path = "./src/pages/tools/index.html";
 			outpath = exportPath + "index.html";
 		}
@@ -38,21 +49,13 @@ function buildHtml(_pageDir, _exportPath) {
 		}
 		var templatePage = fs.readFileSync(path, 'utf8');
 		var vars = {
-			title: tool,
-			header: header
+			title: tool.title,
+			header: header,
+			tools: diplayTools
 		};
-		console.log(tool);
+		console.log(tool.link);
 
-		let html = templatePage;
-		let old;
-		do {
-			old = html;
-			html = Mustache.render(html, vars, null, {
-				escape: function(text) {
-					return text;
-				}
-			});
-		} while(html != old);
+		let html = parseTemplate(templatePage, vars);
 
 		var dom = fixHtmlRefs(html, pageDir, _pageDir);
 

@@ -45,6 +45,7 @@ compileSass("./src/pages/index.scss", exportPath + "/index.css");
 compileSass("./src/pages/api-docs.scss", exportPath + "/api-docs.css");
 compileSass("./src/giscus-theme.scss", exportPath + "/giscus-theme.css");
 compileSass("./src/pages/ko-fi.scss", exportPath + "/ko-fi.css");
+compileSass("./src/pages/tools/tools.scss", exportPath + "/tools.css");
 
 compileJs("./src/pages/featuredMods.js", exportPath + "/featuredMods.js");
 compileJs("./src/pages/wiki.js", exportPath + "/wiki.js");
@@ -52,8 +53,8 @@ compileJs("./src/pages/wiki.js", exportPath + "/wiki.js");
 copyDir("./src/toplevel/", exportPath + "/");
 
 indexPage.buildHtml(pageDir, exportPath); // builds into /
-wiki.buildHtml(pageDir, exportPath); // builds into /wiki
 tools.buildHtml(pageDir, exportPath); // builds into /tools
+wiki.buildHtml(pageDir, exportPath); // builds into /wiki
 if(isFirstRun) {
 	if(isFullBuild) {
 		apiDocs.buildHtml(pageDir, exportPath); // builds into /api-docs
